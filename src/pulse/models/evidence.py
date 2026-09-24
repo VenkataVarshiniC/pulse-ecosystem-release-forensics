@@ -14,7 +14,24 @@ class Confidence(StrEnum):
     LOW = "low"
 
 
+class LifecycleStage(StrEnum):
+    RELEASE = "release"
+    ADOPTION_READINESS = "adoption_readiness"
+    OBSERVED_ADOPTION = "observed_adoption"
+    MIGRATION_FRICTION = "migration_friction"
+    REMEDIATION = "remediation"
+    RECOVERY_SIGNAL = "recovery_signal"
+
+
+class TimestampPrecision(StrEnum):
+    SECOND = "second"
+    DAY = "day"
+
+
 class DownstreamEventType(StrEnum):
+    RELEASE_PUBLISHED = "release_published"
+    COMPATIBILITY_DECLARATION = "compatibility_declaration"
+    COMPATIBILITY_TEST = "compatibility_test"
     DEPENDENCY_UPGRADE = "dependency_upgrade"
     DEPENDENCY_DOWNGRADE = "dependency_downgrade"
     VERSION_PIN = "version_pin"
@@ -61,11 +78,14 @@ class DownstreamRepository(BaseModel):
     evidence: EvidenceReference
 
 
-class DownstreamEvent(BaseModel):
+class EvidenceEvent(BaseModel):
     model_config = ConfigDict(frozen=True)
 
+    case_id: str = Field(min_length=1)
     repository: HttpUrl
     occurred_at: datetime
+    timestamp_precision: TimestampPrecision = TimestampPrecision.SECOND
+    lifecycle_stage: LifecycleStage
     event_type: DownstreamEventType
     title: str
     text: str | None = None
@@ -76,7 +96,11 @@ class DownstreamEvent(BaseModel):
     evidence_reason: str = Field(min_length=10)
 
     @model_validator(mode="after")
-    def reject_unexplained_high_confidence(self) -> DownstreamEvent:
+    def reject_unexplained_high_confidence(self) -> EvidenceEvent:
         if self.confidence is Confidence.HIGH and len(self.evidence_reason.strip()) < 25:
             raise ValueError("high-confidence evidence requires a specific rationale")
         return self
+
+
+# Kept as a public alias while existing collectors migrate to the broader ledger model.
+DownstreamEvent = EvidenceEvent

@@ -3,6 +3,7 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.pytest-tmp/
 .ruff_cache/
 .uv-cache/
 .coverage
@@ -15,3 +16,4 @@ data/raw/*
 data/interim/*
 data/processed/*
 !data/**/.gitkeep
+!data/processed/evidence-ledger.jsonl

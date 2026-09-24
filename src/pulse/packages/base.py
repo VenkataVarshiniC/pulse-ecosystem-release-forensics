@@ -8,7 +8,7 @@ from typing import Protocol
 from pydantic import BaseModel, ConfigDict, HttpUrl
 
 
-class PackageRelease(BaseModel):
+class DistributionArtifact(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     package: str
@@ -22,10 +22,10 @@ class PackageMetadata(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     name: str
-    latest_version: str
+    version: str
     project_url: HttpUrl
     repository_url: HttpUrl | None = None
-    releases: tuple[PackageRelease, ...]
+    artifacts: tuple[DistributionArtifact, ...]
 
 
 class PackageIndex(Protocol):

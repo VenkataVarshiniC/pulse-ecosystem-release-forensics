@@ -3,11 +3,24 @@ from __future__ import annotations
 import pytest
 from pydantic import ValidationError
 
-from pulse.analysis.scorecard import Candidate, Dimension, Scorecard, ScorecardWeights
+from pulse.analysis.scorecard import (
+    Candidate,
+    Dimension,
+    DimensionAssessment,
+    Scorecard,
+    ScorecardWeights,
+)
 
 
-def complete_scores(value: int) -> dict[Dimension, int]:
-    return dict.fromkeys(Dimension, value)
+def complete_assessments(value: int) -> dict[Dimension, DimensionAssessment]:
+    return {
+        dimension: DimensionAssessment(
+            score=value,
+            justification=f"Documented evidence supports the {dimension.value} assessment.",
+            sources=("https://example.com/evidence",),
+        )
+        for dimension in Dimension
+    }
 
 
 def test_scorecard_applies_configurable_weights_and_ranks_deterministically() -> None:
@@ -16,14 +29,14 @@ def test_scorecard_applies_configurable_weights_and_ranks_deterministically() ->
         project="Stronger",
         package="stronger",
         version="2.0",
-        scores=complete_scores(5),
+        assessments=complete_assessments(5),
         rationale="Direct evidence exists across every dimension.",
     )
     weaker = Candidate(
         project="Weaker",
         package="weaker",
         version="2.0",
-        scores=complete_scores(2),
+        assessments=complete_assessments(2),
         rationale="Only partial evidence exists across the dimensions.",
     )
 
@@ -36,3 +49,17 @@ def test_scorecard_applies_configurable_weights_and_ranks_deterministically() ->
 def test_scorecard_rejects_incomplete_weights() -> None:
     with pytest.raises(ValidationError, match="every scorecard dimension"):
         ScorecardWeights(values={Dimension.ECOSYSTEM_SIZE: 1.0})
+
+
+def test_candidate_rejects_an_unauditable_dimension() -> None:
+    assessments = complete_assessments(3)
+    assessments.pop(Dimension.HISTORICAL_DEPTH)
+
+    with pytest.raises(ValidationError, match="every dimension"):
+        Candidate(
+            project="Example",
+            package="example",
+            version="2.0",
+            assessments=assessments,
+            rationale="A candidate with one missing dimension.",
+        )

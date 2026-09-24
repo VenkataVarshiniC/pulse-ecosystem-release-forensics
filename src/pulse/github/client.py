@@ -168,7 +168,11 @@ class GitHubClient:
         return self.paginate(f"/repos/{full_name}/releases")
 
     def issues(self, full_name: str, **filters: Any) -> Iterator[dict[str, Any]]:
-        return self.paginate(f"/repos/{full_name}/issues", params=filters)
+        for item in self.paginate(f"/repos/{full_name}/issues", params=filters):
+            # GitHub's issues endpoint includes pull requests. Analytical issue
+            # counts must never treat those records as issues.
+            if "pull_request" not in item:
+                yield item
 
     def pull_requests(self, full_name: str, **filters: Any) -> Iterator[dict[str, Any]]:
         return self.paginate(f"/repos/{full_name}/pulls", params=filters)

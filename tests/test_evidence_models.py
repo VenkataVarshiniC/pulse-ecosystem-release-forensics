@@ -10,6 +10,7 @@ from pulse.models.evidence import (
     DownstreamEvent,
     DownstreamEventType,
     EvidenceReference,
+    LifecycleStage,
 )
 
 
@@ -23,8 +24,10 @@ def reference() -> EvidenceReference:
 def test_high_confidence_requires_a_specific_reason() -> None:
     with pytest.raises(ValidationError, match="specific rationale"):
         DownstreamEvent(
+            case_id="numpy-2.0.0",
             repository="https://github.com/example/project",
             occurred_at=datetime(2024, 6, 17, tzinfo=UTC),
+            lifecycle_stage=LifecycleStage.OBSERVED_ADOPTION,
             event_type=DownstreamEventType.DEPENDENCY_UPGRADE,
             title="Upgrade dependency",
             target_package="numpy",
@@ -37,8 +40,10 @@ def test_high_confidence_requires_a_specific_reason() -> None:
 
 def test_event_preserves_evidence_and_reason() -> None:
     event = DownstreamEvent(
+        case_id="numpy-2.0.0",
         repository="https://github.com/example/project",
         occurred_at=datetime(2024, 6, 17, tzinfo=UTC),
+        lifecycle_stage=LifecycleStage.OBSERVED_ADOPTION,
         event_type=DownstreamEventType.DEPENDENCY_UPGRADE,
         title="Upgrade dependency",
         target_package="numpy",

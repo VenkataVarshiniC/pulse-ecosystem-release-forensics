@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from enum import StrEnum
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
 
 
 class Dimension(StrEnum):
@@ -49,22 +49,32 @@ class ScorecardWeights(BaseModel):
         )
 
 
+class DimensionAssessment(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
+    score: int = Field(ge=0, le=5)
+    justification: str = Field(min_length=15)
+    sources: tuple[HttpUrl, ...] = Field(min_length=1)
+
+
 class Candidate(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     project: str
     package: str
     version: str
-    scores: dict[Dimension, int]
+    assessments: dict[Dimension, DimensionAssessment]
     rationale: str
 
     @model_validator(mode="after")
-    def validate_scores(self) -> Candidate:
-        if set(self.scores) != set(Dimension):
-            raise ValueError("candidate scores must cover every dimension")
-        if any(score < 0 or score > 5 for score in self.scores.values()):
-            raise ValueError("scores must be between 0 and 5")
+    def validate_assessments(self) -> Candidate:
+        if set(self.assessments) != set(Dimension):
+            raise ValueError("candidate assessments must cover every dimension")
         return self
+
+    @property
+    def scores(self) -> dict[Dimension, int]:
+        return {dimension: assessment.score for dimension, assessment in self.assessments.items()}
 
 
 class Scorecard(BaseModel):
@@ -74,7 +84,7 @@ class Scorecard(BaseModel):
 
     def score(self, candidate: Candidate) -> float:
         return sum(
-            candidate.scores[dimension] * weight
+            candidate.assessments[dimension].score * weight
             for dimension, weight in self.weights.values.items()
         )
 

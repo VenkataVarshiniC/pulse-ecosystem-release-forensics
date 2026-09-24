@@ -5,8 +5,11 @@ from pulse.models.evidence import (
     DownstreamEvent,
     DownstreamEventType,
     DownstreamRepository,
+    EvidenceEvent,
     EvidenceReference,
+    LifecycleStage,
     Release,
+    TimestampPrecision,
 )
 
 __all__ = [
@@ -14,6 +17,9 @@ __all__ = [
     "DownstreamEvent",
     "DownstreamEventType",
     "DownstreamRepository",
+    "EvidenceEvent",
     "EvidenceReference",
+    "LifecycleStage",
     "Release",
+    "TimestampPrecision",
 ]

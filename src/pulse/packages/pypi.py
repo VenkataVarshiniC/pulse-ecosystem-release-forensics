@@ -6,7 +6,7 @@ from typing import Any
 
 import httpx
 
-from pulse.packages.base import PackageMetadata, PackageRelease
+from pulse.packages.base import DistributionArtifact, PackageMetadata
 
 
 class PyPIClient:
@@ -40,8 +40,8 @@ class PyPIClient:
         payload: dict[str, Any] = response.json()
         info = payload["info"]
         files = payload.get("urls", [])
-        releases = tuple(
-            PackageRelease(
+        artifacts = tuple(
+            DistributionArtifact(
                 package=info["name"],
                 version=info["version"],
                 uploaded_at=item["upload_time_iso_8601"],
@@ -54,10 +54,10 @@ class PyPIClient:
         repository = _first_url(project_urls, "Source", "Repository", "Code")
         return PackageMetadata(
             name=info["name"],
-            latest_version=info["version"],
+            version=info["version"],
             project_url=info["package_url"],
             repository_url=repository,
-            releases=releases,
+            artifacts=artifacts,
         )
 
 

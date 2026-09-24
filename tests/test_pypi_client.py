@@ -32,6 +32,7 @@ def test_package_normalizes_version_files_and_repository() -> None:
     )
     package = PyPIClient(http_client=http_client).package("example", version="2.0.0")
 
-    assert package.latest_version == "2.0.0"
+    assert package.version == "2.0.0"
     assert str(package.repository_url) == "https://github.com/example/example"
-    assert package.releases[0].python_requires == ">=3.9"
+    assert package.artifacts[0].python_requires == ">=3.9"
+    assert package.artifacts[0].version == package.version

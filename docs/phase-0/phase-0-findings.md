@@ -1,26 +1,43 @@
 # Phase 0 findings
 
-## Decision: GO
+## Final decision: PIVOT
 
-Public data can reconstruct a defensible release lifecycle for carefully selected cases. NumPy 2.0 supplies direct evidence for the upstream release, downstream compatibility preparation, post-release binary failure, pins and upgrade workarounds, remediation work, and broader recovery signals.
+Public evidence supports curated, repository-bounded release forensics for declared downstream cohorts. It does not support the original broader implication of exhaustive ecosystem monitoring. The work should pivot to that narrower analytical claim before any Phase 1 proposal.
 
-The decision is qualified. PULSE should begin as a curated forensic workflow with human review, not an exhaustive ecosystem monitor. It can state what its collected evidence shows; it cannot infer universal adoption or causality from search hits and timestamps.
+The earlier NumPy result was a **qualified GO to Phase 0B**. It showed that one unusually well-documented release could be reconstructed and justified cross-case validation. It was not a general product GO.
 
-## What survived contact with data
+## Cross-case result
 
-- Release identity and timing are strong when PyPI and upstream notes agree.
-- Explicit manifest changes, binary errors, compatibility releases, and maintainer guidance can connect multiple lifecycle stages.
-- A typed evidence model and transparent rules preserve uncertainty without blocking useful analysis.
-- A compatibility tracker provides a practical seed set of downstream repositories.
+NumPy 2.0, Pydantic 2.0, and SQLAlchemy 2.0 consistently expose strong release, migration-friction, and remediation evidence. Pydantic confirms that the method is useful for a pure-Python API migration. SQLAlchemy confirms that a defensible named-repository reconstruction is possible without a central compatibility tracker.
+
+The method does not consistently observe ordinary adoption. Compatibility declarations usually show readiness, not use. Unbiased downstream discovery remains unresolved, and ecosystem recovery cannot be inferred from patch releases, closed issues, or selected success stories. The [comparison](cross-case-comparison.md) records the evidence and biases case by case.
+
+## Validated scope
+
+- Preserve accepted events in a typed, source-auditable ledger.
+- Reconstruct timelines for named releases and explicitly selected downstream repositories.
+- Distinguish release, readiness, observed adoption, friction, remediation, and bounded recovery signals.
+- Publish confidence, repository-selection rules, time windows, and missing evidence.
+- Make release-associated claims while reserving causal language for evidence that demonstrates a mechanism.
+
+## Scope that remains unvalidated
+
+- Exhaustive or unbiased discovery of downstream repositories.
+- Population-level adoption rates from public repository or package metadata.
+- Ecosystem-wide recovery without a declared denominator and qualifying event.
+- Cross-ecosystem portability beyond the tested Python/PyPI cases.
+- Automated causal attribution or fully automated lifecycle classification.
 
 ## Unresolved risks
 
-- Unbiased downstream discovery is the hardest problem.
-- Search and API limits may make coverage difficult to reproduce at scale.
-- Recovery needs a declared cohort and operational definition.
-- Repository evidence can disappear or be rewritten.
-- Different ecosystems will require different package and lockfile adapters.
+- Search and API behavior can make historical discovery hard to reproduce.
+- Public repositories overrepresent projects that expose issue and CI history.
+- Analyst-selected cohorts can overrepresent successful migrations.
+- Mutable or deleted source artifacts weaken future audits.
+- Different dependency formats will require explicit adapters and validation.
 
-## Next decision gate
+## Gate for a future Phase 1 proposal
 
-Before a product build, run the same method on at least two contrasting releases: one pure-Python API migration and one release without an upstream compatibility tracker. Continue only if discovery and confidence rules remain useful without NumPy’s unusually rich evidence.
+A future proposal must adopt the narrower scope, define repository inclusion before collection, retain negative searches, and declare cohort denominators before using recovery language. It should be rejected or revised if it again implies ecosystem-wide coverage from purposive public evidence.
+
+Phase 0B ends with this decision. No Phase 1 product implementation is included.

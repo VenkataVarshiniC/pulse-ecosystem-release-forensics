@@ -63,3 +63,26 @@ def test_transient_response_is_retried() -> None:
     assert client.repository("example/repo")["full_name"] == "example/repo"
     assert attempts == 2
     assert delays == [0.25]
+
+
+def test_issues_excludes_pull_requests_returned_by_github_issues_api() -> None:
+    def handler(_: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            200,
+            json=[
+                {"number": 10, "title": "A real issue"},
+                {
+                    "number": 11,
+                    "title": "A pull request",
+                    "pull_request": {"url": "https://api.github.test/repos/example/repo/pulls/11"},
+                },
+            ],
+        )
+
+    http_client = httpx.Client(
+        base_url="https://api.github.test",
+        transport=httpx.MockTransport(handler),
+    )
+    client = GitHubClient("test-token", http_client=http_client)
+
+    assert list(client.issues("example/repo")) == [{"number": 10, "title": "A real issue"}]
