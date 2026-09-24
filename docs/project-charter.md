@@ -6,7 +6,7 @@ Can public data reconstruct an evidence-backed lifecycle from a major release th
 
 ## Phase 0 outcome
 
-Produce one defensible reconstruction, document missing evidence and failure modes, and decide **GO**, **PIVOT**, or **STOP**. A score helps prioritize cases; it never substitutes for source review.
+Produce three defensible reconstructions, including a pure-Python API migration and a tracker-free case; document missing evidence and failure modes; and decide **GO TO PHASE 1**, **PIVOT**, or **STOP**. A score helps prioritize cases; it never substitutes for source review.
 
 ## Success criteria
 
