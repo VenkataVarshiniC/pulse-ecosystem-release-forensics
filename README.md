@@ -6,7 +6,7 @@ PULSE is a post-release intelligence project for reconstructing how major open-s
 release → downstream adoption → migration or breakage → remediation → recovery
 ```
 
-Phase 0 will test whether public evidence can support that reconstruction before any product architecture is built.
+Phase 0 tests whether public evidence can support that reconstruction. It deliberately stays small: an authenticated GitHub client, a PyPI metadata client, typed evidence records, a configurable human-guided scorecard, and one evidence-backed NumPy 2.0 case study.
 
 ## Development
 
@@ -22,4 +22,8 @@ uv run python scripts/score_candidates.py
 
 `GITHUB_TOKEN` needs read access to the public repositories being studied. Never commit `.env` or tokens.
 
-Start with [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) and the [project charter](docs/project-charter.md). Phase 0 findings will be proposed through a review branch.
+Start with [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md), then read the Phase 0 [research plan](docs/phase-0/research-plan.md), [candidate scorecard](docs/phase-0/candidate-releases.md), [feasibility report](docs/phase-0/data-feasibility.md), and [decision](docs/phase-0/phase-0-findings.md).
+
+## Current conclusion
+
+Phase 0 reaches a qualified **GO** for curated, evidence-backed release case studies. Public evidence supports the lifecycle for NumPy 2.0, but repository discovery and causal attribution remain human-reviewed steps. See the findings for the limits of that claim.
