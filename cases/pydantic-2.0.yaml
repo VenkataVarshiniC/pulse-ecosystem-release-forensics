@@ -1,0 +1,31 @@
+case:
+  case_id: pydantic-2.0
+  target_package: pydantic
+  target_version: "2.0"
+  upstream_repository: pydantic/pydantic
+  release_timestamp: 2023-06-30T00:00:00Z
+  ecosystem: pypi
+  observation_window_start: 2023-06-01
+  observation_window_end: 2023-11-30
+  collection_rules:
+    - source: pypi
+      artifact_types: [package_version]
+    - source: github
+      artifact_types: [repository, issues, pull_requests, commits, files]
+      file_paths: [requirements.txt, pyproject.toml, setup.py, setup.cfg]
+  created_at: 2026-09-24T00:00:00Z
+cohort:
+  cohort_id: pydantic-2.0-explicit
+  case_id: pydantic-2.0
+  selection_method: explicit
+  selection_rationale: Phase 0 selected two public downstreams with API migration evidence.
+  created_at: 2026-09-24T00:00:00Z
+  repositories:
+    - repository: fastapi/fastapi
+      project_name: FastAPI
+      inclusion_reason: Phase 0 found dual-version support and a compatibility correction.
+      selection_confidence: high
+    - repository: PrefectHQ/prefect
+      project_name: Prefect
+      inclusion_reason: Phase 0 found a migration issue and explicit version pin.
+      selection_confidence: high

@@ -53,6 +53,8 @@ class EvidenceReference(BaseModel):
     observed_at: datetime
     excerpt: str | None = Field(default=None, max_length=1000)
     content_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    source_type: str | None = None
+    source_identifier: str | None = None
 
 
 class Release(BaseModel):
@@ -81,6 +83,7 @@ class DownstreamRepository(BaseModel):
 class EvidenceEvent(BaseModel):
     model_config = ConfigDict(frozen=True)
 
+    event_id: str | None = None
     case_id: str = Field(min_length=1)
     repository: HttpUrl
     occurred_at: datetime

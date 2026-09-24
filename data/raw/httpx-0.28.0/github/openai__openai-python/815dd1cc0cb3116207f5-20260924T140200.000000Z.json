@@ -1,0 +1,22 @@
+{
+  "task_id": "815dd1cc0cb3116207f5",
+  "case_id": "httpx-0.28.0",
+  "source": "github",
+  "source_identifier": "openai/openai-python",
+  "query": {
+    "kind": "github_pull_requests",
+    "since": "2024-10-28",
+    "until": "2025-02-28",
+    "search": "httpx 0.28.0"
+  },
+  "retrieved_at": "2026-09-24T14:02:00Z",
+  "payload": {
+    "repository": "openai/openai-python",
+    "number": 1905,
+    "url": "https://github.com/openai/openai-python/pull/1905",
+    "title": "release: 1.55.3",
+    "body": "Bug Fixes: client compatibility with the new httpx 0.28.0 release. The release PR references fix commit 72b6c636c526885ef873580a07eff1c18e76bc10.",
+    "occurred_at": "2024-11-28T16:55:00Z",
+    "state": "merged"
+  }
+}

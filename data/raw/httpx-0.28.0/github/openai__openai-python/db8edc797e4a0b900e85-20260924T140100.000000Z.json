@@ -1,0 +1,23 @@
+{
+  "task_id": "db8edc797e4a0b900e85",
+  "case_id": "httpx-0.28.0",
+  "source": "github",
+  "source_identifier": "openai/openai-python",
+  "query": {
+    "kind": "github_issues",
+    "since": "2024-10-28",
+    "until": "2025-02-28",
+    "search": "httpx 0.28.0"
+  },
+  "retrieved_at": "2026-09-24T14:01:00Z",
+  "payload": {
+    "repository": "openai/openai-python",
+    "number": 1915,
+    "url": "https://github.com/openai/openai-python/issues/1915",
+    "title": "httpx 0.28.0 removed proxies in httpx.Client, result in error",
+    "body": "The report shows httpx==0.28.0 with openai==1.54.4 and TypeError: Client.__init__() got an unexpected keyword argument 'proxies'. The issue was closed as completed and links the fix in pull request #1905.",
+    "occurred_at": "2024-12-02T09:39:45Z",
+    "state": "closed",
+    "state_reason": "completed"
+  }
+}

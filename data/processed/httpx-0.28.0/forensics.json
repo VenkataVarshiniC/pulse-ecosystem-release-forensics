@@ -1,0 +1,147 @@
+{
+  "case_id": "httpx-0.28.0",
+  "target_package": "httpx",
+  "target_version": "0.28.0",
+  "cohort_id": "httpx-0.28.0-explicit",
+  "cohort_selection_method": "explicit",
+  "cohort_selection_rationale": "A deliberately narrow validation cohort selected before classification: one public Python client library that directly declared httpx and had active public development during the observation window. It is a product validation sample, not a representative population.",
+  "observation_window_start": "2024-10-28",
+  "observation_window_end": "2025-02-28",
+  "accepted_events": [
+    {
+      "event_id": "20680ec40216c18319bcbe57",
+      "case_id": "httpx-0.28.0",
+      "repository": "https://github.com/openai/openai-python",
+      "occurred_at": "2024-11-28T16:55:00Z",
+      "timestamp_precision": "second",
+      "lifecycle_stage": "remediation",
+      "event_type": "migration_pr",
+      "title": "release: 1.55.3",
+      "text": null,
+      "target_package": "httpx",
+      "target_release": "0.28.0",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/openai-python/pull/1905",
+          "observed_at": "2026-09-24T14:02:00Z",
+          "excerpt": "Bug Fixes: client compatibility with the new httpx 0.28.0 release. The release PR references fix commit 72b6c636c526885ef873580a07eff1c18e76bc10.",
+          "content_sha256": "deab1358290124780a0d736524675b4c3a0f3ec2bb851fdcfae71aaf4492a7da",
+          "source_type": "pull_request",
+          "source_identifier": "1905"
+        }
+      ],
+      "confidence": "medium",
+      "evidence_reason": "Rule text.version_specific_remediation: The artifact names the target package and version and contains a remediation term. Human review must confirm the described action. Review: Accepted: the merged release PR explicitly describes client compatibility with httpx 0.28.0 and links the implementing commit."
+    },
+    {
+      "event_id": "11e4c5638043a6c54e30847b",
+      "case_id": "httpx-0.28.0",
+      "repository": "https://github.com/openai/openai-python",
+      "occurred_at": "2024-12-02T09:39:45Z",
+      "timestamp_precision": "second",
+      "lifecycle_stage": "migration_friction",
+      "event_type": "compatibility_issue",
+      "title": "httpx 0.28.0 removed proxies in httpx.Client, result in error",
+      "text": null,
+      "target_package": "httpx",
+      "target_release": "0.28.0",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/openai-python/issues/1915",
+          "observed_at": "2026-09-24T14:01:00Z",
+          "excerpt": "The report shows httpx==0.28.0 with openai==1.54.4 and TypeError: Client.__init__() got an unexpected keyword argument 'proxies'. The issue was closed as completed and links the fix in pull request #1905.",
+          "content_sha256": "a59ac1cf286fa2eb59c54dbc1069d241f976855a3d21e7e25d463b39ded79b5e",
+          "source_type": "issue",
+          "source_identifier": "1915"
+        }
+      ],
+      "confidence": "medium",
+      "evidence_reason": "Rule text.version_specific_friction: The artifact names the target package and version and contains a friction term. Human review must verify that the surrounding context is qualifying evidence. Review: Accepted: the primary issue names httpx 0.28.0, the removed proxies argument, the exact TypeError, and affected openai-python version 1.54.4."
+    }
+  ],
+  "repositories": [
+    {
+      "repository": "openai/openai-python",
+      "observed_adoption": {
+        "state": "unknown_insufficient_data",
+        "event_ids": [],
+        "explanation": "Collection was incomplete or unavailable, so the stage is unknown."
+      },
+      "migration_friction": {
+        "state": "yes",
+        "event_ids": [
+          "11e4c5638043a6c54e30847b"
+        ],
+        "explanation": "1 accepted migration_friction event(s)."
+      },
+      "remediation": {
+        "state": "yes",
+        "event_ids": [
+          "20680ec40216c18319bcbe57"
+        ],
+        "explanation": "1 accepted remediation event(s)."
+      },
+      "recovery_signal": {
+        "state": "unknown_insufficient_data",
+        "event_ids": [],
+        "explanation": "Collection was incomplete or unavailable, so the stage is unknown."
+      },
+      "overall_confidence": "medium",
+      "missing_evidence": [
+        "sufficient public artifacts were not collected",
+        "no accepted observed_adoption evidence",
+        "no accepted recovery_signal evidence"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "observed_adoption_coverage",
+      "numerator": 0,
+      "denominator": 1,
+      "observation_window_start": "2024-10-28",
+      "observation_window_end": "2025-02-28",
+      "qualification_rule": "Accepted observed-adoption event / declared cohort repositories.",
+      "value": 0.0
+    },
+    {
+      "name": "friction_incidence",
+      "numerator": 0,
+      "denominator": 0,
+      "observation_window_start": "2024-10-28",
+      "observation_window_end": "2025-02-28",
+      "qualification_rule": "Accepted friction event / repositories with observed adoption.",
+      "value": null
+    },
+    {
+      "name": "remediation_coverage",
+      "numerator": 1,
+      "denominator": 1,
+      "observation_window_start": "2024-10-28",
+      "observation_window_end": "2025-02-28",
+      "qualification_rule": "Accepted remediation event / repositories with accepted friction.",
+      "value": 1.0
+    }
+  ],
+  "completeness": {
+    "repositories_collected": 0,
+    "cohort_size": 1,
+    "lifecycle_stage_counts": {
+      "remediation": 1,
+      "migration_friction": 1
+    },
+    "confidence_distribution": {
+      "medium": 2
+    }
+  },
+  "missing_evidence": [
+    "openai/openai-python: sufficient public artifacts were not collected",
+    "openai/openai-python: no accepted observed_adoption evidence",
+    "openai/openai-python: no accepted recovery_signal evidence"
+  ],
+  "limitations": [
+    "Metrics describe only the declared cohort and observation window.",
+    "No qualifying evidence found does not prove that no event occurred.",
+    "Accepted evidence supports association unless a source demonstrates causality."
+  ]
+}

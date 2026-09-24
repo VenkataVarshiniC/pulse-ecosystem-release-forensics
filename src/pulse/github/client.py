@@ -180,6 +180,10 @@ class GitHubClient:
     def commits(self, full_name: str, **filters: Any) -> Iterator[dict[str, Any]]:
         return self.paginate(f"/repos/{full_name}/commits", params=filters)
 
+    def contents(self, full_name: str, path: str, *, ref: str | None = None) -> dict[str, Any]:
+        params = {"ref": ref} if ref else None
+        return self.get_json(f"/repos/{full_name}/contents/{path}", params=params)
+
 
 def _safe_json(response: httpx.Response) -> Any:
     try:
