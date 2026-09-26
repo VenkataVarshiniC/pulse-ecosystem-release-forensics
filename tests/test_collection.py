@@ -4,8 +4,11 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+import pytest
+from pydantic import ValidationError
+
 from pulse.collection.planner import TaskKind, plan_collection
-from pulse.collection.raw import RawSnapshotStore
+from pulse.collection.raw import CaptureMethod, RawSnapshot, RawSnapshotStore
 from pulse.collection.runner import CollectionRunner
 from pulse.config.cases import load_case
 
@@ -73,6 +76,7 @@ def test_raw_snapshots_never_silently_overwrite() -> None:
 
     store = RawSnapshotStore(
         Path("raw"),
+        capture_method=CaptureMethod.FIXTURE,
         prepare_directory=lambda _: None,
         write_exclusive=write_exclusive,
     )
@@ -84,3 +88,32 @@ def test_raw_snapshots_never_silently_overwrite() -> None:
         pass
     else:
         raise AssertionError("a duplicate raw snapshot should not overwrite the first")
+
+
+@pytest.mark.parametrize("method", list(CaptureMethod))
+def test_raw_capture_method_survives_serialization(method: CaptureMethod) -> None:
+    task = plan_collection(load_case(CASES / "sqlalchemy-2.0.0.yaml")).tasks[0]
+    written: list[str] = []
+    store = RawSnapshotStore(
+        Path("raw"),
+        capture_method=method,
+        prepare_directory=lambda _: None,
+        write_exclusive=lambda _, content: written.append(content),
+    )
+    store.save(task, {"version": "2.0.0"}, datetime(2026, 9, 24, tzinfo=UTC))
+
+    snapshot = RawSnapshot.model_validate_json(written[0])
+    assert snapshot.capture_method is method
+    assert snapshot.model_dump(mode="json")["capture_method"] == method.value
+
+
+@pytest.mark.parametrize("method", [None, "unspecified"])
+def test_raw_capture_method_cannot_be_missing_or_uncontrolled(method: str | None) -> None:
+    path = next((PROJECT_ROOT / "data/raw/httpx-0.28.0").rglob("*.json"))
+    payload = RawSnapshot.model_validate_json(path.read_text(encoding="utf-8")).model_dump()
+    if method is None:
+        del payload["capture_method"]
+    else:
+        payload["capture_method"] = method
+    with pytest.raises(ValidationError, match="capture_method"):
+        RawSnapshot.model_validate(payload)

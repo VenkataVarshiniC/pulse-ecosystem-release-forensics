@@ -14,6 +14,8 @@ The one-repository validation cohort is sufficient to test architectural reuse, 
 
 ## Final decision: PIVOT
 
+The final Phase 1 hardening patch clarifies that adoption evidence coverage is not an adoption rate, requires raw capture provenance, documents non-sequential lifecycle categories, and configures GitHub Actions to run locked dependency installation, Ruff, and the full pytest suite on pull requests and pushes to `main`. These quality controls do not validate unattended collection and do not change the decision.
+
 Keep the repository-bounded evidence model, modular collectors, review boundary, lifecycle engine, and generated reporting. Before Phase 2 analytical scaling, add authenticated end-to-end collection fixtures, automate historical ref pairing, record paginated search observations directly from collector responses, and validate rule precision on several cohorts declared before evidence review.
 
 The methodology works and the architecture does not need a redesign, but the current evidence does not justify scaling storage or making broader adoption and recovery claims.

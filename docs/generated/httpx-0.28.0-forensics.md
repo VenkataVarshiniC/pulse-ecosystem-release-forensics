@@ -18,6 +18,8 @@ Selection method: `explicit`. A deliberately narrow validation cohort selected b
 
 ## Release timeline
 
+Events are ordered by their evidence timestamps. Lifecycle stages are forensic evidence categories, not a required chronological or causal sequence. Remediation or compatibility work may precede later public friction reports from users of older downstream versions.
+
 - 2024-11-28 — **remediation** — release: 1.55.3 (medium; [source](https://github.com/openai/openai-python/pull/1905))
 - 2024-12-02 — **migration_friction** — httpx 0.28.0 removed proxies in httpx.Client, result in error (medium; [source](https://github.com/openai/openai-python/issues/1915))
 
@@ -49,7 +51,7 @@ Selection method: `explicit`. A deliberately narrow validation cohort selected b
 
 ## Cohort metrics
 
-- **observed_adoption_coverage:** 0/1 (0.0%). Accepted observed-adoption event / declared cohort repositories.
+- **observed_adoption_evidence_coverage:** 0/1 (0.0%). Repositories with accepted observed-adoption evidence / declared cohort repositories. This measures evidence coverage, not an adoption rate. Zero means no accepted adoption evidence; unknown remains unknown and does not establish absence of adoption.
 - **friction_incidence:** 0/0 (unavailable). Accepted friction event / repositories with observed adoption.
 - **remediation_coverage:** 1/1 (100.0%). Accepted remediation event / repositories with accepted friction.
 

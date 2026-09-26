@@ -226,10 +226,15 @@ def _metrics(
     friction = [item for item in summaries if item.migration_friction.state is EvidenceState.YES]
     metrics = [
         CohortMetric(
-            name="observed_adoption_coverage",
+            name="observed_adoption_evidence_coverage",
             numerator=len(adopted),
             denominator=len(summaries),
-            qualification_rule="Accepted observed-adoption event / declared cohort repositories.",
+            qualification_rule=(
+                "Repositories with accepted observed-adoption evidence / declared cohort "
+                "repositories. This measures evidence coverage, not an adoption rate. "
+                "Zero means no accepted adoption evidence; unknown remains unknown and "
+                "does not establish absence of adoption."
+            ),
             **window,
         ),
         CohortMetric(

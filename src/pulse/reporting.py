@@ -42,6 +42,11 @@ def render_forensics_markdown(forensics: ReleaseForensics) -> str:
             "",
             "## Release timeline",
             "",
+            "Events are ordered by their evidence timestamps. Lifecycle stages are forensic "
+            "evidence categories, not a required chronological or causal sequence. "
+            "Remediation or compatibility work may precede later public friction reports "
+            "from users of older downstream versions.",
+            "",
         ]
     )
     for event in forensics.accepted_events:

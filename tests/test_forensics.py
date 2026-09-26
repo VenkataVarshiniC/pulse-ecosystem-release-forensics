@@ -65,8 +65,9 @@ def test_forensics_uses_only_accepted_evidence_and_exposes_denominators() -> Non
     )
 
     metrics = {item.name: item for item in result.metrics}
-    assert metrics["observed_adoption_coverage"].numerator == 1
-    assert metrics["observed_adoption_coverage"].denominator == 2
+    assert metrics["observed_adoption_evidence_coverage"].numerator == 1
+    assert metrics["observed_adoption_evidence_coverage"].denominator == 2
+    assert result.repositories[1].observed_adoption.state is EvidenceState.UNKNOWN
     assert metrics["friction_incidence"].denominator == 1
     assert "bounded_recovery_coverage" not in metrics
 
@@ -104,3 +105,20 @@ def test_accepted_event_projection_deduplicates_stable_candidate_ids() -> None:
     )
 
     assert len(result.accepted_events) == 1
+
+
+def test_incomplete_collection_measures_evidence_coverage_without_asserting_no_adoption() -> None:
+    result = build_forensics(
+        load_case(CASES / "httpx-0.28.0.yaml"),
+        (),
+        repositories_with_sufficient_collection=set(),
+    )
+
+    assert result.repositories[0].observed_adoption.state is EvidenceState.UNKNOWN
+    metrics = {item.name: item for item in result.metrics}
+    assert "observed_adoption_coverage" not in metrics
+    coverage = metrics["observed_adoption_evidence_coverage"]
+    assert (coverage.numerator, coverage.denominator, coverage.value) == (0, 1, 0.0)
+    assert "not an adoption rate" in coverage.qualification_rule
+    assert "does not establish absence of adoption" in coverage.qualification_rule
+    assert metrics["friction_incidence"].value is None

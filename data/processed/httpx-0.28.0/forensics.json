@@ -96,12 +96,12 @@
   ],
   "metrics": [
     {
-      "name": "observed_adoption_coverage",
+      "name": "observed_adoption_evidence_coverage",
       "numerator": 0,
       "denominator": 1,
       "observation_window_start": "2024-10-28",
       "observation_window_end": "2025-02-28",
-      "qualification_rule": "Accepted observed-adoption event / declared cohort repositories.",
+      "qualification_rule": "Repositories with accepted observed-adoption evidence / declared cohort repositories. This measures evidence coverage, not an adoption rate. Zero means no accepted adoption evidence; unknown remains unknown and does not establish absence of adoption.",
       "value": 0.0
     },
     {

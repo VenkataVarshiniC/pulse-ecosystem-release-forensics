@@ -10,7 +10,7 @@ from pulse.analysis.forensics import ReleaseForensics, build_forensics
 from pulse.collection.collectors import GitHubCollector, PyPICollector
 from pulse.collection.manifest import write_manifest
 from pulse.collection.planner import plan_collection
-from pulse.collection.raw import RawSnapshotStore
+from pulse.collection.raw import CaptureMethod, RawSnapshotStore
 from pulse.collection.runner import CollectionRunner
 from pulse.config.cases import load_case
 from pulse.config.settings import Settings
@@ -61,7 +61,7 @@ def _collect(case_path: Path) -> int:
     ) as github_client, PyPIClient(base_url=settings.pypi_api_url) as pypi_client:
         runner = CollectionRunner(
             [GitHubCollector(github_client), PyPICollector(pypi_client)],
-            RawSnapshotStore(Path("data/raw")),
+            RawSnapshotStore(Path("data/raw"), capture_method=CaptureMethod.COLLECTOR),
         )
         manifest = runner.run(definition, plan)
     path = write_manifest(manifest, Path("data/interim"))

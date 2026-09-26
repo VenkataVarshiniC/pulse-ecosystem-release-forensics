@@ -2,6 +2,7 @@
   "task_id": "db8edc797e4a0b900e85",
   "case_id": "httpx-0.28.0",
   "source": "github",
+  "capture_method": "connector_assisted",
   "source_identifier": "openai/openai-python",
   "query": {
     "kind": "github_issues",

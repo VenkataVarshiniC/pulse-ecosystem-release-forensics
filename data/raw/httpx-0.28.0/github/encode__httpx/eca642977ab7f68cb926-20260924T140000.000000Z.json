@@ -2,6 +2,7 @@
   "task_id": "eca642977ab7f68cb926",
   "case_id": "httpx-0.28.0",
   "source": "github",
+  "capture_method": "connector_assisted",
   "source_identifier": "encode/httpx",
   "query": {
     "kind": "github_releases"

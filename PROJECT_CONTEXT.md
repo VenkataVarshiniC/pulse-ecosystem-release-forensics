@@ -20,6 +20,8 @@ Patch / workaround / documentation response
 Ecosystem recovery
 ```
 
+The lifecycle above groups evidence categories; its arrows do not impose chronological order or causality. Compatibility responses can precede later friction reports from users of older versions. Recovery signals remain bounded to a declared eligible cohort. Adoption evidence coverage measures available evidence; unknown adoption is not zero adoption.
+
 ## Possible evidence
 
 - package releases and metadata
