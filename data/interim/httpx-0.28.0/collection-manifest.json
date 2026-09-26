@@ -1,0 +1,112 @@
+{
+  "run_id": "httpx-0.28.0-validation-20260924",
+  "case_id": "httpx-0.28.0",
+  "started_at": "2026-09-24T14:00:00Z",
+  "completed_at": "2026-09-24T14:05:00Z",
+  "observation_window_start": "2024-10-28",
+  "observation_window_end": "2025-02-28",
+  "outcomes": [
+    {
+      "task_id": "a1f396dadac3e00da3af",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "cfeeed36c46c541a4b1a",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "eca642977ab7f68cb926",
+      "status": "succeeded",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 1,
+      "snapshot_path": "data/raw/httpx-0.28.0/github/encode__httpx/eca642977ab7f68cb926-20260924T140000.000000Z.json",
+      "error": null
+    },
+    {
+      "task_id": "85d4ef49e18986439a43",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "db8edc797e4a0b900e85",
+      "status": "succeeded",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 1,
+      "snapshot_path": "data/raw/httpx-0.28.0/github/openai__openai-python/db8edc797e4a0b900e85-20260924T140100.000000Z.json",
+      "error": null
+    },
+    {
+      "task_id": "815dd1cc0cb3116207f5",
+      "status": "succeeded",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 1,
+      "snapshot_path": "data/raw/httpx-0.28.0/github/openai__openai-python/815dd1cc0cb3116207f5-20260924T140200.000000Z.json",
+      "error": null
+    },
+    {
+      "task_id": "78c46de4a26a19b0f947",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "0c7c55242e8e10f82069",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "4d6a44348f804f696846",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "9c215f791f9b659ecd64",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    },
+    {
+      "task_id": "27b6d96cf84a32fa88a5",
+      "status": "failed",
+      "started_at": "2026-09-24T14:00:00Z",
+      "completed_at": "2026-09-24T14:05:00Z",
+      "record_count": 0,
+      "snapshot_path": null,
+      "error": "Not collected in the connector-assisted validation run."
+    }
+  ],
+  "status": "incomplete",
+  "successes": 3,
+  "failures": 8
+}

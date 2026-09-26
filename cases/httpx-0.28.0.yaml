@@ -1,0 +1,32 @@
+case:
+  case_id: httpx-0.28.0
+  target_package: httpx
+  target_version: 0.28.0
+  upstream_repository: encode/httpx
+  release_timestamp: 2024-11-28T14:53:00Z
+  ecosystem: pypi
+  observation_window_start: 2024-10-28
+  observation_window_end: 2025-02-28
+  collection_rules:
+    - source: pypi
+      artifact_types: [package_version]
+    - source: github
+      artifact_types: [repository, releases, issues, pull_requests, commits, files]
+      file_paths: [requirements.txt, pyproject.toml, setup.py, setup.cfg]
+  created_at: 2026-09-24T00:00:00Z
+cohort:
+  cohort_id: httpx-0.28.0-explicit
+  case_id: httpx-0.28.0
+  selection_method: explicit
+  selection_rationale: >-
+    A deliberately narrow validation cohort selected before classification: one public Python
+    client library that directly declared httpx and had active public development during the
+    observation window. It is a product validation sample, not a representative population.
+  created_at: 2026-09-24T00:00:00Z
+  repositories:
+    - repository: openai/openai-python
+      project_name: openai-python
+      inclusion_reason: >-
+        Public Python client library with a direct httpx dependency and active public history
+        during the release window.
+      selection_confidence: high

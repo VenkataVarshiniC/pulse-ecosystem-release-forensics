@@ -1,0 +1,23 @@
+[
+  {
+    "source_identifier": "1915",
+    "classification_rule": "text.version_specific_friction",
+    "status": "accepted",
+    "reviewer_note": "Accepted: the primary issue names httpx 0.28.0, the removed proxies argument, the exact TypeError, and affected openai-python version 1.54.4.",
+    "reviewed_at": "2026-09-24T14:04:00Z"
+  },
+  {
+    "source_identifier": "1905",
+    "classification_rule": "text.version_specific_remediation",
+    "status": "accepted",
+    "reviewer_note": "Accepted: the merged release PR explicitly describes client compatibility with httpx 0.28.0 and links the implementing commit.",
+    "reviewed_at": "2026-09-24T14:04:00Z"
+  },
+  {
+    "source_identifier": "1915",
+    "classification_rule": "text.version_specific_remediation",
+    "status": "rejected",
+    "reviewer_note": "Rejected: the issue only links to a fix; it is not itself the remediation artifact. Pull request #1905 is retained as the direct evidence.",
+    "reviewed_at": "2026-09-24T14:04:00Z"
+  }
+]

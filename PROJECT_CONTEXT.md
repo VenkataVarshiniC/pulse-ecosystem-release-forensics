@@ -1,8 +1,8 @@
 # PULSE product context
 
-## Product thesis
+## Product definition
 
-PULSE reconstructs the lifecycle of significant open-source software changes using real public evidence. The release has already happened; PULSE explains what happened afterward.
+PULSE is a repository-bounded release-forensics system that reconstructs how a software dependency release affects a declared cohort of downstream repositories using auditable public evidence. The release has already happened; PULSE explains the public record afterward.
 
 ## Core lifecycle
 
@@ -19,6 +19,8 @@ Patch / workaround / documentation response
    ↓
 Ecosystem recovery
 ```
+
+The lifecycle above groups evidence categories; its arrows do not impose chronological order or causality. Compatibility responses can precede later friction reports from users of older versions. Recovery signals remain bounded to a declared eligible cohort. Adoption evidence coverage measures available evidence; unknown adoption is not zero adoption.
 
 ## Possible evidence
 
@@ -41,4 +43,8 @@ Ecosystem recovery
 
 ## Product boundary
 
-PULSE is not a generic release dashboard, vulnerability scanner, dependency graph viewer, pre-release predictor, chatbot, or GitHub analytics dashboard. Phase 0 establishes data feasibility only; later product architecture must follow a fresh decision.
+PULSE is not a generic release dashboard, vulnerability scanner, dependency graph viewer, pre-release predictor, chatbot, or GitHub analytics dashboard. It does not claim ecosystem representation from an explicit or purposive cohort. Phase 1 uses deterministic rules and human review; it does not use AI or ML classification.
+
+## Current phase decision
+
+Phase 0 remains the historical feasibility record. Phase 1 implements the file-based forensic engine and validates it on HTTPX 0.28.0 with an explicit one-repository cohort. The Phase 1 decision is **PIVOT**: retain the evidence model and pipeline, then harden live, comprehensive collection and historical manifest comparison before scaling the architecture.

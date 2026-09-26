@@ -1,0 +1,19 @@
+{
+  "task_id": "eca642977ab7f68cb926",
+  "case_id": "httpx-0.28.0",
+  "source": "github",
+  "capture_method": "connector_assisted",
+  "source_identifier": "encode/httpx",
+  "query": {
+    "kind": "github_releases"
+  },
+  "retrieved_at": "2026-09-24T14:00:00Z",
+  "payload": {
+    "repository": "encode/httpx",
+    "number": "0.28.0",
+    "url": "https://github.com/encode/httpx/releases/tag/0.28.0",
+    "title": "Version 0.28.0",
+    "body": "0.28.0 (28th November, 2024). The deprecated proxies argument has now been removed. The deprecated app argument has now been removed.",
+    "occurred_at": "2024-11-28T14:53:00Z"
+  }
+}

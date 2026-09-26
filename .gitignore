@@ -17,3 +17,9 @@ data/interim/*
 data/processed/*
 !data/**/.gitkeep
 !data/processed/evidence-ledger.jsonl
+!data/raw/httpx-0.28.0/
+!data/raw/httpx-0.28.0/**
+!data/interim/httpx-0.28.0/
+!data/interim/httpx-0.28.0/**
+!data/processed/httpx-0.28.0/
+!data/processed/httpx-0.28.0/**
