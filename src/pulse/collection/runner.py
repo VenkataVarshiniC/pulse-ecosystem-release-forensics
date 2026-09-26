@@ -10,7 +10,7 @@ from typing import Any, Protocol
 from uuid import uuid4
 
 from pulse.collection.journal import AttemptRecord, RunJournal, case_fingerprint
-from pulse.collection.manifest import CollectionManifest, TaskOutcome, TaskOutcomeStatus
+from pulse.collection.manifest import LiveCollectionManifest, TaskOutcome, TaskOutcomeStatus
 from pulse.collection.planner import CollectionPlan, CollectionTask, TaskKind
 from pulse.collection.raw import RawSnapshotStore
 from pulse.collection.result import CollectionResult
@@ -48,12 +48,12 @@ class CollectionRunner:
 
     def run(
         self, definition: CaseDefinition, plan: CollectionPlan, *, resume: bool = False,
-    ) -> CollectionManifest:
+    ) -> LiveCollectionManifest:
         if plan.case_id != definition.case.case_id:
             raise ValueError("Plan and case must match")
         if resume and self.journal is None:
             raise ValueError("Resume requires a run journal")
-        previous = self.journal.successful(definition) if resume and self.journal else {}
+        previous = self.journal.reusable(definition) if resume and self.journal else {}
         started_at = self.clock()
         run_id = uuid4().hex
         if self.journal:
@@ -65,12 +65,16 @@ class CollectionRunner:
             prior = previous.get(task.task_id)
             if prior and prior.task == task:
                 outcome = TaskOutcome(
-                    task_id=task.task_id, status=TaskOutcomeStatus.SUCCEEDED,
+                    task_id=task.task_id, status=prior.outcome.status,
                     started_at=task_started, completed_at=self.clock(),
                     record_count=prior.outcome.record_count,
                     snapshot_path=prior.outcome.snapshot_path,
+                    error=prior.outcome.error,
                 )
-                result = CollectionResult(stats=CollectionStats(termination="reused"))
+                result = CollectionResult(
+                    status=prior.outcome.status, failure_kind=prior.failure_kind,
+                    stats=CollectionStats(termination="reused"),
+                )
                 snapshot_hash = prior.snapshot_sha256
             else:
                 prior = None
@@ -82,6 +86,10 @@ class CollectionRunner:
                 self.journal.record(AttemptRecord(
                     run_id=run_id, attempt_id=attempt_id,
                     case_fingerprint=case_fingerprint(definition), task=task,
+                    capture_method=(
+                        self.raw_store.capture_method
+                        if isinstance(self.raw_store, RawSnapshotStore) else None
+                    ),
                     observation_window_start=definition.case.observation_window_start.isoformat(),
                     observation_window_end=definition.case.observation_window_end.isoformat(),
                     outcome=outcome, stats=result.stats,
@@ -92,12 +100,13 @@ class CollectionRunner:
                     snapshot_sha256=snapshot_hash,
                     reused_from_attempt=prior.attempt_id if prior else None,
                 ))
-        manifest = CollectionManifest(
+        manifest = LiveCollectionManifest(
             run_id=run_id, case_id=definition.case.case_id,
             started_at=started_at, completed_at=self.clock(),
             observation_window_start=definition.case.observation_window_start.isoformat(),
             observation_window_end=definition.case.observation_window_end.isoformat(),
             outcomes=tuple(outcomes),
+            planned_tasks=plan.tasks,
         )
         if self.journal:
             self.journal.finish(manifest)

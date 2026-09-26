@@ -6,7 +6,9 @@ from datetime import datetime
 from enum import StrEnum
 from pathlib import Path
 
-from pydantic import BaseModel, ConfigDict, Field, computed_field
+from pydantic import BaseModel, ConfigDict, Field, computed_field, model_validator
+
+from pulse.collection.planner import CollectionTask, TaskKind, TaskRequirement
 
 
 class TaskOutcomeStatus(StrEnum):
@@ -44,6 +46,10 @@ class CollectionManifest(BaseModel):
     @computed_field
     @property
     def status(self) -> str:
+        return self._operational_status()
+
+    def _operational_status(self) -> str:
+        """Legacy Phase 1 status calculation for historical replay."""
         failures = self.failures
         if failures == 0:
             return "complete"
@@ -62,6 +68,101 @@ class CollectionManifest(BaseModel):
     @property
     def failures(self) -> int:
         return sum(item.status is not TaskOutcomeStatus.SUCCEEDED for item in self.outcomes)
+
+
+class FileProbeAvailability(StrEnum):
+    AVAILABLE = "available"
+    NONE_FOUND = "none_found"
+    INCOMPLETE = "incomplete"
+    NOT_PROBED = "not_probed"
+
+
+class LiveCollectionManifest(CollectionManifest):
+    """Operational completion and current-path availability for live runs."""
+
+    planned_tasks: tuple[CollectionTask, ...]
+
+    @model_validator(mode="after")
+    def every_planned_task_has_one_outcome(self) -> LiveCollectionManifest:
+        planned_ids = [task.task_id for task in self.planned_tasks]
+        outcome_ids = [outcome.task_id for outcome in self.outcomes]
+        if (
+            len(set(planned_ids)) != len(planned_ids)
+            or len(set(outcome_ids)) != len(outcome_ids)
+            or set(planned_ids) != set(outcome_ids)
+        ):
+            raise ValueError("Live manifest requires one outcome per planned task")
+        return self
+
+    def _operational_status(self) -> str:
+        requirements = {task.task_id: task.requirement for task in self.planned_tasks}
+        required = [
+            outcome for outcome in self.outcomes
+            if requirements[outcome.task_id] is TaskRequirement.REQUIRED
+        ]
+        blockers = [
+            outcome for outcome in self.outcomes
+            if outcome.status is not TaskOutcomeStatus.SUCCEEDED
+            and not (
+                requirements[outcome.task_id] is TaskRequirement.OPTIONAL_PROBE
+                and outcome.status is TaskOutcomeStatus.NOT_FOUND
+            )
+        ]
+        if not blockers:
+            return "complete"
+        if required and all(
+            item.status not in {TaskOutcomeStatus.SUCCEEDED, TaskOutcomeStatus.PARTIAL}
+            for item in required
+        ):
+            return "failed"
+        return "incomplete"
+
+    @computed_field
+    @property
+    def outcome_breakdown(self) -> dict[str, int]:
+        counts = {status.value: 0 for status in TaskOutcomeStatus}
+        requirements = {task.task_id: task.requirement for task in self.planned_tasks}
+        optional_not_found = 0
+        required_failures = 0
+        for outcome in self.outcomes:
+            counts[outcome.status.value] += 1
+            if (
+                requirements[outcome.task_id] is TaskRequirement.OPTIONAL_PROBE
+                and outcome.status is TaskOutcomeStatus.NOT_FOUND
+            ):
+                optional_not_found += 1
+            if (
+                requirements[outcome.task_id] is TaskRequirement.REQUIRED
+                and outcome.status is not TaskOutcomeStatus.SUCCEEDED
+            ):
+                required_failures += 1
+        return {
+            **counts,
+            "optional_not_found": optional_not_found,
+            "required_failures": required_failures,
+        }
+
+    @computed_field
+    @property
+    def file_probe_availability(self) -> FileProbeAvailability:
+        file_ids = {
+            task.task_id for task in self.planned_tasks if task.kind is TaskKind.GITHUB_FILE
+        }
+        if not file_ids:
+            return FileProbeAvailability.NOT_PROBED
+        statuses = {
+            outcome.status for outcome in self.outcomes if outcome.task_id in file_ids
+        }
+        if statuses - {TaskOutcomeStatus.SUCCEEDED, TaskOutcomeStatus.NOT_FOUND}:
+            return FileProbeAvailability.INCOMPLETE
+        if TaskOutcomeStatus.SUCCEEDED in statuses:
+            return FileProbeAvailability.AVAILABLE
+        return FileProbeAvailability.NONE_FOUND
+
+    @computed_field
+    @property
+    def dependency_analysis_sufficiency(self) -> str:
+        return "not_assessed"
 
 
 def write_manifest(manifest: CollectionManifest, root: Path) -> Path:

@@ -7,7 +7,7 @@ import json
 from enum import StrEnum
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, model_validator
 
 from pulse.models.case import CaseDefinition, SourceSystem
 
@@ -22,6 +22,11 @@ class TaskKind(StrEnum):
     GITHUB_FILE = "github_file"
 
 
+class TaskRequirement(StrEnum):
+    REQUIRED = "required"
+    OPTIONAL_PROBE = "optional_probe"
+
+
 class CollectionTask(BaseModel):
     model_config = ConfigDict(frozen=True)
 
@@ -31,6 +36,16 @@ class CollectionTask(BaseModel):
     kind: TaskKind
     repository: str | None = None
     parameters: dict[str, Any]
+    requirement: TaskRequirement = TaskRequirement.REQUIRED
+
+    @model_validator(mode="after")
+    def optional_is_a_file_probe(self) -> CollectionTask:
+        if (
+            self.requirement is TaskRequirement.OPTIONAL_PROBE
+            and self.kind is not TaskKind.GITHUB_FILE
+        ):
+            raise ValueError("Only configured file probes may be optional")
+        return self
 
 
 class CollectionPlan(BaseModel):
@@ -46,6 +61,7 @@ def _task(
     kind: TaskKind,
     *,
     repository: str | None = None,
+    requirement: TaskRequirement = TaskRequirement.REQUIRED,
     **parameters: Any,
 ) -> CollectionTask:
     identity = {
@@ -58,7 +74,7 @@ def _task(
     digest = hashlib.sha256(
         json.dumps(identity, sort_keys=True, separators=(",", ":")).encode()
     ).hexdigest()[:20]
-    return CollectionTask(task_id=digest, **identity)
+    return CollectionTask(task_id=digest, requirement=requirement, **identity)
 
 
 def plan_collection(definition: CaseDefinition) -> CollectionPlan:
@@ -133,6 +149,7 @@ def plan_collection(definition: CaseDefinition) -> CollectionPlan:
                 SourceSystem.REPOSITORY_FILE,
                 TaskKind.GITHUB_FILE,
                 repository=repository,
+                requirement=TaskRequirement.OPTIONAL_PROBE,
                 path=path,
             )
             for path in sorted(file_paths)
