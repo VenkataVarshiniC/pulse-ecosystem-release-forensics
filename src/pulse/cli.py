@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from pulse.analysis.forensics import ReleaseForensics, build_forensics
 from pulse.collection.collectors import GitHubCollector, PyPICollector
-from pulse.collection.manifest import write_manifest
+from pulse.collection.journal import RunJournal
 from pulse.collection.planner import plan_collection
 from pulse.collection.raw import CaptureMethod, RawSnapshotStore
 from pulse.collection.runner import CollectionRunner
@@ -16,6 +17,7 @@ from pulse.config.cases import load_case
 from pulse.config.settings import Settings
 from pulse.evidence.review_ledger import load_review_ledger
 from pulse.github.client import GitHubClient
+from pulse.github.errors import GitHubAuthenticationError
 from pulse.packages.pypi import PyPIClient
 from pulse.reporting import write_forensics_json, write_forensics_markdown
 
@@ -26,6 +28,11 @@ def _parser() -> argparse.ArgumentParser:
     for name in ("plan", "collect"):
         command = subparsers.add_parser(name)
         command.add_argument("case", type=Path)
+        if name == "collect":
+            command.add_argument("--resume", action="store_true")
+            command.add_argument("--output-root", type=Path, default=Path("."))
+            command.add_argument("--max-pages", type=int, default=1000)
+            command.add_argument("--max-retries", type=int, default=3)
     analyze = subparsers.add_parser("analyze")
     analyze.add_argument("case", type=Path)
     analyze.add_argument("review_ledger", type=Path)
@@ -44,7 +51,14 @@ def main(argv: list[str] | None = None) -> int:
         print(plan_collection(load_case(args.case)).model_dump_json(indent=2))
         return 0
     if args.command == "collect":
-        return _collect(args.case)
+        try:
+            return _collect(
+                args.case, resume=args.resume, output_root=args.output_root,
+                max_pages=args.max_pages, max_retries=args.max_retries,
+            )
+        except (GitHubAuthenticationError, ValueError) as exc:
+            print(f"Collection configuration error: {exc}", file=sys.stderr)
+            return 2
     if args.command == "analyze":
         return _analyze(args)
     forensics = ReleaseForensics.model_validate_json(args.forensics.read_text(encoding="utf-8"))
@@ -52,19 +66,27 @@ def main(argv: list[str] | None = None) -> int:
     return 0
 
 
-def _collect(case_path: Path) -> int:
+def _collect(
+    case_path: Path, *, resume: bool = False, output_root: Path = Path("."),
+    max_pages: int = 1000, max_retries: int = 3,
+) -> int:
     definition = load_case(case_path)
     settings = Settings.from_env()
     plan = plan_collection(definition)
+    journal = RunJournal(output_root / "data/interim")
     with GitHubClient(
-        settings.github_token, base_url=settings.github_api_url
+        settings.github_token, base_url=settings.github_api_url,
+        max_pages=max_pages, max_retries=max_retries,
     ) as github_client, PyPIClient(base_url=settings.pypi_api_url) as pypi_client:
         runner = CollectionRunner(
             [GitHubCollector(github_client), PyPICollector(pypi_client)],
-            RawSnapshotStore(Path("data/raw"), capture_method=CaptureMethod.COLLECTOR),
+            RawSnapshotStore(
+                output_root / "data/raw", capture_method=CaptureMethod.COLLECTOR
+            ),
+            journal=journal,
         )
-        manifest = runner.run(definition, plan)
-    path = write_manifest(manifest, Path("data/interim"))
+        manifest = runner.run(definition, plan, resume=resume)
+    path = journal.directory(definition.case.case_id, manifest.run_id) / "manifest.json"
     print(path)
     return 0 if manifest.status == "complete" else 2
 

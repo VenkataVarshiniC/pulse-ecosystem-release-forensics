@@ -12,6 +12,7 @@ class GitHubApiError(RuntimeError):
     status_code: int | None = None
     endpoint: str | None = None
     response_body: Any = None
+    failure_kind: str = "failed"
 
     def __str__(self) -> str:
         status = f" status={self.status_code}" if self.status_code is not None else ""

@@ -11,6 +11,10 @@ from pydantic import BaseModel, ConfigDict, Field, computed_field
 
 class TaskOutcomeStatus(StrEnum):
     SUCCEEDED = "succeeded"
+    PARTIAL = "partial"
+    RATE_LIMITED = "rate_limited"
+    NOT_FOUND = "not_found"
+    UNAUTHORIZED = "unauthorized"
     FAILED = "failed"
 
 
@@ -40,10 +44,12 @@ class CollectionManifest(BaseModel):
     @computed_field
     @property
     def status(self) -> str:
-        failures = sum(item.status is TaskOutcomeStatus.FAILED for item in self.outcomes)
+        failures = self.failures
         if failures == 0:
             return "complete"
-        if failures == len(self.outcomes):
+        if failures == len(self.outcomes) and not any(
+            item.status is TaskOutcomeStatus.PARTIAL for item in self.outcomes
+        ):
             return "failed"
         return "incomplete"
 
@@ -55,7 +61,7 @@ class CollectionManifest(BaseModel):
     @computed_field
     @property
     def failures(self) -> int:
-        return sum(item.status is TaskOutcomeStatus.FAILED for item in self.outcomes)
+        return sum(item.status is not TaskOutcomeStatus.SUCCEEDED for item in self.outcomes)
 
 
 def write_manifest(manifest: CollectionManifest, root: Path) -> Path:

@@ -6,7 +6,7 @@ PULSE is a repository-bounded release-forensics system. It reconstructs how a so
 release → downstream adoption → migration or breakage → remediation → recovery
 ```
 
-Phase 0 established feasibility and narrowed the product claim. Phase 1 adds declarative cases, deterministic collection plans, modular GitHub and PyPI collectors, immutable raw snapshots, dependency parsers, transparent candidate rules, explicit human review, repository summaries, defensible cohort metrics, and generated reports.
+Phase 0 established feasibility and narrowed the product claim. Phase 1 adds declarative cases, deterministic collection plans, modular GitHub and PyPI collectors, immutable raw snapshots, dependency parsers, transparent candidate rules, explicit human review, repository summaries, defensible cohort metrics, and generated reports. Phase 2 Milestone 1 adds collection reliability and resumable run records; live cohort validation remains a later step.
 
 Lifecycle stages are evidence categories, not a required chronological or causal sequence. Adoption evidence coverage measures accepted evidence, not adoption prevalence; unknown findings remain unknown.
 
@@ -37,7 +37,7 @@ uv run pulse analyze cases/httpx-0.28.0.yaml data/interim/httpx-0.28.0/review-le
 uv run pulse report data/processed/httpx-0.28.0/forensics.json docs/generated/httpx-0.28.0-forensics.md
 ```
 
-`collect` records every planned task as succeeded or failed and returns a nonzero status for an incomplete run. Raw snapshot filenames are append-only and include the stable task ID and retrieval time. `analyze` consumes reviewed evidence; it never promotes candidates implicitly.
+`collect` records each planned task with an explicit success, partial, rate-limit, access, or failure outcome and returns a nonzero status for an incomplete run. Use `--resume` to reuse verified successful tasks; each run has a new immutable journal and manifest. Raw snapshot filenames include the stable task ID, retrieval time, and attempt ID. See the [Phase 2 plan](docs/phase-2/phase-2-plan.md) and [collection reliability contract](docs/phase-2/collection-reliability.md). `analyze` consumes reviewed evidence; it never promotes candidates implicitly.
 
 Raw envelopes require `capture_method` (`collector`, `connector_assisted`, or `fixture`). The committed HTTPX validation snapshots are connector-assisted; replaying them does not establish unattended collection. That remains unvalidated.
 

@@ -27,7 +27,7 @@ class ReviewDecision(BaseModel):
 def detect_raw_candidates(
     definition: CaseDefinition, raw_root: Path
 ) -> tuple[ReviewableEvidence, ...]:
-    """Detect candidates from preserved normalized GitHub payloads."""
+    """Detect candidates from preserved normalized or collector-native GitHub payloads."""
     candidates: dict[str, ReviewableEvidence] = {}
     for path in sorted(raw_root.rglob("*.json")):
         snapshot = RawSnapshot.model_validate_json(path.read_text(encoding="utf-8"))
@@ -44,19 +44,27 @@ def detect_raw_candidates(
         for record in records:
             if not isinstance(record, dict):
                 continue
-            repository = record.get("repository") or snapshot.source_identifier
+            repository = record.get("repository")
+            if not isinstance(repository, str):
+                repository = snapshot.source_identifier
             if repository.casefold() not in {
                 item.repository.casefold() for item in definition.cohort.repositories
             }:
                 continue
+            commit = record.get("commit") or {}
             artifact = TextArtifact(
                 repository=repository,
                 artifact_type=artifact_type,
-                source_url=record["url"],
-                source_identifier=str(record["number"]),
-                title=record["title"],
+                source_url=record.get("html_url") or record["url"],
+                source_identifier=str(
+                    record.get("number") or record.get("sha") or record["id"]
+                ),
+                title=record.get("title") or record.get("name") or commit.get("message", ""),
                 body=record.get("body") or "",
-                occurred_at=record["occurred_at"],
+                occurred_at=(
+                    record.get("occurred_at") or record.get("published_at")
+                    or record.get("created_at") or commit.get("committer", {}).get("date")
+                ),
                 observed_at=snapshot.retrieved_at,
             )
             for candidate in detect_text_candidates(definition.case, artifact):

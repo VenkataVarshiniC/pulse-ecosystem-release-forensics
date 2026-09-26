@@ -11,6 +11,7 @@ from typing import Any
 from pydantic import BaseModel, ConfigDict
 
 from pulse.collection.planner import CollectionTask
+from pulse.collection.telemetry import CollectionStats
 from pulse.models.case import SourceSystem
 
 
@@ -31,6 +32,9 @@ class RawSnapshot(BaseModel):
     query: dict[str, Any]
     retrieved_at: datetime
     payload: Any
+    run_id: str | None = None
+    attempt_id: str | None = None
+    stats: CollectionStats | None = None
 
 
 class RawSnapshotStore:
@@ -47,12 +51,17 @@ class RawSnapshotStore:
         self._prepare_directory = prepare_directory or _prepare_directory
         self._write_exclusive = write_exclusive or _write_exclusive
 
-    def save(self, task: CollectionTask, payload: Any, retrieved_at: datetime) -> Path:
+    def save(
+        self, task: CollectionTask, payload: Any, retrieved_at: datetime, *,
+        run_id: str | None = None, attempt_id: str | None = None,
+        stats: CollectionStats | None = None,
+    ) -> Path:
         slug = (task.repository or "upstream").replace("/", "__")
         directory = self.root / task.case_id / task.source.value / slug
         self._prepare_directory(directory)
         timestamp = retrieved_at.strftime("%Y%m%dT%H%M%S.%fZ")
-        path = directory / f"{task.task_id}-{timestamp}.json"
+        suffix = f"-{attempt_id}" if attempt_id else ""
+        path = directory / f"{task.task_id}-{timestamp}{suffix}.json"
         snapshot = RawSnapshot(
             task_id=task.task_id,
             case_id=task.case_id,
@@ -62,6 +71,9 @@ class RawSnapshotStore:
             query={"kind": task.kind.value, **task.parameters},
             retrieved_at=retrieved_at,
             payload=payload,
+            run_id=run_id,
+            attempt_id=attempt_id,
+            stats=stats,
         )
         self._write_exclusive(path, snapshot.model_dump_json(indent=2))
         return path
