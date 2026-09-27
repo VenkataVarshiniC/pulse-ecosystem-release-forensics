@@ -12,3 +12,5 @@ All groups below are **hypotheses**, inferred from PULSE's repository-bounded us
 | Software supply-chain team | May oversee dependency exposure or policy evidence. | Which owned repositories have unresolved dependency-state uncertainty? | Provenance, collection completeness, version evidence, auditability. | Medium / medium | PULSE tracks provenance and UNKNOWN; this is not evidence of a supply-chain use case. | hypothesis |
 
 Prioritize discovery with people who personally performed or directed a recent dependency-release investigation. The [primary-user hypothesis](primary-user-hypothesis.md) selects a starting segment for testing, not an exclusive target or validated persona. Promote a group beyond `hypothesis` only with cited genuine evidence and a recorded validation decision.
+
+Milestone 1A [public PR observations](secondary-research/github-workflow-analysis.md) show that some repository reviewers approve, comment on, or command dependency-update PRs. They do not establish those reviewers' organizational role, preferences, or a cross-repository decision remit. The stakeholder statuses above therefore remain `hypothesis` pending primary research.
