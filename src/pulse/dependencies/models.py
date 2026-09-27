@@ -18,6 +18,13 @@ class DependencyObservation(BaseModel):
     commit_reference: str
     observed_at: datetime
     source: HttpUrl
+    raw_requirement: str | None = None
+    declared_package: str | None = None
+    raw_constraint: str | None = None
+    marker: str | None = None
+    extras: tuple[str, ...] = ()
+    direct_reference: str | None = None
+    declaration_group: str | None = None
 
 
 class TransitionKind(StrEnum):

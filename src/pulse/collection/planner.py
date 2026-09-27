@@ -155,3 +155,23 @@ def plan_collection(definition: CaseDefinition) -> CollectionPlan:
             for path in sorted(file_paths)
         )
     return CollectionPlan(case_id=case.case_id, tasks=tuple(tasks))
+
+
+def historical_commit_task(
+    definition: CaseDefinition, repository: str, path: str,
+    since: str, until: str,
+) -> CollectionTask:
+    return _task(
+        definition, SourceSystem.GITHUB, TaskKind.GITHUB_COMMITS,
+        repository=repository, path=path, since=since, until=until,
+    )
+
+
+def historical_file_task(
+    definition: CaseDefinition, repository: str, path: str, sha: str,
+) -> CollectionTask:
+    return _task(
+        definition, SourceSystem.REPOSITORY_FILE, TaskKind.GITHUB_FILE,
+        repository=repository, requirement=TaskRequirement.OPTIONAL_PROBE,
+        path=path, ref=sha,
+    )

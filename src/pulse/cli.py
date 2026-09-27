@@ -18,6 +18,7 @@ from pulse.config.settings import Settings
 from pulse.evidence.review_ledger import load_review_ledger
 from pulse.github.client import GitHubClient
 from pulse.github.errors import GitHubAuthenticationError
+from pulse.history.runner import HistoricalRunner
 from pulse.packages.pypi import PyPIClient
 from pulse.reporting import write_forensics_json, write_forensics_markdown
 
@@ -33,6 +34,11 @@ def _parser() -> argparse.ArgumentParser:
             command.add_argument("--output-root", type=Path, default=Path("."))
             command.add_argument("--max-pages", type=int, default=1000)
             command.add_argument("--max-retries", type=int, default=3)
+    history = subparsers.add_parser("history")
+    history.add_argument("case", type=Path)
+    history.add_argument("--output-root", type=Path, default=Path("."))
+    history.add_argument("--max-pages", type=int, default=1000)
+    history.add_argument("--max-retries", type=int, default=3)
     analyze = subparsers.add_parser("analyze")
     analyze.add_argument("case", type=Path)
     analyze.add_argument("review_ledger", type=Path)
@@ -58,6 +64,22 @@ def main(argv: list[str] | None = None) -> int:
             )
         except (GitHubAuthenticationError, ValueError) as exc:
             print(f"Collection configuration error: {exc}", file=sys.stderr)
+            return 2
+    if args.command == "history":
+        try:
+            definition = load_case(args.case)
+            settings = Settings.from_env()
+            with GitHubClient(
+                settings.github_token, base_url=settings.github_api_url,
+                max_pages=args.max_pages, max_retries=args.max_retries,
+            ) as client:
+                run, path = HistoricalRunner(client, args.output_root).run(definition)
+            print(path)
+            return 2 if any(
+                result.pair.status.value == "collection_failed" for result in run.results
+            ) else 0
+        except (GitHubAuthenticationError, ValueError) as exc:
+            print(f"History configuration error: {exc}", file=sys.stderr)
             return 2
     if args.command == "analyze":
         return _analyze(args)

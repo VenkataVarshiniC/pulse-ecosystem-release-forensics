@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from packaging.specifiers import InvalidSpecifier, SpecifierSet
-from packaging.version import Version
+from packaging.version import InvalidVersion, Version
 
 from pulse.dependencies.models import (
     DependencyObservation,
@@ -29,17 +29,21 @@ def detect_transition(
     elif after is None:
         kind = TransitionKind.REMOVED
         reason = "The dependency is absent from the later inspected manifest."
-    elif before.constraint == after.constraint:
+    elif (
+        before.constraint, before.direct_reference, before.marker, before.extras
+    ) == (
+        after.constraint, after.direct_reference, after.marker, after.extras
+    ):
         return None
     else:
-        accepted_before = _accepts(before.constraint, target_version)
-        accepted_after = _accepts(after.constraint, target_version)
-        if accepted_before and not accepted_after:
+        accepted_before = _accepts(before, target_version)
+        accepted_after = _accepts(after, target_version)
+        if accepted_before is True and accepted_after is False:
             kind = TransitionKind.TARGET_EXCLUDED
             reason = (
                 "The later constraint excludes the target release after previously accepting it."
             )
-        elif not accepted_before and accepted_after:
+        elif accepted_before is False and accepted_after is True:
             kind = TransitionKind.TARGET_ACCEPTED
             reason = (
                 "The later constraint accepts the target release after previously excluding it."
@@ -47,7 +51,8 @@ def detect_transition(
         else:
             kind = TransitionKind.CONSTRAINT_CHANGED
             reason = (
-                "The dependency constraint changed without changing target-release eligibility."
+                "The dependency declaration changed without an established change in "
+                "target-release eligibility."
             )
     return DependencyTransition(
         repository=observed.repository,
@@ -60,10 +65,14 @@ def detect_transition(
     )
 
 
-def _accepts(constraint: str, target_version: str) -> bool:
-    if not constraint:
+def _accepts(observation: DependencyObservation, target_version: str) -> bool | None:
+    if observation.direct_reference or observation.marker:
+        return None
+    if not observation.constraint:
         return True
     try:
-        return SpecifierSet(constraint).contains(Version(target_version), prereleases=True)
-    except InvalidSpecifier:
-        return False
+        return SpecifierSet(observation.constraint).contains(
+            Version(target_version), prereleases=True
+        )
+    except (InvalidSpecifier, InvalidVersion):
+        return None

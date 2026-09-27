@@ -72,6 +72,10 @@ class GitHubClient:
         self.stats = CollectionStats()
         self.rate_limit = RateLimit(None, None, None, None)
 
+    @property
+    def api_base_url(self) -> str:
+        return str(self._client.base_url).rstrip("/")
+
     def __enter__(self) -> GitHubClient:
         return self
 
