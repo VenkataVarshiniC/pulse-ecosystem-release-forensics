@@ -1,0 +1,176 @@
+{
+  "cases": {
+    "pytest-8.0.0": {
+      "cohort_size": 2,
+      "collection_operational_status": "complete",
+      "historical_context_counts": {
+        "historically_supported": 1,
+        "historically_unknown": 1
+      },
+      "candidate_counts": {
+        "emitted": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "needs_review": 0
+      },
+      "zero_candidate_repositories": [
+        "bsc-wdc/qdislib",
+        "planetlabs/cosmolog"
+      ],
+      "stage_findings": {
+        "adoption_readiness": {
+          "unknown_insufficient_data": 2
+        },
+        "observed_adoption": {
+          "unknown_insufficient_data": 2
+        },
+        "migration_friction": {
+          "unknown_insufficient_data": 1,
+          "no_qualifying_evidence_found": 1
+        },
+        "remediation": {
+          "unknown_insufficient_data": 1,
+          "no_qualifying_evidence_found": 1
+        },
+        "recovery_signal": {
+          "unknown_insufficient_data": 2
+        }
+      },
+      "metrics": [
+        {
+          "name": "core_collection_coverage",
+          "numerator": 2,
+          "denominator": 2,
+          "meaning": "Repositories with complete metadata, issues, PRs, and commits / frozen cohort."
+        },
+        {
+          "name": "historical_dependency_evidence_coverage",
+          "numerator": 1,
+          "denominator": 2,
+          "meaning": "Repositories with an exact-ref target-package declaration / frozen cohort; not adoption."
+        },
+        {
+          "name": "candidate_emission_coverage",
+          "numerator": 0,
+          "denominator": 2,
+          "meaning": "Repositories with at least one emitted candidate / frozen cohort; not impact incidence."
+        },
+        {
+          "name": "accepted_evidence_coverage",
+          "numerator": 0,
+          "denominator": 2,
+          "meaning": "Repositories with accepted evidence / frozen cohort; not event incidence."
+        },
+        {
+          "name": "bounded_friction_finding_coverage",
+          "numerator": 0,
+          "denominator": 1,
+          "meaning": "Accepted friction evidence / repositories sufficient for a stage-level finding; not ecosystem incidence."
+        }
+      ],
+      "unavailable_metrics": [
+        "observed_adoption_rate: no target-version installation or runtime denominator",
+        "remediation_coverage: no accepted qualifying friction denominator",
+        "recovery_rate: downstream releases not collected and recovery-eligible set undefined"
+      ],
+      "missing_sources": [
+        "Downstream release collection was not planned; text.support_release had no input.",
+        "Target-version lockfile selection and runtime/CI resolution were not collected.",
+        "Path-scoped historical manifest reconstruction is incomplete for some repositories."
+      ],
+      "report_paths": {
+        "json": "data/processed/phase-2/pytest-8.0.0/forensics.json",
+        "accepted_ledger": "data/processed/phase-2/pytest-8.0.0/accepted-evidence.jsonl",
+        "markdown": "docs/phase-2/generated/pytest-8.0.0-forensics.md"
+      }
+    },
+    "urllib3-2.0.0": {
+      "cohort_size": 6,
+      "collection_operational_status": "complete",
+      "historical_context_counts": {
+        "historically_supported": 1,
+        "historically_unknown": 5
+      },
+      "candidate_counts": {
+        "emitted": 2,
+        "accepted": 0,
+        "rejected": 2,
+        "needs_review": 0
+      },
+      "zero_candidate_repositories": [
+        "atenreiro/opensquat",
+        "wimglenn/advent-of-code-data",
+        "Aiven-Open/pghoard",
+        "facundoolano/feedi",
+        "enzet/map-machine"
+      ],
+      "stage_findings": {
+        "adoption_readiness": {
+          "unknown_insufficient_data": 6
+        },
+        "observed_adoption": {
+          "unknown_insufficient_data": 6
+        },
+        "migration_friction": {
+          "unknown_insufficient_data": 5,
+          "no_qualifying_evidence_found": 1
+        },
+        "remediation": {
+          "unknown_insufficient_data": 5,
+          "no_qualifying_evidence_found": 1
+        },
+        "recovery_signal": {
+          "unknown_insufficient_data": 6
+        }
+      },
+      "metrics": [
+        {
+          "name": "core_collection_coverage",
+          "numerator": 6,
+          "denominator": 6,
+          "meaning": "Repositories with complete metadata, issues, PRs, and commits / frozen cohort."
+        },
+        {
+          "name": "historical_dependency_evidence_coverage",
+          "numerator": 1,
+          "denominator": 6,
+          "meaning": "Repositories with an exact-ref target-package declaration / frozen cohort; not adoption."
+        },
+        {
+          "name": "candidate_emission_coverage",
+          "numerator": 1,
+          "denominator": 6,
+          "meaning": "Repositories with at least one emitted candidate / frozen cohort; not impact incidence."
+        },
+        {
+          "name": "accepted_evidence_coverage",
+          "numerator": 0,
+          "denominator": 6,
+          "meaning": "Repositories with accepted evidence / frozen cohort; not event incidence."
+        },
+        {
+          "name": "bounded_friction_finding_coverage",
+          "numerator": 0,
+          "denominator": 1,
+          "meaning": "Accepted friction evidence / repositories sufficient for a stage-level finding; not ecosystem incidence."
+        }
+      ],
+      "unavailable_metrics": [
+        "observed_adoption_rate: no target-version installation or runtime denominator",
+        "remediation_coverage: no accepted qualifying friction denominator",
+        "recovery_rate: downstream releases not collected and recovery-eligible set undefined"
+      ],
+      "missing_sources": [
+        "Downstream release collection was not planned; text.support_release had no input.",
+        "Target-version lockfile selection and runtime/CI resolution were not collected.",
+        "Path-scoped historical manifest reconstruction is incomplete for some repositories."
+      ],
+      "report_paths": {
+        "json": "data/processed/phase-2/urllib3-2.0.0/forensics.json",
+        "accepted_ledger": "data/processed/phase-2/urllib3-2.0.0/accepted-evidence.jsonl",
+        "markdown": "docs/phase-2/generated/urllib3-2.0.0-forensics.md"
+      }
+    }
+  },
+  "scope": "Two frozen convenience cohorts; no pooled incidence statistic."
+}

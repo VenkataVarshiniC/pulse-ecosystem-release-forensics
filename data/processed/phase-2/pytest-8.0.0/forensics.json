@@ -1,0 +1,384 @@
+{
+  "case_id": "pytest-8.0.0",
+  "target_package": "pytest",
+  "target_version": "8.0.0",
+  "release_timestamp": "2024-01-27T21:47:54.913691Z",
+  "cohort_id": "pytest-8.0.0-rule-based",
+  "selection_method": "rule_based",
+  "selection_rationale": "First six eligible repositories by the predeclared SHA-256 ranking of a bounded GitHub code-search candidate frame; no release outcomes inspected.",
+  "observation_window_start": "2023-12-28",
+  "observation_window_end": "2024-05-26",
+  "collection_run_id": "806b4926db8c4f77a3ed68bec605b5fe",
+  "collection_operational_status": "complete",
+  "collection_task_counts": {
+    "planned": 15,
+    "succeeded": 14,
+    "partial": 0,
+    "rate_limited": 0,
+    "not_found": 1,
+    "unauthorized": 0,
+    "failed": 0,
+    "optional_not_found": 1,
+    "required_failures": 0
+  },
+  "upstream_collection": {
+    "pypi_version": {
+      "state": "complete",
+      "planned": 1,
+      "succeeded": 1,
+      "optional_not_found": 0,
+      "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+    },
+    "upstream_repository": {
+      "state": "complete",
+      "planned": 1,
+      "succeeded": 1,
+      "optional_not_found": 0,
+      "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+    },
+    "upstream_releases": {
+      "state": "complete",
+      "planned": 1,
+      "succeeded": 1,
+      "optional_not_found": 0,
+      "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+    }
+  },
+  "history_run_id": "357943cd594b400bae95717732a8edc7",
+  "frozen_cohort": [
+    "bsc-wdc/qdislib",
+    "planetlabs/cosmolog"
+  ],
+  "repositories": [
+    {
+      "repository": "bsc-wdc/qdislib",
+      "historical_dependency_context": "historically_unknown",
+      "historical_paths": [
+        {
+          "path": "pyproject.toml",
+          "pair_status": "missing_before",
+          "before_sha": null,
+          "after_sha": "267e8a503a44aa45150dd5e6278f61fb83f2e984",
+          "before_target": [],
+          "after_target": [],
+          "before_file_status": null,
+          "after_file_status": "parsed",
+          "change_status": "unknown"
+        },
+        {
+          "path": "requirements.txt",
+          "pair_status": "insufficient_history",
+          "before_sha": null,
+          "after_sha": null,
+          "before_target": [],
+          "after_target": [],
+          "before_file_status": null,
+          "after_file_status": null,
+          "change_status": "unknown"
+        }
+      ],
+      "collection_coverage": {
+        "repository_metadata": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "issues": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "pull_requests": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "commits": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "current_manifest_probes": {
+          "state": "complete",
+          "planned": 2,
+          "succeeded": 2,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "historical_dependency": {
+          "state": "partial",
+          "planned": 2,
+          "succeeded": 0,
+          "optional_not_found": 0,
+          "reason": "Historical target-version eligibility is unresolved in one or more paths."
+        },
+        "reviewed_candidates": {
+          "state": "complete",
+          "planned": 0,
+          "succeeded": 0,
+          "optional_not_found": 0,
+          "reason": "Every emitted candidate has an analyst review outcome; zero is valid."
+        },
+        "downstream_releases": {
+          "state": "not_collected",
+          "planned": 0,
+          "succeeded": 0,
+          "optional_not_found": 0,
+          "reason": "No task was planned for this source."
+        }
+      },
+      "stage_sufficiency": {
+        "adoption_readiness": false,
+        "observed_adoption": false,
+        "migration_friction": false,
+        "remediation": false,
+        "recovery_signal": false
+      },
+      "stage_findings": {
+        "adoption_readiness": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        },
+        "observed_adoption": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        },
+        "migration_friction": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        },
+        "remediation": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        },
+        "recovery_signal": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        }
+      },
+      "accepted_event_ids": [],
+      "emitted_candidate_count": 0,
+      "rejected_candidate_count": 0,
+      "needs_review_count": 0,
+      "unknowns": [
+        "adoption_readiness",
+        "observed_adoption",
+        "migration_friction",
+        "remediation",
+        "recovery_signal"
+      ],
+      "missing_sources": [
+        "historical_dependency",
+        "downstream_releases"
+      ],
+      "confidence": null
+    },
+    {
+      "repository": "planetlabs/cosmolog",
+      "historical_dependency_context": "historically_supported",
+      "historical_paths": [
+        {
+          "path": "pyproject.toml",
+          "pair_status": "paired",
+          "before_sha": "949163d11dc03fcd4f6098413252cb0bab034490",
+          "after_sha": "ff4cde41a420e08b889d6215ac9cdbce2540aba1",
+          "before_target": [
+            "pytest>=3.0.2"
+          ],
+          "after_target": [
+            "pytest>=3.0.2"
+          ],
+          "before_file_status": "parsed",
+          "after_file_status": "parsed",
+          "change_status": "unchanged"
+        },
+        {
+          "path": "requirements.txt",
+          "pair_status": "insufficient_history",
+          "before_sha": null,
+          "after_sha": null,
+          "before_target": [],
+          "after_target": [],
+          "before_file_status": null,
+          "after_file_status": null,
+          "change_status": "unknown"
+        }
+      ],
+      "collection_coverage": {
+        "repository_metadata": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "issues": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "pull_requests": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "commits": {
+          "state": "complete",
+          "planned": 1,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "current_manifest_probes": {
+          "state": "complete",
+          "planned": 2,
+          "succeeded": 1,
+          "optional_not_found": 1,
+          "reason": "All planned tasks succeeded or optional current-file probes returned verified 404s."
+        },
+        "historical_dependency": {
+          "state": "partial",
+          "planned": 2,
+          "succeeded": 1,
+          "optional_not_found": 0,
+          "reason": "Historical target-version eligibility is unresolved in one or more paths."
+        },
+        "reviewed_candidates": {
+          "state": "complete",
+          "planned": 0,
+          "succeeded": 0,
+          "optional_not_found": 0,
+          "reason": "Every emitted candidate has an analyst review outcome; zero is valid."
+        },
+        "downstream_releases": {
+          "state": "not_collected",
+          "planned": 0,
+          "succeeded": 0,
+          "optional_not_found": 0,
+          "reason": "No task was planned for this source."
+        }
+      },
+      "stage_sufficiency": {
+        "adoption_readiness": false,
+        "observed_adoption": false,
+        "migration_friction": true,
+        "remediation": true,
+        "recovery_signal": false
+      },
+      "stage_findings": {
+        "adoption_readiness": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        },
+        "observed_adoption": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        },
+        "migration_friction": {
+          "state": "no_qualifying_evidence_found",
+          "event_ids": [],
+          "explanation": "Required sources were completely collected and emitted candidates were reviewed; no accepted qualifying evidence was found. This does not prove the event did not happen."
+        },
+        "remediation": {
+          "state": "no_qualifying_evidence_found",
+          "event_ids": [],
+          "explanation": "Required sources were completely collected and emitted candidates were reviewed; no accepted qualifying evidence was found. This does not prove the event did not happen."
+        },
+        "recovery_signal": {
+          "state": "unknown_insufficient_data",
+          "event_ids": [],
+          "explanation": "Required evidence or historical context is incomplete; a negative finding is unsupported."
+        }
+      },
+      "accepted_event_ids": [],
+      "emitted_candidate_count": 0,
+      "rejected_candidate_count": 0,
+      "needs_review_count": 0,
+      "unknowns": [
+        "adoption_readiness",
+        "observed_adoption",
+        "recovery_signal"
+      ],
+      "missing_sources": [
+        "historical_dependency",
+        "downstream_releases"
+      ],
+      "confidence": null
+    }
+  ],
+  "emitted_candidate_count": 0,
+  "accepted_candidate_count": 0,
+  "rejected_candidate_count": 0,
+  "needs_review_count": 0,
+  "rejected_candidates": [],
+  "accepted_events": [],
+  "metrics": [
+    {
+      "name": "core_collection_coverage",
+      "numerator": 2,
+      "denominator": 2,
+      "meaning": "Repositories with complete metadata, issues, PRs, and commits / frozen cohort."
+    },
+    {
+      "name": "historical_dependency_evidence_coverage",
+      "numerator": 1,
+      "denominator": 2,
+      "meaning": "Repositories with an exact-ref target-package declaration / frozen cohort; not adoption."
+    },
+    {
+      "name": "candidate_emission_coverage",
+      "numerator": 0,
+      "denominator": 2,
+      "meaning": "Repositories with at least one emitted candidate / frozen cohort; not impact incidence."
+    },
+    {
+      "name": "accepted_evidence_coverage",
+      "numerator": 0,
+      "denominator": 2,
+      "meaning": "Repositories with accepted evidence / frozen cohort; not event incidence."
+    },
+    {
+      "name": "bounded_friction_finding_coverage",
+      "numerator": 0,
+      "denominator": 1,
+      "meaning": "Accepted friction evidence / repositories sufficient for a stage-level finding; not ecosystem incidence."
+    }
+  ],
+  "unavailable_metrics": [
+    "observed_adoption_rate: no target-version installation or runtime denominator",
+    "remediation_coverage: no accepted qualifying friction denominator",
+    "recovery_rate: downstream releases not collected and recovery-eligible set undefined"
+  ],
+  "missing_sources": [
+    "Downstream release collection was not planned; text.support_release had no input.",
+    "Target-version lockfile selection and runtime/CI resolution were not collected.",
+    "Path-scoped historical manifest reconstruction is incomplete for some repositories."
+  ],
+  "limitations": [
+    "Cohort selection used current declarations, not proven historical target-version use.",
+    "Path-scoped history can miss earlier declarations and cross-file migrations.",
+    "No qualifying evidence found describes this bounded method, not proof no event occurred.",
+    "Zero emitted candidates does not establish absence of release impact or detector recall.",
+    "Lifecycle stages are evidence categories, not a required chronology or causal chain.",
+    "These frozen convenience cohorts are not ecosystem-representative."
+  ]
+}

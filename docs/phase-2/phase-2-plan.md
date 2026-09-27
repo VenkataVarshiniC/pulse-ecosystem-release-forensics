@@ -20,6 +20,10 @@ Milestone 3 froze two new Python/PyPI validation cases using predeclared release
 
 Milestone 4 preregistered detector review before live collection, collected both frozen cohorts, reconstructed historical manifest context for all eight repositories, and preserved the unchanged first-pass candidate set. Analyst review rejected both candidates from one bot PR, yielding reviewed-candidate precision **0/2**; pytest emitted none, and seven repositories emitted none. No detector rule was changed. The result is **PARTIAL** because candidate volume and historical context remain too limited for broad rule assessment. See [detector evaluation](detector-evaluation.md) and its machine-readable baseline, review ledger, and metrics.
 
+## Milestone 5 — End-to-end multi-cohort forensics and completeness
+
+Milestone 5 connected the frozen case definitions, verified live collection journals, historical reconstruction, first-pass detector baselines, and independent review ledger into a deterministic report workflow. Both pytest 8.0.0 and urllib3 2.0.0 now have structured and Markdown Release Forensics Reports, an accepted evidence ledger, repository source-availability and stage findings, denominator-aware cohort metrics, and a cross-case validation summary. No new collection or detector tuning was performed. The result is **PASS for end-to-end report integration**: source sufficiency is derived from the machine-readable artifacts, rejected candidates cannot become accepted events, and missing inputs remain visible as UNKNOWN or unavailable metrics. This milestone does not resolve the partial findings from Milestones 2–4 or determine the final Phase 2 decision. See [validation results](validation-results.md) and [evidence sufficiency](evidence-sufficiency.md).
+
 ## Later Phase 2 work — deferred
 
-Later milestones may assess end-to-end cohort-level completeness and reporting. They require separate evidence and review. No Phase 2 final decision follows from Milestones 1–4. Phase 0 and Phase 1 artifacts and their interpretations remain preserved.
+Later milestones require separate evidence and review. No Phase 2 final decision follows from Milestones 1–5. Phase 0 and Phase 1 artifacts and their interpretations remain preserved.

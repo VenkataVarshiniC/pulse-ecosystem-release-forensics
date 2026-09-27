@@ -20,6 +20,7 @@ from pulse.github.client import GitHubClient
 from pulse.github.errors import GitHubAuthenticationError
 from pulse.history.runner import HistoricalRunner
 from pulse.packages.pypi import PyPIClient
+from pulse.phase2_forensics import build_phase2_report, write_phase2_report
 from pulse.reporting import write_forensics_json, write_forensics_markdown
 
 
@@ -48,6 +49,11 @@ def _parser() -> argparse.ArgumentParser:
     report = subparsers.add_parser("report")
     report.add_argument("forensics", type=Path)
     report.add_argument("output", type=Path)
+    forensics = subparsers.add_parser("forensics")
+    forensics.add_argument("case", type=Path)
+    forensics.add_argument("--baseline-manifest", type=Path, required=True)
+    forensics.add_argument("--review-ledger", type=Path, required=True)
+    forensics.add_argument("--output-root", type=Path, default=Path("."))
     return parser
 
 
@@ -59,8 +65,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "collect":
         try:
             return _collect(
-                args.case, resume=args.resume, output_root=args.output_root,
-                max_pages=args.max_pages, max_retries=args.max_retries,
+                args.case,
+                resume=args.resume,
+                output_root=args.output_root,
+                max_pages=args.max_pages,
+                max_retries=args.max_retries,
             )
         except (GitHubAuthenticationError, ValueError) as exc:
             print(f"Collection configuration error: {exc}", file=sys.stderr)
@@ -70,41 +79,71 @@ def main(argv: list[str] | None = None) -> int:
             definition = load_case(args.case)
             settings = Settings.from_env()
             with GitHubClient(
-                settings.github_token, base_url=settings.github_api_url,
-                max_pages=args.max_pages, max_retries=args.max_retries,
+                settings.github_token,
+                base_url=settings.github_api_url,
+                max_pages=args.max_pages,
+                max_retries=args.max_retries,
             ) as client:
                 run, path = HistoricalRunner(client, args.output_root).run(definition)
             print(path)
-            return 2 if any(
-                result.pair.status.value == "collection_failed" for result in run.results
-            ) else 0
+            return (
+                2
+                if any(result.pair.status.value == "collection_failed" for result in run.results)
+                else 0
+            )
         except (GitHubAuthenticationError, ValueError) as exc:
             print(f"History configuration error: {exc}", file=sys.stderr)
             return 2
     if args.command == "analyze":
         return _analyze(args)
+    if args.command == "forensics":
+        try:
+            metadata = json.loads(args.baseline_manifest.read_text(encoding="utf-8"))
+            stem = args.baseline_manifest.name.removesuffix(".manifest.json")
+            baseline = args.baseline_manifest.with_name(f"{stem}.jsonl")
+            result = build_phase2_report(
+                load_case(args.case),
+                Path(metadata["collection_manifest"]),
+                Path(metadata["history_manifest"]),
+                baseline,
+                args.baseline_manifest,
+                args.review_ledger,
+            )
+            json_path, markdown_path = write_phase2_report(result, args.output_root)
+        except (OSError, KeyError, ValueError) as exc:
+            print(f"Forensics artifact error: {exc}", file=sys.stderr)
+            return 2
+        print(json.dumps({"json": str(json_path), "markdown": str(markdown_path)}))
+        return 0
     forensics = ReleaseForensics.model_validate_json(args.forensics.read_text(encoding="utf-8"))
     write_forensics_markdown(forensics, args.output)
     return 0
 
 
 def _collect(
-    case_path: Path, *, resume: bool = False, output_root: Path = Path("."),
-    max_pages: int = 1000, max_retries: int = 3,
+    case_path: Path,
+    *,
+    resume: bool = False,
+    output_root: Path = Path("."),
+    max_pages: int = 1000,
+    max_retries: int = 3,
 ) -> int:
     definition = load_case(case_path)
     settings = Settings.from_env()
     plan = plan_collection(definition)
     journal = RunJournal(output_root / "data/interim")
-    with GitHubClient(
-        settings.github_token, base_url=settings.github_api_url,
-        max_pages=max_pages, max_retries=max_retries,
-    ) as github_client, PyPIClient(base_url=settings.pypi_api_url) as pypi_client:
+    with (
+        GitHubClient(
+            settings.github_token,
+            base_url=settings.github_api_url,
+            max_pages=max_pages,
+            max_retries=max_retries,
+        ) as github_client,
+        PyPIClient(base_url=settings.pypi_api_url) as pypi_client,
+    ):
         runner = CollectionRunner(
             [GitHubCollector(github_client), PyPICollector(pypi_client)],
-            RawSnapshotStore(
-                output_root / "data/raw", capture_method=CaptureMethod.COLLECTOR
-            ),
+            RawSnapshotStore(output_root / "data/raw", capture_method=CaptureMethod.COLLECTOR),
             journal=journal,
         )
         manifest = runner.run(definition, plan, resume=resume)
@@ -124,12 +163,8 @@ def _analyze(args: argparse.Namespace) -> int:
             set(args.recovery_eligible) if args.recovery_eligible is not None else None
         ),
     )
-    json_path = (
-        args.output_root / "data" / "processed" / forensics.case_id / "forensics.json"
-    )
-    markdown_path = (
-        args.output_root / "docs" / "generated" / f"{forensics.case_id}-forensics.md"
-    )
+    json_path = args.output_root / "data" / "processed" / forensics.case_id / "forensics.json"
+    markdown_path = args.output_root / "docs" / "generated" / f"{forensics.case_id}-forensics.md"
     write_forensics_json(forensics, json_path)
     write_forensics_markdown(forensics, markdown_path)
     print(json.dumps({"json": str(json_path), "markdown": str(markdown_path)}))
