@@ -1,0 +1,34 @@
+# Milestone 2A stakeholder-evidence reconciliation framework
+
+**Procedure prepared, not executed.** Google Form/interview results have not arrived. The [primary-user hypothesis](primary-user-hypothesis.md), [Milestone 2 As-Is](milestone-2-findings.md), [Milestone 3 To-Be](milestone-3-findings.md), and [formal baseline](requirements-specification.md) therefore retain their provisional status. This framework specifies how real evidence would change them without rewriting raw responses or silently weakening analytical integrity.
+
+| Question | Existing hypothesis / current evidence | Relevant requirements | Evidence expected from real participant | Reconciliation action |
+| --- | --- | --- | --- | --- |
+| Who is the primary user? | Cross-repository dependency/platform engineer is a recruiting hypothesis; public PRs show local reviewers only. | BR-001/004, SR-001/005 | Recent actual investigation, role, responsibility, decision authority. | Confirm/refine/replace persona and related use cases. |
+| Who selects repositories? | Phase 2 cohorts are research selections, not organizational scope. | BR-001, SR-001, FR-001 | Who set the repository list in a real case and why exclusions occurred. | Revise scope/approval workflow and membership data if warranted. |
+| Is portfolio prioritization real? | No public PR establishes a cross-repo priority decision. | BR-004, SR-005, FR-011 | Concrete multi-repo comparison and changed action. | Retain, narrow, reprioritize, or remove attention capability. |
+| What triggers investigation? | Release, failed update, request, security/deprecation are candidate triggers only. | BR-001, SR-001 | Actual last trigger, frequency/context, who initiated. | Revise To-Be intake and case fields. |
+| Which evidence changes decisions? | Diff, upstream notes, comments visible in M1A; usefulness unmeasured. | SR-002/004, FR-003/006/010 | Source walkthrough: what was consulted, trusted, decisive, ignored. | Adjust source priorities and presentation; keep provenance guard. |
+| Is passing CI enough? | M1A check history not systematically audited; PR merge is not recovery. | SR-006, FR-005/012 | Actual gate and CI environment/branch relation. | Define bounded CI evidence meaning or defer acquisition. |
+| When is historical release-time state needed? | P2 path-scoped method often unknown; need hypothesized. | FR-004/006 | Recent decision where timing changed action, acceptable boundary. | Refine history method/sufficiency threshold, never infer past from present. |
+| Does resolved/installed version matter? | Declarations do not prove target-version use; comprehensive source absent. | FR-005, SR-006 | Actual resolution/runtime artifact and how it altered decision. | Select feasible evidence source or remove unsupported adoption claim. |
+| Who reviews candidates and what burden is tolerable? | P2 ledger exists; no role/cost validation. | SR-003, FR-008, FR-011 | Actual reviewer, volume, time, escalation, missed-vs-extra signal cost. | Revise role, queue, priority, and review AC. |
+| Is bot noise costly? | M1A supersession/copying visible; human burden not measured. | SR-003/005, FR-007/011 | Which bot artifacts were truly reviewed or ignored in recent cases. | Keep or revise relevance/attention hypothesis. |
+| What provenance builds trust? | Source links/method are preserved, preference untested. | SR-002, NFR-001 | Which origin/capture/completeness details affect reliance. | Refine view/retention, never erase source identity. |
+| What follows UNKNOWN? | P2 honest UNKNOWN; actionability untested. | SR-004, FR-006/010 | Respondent reaction to real incomplete report; next action. | Improve evidence-request path or reconsider product value. |
+| What counts as completion? | PR merge, version resolution, migration, and recovery distinct; owner unknown. | SR-006, FR-012 | Actual criterion, owner, artifact, window, operational evidence. | Define bounded completion separately from production recovery. |
+| Are current tools sufficient? | Existing bot/CI/manual search may already meet need. | BR-001/004, all stakeholder SRs | Tool demonstration, uncovered decision gap, workaround. | Narrow, pivot, or stop PULSE use case if no unmet need. |
+| What unmet need remains? | Business problem is a hypothesis; no measured labor/benefit. | BR-001–004, backlog priority | Concrete consequence and frequency of unresolved decision. | Reprioritize requirements or recommend HOLD/PIVOT. |
+
+## Evidence handling and coding procedure
+
+1. **Freeze raw responses/export** with retrieval context, source date, and access/consent boundary. Do not rewrite participant wording. Avoid committing private identifiers or restricted raw material to the public repository.
+2. Assign anonymized response IDs and remove unnecessary names, employers, repository secrets, and contact details from analysis copies. Keep the raw-to-anonymized mapping only where authorized.
+3. Code each response into question/theme, concrete incident, evidence consulted, decision and outcome, uncertainty, and counterexample. Preserve verbatim respondent statement separately from analyst interpretation.
+4. Record evidence strength qualitatively: direct recent hands-on work and personal decision/review role are stronger workflow evidence than a hypothetical opinion; note multi-repository experience and response completeness. Do **not** invent numeric weights or treat every survey answer as equally probative.
+5. For every existing hypothesis classify **confirmed**, **partially confirmed**, **contradicted**, **mixed**, or **not addressed**. Include disconfirming cases and source IDs; one statement does not establish population prevalence.
+6. Compare public bot-PR observations, provisional As-Is, survey themes, and interviews without collapsing them. A respondent may describe a manual/private path absent from the frozen all-Dependabot sample.
+7. Update primary-user/problem, As-Is, To-Be, MoSCoW priorities, SR/FR/NFR wording, use cases, data needs, RTM, AC, UAT plan, risk/decision log **only where evidence warrants**. For each changed ID record old/new interpretation, source, reason, owner of decision, and affected links in [change history](requirements-change-history.md).
+8. Re-run requirement ID/link/quality audit and technical regression if requirements or product behavior change. Seek explicit stakeholder approval only from a real accountable participant; record unresolved disagreement rather than inventing consensus.
+
+A respondent preference for guessing instead of UNKNOWN can motivate a clearer presentation or an optional *explicitly labeled estimate* in a separately scoped future decision. It cannot silently turn missing evidence into a negative finding under existing [integrity rules](business-rules.md). If required evidence is inaccessible or no real user decision exists, reconsider the product thesis before authorizing implementation.

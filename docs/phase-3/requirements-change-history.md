@@ -29,3 +29,9 @@ The earlier CH-01–07 entries are preserved. The [provisional specification](re
 | CH-07 | BR-004, SR-005, FR-011; RULE-011; AC-FR-011-01 | Attention suggestions are explainable and human-overrideable only if a real portfolio decision is validated. |
 
 At the later reconciliation checkpoint, a change record should retain the response source, affected IDs, proposed wording/priority change, reason, decision authority, updated AC/RTM/backlog links, and whether the result is confirmed, modified, split, removed, added, or unresolved. Level B integrity rules require an explicit evidence tradeoff review rather than silent relaxation. No such primary-research change has occurred yet.
+
+## Milestone 5 validation correction
+
+| Change | Trigger and old interpretation | New interpretation / rationale | Impacted baseline and verification | Status |
+| --- | --- | --- | --- | --- |
+| CH-08 | Milestone 5 code/test audit found `AnalystDecision` and `test_precision_excludes_unresolved_and_handles_zero_denominator` already accept a reasoned `NEEDS_REVIEW`; Milestone 4 described the third review outcome as proposed. | The **bounded three-outcome ledger behavior exists**. This does not validate a stakeholder review role, interface, or acceptable workload. | FR-008 status and backlog implementation label corrected; AC-FR-008-01 and RTM link remain; [UAT-016](uat-test-cases.md) records current-system evidence. Requirement wording and priority unchanged. | Evidence-based status correction; no stakeholder approval. |

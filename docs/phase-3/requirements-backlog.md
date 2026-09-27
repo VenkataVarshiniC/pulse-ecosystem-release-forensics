@@ -21,7 +21,7 @@ MoSCoW priorities follow the [specification](requirements-specification.md) and 
 | FR-005 / distinct dependency states / Functional | Must | GAP-03; resolved-version source absent. | A/B | Needed source yes | Proposed method / Not Implemented. |
 | FR-006 / source sufficiency / Functional | Must | GAP-05; stage threshold changes need review. | A/B | Expanded threshold yes | Existing / partial. |
 | FR-007 / provenance-sensitive candidates / Functional | Must | GAP-04; copied-text mechanism; recall unknown. | A/B/C | Review burden yes | Existing candidate rules / partial; new origin method Not Implemented. |
-| FR-008 / three-outcome review / Functional | Must | CAP-06; reviewer authority pending. | A/B/D | Yes | Existing accept/reject / partial; needs-evidence Not Implemented. |
+| FR-008 / three-outcome review / Functional | Must | CAP-06; reviewer authority pending. | A/B/D | Yes | Existing / validated bounded three-outcome ledger; user workflow pending. |
 | FR-009 / bounded finding states / Functional | Must | RULE-003–013; no universal adoption/recovery negative. | A/B | Wording/value later | Existing / validated current bounded stages. |
 | FR-010 / deterministic report / Functional | Must | CAP-08; unresolved-candidate presentation proposed. | A/B/D | View preference yes | Existing / partial. |
 | FR-011 / attention rationale / Functional | Should | CAP-11; depends on portfolio role/factors. | C/D | Yes | Proposed / Not Implemented. |
