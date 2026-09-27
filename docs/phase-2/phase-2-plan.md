@@ -8,6 +8,8 @@ Harden the existing authenticated GitHub collector and retain auditable per-task
 
 An initial authenticated HTTPX smoke run retrieved 8 of 11 planned task payloads and correctly recorded three candidate file paths as `not_found`. It demonstrated live pagination, provenance, and safe resume, while exposing that optional 404 probes made the run operationally incomplete. Milestone 1 now separates operational completion from current artifact availability and later analytical sufficiency. A fresh authenticated run on 2026-09-26 completed operationally with 8 `succeeded`, 3 optional `not_found`, and 0 required failures. Resume reused all 11 terminal tasks without new requests or changed snapshots. The disposable live artifacts remain outside the repository. Access scope and source completeness still constrain any interpretation of absent evidence.
 
+The Milestone 1 result is **PASS — LIVE VALIDATED** for bounded collection and resume mechanics.
+
 ## Milestone 2 — Historical Dependency Reconstruction
 
 Implemented path-scoped historical commit discovery, exact-ref manifest retrieval, typed refs and pairs, raw collector provenance, and conservative dependency comparison. Live validation on 2026-09-26 automatically reconstructed stable HTTPX declarations in `openai/openai-python` and stable SQLAlchemy optional-dependency declarations in `pandas-dev/pandas`. `pallets-eco/flask-sqlalchemy` exposed incomplete complementary histories across packaging paths; PULSE left its transition unknown. The milestone result is **PARTIAL**. See [historical dependency reconstruction](historical-dependency-reconstruction.md) for anchor rules, raw evidence, live refs, Phase 0 comparison, and limitations.
@@ -24,6 +26,10 @@ Milestone 4 preregistered detector review before live collection, collected both
 
 Milestone 5 connected the frozen case definitions, verified live collection journals, historical reconstruction, first-pass detector baselines, and independent review ledger into a deterministic report workflow. Both pytest 8.0.0 and urllib3 2.0.0 now have structured and Markdown Release Forensics Reports, an accepted evidence ledger, repository source-availability and stage findings, denominator-aware cohort metrics, and a cross-case validation summary. No new collection or detector tuning was performed. The result is **PASS for end-to-end report integration**: source sufficiency is derived from the machine-readable artifacts, rejected candidates cannot become accepted events, and missing inputs remain visible as UNKNOWN or unavailable metrics. This milestone does not resolve the partial findings from Milestones 2–4 or determine the final Phase 2 decision. See [validation results](validation-results.md) and [evidence sufficiency](evidence-sufficiency.md).
 
-## Later Phase 2 work — deferred
+## Milestone 6 — Final Phase 2 Decision
 
-Later milestones require separate evidence and review. No Phase 2 final decision follows from Milestones 1–5. Phase 0 and Phase 1 artifacts and their interpretations remain preserved.
+The final decision is **PIVOT**. Live collection and deterministic reporting are validated for the bounded cases, but historical release-boundary context, candidate yield, observed-adoption inputs, and recovery eligibility remain too weak for product scaling. The closure audit tightened negative stage findings so an after-only historical declaration cannot stand in for a release-boundary declaration. See [Phase 2 findings](phase-2-findings.md) for the evidence, limitations, and decision rationale.
+
+## Later work — deferred
+
+Any later work requires separate evidence, design, and authorization. Phase 0 and Phase 1 artifacts and their interpretations remain preserved.

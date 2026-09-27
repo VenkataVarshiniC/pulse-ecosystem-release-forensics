@@ -28,6 +28,7 @@ from pulse.phase2_forensics import (
     Availability,
     _finding,
     _read_collection,
+    _release_boundary_dependency_supported,
     build_phase2_report,
     render_phase2_markdown,
     validation_summary,
@@ -223,6 +224,37 @@ def test_zero_candidates_require_stage_sufficiency_for_negative_finding() -> Non
     stage = LifecycleStage.MIGRATION_FRICTION
     assert _finding(stage, (), True).state is EvidenceState.NO_QUALIFYING_EVIDENCE
     assert _finding(stage, (), False).state is EvidenceState.UNKNOWN
+
+
+def test_after_only_historical_declaration_cannot_support_negative_finding() -> None:
+    after_only = [{
+        "pair_status": "missing_before", "before_file_status": None,
+        "before_target": [], "after_target": ["urllib3"],
+    }]
+    paired_before = [{
+        "pair_status": "paired", "before_file_status": "parsed",
+        "before_target": ["pytest>=3.0.2"], "after_target": ["pytest>=3.0.2"],
+    }]
+    assert not _release_boundary_dependency_supported(after_only)
+    assert _release_boundary_dependency_supported(paired_before)
+
+
+def test_committed_after_only_case_remains_unknown_with_no_friction_denominator() -> None:
+    path = ROOT / "data/processed/phase-2/urllib3-2.0.0/forensics.json"
+    report = json.loads(path.read_text(encoding="utf-8"))
+    repository = next(
+        item for item in report["repositories"]
+        if item["repository"] == "wimglenn/advent-of-code-data"
+    )
+    assert repository["historical_dependency_context"] == "historically_supported"
+    assert repository["historical_paths"][0]["before_target"] == []
+    assert repository["stage_findings"]["migration_friction"]["state"] \
+        == EvidenceState.UNKNOWN.value
+    assert repository["stage_findings"]["remediation"]["state"] \
+        == EvidenceState.UNKNOWN.value
+    assert "bounded_friction_finding_coverage" not in {
+        item["name"] for item in report["metrics"]
+    }
 
 
 def test_required_failure_prevents_negative_finding(tmp_path: Path) -> None:

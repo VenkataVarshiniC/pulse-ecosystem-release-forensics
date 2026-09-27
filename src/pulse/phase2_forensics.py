@@ -329,6 +329,16 @@ def _metric(name: str, numerator: int, denominator: int, meaning: str) -> Bounde
     return BoundedMetric(name=name, numerator=numerator, denominator=denominator, meaning=meaning)
 
 
+def _release_boundary_dependency_supported(paths: list[dict]) -> bool:
+    """Require a parsed pre-release declaration in a complete path pair for negative findings."""
+    return any(
+        path["pair_status"] == "paired"
+        and path["before_file_status"] == "parsed"
+        and bool(path["before_target"])
+        for path in paths
+    )
+
+
 def build_phase2_report(
     definition: CaseDefinition,
     collection_path: Path,
@@ -453,10 +463,10 @@ def build_phase2_report(
             LifecycleStage.ADOPTION_READINESS.value: False,
             LifecycleStage.OBSERVED_ADOPTION.value: False,
             LifecycleStage.MIGRATION_FRICTION.value: (
-                source_complete and historical_status == "historically_supported"
+                source_complete and _release_boundary_dependency_supported(paths)
             ),
             LifecycleStage.REMEDIATION.value: (
-                source_complete and historical_status == "historically_supported"
+                source_complete and _release_boundary_dependency_supported(paths)
             ),
             LifecycleStage.RECOVERY_SIGNAL.value: False,
         }

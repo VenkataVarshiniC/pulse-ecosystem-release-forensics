@@ -62,11 +62,11 @@ Accepted-event confidence: `unavailable`.
 Source coverage: repository_metadata=`complete` (1/1 succeeded, 0 optional 404), issues=`complete` (1/1 succeeded, 0 optional 404), pull_requests=`complete` (1/1 succeeded, 0 optional 404), commits=`complete` (1/1 succeeded, 0 optional 404), current_manifest_probes=`complete` (1/2 succeeded, 1 optional 404), historical_dependency=`partial` (0/2 succeeded, 0 optional 404), reviewed_candidates=`complete` (0/0 succeeded, 0 optional 404), downstream_releases=`not_collected` (0/0 succeeded, 0 optional 404).
 - adoption_readiness: **unknown_insufficient_data** — Required evidence or historical context is incomplete; a negative finding is unsupported.
 - observed_adoption: **unknown_insufficient_data** — Required evidence or historical context is incomplete; a negative finding is unsupported.
-- migration_friction: **no_qualifying_evidence_found** — Required sources were completely collected and emitted candidates were reviewed; no accepted qualifying evidence was found. This does not prove the event did not happen.
-- remediation: **no_qualifying_evidence_found** — Required sources were completely collected and emitted candidates were reviewed; no accepted qualifying evidence was found. This does not prove the event did not happen.
+- migration_friction: **unknown_insufficient_data** — Required evidence or historical context is incomplete; a negative finding is unsupported.
+- remediation: **unknown_insufficient_data** — Required evidence or historical context is incomplete; a negative finding is unsupported.
 - recovery_signal: **unknown_insufficient_data** — Required evidence or historical context is incomplete; a negative finding is unsupported.
 Missing sources: historical_dependency, downstream_releases.
-Unknown stages: adoption_readiness, observed_adoption, recovery_signal.
+Unknown stages: adoption_readiness, observed_adoption, migration_friction, remediation, recovery_signal.
 
 ### Aiven-Open/pghoard
 
@@ -130,13 +130,13 @@ No candidate event in this validation case passed the preregistered analyst revi
 - **historical_dependency_evidence_coverage:** 1/6 (16.7%). Repositories with an exact-ref target-package declaration / frozen cohort; not adoption.
 - **candidate_emission_coverage:** 1/6 (16.7%). Repositories with at least one emitted candidate / frozen cohort; not impact incidence.
 - **accepted_evidence_coverage:** 0/6 (0.0%). Repositories with accepted evidence / frozen cohort; not event incidence.
-- **bounded_friction_finding_coverage:** 0/1 (0.0%). Accepted friction evidence / repositories sufficient for a stage-level finding; not ecosystem incidence.
 
 ## Unavailable metrics
 
 - observed_adoption_rate: no target-version installation or runtime denominator
 - remediation_coverage: no accepted qualifying friction denominator
 - recovery_rate: downstream releases not collected and recovery-eligible set undefined
+- bounded_friction_finding_coverage: no repository has sufficient stage evidence
 
 ## Missing evidence
 

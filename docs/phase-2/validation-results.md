@@ -30,8 +30,8 @@ The two cohorts are convenience validation sets. Their counts are not pooled int
 
 - `adoption_readiness`: sufficient 0/6; YES 0, NO QUALIFYING EVIDENCE 0, UNKNOWN 6.
 - `observed_adoption`: sufficient 0/6; YES 0, NO QUALIFYING EVIDENCE 0, UNKNOWN 6.
-- `migration_friction`: sufficient 1/6; YES 0, NO QUALIFYING EVIDENCE 1, UNKNOWN 5.
-- `remediation`: sufficient 1/6; YES 0, NO QUALIFYING EVIDENCE 1, UNKNOWN 5.
+- `migration_friction`: sufficient 0/6; YES 0, NO QUALIFYING EVIDENCE 0, UNKNOWN 6.
+- `remediation`: sufficient 0/6; YES 0, NO QUALIFYING EVIDENCE 0, UNKNOWN 6.
 - `recovery_signal`: sufficient 0/6; YES 0, NO QUALIFYING EVIDENCE 0, UNKNOWN 6.
 - Accepted evidence timeline: empty; no candidate passed review.
 - Zero-candidate repositories: `atenreiro/opensquat`, `wimglenn/advent-of-code-data`, `Aiven-Open/pghoard`, `facundoolano/feedi`, `enzet/map-machine`.
@@ -40,6 +40,7 @@ The two cohorts are convenience validation sets. Their counts are not pooled int
   - observed_adoption_rate: no target-version installation or runtime denominator
   - remediation_coverage: no accepted qualifying friction denominator
   - recovery_rate: downstream releases not collected and recovery-eligible set undefined
+  - bounded_friction_finding_coverage: no repository has sufficient stage evidence
 
 ## Reproduction and interpretation
 

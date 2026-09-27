@@ -24,11 +24,11 @@ Accepted qualifying evidence gives `YES` for its stage, regardless of a separate
 | --- | --- | --- |
 | Adoption readiness | No negative rule: compatible declarations, tests, and CI are not comprehensively collected. | `UNKNOWN` |
 | Observed adoption | No negative rule: target-version lockfile selection and ordinary runtime/CI resolution are not comprehensively collected. | `UNKNOWN` |
-| Migration friction | Complete repository metadata, issues, PRs, commits, and emitted-candidate review, plus at least one direct exact-ref historical package declaration. | `UNKNOWN` |
-| Remediation | Same bounded public-artifact and historical support threshold as friction. | `UNKNOWN` |
+| Migration friction | Complete repository metadata, issues, PRs, commits, and emitted-candidate review, plus a parsed target-package declaration at a pre-release anchor in a paired manifest path. | `UNKNOWN` |
+| Remediation | Same bounded public-artifact and release-boundary declaration threshold as friction. | `UNKNOWN` |
 | Recovery signal | No negative rule: downstream releases were not collected and no recovery-eligible set is defined. | `UNKNOWN` |
 
-When a friction or remediation negative prerequisite is met, the finding is `NO QUALIFYING EVIDENCE FOUND`: PULSE completed those stage sources in the declared window and found no **accepted** event. It does not prove the event did not happen, that the target version was installed, or that the detector found every relevant artifact. An unresolved historical context makes a negative finding `UNKNOWN` even if issue/PR/commit collection succeeded. A required collection failure also makes it `UNKNOWN`. A verified optional current-file 404 does not by itself cause a required-source failure.
+When a friction or remediation negative prerequisite is met, the finding is `NO QUALIFYING EVIDENCE FOUND`: PULSE completed those stage sources in the declared window and found no **accepted** event. It does not prove the event did not happen, that the target version was installed, or that the detector found every relevant artifact. A target-package declaration seen only at a post-release anchor is enough for contextual `historically_supported` evidence coverage, but not enough to establish declaration at the release boundary for a negative stage finding. Thus the urllib3 `wimglenn/advent-of-code-data` friction and remediation findings remain `UNKNOWN`. An unresolved historical context makes a negative finding `UNKNOWN` even if issue/PR/commit collection succeeded. A required collection failure also makes it `UNKNOWN`. A verified optional current-file 404 does not by itself cause a required-source failure.
 
 ## Denominators
 

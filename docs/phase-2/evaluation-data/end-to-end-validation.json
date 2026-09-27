@@ -112,12 +112,10 @@
           "unknown_insufficient_data": 6
         },
         "migration_friction": {
-          "unknown_insufficient_data": 5,
-          "no_qualifying_evidence_found": 1
+          "unknown_insufficient_data": 6
         },
         "remediation": {
-          "unknown_insufficient_data": 5,
-          "no_qualifying_evidence_found": 1
+          "unknown_insufficient_data": 6
         },
         "recovery_signal": {
           "unknown_insufficient_data": 6
@@ -147,18 +145,13 @@
           "numerator": 0,
           "denominator": 6,
           "meaning": "Repositories with accepted evidence / frozen cohort; not event incidence."
-        },
-        {
-          "name": "bounded_friction_finding_coverage",
-          "numerator": 0,
-          "denominator": 1,
-          "meaning": "Accepted friction evidence / repositories sufficient for a stage-level finding; not ecosystem incidence."
         }
       ],
       "unavailable_metrics": [
         "observed_adoption_rate: no target-version installation or runtime denominator",
         "remediation_coverage: no accepted qualifying friction denominator",
-        "recovery_rate: downstream releases not collected and recovery-eligible set undefined"
+        "recovery_rate: downstream releases not collected and recovery-eligible set undefined",
+        "bounded_friction_finding_coverage: no repository has sufficient stage evidence"
       ],
       "missing_sources": [
         "Downstream release collection was not planned; text.support_release had no input.",
