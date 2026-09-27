@@ -10,3 +10,5 @@ Google Form responses and genuine stakeholder conversations are pending. **None*
 6. Only after process/root-cause analysis, derive and trace formal requirements to validated needs and evidence. Record requirements changed or rejected by contradictions; preserve open evidence gaps and acceptance questions for later UAT.
 
 Do not combine a base-sample proportion with purposive discussion cases or survey counts. Neither public PRs nor an unqualified self-selected form alone validates user preference, business impact, or a requirement.
+
+After the provisional [Milestone 2 As-Is findings](../milestone-2-findings.md), this comparison is proposed as a separate **Milestone 2A — Stakeholder Evidence Reconciliation** checkpoint when genuine responses arrive. It has not occurred and must not be inferred from the present public PR analysis.

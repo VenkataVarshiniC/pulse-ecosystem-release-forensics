@@ -15,7 +15,7 @@ PULSE's product boundary remains: given a software release and a declared set of
 | 5. Data Requirements & Traceability | Specify information, provenance, completeness, and trace links needed for the workflow. | Traceability from evidence and stakeholder needs to requirements. |
 | 6. UAT & BA Validation | Define and perform stakeholder-facing acceptance against the agreed decision workflow. | Documented acceptance evidence and unresolved gaps. |
 
-Only Milestone 1 is active here. Later milestones are a plan, not completed analysis. No As-Is/To-Be model or formal FR/NFR/BR catalogue is created in this milestone.
+Milestone 1 and the bounded public-research Milestone 1A are complete. [Milestone 2 findings](milestone-2-findings.md) classify the provisional As-Is and root-cause analysis as **PARTIAL** because stakeholder evidence is pending. A future Milestone 2A reconciliation is proposed, not performed. Milestones 3–6 remain planning only; no To-Be process or formal FR/NFR/BR catalogue has been created.
 
 ## Working method
 
