@@ -45,4 +45,4 @@ Start with [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md), the Phase 0 [decision](docs
 
 ## Current conclusion
 
-Phase 2 reaches **PIVOT**. Bounded live collection and report integration work, while historical release-boundary evidence, detector yield, observed-adoption inputs, and recovery eligibility still limit substantive multi-repository reconstruction. See the [Phase 2 findings](docs/phase-2/phase-2-findings.md). The system makes no ecosystem-wide claim, and Phase 3 has not begun.
+Phase 2 reaches **PIVOT**. Bounded live collection and report integration work, while historical release-boundary evidence, detector yield, observed-adoption inputs, and recovery eligibility still limit substantive multi-repository reconstruction. See the [Phase 2 findings](docs/phase-2/phase-2-findings.md). The system makes no ecosystem-wide claim. [Phase 3 — Business Analysis & Requirements Engineering](docs/phase-3/phase-3-plan.md) has begun with provisional stakeholder and problem hypotheses and a discovery plan; no stakeholder validation or formal requirements have been completed.
