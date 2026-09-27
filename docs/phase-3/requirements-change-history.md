@@ -12,4 +12,20 @@ This is a BA decision-history log, **not** a requirements catalogue. It records 
 | CH-06 — PR completion | Merge or closure might be read as migration or recovery. | Milestone 1A records PR disposition but not production state; Phase 2 collected no downstream releases or recovery-eligible set. | Distinguish artifact disposition, target-version use, migration, and recovery; leave unsupported completion UNKNOWN. | Evidence boundary supported; stakeholder completion criterion pending. |
 | CH-07 — Universal deep review | Every update might receive the same investigative depth. | Only 6/20 base sampled bot PRs had visible human interaction; the purposive 7/7 discussion set cannot estimate prevalence. | Test explainable triage between routine updates and investigation-worthy cases; do not assume hidden review was absent or that a priority queue is desired. | Design hypothesis only. |
 
-The future [Milestone 2A reconciliation](secondary-research/primary-research-integration-plan.md) should record any stakeholder-driven revisions here before formal requirements. `CH` IDs are change-history references, not functional requirement IDs.
+The future [Milestone 2A reconciliation](secondary-research/primary-research-integration-plan.md) should record any stakeholder-driven revisions here before formal requirements are finalized. `CH` IDs are change-history references, not functional requirement IDs.
+
+## Milestone 4 trace links — baseline prepared, no stakeholder approval
+
+The earlier CH-01–07 entries are preserved. The [provisional specification](requirements-specification.md) translates each decision into requirements and [rules](business-rules.md); this is **evidence → requirement change → resulting bounded behavior**, not a claim that new behavior was implemented.
+
+| History ID | Formal trace | Resulting behavior or guard in the provisional baseline |
+| --- | --- | --- |
+| CH-01 | FR-002, NFR-004; RULE-001/010; AC-FR-002-01 | Optional not-found remains distinct from required failure and analytical sufficiency. |
+| CH-02 | FR-009/010; RULE-008/013; AC-FR-009-01 | Lifecycle categories and report wording do not impose stage order or causality. |
+| CH-03 | FR-004/005; RULE-002/003; AC-FR-004-01/AC-FR-005-01 | Current declaration, release-boundary evidence, and target-version observation stay distinct. |
+| CH-04 | FR-004/006/009; RULE-009; AC-FR-004-01 | After-only declaration cannot support a negative release-window finding. |
+| CH-05 | FR-007/008/009; RULE-004/005/007; AC-FR-007-01/AC-FR-008-01 | Copied upstream text stays tentative and rejected candidates cannot become findings. |
+| CH-06 | SR-006, FR-012; RULE-012; AC-SR-006-01/AC-FR-012-01 | PR disposition, target-version use, and recovery are separate. |
+| CH-07 | BR-004, SR-005, FR-011; RULE-011; AC-FR-011-01 | Attention suggestions are explainable and human-overrideable only if a real portfolio decision is validated. |
+
+At the later reconciliation checkpoint, a change record should retain the response source, affected IDs, proposed wording/priority change, reason, decision authority, updated AC/RTM/backlog links, and whether the result is confirmed, modified, split, removed, added, or unresolved. Level B integrity rules require an explicit evidence tradeoff review rather than silent relaxation. No such primary-research change has occurred yet.

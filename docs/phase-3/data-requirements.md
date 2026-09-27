@@ -1,0 +1,33 @@
+# Logical data requirements and quality semantics
+
+These are **business information concepts**, not SQL tables, storage choices, or new collectors. The [logical model](logical-data-model.md), [dictionary](data-dictionary.md), and [source mappings](source-to-target-mapping.md) refine them. Current Phase 2 sources and their limits are in [findings](../phase-2/phase-2-findings.md). Proposed source extensions remain unavailable until justified, authorized, and tested. `UNKNOWN` is an analytical state with a reason, never a replacement for missing raw data.
+
+| Entity | Business definition and purpose | Key attributes; relationship | Source / current availability | Null, UNKNOWN, and quality rule |
+| --- | --- | --- | --- | --- |
+| Investigation Case | Declared question and bounded analysis unit. | case_id, package, target_version, release_boundary, window; owns cohort and runs. | Typed Phase 2 case; **existing/validated in cases**. | Case identity, window, and cohort cannot be null for analysis; no implicit ecosystem scope. |
+| Dependency Release | Upstream version event that anchors a case. | package, version, published_at, source_ref; one case targets one declared release. | PyPI/upstream metadata; **existing**. | Unknown publish time remains unresolved; do not invent boundary timestamp. |
+| Repository | Identified downstream repository, not automatically an adopter. | canonical_repository_id, host/ref; joins cases via membership. | GitHub metadata; **existing**. | Current existence or manifest is not historical use. |
+| Cohort Membership | Explicit inclusion and selection rationale for one repository in one case. | case_id, repository_id, selection_reason, frozen_at; case↔repository. | Frozen Phase 2 case; **existing**. | Incomplete collection never removes membership; denominator is declared cohort. |
+| Evidence Source | Origin and method category for an artifact or task. | source_type, source_uri, access_class, capture_method; linked to tasks/artifacts. | GitHub/PyPI collectors; **existing**, new sources proposed. | `not_collected` differs from null/absence; source identity required for accepted use. |
+| Collection Run | One planned execution or verified replay of case sources. | run_id, case_fingerprint, started_at, plan_id; belongs to case. | Phase 2 run journal; **existing**. | Missing run identity blocks claimed provenance. |
+| Collection Task | Bounded source query/probe and result for one run/repository. | task_id, repository_id, source_type, required_flag, status, attempts; belongs to run. | Phase 2 task plan/outcomes; **existing**. | Optional-not-found is completed probe, not found dependency; required failure is visible. |
+| Evidence Artifact | Preserved source content and retrieval context, raw or normalized link. | artifact_id, source_ref, digest, captured_at, method, task_id; belongs to task. | Immutable Phase 1/2 snapshots; **existing**. | Raw content is not overwritten; hash mismatch invalidates use. |
+| Historical Dependency Observation | Target-package declaration at a named ref/path/time, including absence/unresolved. | observation_id, repository_id, path, ref_sha, observed_at, declaration_state; linked to case/artifact. | Phase 2 exact-ref history; **partial**. | After-only or current state cannot fill pre-release state; missing anchor is explicit. |
+| Target-Version Observation | Resolved/installed target version or runtime/CI result, distinct from declaration. | observation_id, version, method, context, observed_at, source artifact. | Comprehensive ordinary resolution **not collected** in Phase 2. | Null version means no observation, never 0 adoption or compatibility. |
+| Candidate Signal | Tentative rule emission from evidence. | candidate_id, rule_id/version, artifact_id, span/origin, reason; case/repository scoped. | Phase 2 baseline; **existing/partial quality**. | Candidate is not a finding; stable ID and text origin needed. |
+| Analyst Review | Independent judgment on one candidate. | review_id, candidate_id, decision, rationale, reviewer/time if available; one terminal decision per candidate. | Phase 2 ledger; **accept/reject existing**, needs-evidence proposed. | Unreviewed/unresolved never accepted; missing identity is disclosed. |
+| Sufficiency Assessment | Question- and repository-specific evaluation of source prerequisites. | assessment_id, stage, status, reasons, required_source_set; linked to case/repository. | Phase 2 report logic; **existing/partial**. | Incomplete/unavailable/conflicting distinct; UNKNOWN follows unmet prerequisites. |
+| Lifecycle Finding | Bounded statement about an evidence category. | finding_id, stage, status, supporting_review_ids, confidence, assessment_id; linked to repository. | Phase 2 deterministic report; **existing**, zero accepted events. | NO requires bounded rule; recovery cannot be inferred from PR merge. |
+| Report | Preserved analytical presentation for one case/run/rule set. | report_id, case_id, input identities, generated_at, metric definitions; contains repository findings. | Phase 2 JSON/Markdown; **existing**. | Replay equivalence required; unavailable metric stays unavailable. |
+| Decision/Disposition | Human next-action or closure record, distinct from a finding. | decision_id, case/repository, owner, action, rationale, time, unresolved items. | Organizational decision **not observed**; PR disposition only secondary evidence. | No fabricated owner; no production completion from artifact status. |
+
+## Quality dimensions
+
+- **Completeness:** required task and source coverage is visible per case/repository/stage; a completed API plan is not proof of all relevant evidence.
+- **Provenance:** original URI/ref, capture method, query/run/task, digest, and transformation/review chain remain inspectable; connector-assisted validation is not an unattended collector run.
+- **Validity:** controlled statuses and case/window membership follow [rules](business-rules.md); `NO_EVENT_OCCURRED` is not an allowed finding.
+- **Consistency and uniqueness:** stable case, artifact, candidate, and review identities prevent duplicate terminal decisions and mismatched replay.
+- **Timeliness:** preserve source event time and retrieval time as different fields where known; no timeliness SLA is claimed.
+- **Reproducibility:** frozen inputs and rule versions regenerate analytically equivalent output. Source drift requires a new run, not silent mutation.
+
+No private source is presumed authorized. Retention, access policy, user-facing provenance detail, and performance targets are **TBD — requires baseline measurement / stakeholder and policy validation**.
