@@ -1,0 +1,15 @@
+{
+  "case_id": "urllib3-2.0.0",
+  "generated_at": "2026-09-27T05:02:24.724834+00:00",
+  "collection_manifest": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\manifest.json",
+  "history_manifest": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-history-live\\data\\interim\\urllib3-2.0.0\\historical\\027bc3fc71334e138d8ec73bedde28a1\\manifest.json",
+  "collection_run_id": "5ba100d9629143f880ce8f5779d6d747",
+  "history_run_id": "027bc3fc71334e138d8ec73bedde28a1",
+  "candidate_count": 2,
+  "candidate_ids": [
+    "bb4048c374b6b5c34d799903",
+    "e3aebd0869d43caa3aee8e22"
+  ],
+  "baseline_sha256": "30e24393818b5009520cab51374f052ddb35417f5476bc146bab31bf2450d37e",
+  "detector_rules_unchanged_from_commit": "da343d5"
+}

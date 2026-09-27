@@ -1,0 +1,12 @@
+{
+  "case_id": "pytest-8.0.0",
+  "generated_at": "2026-09-27T05:02:24.123200+00:00",
+  "collection_manifest": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\manifest.json",
+  "history_manifest": "C:\\Users\\venka\\pulse-phase2-m4-pytest-history-live\\data\\interim\\pytest-8.0.0\\historical\\357943cd594b400bae95717732a8edc7\\manifest.json",
+  "collection_run_id": "806b4926db8c4f77a3ed68bec605b5fe",
+  "history_run_id": "357943cd594b400bae95717732a8edc7",
+  "candidate_count": 0,
+  "candidate_ids": [],
+  "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "detector_rules_unchanged_from_commit": "da343d5"
+}
