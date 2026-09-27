@@ -1,0 +1,18 @@
+[
+  {
+    "candidate_id": "bb4048c374b6b5c34d799903",
+    "status": "rejected",
+    "reason_code": "bot_or_dependency_update_noise",
+    "note": "Analyst review of the collected Dependabot PR #226: the bot proposed widening scrapelib's urllib3 requirement, but the PR was closed without merging and its body does not connect the proposal to a downstream friction event. Copied upstream release notes are not scrapelib remediation.",
+    "reviewed_at": "2026-09-27T05:03:24Z",
+    "source_basis": "Collector-captured full PR body and metadata, urllib3 collection run 5ba100d9629143f880ce8f5779d6d747; no external supplementation."
+  },
+  {
+    "candidate_id": "e3aebd0869d43caa3aee8e22",
+    "status": "rejected",
+    "reason_code": "generic_dependency_mention",
+    "note": "Analyst review of the collected Dependabot PR #226: the PR describes a proposed version-range update, not a concrete failure, incompatible environment, or migration task in scrapelib. The error/fix language belongs to copied upstream urllib3 release notes and does not establish downstream friction.",
+    "reviewed_at": "2026-09-27T05:03:24Z",
+    "source_basis": "Collector-captured full PR body and metadata, urllib3 collection run 5ba100d9629143f880ce8f5779d6d747; no external supplementation."
+  }
+]
