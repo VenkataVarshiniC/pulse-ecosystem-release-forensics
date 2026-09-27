@@ -1,0 +1,3676 @@
+{
+  "protocol_commit": "7f3c495",
+  "checked_at": "2026-09-27T03:24:05.372186+00:00",
+  "target_seed_pool": [
+    {
+      "package": "click",
+      "pypi_url": "https://pypi.org/pypi/click/json",
+      "upstream_repository": "pallets/click",
+      "qualifying_release": null,
+      "released_at": null,
+      "eligible": false,
+      "exclusion_reason": "no_release_in_range"
+    },
+    {
+      "package": "pytest",
+      "pypi_url": "https://pypi.org/pypi/pytest/json",
+      "upstream_repository": "pytest-dev/pytest",
+      "qualifying_release": "8.0.0",
+      "released_at": "2024-01-27T21:47:54.913691+00:00",
+      "eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "package": "urllib3",
+      "pypi_url": "https://pypi.org/pypi/urllib3/json",
+      "upstream_repository": "urllib3/urllib3",
+      "qualifying_release": "2.0.0",
+      "released_at": "2023-04-26T17:21:22.577020+00:00",
+      "eligible": true,
+      "exclusion_reason": null
+    }
+  ],
+  "cases": [
+    {
+      "target": {
+        "package": "pytest",
+        "pypi_url": "https://pypi.org/pypi/pytest/json",
+        "upstream_repository": "pytest-dev/pytest",
+        "qualifying_release": "8.0.0",
+        "released_at": "2024-01-27T21:47:54.913691+00:00",
+        "eligible": true,
+        "exclusion_reason": null
+      },
+      "searches": [
+        {
+          "query": "pytest in:file filename:pyproject.toml",
+          "retrieved_at": "2026-09-27T03:24:06.193664+00:00",
+          "total_count": 799744,
+          "returned_count": 30,
+          "ordered_results": [
+            {
+              "repository": "QIN2DIM/hcaptcha-challenger",
+              "path": "archive/pyproject.toml.txt",
+              "html_url": "https://github.com/QIN2DIM/hcaptcha-challenger/blob/28ee79b80bad2e5a7d713acdf2d9376e3a46e73e/archive/pyproject.toml.txt"
+            },
+            {
+              "repository": "PyO3/maturin",
+              "path": "src/templates/pyproject.toml.j2",
+              "html_url": "https://github.com/PyO3/maturin/blob/4c4d695109ef2799d6331681f9cafbccc4722bac/src/templates/pyproject.toml.j2"
+            },
+            {
+              "repository": "thinh-vu/vnstock",
+              "path": "pyproject.toml.testing",
+              "html_url": "https://github.com/thinh-vu/vnstock/blob/53f7edce4122c17b928a856f0ea801abe0f8b78c/pyproject.toml.testing"
+            },
+            {
+              "repository": "Tecnativa/image-template",
+              "path": "src/{% if pytest %}pyproject.toml{% endif %}.jinja",
+              "html_url": "https://github.com/Tecnativa/image-template/blob/62f99017faabaa9822fc8c12bda8464531c69c85/src/{% if pytest %}pyproject.toml{% endif %}.jinja"
+            },
+            {
+              "repository": "quantalogic/quantalogic",
+              "path": "pyproject.toml.bak",
+              "html_url": "https://github.com/quantalogic/quantalogic/blob/47c6987353d57369a5eb46205f346078ab00dcd8/pyproject.toml.bak"
+            },
+            {
+              "repository": "ROCm/amdsmi",
+              "path": "py-interface/pyproject.toml.in",
+              "html_url": "https://github.com/ROCm/amdsmi/blob/8c5d4990cbe45dc99bd0d0b4cc265506b021f8f5/py-interface/pyproject.toml.in"
+            },
+            {
+              "repository": "NLeSC/python-template",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/NLeSC/python-template/blob/1d1b6bb84708971362d368507190011531ac4364/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "AdaCore/RecordFlux",
+              "path": "pyproject.toml.in",
+              "html_url": "https://github.com/AdaCore/RecordFlux/blob/d13da982a2277eda4850fe7875e2a6d723d8bd0f/pyproject.toml.in"
+            },
+            {
+              "repository": "sb-ai-lab/RePlay",
+              "path": "projects/pyproject.toml.template",
+              "html_url": "https://github.com/sb-ai-lab/RePlay/blob/98d2d72ae169e431d19f410bdeb6064c4af24427/projects/pyproject.toml.template"
+            },
+            {
+              "repository": "djangostarter/web",
+              "path": "pyproject.toml.jinja",
+              "html_url": "https://github.com/djangostarter/web/blob/2cce2f972b9a794e4830e29d1320f7e470246080/pyproject.toml.jinja"
+            },
+            {
+              "repository": "superlinear-ai/substrate",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/superlinear-ai/substrate/blob/ad9b9f61cd4c895a71f98994ab5547b461772eeb/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "SAITEC-TEAM/SAITEC-Infra",
+              "path": "Git/src/assets/pyproject.toml.pytest",
+              "html_url": "https://github.com/SAITEC-TEAM/SAITEC-Infra/blob/e1dd34a699ccef136ab28db04c7124fe180eefbc/Git/src/assets/pyproject.toml.pytest"
+            },
+            {
+              "repository": "planetlabs/cosmolog",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/planetlabs/cosmolog/blob/7bd30bcfab91c3b73602db8efefaf6ac1b7115cb/pyproject.toml"
+            },
+            {
+              "repository": "HappySeaFox/sail",
+              "path": "src/bindings/sail-python/pyproject.toml.in",
+              "html_url": "https://github.com/HappySeaFox/sail/blob/9ca3979f2b500b8586cd6fb3054b343507fd7cc9/src/bindings/sail-python/pyproject.toml.in"
+            },
+            {
+              "repository": "4TUResearchData/djehuty",
+              "path": "pyproject.toml.in",
+              "html_url": "https://github.com/4TUResearchData/djehuty/blob/4485d8aac981867a839fbb7e752afabafc559ffe/pyproject.toml.in"
+            },
+            {
+              "repository": "datalens-tech/datalens-backend",
+              "path": "lib/redis-cache-lock/pyproject.toml.upstream",
+              "html_url": "https://github.com/datalens-tech/datalens-backend/blob/58a1bad1b95b6df1713c8328fa5b690024c91f8c/lib/redis-cache-lock/pyproject.toml.upstream"
+            },
+            {
+              "repository": "fabric8-analytics/fabric8-analytics-vscode-extension",
+              "path": "src/providers/pyproject.toml.ts",
+              "html_url": "https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension/blob/d05abf2cbbfcf1c21b265712d8bea361f5ccbc7a/src/providers/pyproject.toml.ts"
+            },
+            {
+              "repository": "gone/django-hydra",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/gone/django-hydra/blob/f743935a4d75030ebaa3f422ec8d953fc5b6439c/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "deanmalan/easy-equities-client",
+              "path": "pyproject.toml.old",
+              "html_url": "https://github.com/deanmalan/easy-equities-client/blob/10c52efe2fc86554ec78f8d3a416247ddb2d1a6f/pyproject.toml.old"
+            },
+            {
+              "repository": "jlevy/simple-modern-uv",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/jlevy/simple-modern-uv/blob/019733b9f0806afee542af9076ccf891e3fc5293/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "ritwiktiwari/copier-astral",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/ritwiktiwari/copier-astral/blob/10205f6655868e7ae4df0cc7e48089cbf7aff871/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "DiamondLightSource/python-copier-template",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/DiamondLightSource/python-copier-template/blob/4e8d91716d3c7f73e2f5731656a5db0e3b2e57f7/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "muscbridge/PyDKE",
+              "path": "pyproject.toml.backup",
+              "html_url": "https://github.com/muscbridge/PyDKE/blob/d9e71bd92190076d5276aaef355b5be79cce279d/pyproject.toml.backup"
+            },
+            {
+              "repository": "napari/napari-plugin-template",
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/napari/napari-plugin-template/blob/85c5e0475b40c6abc008a51021b21864509bfafc/template/pyproject.toml.jinja"
+            },
+            {
+              "repository": "bsc-wdc/qdislib",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/bsc-wdc/qdislib/blob/901d3ae8112c1d70f57dba37ff391c406a8afb54/pyproject.toml"
+            },
+            {
+              "repository": "pawamoy/copier-poetry",
+              "path": "project/pyproject.toml.jinja",
+              "html_url": "https://github.com/pawamoy/copier-poetry/blob/7c6ec33ffb37ceb6f76614833068708987b8c12a/project/pyproject.toml.jinja"
+            },
+            {
+              "repository": "risi-kondor/GElib",
+              "path": "pyproject.toml.new",
+              "html_url": "https://github.com/risi-kondor/GElib/blob/dee79cf732d08bb3c907e0b33a3804ed5b1802b0/pyproject.toml.new"
+            },
+            {
+              "repository": "cmpnd-ai/dspy-cli",
+              "path": "src/dspy_cli/templates/pyproject.toml.template",
+              "html_url": "https://github.com/cmpnd-ai/dspy-cli/blob/c3b667ef4254bda77c7cf94a0bc786a0f762c0c0/src/dspy_cli/templates/pyproject.toml.template"
+            },
+            {
+              "repository": "brucechou1983/chainlit_langgraph",
+              "path": "pyproject.toml.backup",
+              "html_url": "https://github.com/brucechou1983/chainlit_langgraph/blob/7f5ab8a23e48505675d5e9836c9e689ad1a64ad8/pyproject.toml.backup"
+            },
+            {
+              "repository": "yezz123/fastango",
+              "path": "fastango/templates/project/mvc/pyproject.toml.j2",
+              "html_url": "https://github.com/yezz123/fastango/blob/d26f047d7c1fd5ff27b6ac2a1f435368b2e86fa2/fastango/templates/project/mvc/pyproject.toml.j2"
+            }
+          ]
+        },
+        {
+          "query": "pytest in:file filename:requirements.txt",
+          "retrieved_at": "2026-09-27T03:24:07.837896+00:00",
+          "total_count": 579584,
+          "returned_count": 30,
+          "ordered_results": [
+            {
+              "repository": "zerodha/pykiteconnect",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/zerodha/pykiteconnect/blob/2f67c46ead6864425744abe5ec386979ee39c69f/dev_requirements.txt"
+            },
+            {
+              "repository": "dropbox/PyHive",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/dropbox/PyHive/blob/ac09074a652fd50e10b57a7f0bbc4f6410961301/dev_requirements.txt"
+            },
+            {
+              "repository": "CyberPunkMetalHead/gateio-crypto-trading-bot-binance-announcements-new-coins",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/CyberPunkMetalHead/gateio-crypto-trading-bot-binance-announcements-new-coins/blob/180763fa167ede0a7534d485a3c4c7b3030b43ec/dev_requirements.txt"
+            },
+            {
+              "repository": "etherex/etherex",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/etherex/etherex/blob/c91832e0c4c97aa55280557cd6773cb89cb5e858/dev_requirements.txt"
+            },
+            {
+              "repository": "aceinnolab/Inkycal",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/aceinnolab/Inkycal/blob/2066169c6f1fde1bb1d7cf6b1147cecf970b257d/dev_requirements.txt"
+            },
+            {
+              "repository": "vintasoftware/django-templated-email",
+              "path": "tox-requirements.txt",
+              "html_url": "https://github.com/vintasoftware/django-templated-email/blob/9a3706f70d88b73d467b1b1c99149983d3f0a99a/tox-requirements.txt"
+            },
+            {
+              "repository": "facebookresearch/CodeGen",
+              "path": "ci_requirements.txt",
+              "html_url": "https://github.com/facebookresearch/CodeGen/blob/e3e8855c4abbd7d19c8fec36b49d7e7fe7479dbf/ci_requirements.txt"
+            },
+            {
+              "repository": "ssokolow/quicktile",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/ssokolow/quicktile/blob/5438dbb69a5330d393d3a706f9d1b9c11523c595/dev_requirements.txt"
+            },
+            {
+              "repository": "DataBassGit/AgentForge",
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/DataBassGit/AgentForge/blob/4777277050a242238cfc394e95a6299c54076075/REQUIREMENTS.txt"
+            },
+            {
+              "repository": "pinterest/pymemcache",
+              "path": "docs-requirements.txt",
+              "html_url": "https://github.com/pinterest/pymemcache/blob/3ef28efac1a6cca5fb47c88981b7df4b33f1aac5/docs-requirements.txt"
+            },
+            {
+              "repository": "jcushman/pdfquery",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/jcushman/pdfquery/blob/7f83848e6ead157ecfb8563d592550b1fdda6020/dev_requirements.txt"
+            },
+            {
+              "repository": "jdiegodcp/ramlfications",
+              "path": "tox-requirements.txt",
+              "html_url": "https://github.com/jdiegodcp/ramlfications/blob/1cd40bd7da1fdcf0335fdb07bba84eeb3b474e97/tox-requirements.txt"
+            },
+            {
+              "repository": "ClickHouse/dbt-clickhouse",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/ClickHouse/dbt-clickhouse/blob/53bdb016e70a5225ac21b493c8e747f52989b1ed/dev_requirements.txt"
+            },
+            {
+              "repository": "hagsteel/swampdragon",
+              "path": "tox_requirements.txt",
+              "html_url": "https://github.com/hagsteel/swampdragon/blob/ef8dedd191b7b3a7a11d49f5190699ed0b00bcb2/tox_requirements.txt"
+            },
+            {
+              "repository": "selinon/selinon",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/selinon/selinon/blob/d3a6f3178242dee9a69608e493a9d5ccbf10ca91/dev_requirements.txt"
+            },
+            {
+              "repository": "shakedzy/dython",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/shakedzy/dython/blob/7f72a9b225473d1b43b5258df614fdb6f34293de/dev_requirements.txt"
+            },
+            {
+              "repository": "lona-web-org/lona",
+              "path": "doc/REQUIREMENTS.txt",
+              "html_url": "https://github.com/lona-web-org/lona/blob/5ffcc2591a20a441bc25807ca01035a79c5a5d19/doc/REQUIREMENTS.txt"
+            },
+            {
+              "repository": "AdvancedClimateSystems/uModbus",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/AdvancedClimateSystems/uModbus/blob/f1128a73e43f565bacedd1ae99d077d7c9c831f3/dev_requirements.txt"
+            },
+            {
+              "repository": "GoogleCloudPlatform/terraform-python-testing-helper",
+              "path": "DEV-REQUIREMENTS.txt",
+              "html_url": "https://github.com/GoogleCloudPlatform/terraform-python-testing-helper/blob/f8c79b4b8a86079f4c829cad3b03dca860023770/DEV-REQUIREMENTS.txt"
+            },
+            {
+              "repository": "GT4SD/gt4sd-core",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/GT4SD/gt4sd-core/blob/31fe75a4a8adfdede8936c5010fce97cc7225947/dev_requirements.txt"
+            },
+            {
+              "repository": "Tanuki/tanuki.py",
+              "path": "dev.requirements.txt",
+              "html_url": "https://github.com/Tanuki/tanuki.py/blob/138fed16889cd0074e8c631c90b62c40f222e822/dev.requirements.txt"
+            },
+            {
+              "repository": "linkedin/pyexchange",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/linkedin/pyexchange/blob/d568f4edd326adb451b915ddf66cf1a37820e3ca/dev_requirements.txt"
+            },
+            {
+              "repository": "opentok/Opentok-Python-SDK",
+              "path": ".requirements.txt",
+              "html_url": "https://github.com/opentok/Opentok-Python-SDK/blob/93ea3f9ff06e693014cf1242f32409a62366ae61/.requirements.txt"
+            },
+            {
+              "repository": "microsoft/nutter",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/microsoft/nutter/blob/368248bb3c2ed88a60ba6f5953b89fcc2cd0364e/dev_requirements.txt"
+            },
+            {
+              "repository": "nitram509/ascii-telnet-server",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/nitram509/ascii-telnet-server/blob/9804cd76ef485a9c2ca567ff9b6e93aa4ce96e57/dev_requirements.txt"
+            },
+            {
+              "repository": "pubs/pubs",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/pubs/pubs/blob/f3fc571e9983d6ba13cac2c5439dc7abb9447c37/dev_requirements.txt"
+            },
+            {
+              "repository": "aws/aws-elastic-beanstalk-cli",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/aws/aws-elastic-beanstalk-cli/blob/72145afcf6df675e68684dc80c88db92bcaf5391/dev_requirements.txt"
+            },
+            {
+              "repository": "WheatonCS/Lexos",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/WheatonCS/Lexos/blob/0c46becd362c6a608644cb87f5074994d0dfed1f/dev_requirements.txt"
+            },
+            {
+              "repository": "bugsnag/bugsnag-python",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/bugsnag/bugsnag-python/blob/005ad44ff503593d798ccdf1265c2bc5140da3e7/dev_requirements.txt"
+            },
+            {
+              "repository": "ga4gh/vrs",
+              "path": ".requirements.txt",
+              "html_url": "https://github.com/ga4gh/vrs/blob/a3a1e527e421ab6355ad193af6cbf680ac4ef81c/.requirements.txt"
+            }
+          ]
+        }
+      ],
+      "candidates_considered": 60,
+      "eligible_count": 2,
+      "selected_count": 2,
+      "candidates": [
+        {
+          "repository": "QIN2DIM/hcaptcha-challenger",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 1,
+              "path": "archive/pyproject.toml.txt",
+              "html_url": "https://github.com/QIN2DIM/hcaptcha-challenger/blob/28ee79b80bad2e5a7d713acdf2d9376e3a46e73e/archive/pyproject.toml.txt"
+            }
+          ],
+          "rank_hash": "d827bc3bf65651b4e53867f72eb9dd7d6dc0b81f1fc9e64aa69b311e18ba05ea",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "PyO3/maturin",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 2,
+              "path": "src/templates/pyproject.toml.j2",
+              "html_url": "https://github.com/PyO3/maturin/blob/4c4d695109ef2799d6331681f9cafbccc4722bac/src/templates/pyproject.toml.j2"
+            }
+          ],
+          "rank_hash": "9a10408f485f613e2b1f7576b47dec034e80ae141a2647f2de291c89793438cd",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "thinh-vu/vnstock",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 3,
+              "path": "pyproject.toml.testing",
+              "html_url": "https://github.com/thinh-vu/vnstock/blob/53f7edce4122c17b928a856f0ea801abe0f8b78c/pyproject.toml.testing"
+            }
+          ],
+          "rank_hash": "72b72482cd20384352ccf6c43fbb6960813cc9c18f7ef1c5fb5d0c57a0d35761",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "Tecnativa/image-template",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 4,
+              "path": "src/{% if pytest %}pyproject.toml{% endif %}.jinja",
+              "html_url": "https://github.com/Tecnativa/image-template/blob/62f99017faabaa9822fc8c12bda8464531c69c85/src/{% if pytest %}pyproject.toml{% endif %}.jinja"
+            }
+          ],
+          "rank_hash": "07b72f420e9c4a433497ce03a84d391c094ca33d8660a74d2cc9b42cbc610a0c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "quantalogic/quantalogic",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 5,
+              "path": "pyproject.toml.bak",
+              "html_url": "https://github.com/quantalogic/quantalogic/blob/47c6987353d57369a5eb46205f346078ab00dcd8/pyproject.toml.bak"
+            }
+          ],
+          "rank_hash": "90dcf57eb212ef4d0b898e5addbeba89890bca4e67fe9b94b5b38d8224aa9fe1",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ROCm/amdsmi",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 6,
+              "path": "py-interface/pyproject.toml.in",
+              "html_url": "https://github.com/ROCm/amdsmi/blob/8c5d4990cbe45dc99bd0d0b4cc265506b021f8f5/py-interface/pyproject.toml.in"
+            }
+          ],
+          "rank_hash": "136ba7dc25370adcd26fdd21f6c6c5158051884f1f96ad1e1e3b31277fcd4a75",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "NLeSC/python-template",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 7,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/NLeSC/python-template/blob/1d1b6bb84708971362d368507190011531ac4364/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "d8b26f0d39e76341ab46828c68da601b805a408a431b1c7c04bb933378f93fc3",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "AdaCore/RecordFlux",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 8,
+              "path": "pyproject.toml.in",
+              "html_url": "https://github.com/AdaCore/RecordFlux/blob/d13da982a2277eda4850fe7875e2a6d723d8bd0f/pyproject.toml.in"
+            }
+          ],
+          "rank_hash": "b96d9a9271b8e21bbc80d286c7456a0b4ae29b36a6076c07fda00453515f1156",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "sb-ai-lab/RePlay",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 9,
+              "path": "projects/pyproject.toml.template",
+              "html_url": "https://github.com/sb-ai-lab/RePlay/blob/98d2d72ae169e431d19f410bdeb6064c4af24427/projects/pyproject.toml.template"
+            }
+          ],
+          "rank_hash": "ba258589306bcf33fe95fc26f5ff502049e90bd8a32df6e10ee99f80ab16a5f1",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "djangostarter/web",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 10,
+              "path": "pyproject.toml.jinja",
+              "html_url": "https://github.com/djangostarter/web/blob/2cce2f972b9a794e4830e29d1320f7e470246080/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "84f54a22b20ee593add0475f9152f46d9505b3f11b8bc5ac2352a6c987cca604",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "superlinear-ai/substrate",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 11,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/superlinear-ai/substrate/blob/ad9b9f61cd4c895a71f98994ab5547b461772eeb/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "0f99bc8e91c4e901a675693274a1a65c1a74e39dde8fe7358533c6c3a9a9c916",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "SAITEC-TEAM/SAITEC-Infra",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 12,
+              "path": "Git/src/assets/pyproject.toml.pytest",
+              "html_url": "https://github.com/SAITEC-TEAM/SAITEC-Infra/blob/e1dd34a699ccef136ab28db04c7124fe180eefbc/Git/src/assets/pyproject.toml.pytest"
+            }
+          ],
+          "rank_hash": "710a161826eb9984749204df369a01377a2c622c3b5763de7c78cd1d86b7b24f",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "planetlabs/cosmolog",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 13,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/planetlabs/cosmolog/blob/7bd30bcfab91c3b73602db8efefaf6ac1b7115cb/pyproject.toml"
+            }
+          ],
+          "rank_hash": "7bd09cde726fbd49eeb945385f055700226989e5eb5a64f2055460f32ae573dc",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": null,
+            "language": "Python",
+            "size_kb": 72,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/planetlabs/cosmolog"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/planetlabs/cosmolog/blob/master/pyproject.toml",
+            "content_sha256": "2cafddda8d28677d810e2c0e765e9512caa54b02115c1922b0f04084ccf55e74",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "pytest>=3.0.2",
+                "group": "project.optional-dependencies.test"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2024-03-12T20:35:20Z",
+              "2024-03-12T20:21:42Z"
+            ]
+          }
+        },
+        {
+          "repository": "HappySeaFox/sail",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 14,
+              "path": "src/bindings/sail-python/pyproject.toml.in",
+              "html_url": "https://github.com/HappySeaFox/sail/blob/9ca3979f2b500b8586cd6fb3054b343507fd7cc9/src/bindings/sail-python/pyproject.toml.in"
+            }
+          ],
+          "rank_hash": "7cc5627817b95d543b8ebb275d5dcec75313d52e81a4b3c4168b678919d20919",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "4TUResearchData/djehuty",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 15,
+              "path": "pyproject.toml.in",
+              "html_url": "https://github.com/4TUResearchData/djehuty/blob/4485d8aac981867a839fbb7e752afabafc559ffe/pyproject.toml.in"
+            }
+          ],
+          "rank_hash": "1cb4f83bd719732e18aa42a90e8bc9581a8f6a536a4354667ccb431834e5e142",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "datalens-tech/datalens-backend",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 16,
+              "path": "lib/redis-cache-lock/pyproject.toml.upstream",
+              "html_url": "https://github.com/datalens-tech/datalens-backend/blob/58a1bad1b95b6df1713c8328fa5b690024c91f8c/lib/redis-cache-lock/pyproject.toml.upstream"
+            }
+          ],
+          "rank_hash": "72e132bc82b38fd9b2c72ca35a364e4201a241cb79110bb242df29096df07834",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "fabric8-analytics/fabric8-analytics-vscode-extension",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 17,
+              "path": "src/providers/pyproject.toml.ts",
+              "html_url": "https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension/blob/d05abf2cbbfcf1c21b265712d8bea361f5ccbc7a/src/providers/pyproject.toml.ts"
+            }
+          ],
+          "rank_hash": "8f956e1fd30b68e0d6d15bf01f0beaa233819db37aa668edf4603854ae3e62bd",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "gone/django-hydra",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 18,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/gone/django-hydra/blob/f743935a4d75030ebaa3f422ec8d953fc5b6439c/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "9990980bf7d7a17be338ba43f5b92496b520824615ab3025341b5dc764910698",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "deanmalan/easy-equities-client",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 19,
+              "path": "pyproject.toml.old",
+              "html_url": "https://github.com/deanmalan/easy-equities-client/blob/10c52efe2fc86554ec78f8d3a416247ddb2d1a6f/pyproject.toml.old"
+            }
+          ],
+          "rank_hash": "5b5ae09fb07c6a0168ee4553de52cd3e0d4116162423d27d023bb9564f96d804",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "jlevy/simple-modern-uv",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 20,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/jlevy/simple-modern-uv/blob/019733b9f0806afee542af9076ccf891e3fc5293/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "17a3a6b0fc9dad24eb54889506e43546724fc10a25e79484381b57d31469cb12",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ritwiktiwari/copier-astral",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 21,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/ritwiktiwari/copier-astral/blob/10205f6655868e7ae4df0cc7e48089cbf7aff871/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "a867b6a34845e3b7057e1346364ec8535bac694ed0692d0abc92ee56c4358b41",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "DiamondLightSource/python-copier-template",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 22,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/DiamondLightSource/python-copier-template/blob/4e8d91716d3c7f73e2f5731656a5db0e3b2e57f7/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "2ae7be0e5437124b700daa3adefa3c758848b64820156a673c738375a82f97bf",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "muscbridge/PyDKE",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 23,
+              "path": "pyproject.toml.backup",
+              "html_url": "https://github.com/muscbridge/PyDKE/blob/d9e71bd92190076d5276aaef355b5be79cce279d/pyproject.toml.backup"
+            }
+          ],
+          "rank_hash": "84ce28628b6620ad4a44dc24f6d43f67f97aa9d69f8818563dc259df4a6994d9",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "napari/napari-plugin-template",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 24,
+              "path": "template/pyproject.toml.jinja",
+              "html_url": "https://github.com/napari/napari-plugin-template/blob/85c5e0475b40c6abc008a51021b21864509bfafc/template/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "07be1f36e3e16e2460c655484cd5391f3b30a837f36e959b2fb5a1152eb1e73c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "bsc-wdc/qdislib",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 25,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/bsc-wdc/qdislib/blob/901d3ae8112c1d70f57dba37ff391c406a8afb54/pyproject.toml"
+            }
+          ],
+          "rank_hash": "47759f83ae61f8b8800545540ca7344397460a1788973f48d546064173744c50",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "Quantum Distributed Library",
+            "language": "Python",
+            "size_kb": 8437,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/bsc-wdc/qdislib"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/bsc-wdc/qdislib/blob/main/pyproject.toml",
+            "content_sha256": "f87d06c858ba80f434df6cd3166107ff8e4bc097511fa1384f7eb41034de2b9b",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "pytest",
+                "group": "project.optional-dependencies.ci"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2024-05-16T08:35:45Z",
+              "2024-05-15T08:55:08Z"
+            ]
+          }
+        },
+        {
+          "repository": "pawamoy/copier-poetry",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 26,
+              "path": "project/pyproject.toml.jinja",
+              "html_url": "https://github.com/pawamoy/copier-poetry/blob/7c6ec33ffb37ceb6f76614833068708987b8c12a/project/pyproject.toml.jinja"
+            }
+          ],
+          "rank_hash": "e29f6e0d870ed77b78cc38434e0468cfc39617a3b82aad7e35a84b711fa020e9",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "risi-kondor/GElib",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 27,
+              "path": "pyproject.toml.new",
+              "html_url": "https://github.com/risi-kondor/GElib/blob/dee79cf732d08bb3c907e0b33a3804ed5b1802b0/pyproject.toml.new"
+            }
+          ],
+          "rank_hash": "a8bbd8c586a38e5c574e75f72739a72cf120c2ba84d3b107b6c56ceff1f546ef",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "cmpnd-ai/dspy-cli",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 28,
+              "path": "src/dspy_cli/templates/pyproject.toml.template",
+              "html_url": "https://github.com/cmpnd-ai/dspy-cli/blob/c3b667ef4254bda77c7cf94a0bc786a0f762c0c0/src/dspy_cli/templates/pyproject.toml.template"
+            }
+          ],
+          "rank_hash": "860f32a26e0a350356dfa4ea9586a93bf1e7aaa110f721a591d2e7eb175430f5",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "brucechou1983/chainlit_langgraph",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 29,
+              "path": "pyproject.toml.backup",
+              "html_url": "https://github.com/brucechou1983/chainlit_langgraph/blob/7f5ab8a23e48505675d5e9836c9e689ad1a64ad8/pyproject.toml.backup"
+            }
+          ],
+          "rank_hash": "ade6e0fa6cbf18335393f6ed6ae9a8e56ddd56572b0996eeb497a50b431ee61c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "yezz123/fastango",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:pyproject.toml",
+              "rank": 30,
+              "path": "fastango/templates/project/mvc/pyproject.toml.j2",
+              "html_url": "https://github.com/yezz123/fastango/blob/d26f047d7c1fd5ff27b6ac2a1f435368b2e86fa2/fastango/templates/project/mvc/pyproject.toml.j2"
+            }
+          ],
+          "rank_hash": "4d8dbff16ec367aafb8c40cebab0f6b106c234d51670f1680085a7e18786c469",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "zerodha/pykiteconnect",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 1,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/zerodha/pykiteconnect/blob/2f67c46ead6864425744abe5ec386979ee39c69f/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "5a0e6affac7c3871eb7359d440a60d86fd44f9fe2c7f94f3deb606adcba8491b",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "dropbox/PyHive",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 2,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/dropbox/PyHive/blob/ac09074a652fd50e10b57a7f0bbc4f6410961301/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "0c65cb71a2ab59e6450008f67da339fec95bb4a36747b480842e6f97e516b409",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "CyberPunkMetalHead/gateio-crypto-trading-bot-binance-announcements-new-coins",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 3,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/CyberPunkMetalHead/gateio-crypto-trading-bot-binance-announcements-new-coins/blob/180763fa167ede0a7534d485a3c4c7b3030b43ec/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "2f92f547f866e8bcc703bf5a0ce04d6d9b62f776fdbe18688354f99d3318e31f",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "etherex/etherex",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 4,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/etherex/etherex/blob/c91832e0c4c97aa55280557cd6773cb89cb5e858/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "c8045b3025e532abe27c7a44998f7610e3bbd2a137b71a5545075ce3dd4c87e5",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "aceinnolab/Inkycal",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 5,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/aceinnolab/Inkycal/blob/2066169c6f1fde1bb1d7cf6b1147cecf970b257d/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "fd748b481411b3205da2b5d6827557c33e91c5d84e53e83e12ef7e118dc98589",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "vintasoftware/django-templated-email",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 6,
+              "path": "tox-requirements.txt",
+              "html_url": "https://github.com/vintasoftware/django-templated-email/blob/9a3706f70d88b73d467b1b1c99149983d3f0a99a/tox-requirements.txt"
+            }
+          ],
+          "rank_hash": "eaf714954299a9c53fe989cf7790e7c6fec3c21102241e2f3f3beb4c58fcb21c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "facebookresearch/CodeGen",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 7,
+              "path": "ci_requirements.txt",
+              "html_url": "https://github.com/facebookresearch/CodeGen/blob/e3e8855c4abbd7d19c8fec36b49d7e7fe7479dbf/ci_requirements.txt"
+            }
+          ],
+          "rank_hash": "9f4e18c0ce8001b86301e498f5ea01780808d3f04be8342bce94c2b451760c2d",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ssokolow/quicktile",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 8,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/ssokolow/quicktile/blob/5438dbb69a5330d393d3a706f9d1b9c11523c595/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "2d4481c38827babb5f879cb0f6fd3cc01e6257e6e908f7ac15fea443fc264013",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "DataBassGit/AgentForge",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 9,
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/DataBassGit/AgentForge/blob/4777277050a242238cfc394e95a6299c54076075/REQUIREMENTS.txt"
+            }
+          ],
+          "rank_hash": "f860928720354febd2d2e057c1b340d180dbcb13e7a16fc9a7f194fec1118a51",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "pinterest/pymemcache",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 10,
+              "path": "docs-requirements.txt",
+              "html_url": "https://github.com/pinterest/pymemcache/blob/3ef28efac1a6cca5fb47c88981b7df4b33f1aac5/docs-requirements.txt"
+            }
+          ],
+          "rank_hash": "449964dfaaeaced0fa7b3fb527b346961476b0d1c7a855cbe2cab32a1a5d4bf6",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "jcushman/pdfquery",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 11,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/jcushman/pdfquery/blob/7f83848e6ead157ecfb8563d592550b1fdda6020/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "52bc6b8c8479b2c4299cb9d967f076f36ea9674944e6251830e5989330cfda55",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "jdiegodcp/ramlfications",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 12,
+              "path": "tox-requirements.txt",
+              "html_url": "https://github.com/jdiegodcp/ramlfications/blob/1cd40bd7da1fdcf0335fdb07bba84eeb3b474e97/tox-requirements.txt"
+            }
+          ],
+          "rank_hash": "12115b1cc4af0cfd8fb0a6ae5f136efdee81b7f72f0b80823ba3fead052dfdcf",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ClickHouse/dbt-clickhouse",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 13,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/ClickHouse/dbt-clickhouse/blob/53bdb016e70a5225ac21b493c8e747f52989b1ed/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "4f7c95a8b1460e48d5960a27e656b76998d1c08c9368860b6a4a673521c88a9e",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "hagsteel/swampdragon",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 14,
+              "path": "tox_requirements.txt",
+              "html_url": "https://github.com/hagsteel/swampdragon/blob/ef8dedd191b7b3a7a11d49f5190699ed0b00bcb2/tox_requirements.txt"
+            }
+          ],
+          "rank_hash": "60757686793542aa846a8df11e58b7528449e3b71e333193d2423f54796f80c0",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "selinon/selinon",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 15,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/selinon/selinon/blob/d3a6f3178242dee9a69608e493a9d5ccbf10ca91/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "6d6dac25bd5b55c660453ac6c0024c55dc24b3a6b8cd2897b5094cb8403b76b3",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "shakedzy/dython",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 16,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/shakedzy/dython/blob/7f72a9b225473d1b43b5258df614fdb6f34293de/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "3c888a1c0c95c8608e3656bd2a92f8217b39a4a68fe63ff8fc88055ca5d334c1",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "lona-web-org/lona",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 17,
+              "path": "doc/REQUIREMENTS.txt",
+              "html_url": "https://github.com/lona-web-org/lona/blob/5ffcc2591a20a441bc25807ca01035a79c5a5d19/doc/REQUIREMENTS.txt"
+            }
+          ],
+          "rank_hash": "64a9736c0aeb4921e658f1c07611debc6072b83dc31246d0da3495d8eaa0a2ea",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "AdvancedClimateSystems/uModbus",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 18,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/AdvancedClimateSystems/uModbus/blob/f1128a73e43f565bacedd1ae99d077d7c9c831f3/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "ca0e58174da726ad33589f7ce0138c95d6624550bc6b0178522e29a54c81868b",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "GoogleCloudPlatform/terraform-python-testing-helper",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 19,
+              "path": "DEV-REQUIREMENTS.txt",
+              "html_url": "https://github.com/GoogleCloudPlatform/terraform-python-testing-helper/blob/f8c79b4b8a86079f4c829cad3b03dca860023770/DEV-REQUIREMENTS.txt"
+            }
+          ],
+          "rank_hash": "79cafe3e81adf6263bd169b757bf284b3110877f9aa92294996079ca6b901987",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "GT4SD/gt4sd-core",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 20,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/GT4SD/gt4sd-core/blob/31fe75a4a8adfdede8936c5010fce97cc7225947/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "2b0689a98364d3ababac38cd86d9bb9009326ce8e993af49adebccbe1414bdb2",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "Tanuki/tanuki.py",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 21,
+              "path": "dev.requirements.txt",
+              "html_url": "https://github.com/Tanuki/tanuki.py/blob/138fed16889cd0074e8c631c90b62c40f222e822/dev.requirements.txt"
+            }
+          ],
+          "rank_hash": "6931e33dc361eb2415bd5136d5a154e76538b79be3963080e5ef5f61555a53ee",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "linkedin/pyexchange",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 22,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/linkedin/pyexchange/blob/d568f4edd326adb451b915ddf66cf1a37820e3ca/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "2a65345149914569b1cec0030a657d8410519c2a758cdf51a8e27f91012081de",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "opentok/Opentok-Python-SDK",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 23,
+              "path": ".requirements.txt",
+              "html_url": "https://github.com/opentok/Opentok-Python-SDK/blob/93ea3f9ff06e693014cf1242f32409a62366ae61/.requirements.txt"
+            }
+          ],
+          "rank_hash": "f6c881f2f47f1e148616d16d2aa22db83b620f611c8d461a810f5a933a6daa82",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "microsoft/nutter",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 24,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/microsoft/nutter/blob/368248bb3c2ed88a60ba6f5953b89fcc2cd0364e/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "4c8890c34725b35b86cb647216b0a4b116200e922cd182cae903e87a135f8558",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "nitram509/ascii-telnet-server",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 25,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/nitram509/ascii-telnet-server/blob/9804cd76ef485a9c2ca567ff9b6e93aa4ce96e57/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "0a9abc0248840e20ced8d961136edbd00ab35fcf455ff70ebd97cd79e9c18533",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "pubs/pubs",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 26,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/pubs/pubs/blob/f3fc571e9983d6ba13cac2c5439dc7abb9447c37/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "33559183030bd588a9c790765f0d8a487fab4a4952d985325d60b20f9009a29c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "aws/aws-elastic-beanstalk-cli",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 27,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/aws/aws-elastic-beanstalk-cli/blob/72145afcf6df675e68684dc80c88db92bcaf5391/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "d9d121074217b90ee8f923d08f45773dce1bebb1a2f0b2ba115f5e8f3eb78ab4",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "WheatonCS/Lexos",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 28,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/WheatonCS/Lexos/blob/0c46becd362c6a608644cb87f5074994d0dfed1f/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "24c7ab59eef2fb751285ca9df4e9aedf2c268b8065281a98dfea5b4b760f6a5c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "bugsnag/bugsnag-python",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 29,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/bugsnag/bugsnag-python/blob/005ad44ff503593d798ccdf1265c2bc5140da3e7/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "66435f7088358ff682d5bcef73e140f1b9b58e30533749c982632eadd6863438",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ga4gh/vrs",
+          "search_hits": [
+            {
+              "query": "pytest in:file filename:requirements.txt",
+              "rank": 30,
+              "path": ".requirements.txt",
+              "html_url": "https://github.com/ga4gh/vrs/blob/a3a1e527e421ab6355ad193af6cbf680ac4ef81c/.requirements.txt"
+            }
+          ],
+          "rank_hash": "c196180de82330bac80f3fb9872ec65b33ff45624a054d8848516941c8051361",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        }
+      ],
+      "eligible_ranked": [
+        "bsc-wdc/qdislib",
+        "planetlabs/cosmolog"
+      ]
+    },
+    {
+      "target": {
+        "package": "urllib3",
+        "pypi_url": "https://pypi.org/pypi/urllib3/json",
+        "upstream_repository": "urllib3/urllib3",
+        "qualifying_release": "2.0.0",
+        "released_at": "2023-04-26T17:21:22.577020+00:00",
+        "eligible": true,
+        "exclusion_reason": null
+      },
+      "searches": [
+        {
+          "query": "urllib3 in:file filename:pyproject.toml",
+          "retrieved_at": "2026-09-27T03:24:10.495531+00:00",
+          "total_count": 28672,
+          "returned_count": 30,
+          "ordered_results": [
+            {
+              "repository": "raiden-network/raiden",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/raiden-network/raiden/blob/90cd5a6cc27e31088a39fd35c0dccf89871dfa88/pyproject.toml"
+            },
+            {
+              "repository": "cobrateam/splinter",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/cobrateam/splinter/blob/861539107381e848f63c350189360520c300ced9/pyproject.toml"
+            },
+            {
+              "repository": "buildbot/buildbot",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/buildbot/buildbot/blob/d5537a9078adf42b0983c1a408b45efe260b4f68/pyproject.toml"
+            },
+            {
+              "repository": "Aiven-Open/pghoard",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/Aiven-Open/pghoard/blob/a531b8efc05addaba66a8525c383a6998f156546/pyproject.toml"
+            },
+            {
+              "repository": "codingo/VHostScan",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/codingo/VHostScan/blob/acc7890071fac294b2b8be4f22fb7c609c837daa/pyproject.toml"
+            },
+            {
+              "repository": "atenreiro/opensquat",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/atenreiro/opensquat/blob/416c2dd72f0e7867a326d2907450b9c4a0375e5a/pyproject.toml"
+            },
+            {
+              "repository": "nlmatics/nlm-ingestor",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/nlmatics/nlm-ingestor/blob/5f0c1b920eda649637713578471577cb1feb7209/pyproject.toml"
+            },
+            {
+              "repository": "ibm-granite/granite-tsfm",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/ibm-granite/granite-tsfm/blob/fe7a35697723e2a2f5246ae979474bfc554e26c0/pyproject.toml"
+            },
+            {
+              "repository": "H-EmbodVis/VEGA-3D",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/H-EmbodVis/VEGA-3D/blob/65e2615b0452f068299220fe8c6a427892fc7d7f/pyproject.toml"
+            },
+            {
+              "repository": "wimglenn/advent-of-code-data",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/wimglenn/advent-of-code-data/blob/718d75386d2e9ff29432b1acc861714543be3fa9/pyproject.toml"
+            },
+            {
+              "repository": "ecoron/SerpScrap",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/ecoron/SerpScrap/blob/db5a89a3a41270e86c6c2ad581d5681c6820b6a5/pyproject.toml"
+            },
+            {
+              "repository": "facundoolano/feedi",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/facundoolano/feedi/blob/53233ecd2d51c4f0e041de8e287dfbbf38fc97a2/pyproject.toml"
+            },
+            {
+              "repository": "paulopacitti/gruvbox-factory",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/paulopacitti/gruvbox-factory/blob/f04400ef67b0f0e3bc9582dca9ff9db265fae518/pyproject.toml"
+            },
+            {
+              "repository": "cosai-oasis/project-codeguard",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/cosai-oasis/project-codeguard/blob/ea88e31c98e2b49efceb185c95a574d88d8fb706/pyproject.toml"
+            },
+            {
+              "repository": "LinOTP/LinOTP",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/LinOTP/LinOTP/blob/d880a775c1bb460f19456cdd7d4796d821dfe5e9/pyproject.toml"
+            },
+            {
+              "repository": "jamesturk/scrapelib",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/jamesturk/scrapelib/blob/687a434aee51e54ce1da9b3e2e634ccd4f4a376e/pyproject.toml"
+            },
+            {
+              "repository": "analysiscenter/batchflow",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/analysiscenter/batchflow/blob/68ebb5b8dccdb8f53415f382580818d1aa0d80b4/pyproject.toml"
+            },
+            {
+              "repository": "awslabs/git-remote-s3",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/awslabs/git-remote-s3/blob/60762e2f2c85743737910dbbe0ba1a23bf59758e/pyproject.toml"
+            },
+            {
+              "repository": "public/sonora",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/public/sonora/blob/0487aa08a93eb5bae008351e58ea6f19a4fbc5d8/pyproject.toml"
+            },
+            {
+              "repository": "manusimidt/py-xbrl",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/manusimidt/py-xbrl/blob/29dcc844ad7cc87195f3198e7e7ee42b45a45ece/pyproject.toml"
+            },
+            {
+              "repository": "Doriandarko/BabyAGIChatGPT",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/Doriandarko/BabyAGIChatGPT/blob/174491cbbc09d3f6ef0ec511e9e3b94e2615ffa0/pyproject.toml"
+            },
+            {
+              "repository": "felafax/felafax",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/felafax/felafax/blob/09e3b81199eadb9307b1270cfb95aa50f75f6b3e/pyproject.toml"
+            },
+            {
+              "repository": "enzet/map-machine",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/enzet/map-machine/blob/eab10c1ec9bcd0a78fa6db75d02e6219fcea562c/pyproject.toml"
+            },
+            {
+              "repository": "bellingcat/wayback-google-analytics",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/bellingcat/wayback-google-analytics/blob/e697ce9d0e2594175867e911b03198ae986ffce6/pyproject.toml"
+            },
+            {
+              "repository": "gremlin/gremlin-python",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/gremlin/gremlin-python/blob/6f52665e330a34cc5a167f28ebde05943f54f88c/pyproject.toml"
+            },
+            {
+              "repository": "batfish/pybatfish",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/batfish/pybatfish/blob/9f0f76ff3c11ad81b4f505ad6975695cd94a259e/pyproject.toml"
+            },
+            {
+              "repository": "datastax/astra-assistants-api",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/datastax/astra-assistants-api/blob/6328c717fa9e3803b692329eb9899553aec08b2c/pyproject.toml"
+            },
+            {
+              "repository": "NVIDIA-NeMo/Run",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/NVIDIA-NeMo/Run/blob/b85eb6742ea52bf51e71f10c9cc45927567403a9/pyproject.toml"
+            },
+            {
+              "repository": "MagnivOrg/prompt-layer-library",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/MagnivOrg/prompt-layer-library/blob/64abac79c1e096f9f2eeda7205cf20221d10b782/pyproject.toml"
+            },
+            {
+              "repository": "urbanogilson/SICAR",
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/urbanogilson/SICAR/blob/facffbf91a4998a2daa814a65d1d36ea99266f83/pyproject.toml"
+            }
+          ]
+        },
+        {
+          "query": "urllib3 in:file filename:requirements.txt",
+          "retrieved_at": "2026-09-27T03:24:14.242075+00:00",
+          "total_count": 894976,
+          "returned_count": 30,
+          "ordered_results": [
+            {
+              "repository": "juliomalegria/python-craigslist",
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/juliomalegria/python-craigslist/blob/bd85a3e46a467d84984c3ce89fc077cb4da6aa04/REQUIREMENTS.txt"
+            },
+            {
+              "repository": "MoonInTheRiver/NeuralSVB",
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/MoonInTheRiver/NeuralSVB/blob/7a80bc51806103f09c7448b0daf93f49615ce52f/Requirements.txt"
+            },
+            {
+              "repository": "opentok/Opentok-Python-SDK",
+              "path": ".requirements.txt",
+              "html_url": "https://github.com/opentok/Opentok-Python-SDK/blob/93ea3f9ff06e693014cf1242f32409a62366ae61/.requirements.txt"
+            },
+            {
+              "repository": "nityansuman/warren",
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/nityansuman/warren/blob/23d47fff7fff075ed9b05b43ea5d5f71d461f2fa/REQUIREMENTS.txt"
+            },
+            {
+              "repository": "jalajthanaki/NLPython",
+              "path": "pip-requirements.txt",
+              "html_url": "https://github.com/jalajthanaki/NLPython/blob/47e6861590684a63a268002d345765fd3e7cf986/pip-requirements.txt"
+            },
+            {
+              "repository": "goruck/smart-zoneminder",
+              "path": "ml-requirements.txt",
+              "html_url": "https://github.com/goruck/smart-zoneminder/blob/e2f7bf49f22f3aa00a082bc227de64237d8e7699/ml-requirements.txt"
+            },
+            {
+              "repository": "DrewThomasson/VoxNovel",
+              "path": "MAC-requirements.txt",
+              "html_url": "https://github.com/DrewThomasson/VoxNovel/blob/2d2fc9fd52ce2312ea75dd33bcd2da27b5762aba/MAC-requirements.txt"
+            },
+            {
+              "repository": "netscaler/netscaler-adc-metrics-exporter",
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/netscaler/netscaler-adc-metrics-exporter/blob/32c7e925b1f0f943ad1dc944a6f8fc5de022de8b/pip_requirements.txt"
+            },
+            {
+              "repository": "ska-sa/katdal",
+              "path": "doc-requirements.txt",
+              "html_url": "https://github.com/ska-sa/katdal/blob/142dd342c886d35f9cc8defda3ad8ea1028fc880/doc-requirements.txt"
+            },
+            {
+              "repository": "pnnl/socialsim",
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/pnnl/socialsim/blob/06f0ce61d10ca08dd50d256fb30ac0ae81ead58d/pip_requirements.txt"
+            },
+            {
+              "repository": "OpenToAllCTF/OTA-University",
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/OpenToAllCTF/OTA-University/blob/87ed6105e858b3fbfbe03298d456529be90a6c3b/REQUIREMENTS.txt"
+            },
+            {
+              "repository": "sc2musa/Large-Language-Models-play-StarCraftII",
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/sc2musa/Large-Language-Models-play-StarCraftII/blob/48564d6647c9f39a44d11588f2b9cbefee940fdd/pip_requirements.txt"
+            },
+            {
+              "repository": "daveoncode/python-string-utils",
+              "path": "dev.requirements.txt",
+              "html_url": "https://github.com/daveoncode/python-string-utils/blob/78929d88d90b1f90cb4837528ed955166bf0f559/dev.requirements.txt"
+            },
+            {
+              "repository": "eljost/pysisyphus",
+              "path": "doc-requirements.txt",
+              "html_url": "https://github.com/eljost/pysisyphus/blob/a4ce10dd6d7fdcb3d813f1c730eb365d29041999/doc-requirements.txt"
+            },
+            {
+              "repository": "dadosgovbr/ckanext-dadosgovbr",
+              "path": "pip-requirements.txt",
+              "html_url": "https://github.com/dadosgovbr/ckanext-dadosgovbr/blob/7bd17cade8b6d673743a3b19e262c815d3b2d7cb/pip-requirements.txt"
+            },
+            {
+              "repository": "jaychempan/LAE-DINO",
+              "path": "lae_requirements.txt",
+              "html_url": "https://github.com/jaychempan/LAE-DINO/blob/6b1519626e39d1f39f8ed1f38761c20f7e0e8c35/lae_requirements.txt"
+            },
+            {
+              "repository": "lrsoenksen/HAIM",
+              "path": "0-requirements.txt",
+              "html_url": "https://github.com/lrsoenksen/HAIM/blob/691b8838ab57417db5cbac0b8422a1e103033fef/0-requirements.txt"
+            },
+            {
+              "repository": "mitchos/pyZscaler",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/mitchos/pyZscaler/blob/51002a5bec289700e54ffc1e92eb6b8576b6c181/dev_requirements.txt"
+            },
+            {
+              "repository": "hadi-abdine/Prot2Text",
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/hadi-abdine/Prot2Text/blob/1bc9fcf7236cd7297974ed8d201545fa0491c93c/Requirements.txt"
+            },
+            {
+              "repository": "whyashthakker/RAG",
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/whyashthakker/RAG/blob/be521b3aea8d5566d786968e21e1c8d22050f688/Requirements.txt"
+            },
+            {
+              "repository": "horacio9a/chaturbate-anonymous",
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/horacio9a/chaturbate-anonymous/blob/24111dd08b768f4e69f53c08e6745580e1eec609/Requirements.txt"
+            },
+            {
+              "repository": "LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256",
+              "path": "ch1_requirements.txt",
+              "html_url": "https://github.com/LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256/blob/046b578594121219edbe12a99e592af3a7374172/ch1_requirements.txt"
+            },
+            {
+              "repository": "LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256",
+              "path": "ch3_requirements.txt",
+              "html_url": "https://github.com/LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256/blob/046b578594121219edbe12a99e592af3a7374172/ch3_requirements.txt"
+            },
+            {
+              "repository": "Samuel1698/fakeViewport",
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/Samuel1698/fakeViewport/blob/cd0375e08d1aeed9b95dc011e365f29c87c1220e/dev_requirements.txt"
+            },
+            {
+              "repository": "widelands/widelands-website",
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/widelands/widelands-website/blob/dcf65be409759ba1735c99a56176bf5dcea31edd/pip_requirements.txt"
+            },
+            {
+              "repository": "Haoqiu-Yan/PerceptiveAgent",
+              "path": "syn_requirements.txt",
+              "html_url": "https://github.com/Haoqiu-Yan/PerceptiveAgent/blob/a5ef942cd5b44b08d22d78f7372860499a9d6654/syn_requirements.txt"
+            },
+            {
+              "repository": "openego/eDisGo",
+              "path": "rtd_requirements.txt",
+              "html_url": "https://github.com/openego/eDisGo/blob/8cf7bc9815299c7b2da8bb204fe5fa9edd508795/rtd_requirements.txt"
+            },
+            {
+              "repository": "PacktPublishing/Azure-AI102-Certification-Essentials",
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/PacktPublishing/Azure-AI102-Certification-Essentials/blob/b4e69e5304d7bd7e023c0ecf58c829fc32f9ccdd/Requirements.txt"
+            },
+            {
+              "repository": "ynadji/hands-on-adversarial-ml",
+              "path": "all-requirements.txt",
+              "html_url": "https://github.com/ynadji/hands-on-adversarial-ml/blob/989917b51233f38f20bf1eef220c217400b0e395/all-requirements.txt"
+            },
+            {
+              "repository": "ayu-22/BPPNet-Back-Projected-Pyramid-Network",
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/ayu-22/BPPNet-Back-Projected-Pyramid-Network/blob/8c636a4f9914a5609c4b50ce74bba06f4dc8f425/Requirements.txt"
+            }
+          ]
+        }
+      ],
+      "candidates_considered": 59,
+      "eligible_count": 12,
+      "selected_count": 6,
+      "candidates": [
+        {
+          "repository": "raiden-network/raiden",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 1,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/raiden-network/raiden/blob/90cd5a6cc27e31088a39fd35c0dccf89871dfa88/pyproject.toml"
+            }
+          ],
+          "rank_hash": "4bfac3653aa203c35c5bf90661046b7da5ec2f54745da98672753f5031b9267f",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "Raiden Network",
+            "language": "Python",
+            "size_kb": 32473,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "develop",
+            "html_url": "https://github.com/raiden-network/raiden"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "cobrateam/splinter",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 2,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/cobrateam/splinter/blob/861539107381e848f63c350189360520c300ced9/pyproject.toml"
+            }
+          ],
+          "rank_hash": "7a5be73907685ba643893fd739e83acc48deaf6d9885c7d604d309257a28c7ad",
+          "eligible": true,
+          "selected": false,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "splinter - python test framework for web applications ",
+            "language": "Python",
+            "size_kb": 4543,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/cobrateam/splinter"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/cobrateam/splinter/blob/master/pyproject.toml",
+            "content_sha256": "ece74fd0944914c38a239d718bfae9f3836dd0377ff5341d3c5f126d9257e604",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=1.26.14,<3.0",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-08-16T02:10:10Z",
+              "2023-08-16T01:57:38Z"
+            ]
+          }
+        },
+        {
+          "repository": "buildbot/buildbot",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 3,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/buildbot/buildbot/blob/d5537a9078adf42b0983c1a408b45efe260b4f68/pyproject.toml"
+            }
+          ],
+          "rank_hash": "8a579840a699dabbcd3f592f480703ab438eeff099e3cee251fa2393170b51a9",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "Python-based continuous integration testing framework; your pull requests are more than welcome!",
+            "language": "Python",
+            "size_kb": 84475,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/buildbot/buildbot"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "Aiven-Open/pghoard",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 4,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/Aiven-Open/pghoard/blob/a531b8efc05addaba66a8525c383a6998f156546/pyproject.toml"
+            }
+          ],
+          "rank_hash": "49c69e0ffb783d831c195e6d5a6dcb62d5af0b8cac31f5aa39d53dae733853a8",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "PostgreSQL® backup and restore service",
+            "language": "Python",
+            "size_kb": 8798,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/Aiven-Open/pghoard"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/Aiven-Open/pghoard/blob/main/pyproject.toml",
+            "content_sha256": "cf01b1e9676777089174e688e02e1e7b76902dbe2959987c23dd0e879aa9ae7c",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3==1.26.15",
+                "group": "project.optional-dependencies.constraints"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-07-06T11:40:29Z",
+              "2023-07-04T09:39:44Z"
+            ]
+          }
+        },
+        {
+          "repository": "codingo/VHostScan",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 5,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/codingo/VHostScan/blob/acc7890071fac294b2b8be4f22fb7c609c837daa/pyproject.toml"
+            }
+          ],
+          "rank_hash": "154de1e6773ccd5f409d5994e926dd506910ea4218af9102e6bdb699df228990",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "inactive_in_window"
+          ],
+          "metadata": {
+            "description": "A virtual host scanner that performs reverse lookups, can be used with pivot tools, detect catch-all scenarios, work around wildcards, aliases and dynamic default pages.",
+            "language": "Python",
+            "size_kb": 241,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/codingo/VHostScan"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/codingo/VHostScan/blob/master/pyproject.toml",
+            "content_sha256": "6751f7a093349b9f6d2203a92c0a8c07d2d81db3cafe083c773724f9b5c70076",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=2.0.0",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": false,
+            "sample_committer_dates": []
+          }
+        },
+        {
+          "repository": "atenreiro/opensquat",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 6,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/atenreiro/opensquat/blob/416c2dd72f0e7867a326d2907450b9c4a0375e5a/pyproject.toml"
+            }
+          ],
+          "rank_hash": "107436ef435980c4ca98c5a24698359eb41504b05596db574cdc5e2c085dbe85",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "openSquat is an open-source tool that detects look-alike domains impersonating your brand, by scanning newly registered domains daily.",
+            "language": "Python",
+            "size_kb": 7213,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/atenreiro/opensquat"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/atenreiro/opensquat/blob/master/pyproject.toml",
+            "content_sha256": "97431204737e03e9dda58719298f38f709ff9451012859264c9918b266488030",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=2.6.3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-06-04T09:14:40Z",
+              "2023-06-04T09:14:01Z"
+            ]
+          }
+        },
+        {
+          "repository": "nlmatics/nlm-ingestor",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 7,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/nlmatics/nlm-ingestor/blob/5f0c1b920eda649637713578471577cb1feb7209/pyproject.toml"
+            }
+          ],
+          "rank_hash": "405885663fe785d841aa5ac884a1ed53b0c1052655bfdcd7610010b46c16b662",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "This repo provides the server side code for llmsherpa API to connect. It includes parsers for various file formats.",
+            "language": "Python",
+            "size_kb": 239976,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/nlmatics/nlm-ingestor"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ibm-granite/granite-tsfm",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 8,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/ibm-granite/granite-tsfm/blob/fe7a35697723e2a2f5246ae979474bfc554e26c0/pyproject.toml"
+            }
+          ],
+          "rank_hash": "7019eddafe95354ea90767d7ba957bac4f4cdaabd2ed89a59cc528bf53b91db3",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "not_primary_python"
+          ],
+          "metadata": {
+            "description": "Foundation Models for Time Series",
+            "language": "Jupyter Notebook",
+            "size_kb": 109458,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/ibm-granite/granite-tsfm"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "H-EmbodVis/VEGA-3D",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 9,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/H-EmbodVis/VEGA-3D/blob/65e2615b0452f068299220fe8c6a427892fc7d7f/pyproject.toml"
+            }
+          ],
+          "rank_hash": "f285fdd63b7b553d828527f2b465aeaaf5b83a046afad2fc3f28cc13bc953086",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "inactive_in_window"
+          ],
+          "metadata": {
+            "description": "[ECCV 2026] Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+            "language": "Python",
+            "size_kb": 111538,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/H-EmbodVis/VEGA-3D"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/H-EmbodVis/VEGA-3D/blob/main/pyproject.toml",
+            "content_sha256": "9723d920f87aea7a5df2a5b54831774ff8f9e51e45d602bb2429d668e87748e0",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3<=2.0.0",
+                "group": "project.optional-dependencies.train"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": false,
+            "sample_committer_dates": []
+          }
+        },
+        {
+          "repository": "wimglenn/advent-of-code-data",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 10,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/wimglenn/advent-of-code-data/blob/718d75386d2e9ff29432b1acc861714543be3fa9/pyproject.toml"
+            }
+          ],
+          "rank_hash": "3d3b6dfef350d7367328645c387f4fcede369a6c8199f1fad19b331e201b08a4",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "Get your Advent of Code data with a single import statement",
+            "language": "Python",
+            "size_kb": 460,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/wimglenn/advent-of-code-data"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/wimglenn/advent-of-code-data/blob/main/pyproject.toml",
+            "content_sha256": "5d50650659763aa0315b680d2689d59a127de44a64c6977b9239861c8531eaa1",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-07-29T04:18:03Z",
+              "2023-07-22T18:16:12Z"
+            ]
+          }
+        },
+        {
+          "repository": "ecoron/SerpScrap",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 11,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/ecoron/SerpScrap/blob/db5a89a3a41270e86c6c2ad581d5681c6820b6a5/pyproject.toml"
+            }
+          ],
+          "rank_hash": "8f4d7f11fef1f68e50400627d980c2281b6ef1b134692da97a1e4439e6ab46c2",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "inactive_in_window"
+          ],
+          "metadata": {
+            "description": "SerpScrap retrieves structured search results for SEO, research, and automation. It is available as a Python package, a CLI, a Docker application, and an MCP-compatible server. Results are JSON-compatible and preserve the source engine, rank, URL, title, snippets, result type, and typed failures.",
+            "language": "Python",
+            "size_kb": 1740,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/ecoron/SerpScrap"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/ecoron/SerpScrap/blob/master/pyproject.toml",
+            "content_sha256": "bdbdba8a89381509db50da84fc79f988ef42ad3a5fc9d6f49a9c0409941d595a",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=2.5,<3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": false,
+            "sample_committer_dates": []
+          }
+        },
+        {
+          "repository": "facundoolano/feedi",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 12,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/facundoolano/feedi/blob/53233ecd2d51c4f0e041de8e287dfbbf38fc97a2/pyproject.toml"
+            }
+          ],
+          "rank_hash": "4e7d6863a402d93b99e27cb94625074f34138a02329737386eba92a66297b2c1",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "A personal feed reader",
+            "language": "Python",
+            "size_kb": 3354,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/facundoolano/feedi"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/facundoolano/feedi/blob/main/pyproject.toml",
+            "content_sha256": "2b0defa090248b2c53dc4f3fd31c25620c098ae193b9384820f16f59af307cd4",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3<2.3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-08-24T14:21:10Z",
+              "2023-08-23T23:11:27Z"
+            ]
+          }
+        },
+        {
+          "repository": "paulopacitti/gruvbox-factory",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 13,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/paulopacitti/gruvbox-factory/blob/f04400ef67b0f0e3bc9582dca9ff9db265fae518/pyproject.toml"
+            }
+          ],
+          "rank_hash": "cf46942300d18cad8fa107b3d43cb77af12516ade9ab992cde483b9820662306",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "inactive_in_window"
+          ],
+          "metadata": {
+            "description": "🏭 convert any image to the gruvbox pallete",
+            "language": "Python",
+            "size_kb": 9214,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/paulopacitti/gruvbox-factory"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/paulopacitti/gruvbox-factory/blob/master/pyproject.toml",
+            "content_sha256": "7889d183982856afddae976301931872950e39d77a8fd0e9e32c819e2cfd8fd2",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3==2.3.0",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": false,
+            "sample_committer_dates": []
+          }
+        },
+        {
+          "repository": "cosai-oasis/project-codeguard",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 14,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/cosai-oasis/project-codeguard/blob/ea88e31c98e2b49efceb185c95a574d88d8fb706/pyproject.toml"
+            }
+          ],
+          "rank_hash": "f6d47f9b6c893e93a1935b3755594c4fb1f0d0edf1cb523385d4c20b0d059ec5",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "Project CodeGuard is an open-source, model-agnostic security framework that embeds secure-by-default practices into AI coding agent workflows. It provides comprehensive security rules that guide AI assistants to generate more secure code automatically.",
+            "language": "Python",
+            "size_kb": 2109,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/cosai-oasis/project-codeguard"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "LinOTP/LinOTP",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 15,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/LinOTP/LinOTP/blob/d880a775c1bb460f19456cdd7d4796d821dfe5e9/pyproject.toml"
+            }
+          ],
+          "rank_hash": "e2a69313c3a8dc66b52f08f21de1e985bf7bf29f6174b50bb62df912a6367c58",
+          "eligible": true,
+          "selected": false,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "LinOTP - the open source solution for two factor authentication",
+            "language": "Python",
+            "size_kb": 29212,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/LinOTP/LinOTP"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/LinOTP/LinOTP/blob/master/pyproject.toml",
+            "content_sha256": "26e5e082d0cc21ccd4c3830164c2004ade6bcf81b05e3b2192b9ad446eaac76a",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=2.5.0",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-08-15T09:15:10Z",
+              "2023-08-15T08:01:36Z"
+            ]
+          }
+        },
+        {
+          "repository": "jamesturk/scrapelib",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 16,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/jamesturk/scrapelib/blob/687a434aee51e54ce1da9b3e2e634ccd4f4a376e/pyproject.toml"
+            }
+          ],
+          "rank_hash": "2d4d4802bde177758d292696a665f50a1ea9b77e7b7448fc52004f99d8ce5518",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "⛏ a library for scraping unreliable pages",
+            "language": "Python",
+            "size_kb": 975,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/jamesturk/scrapelib"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/jamesturk/scrapelib/blob/main/pyproject.toml",
+            "content_sha256": "4be8eaeb7aa9b8e3e3388d4c28be5b6965f79aa128a4b5ea70dcf81157b9c524",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-06-29T17:19:40Z",
+              "2023-06-26T14:33:43Z"
+            ]
+          }
+        },
+        {
+          "repository": "analysiscenter/batchflow",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 17,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/analysiscenter/batchflow/blob/68ebb5b8dccdb8f53415f382580818d1aa0d80b4/pyproject.toml"
+            }
+          ],
+          "rank_hash": "f4c7fb965318edcfc076cdbc99a754fd07f78820c89410717486eae0fa6a5136",
+          "eligible": true,
+          "selected": false,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "BatchFlow helps you conveniently work with random or sequential batches of your data and define data processing and machine learning workflows even for datasets that do not fit into memory.",
+            "language": "Python",
+            "size_kb": 154267,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/analysiscenter/batchflow"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/analysiscenter/batchflow/blob/master/pyproject.toml",
+            "content_sha256": "f5c98f72f365974f21c83b8ad18b8a2ae85eac97f8cbb2d4c94c258c1d7f0377",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=1.25",
+                "group": "project.optional-dependencies.other"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-08-24T15:19:05Z",
+              "2023-08-24T14:55:58Z"
+            ]
+          }
+        },
+        {
+          "repository": "awslabs/git-remote-s3",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 18,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/awslabs/git-remote-s3/blob/60762e2f2c85743737910dbbe0ba1a23bf59758e/pyproject.toml"
+            }
+          ],
+          "rank_hash": "947dc405cddf9bce89c87d905601bbb7368adbbd630fa6ee850ced8d32abfdda",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "inactive_in_window"
+          ],
+          "metadata": {
+            "description": null,
+            "language": "Python",
+            "size_kb": 172,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/awslabs/git-remote-s3"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/awslabs/git-remote-s3/blob/main/pyproject.toml",
+            "content_sha256": "aca8a4230e30d97f6fb72488b149831971f74577f279f9a6db6826f181fb77f6",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3 (>=2.7.0,<3.0.0)",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": false,
+            "sample_committer_dates": []
+          }
+        },
+        {
+          "repository": "public/sonora",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 19,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/public/sonora/blob/0487aa08a93eb5bae008351e58ea6f19a4fbc5d8/pyproject.toml"
+            }
+          ],
+          "rank_hash": "cb25bb388ba7854ae88d1a5500e4097f44be902af39b4c1137ea6d46e2941f2a",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "A gRPC-Web implementation for Python",
+            "language": "Python",
+            "size_kb": 333,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/public/sonora"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "manusimidt/py-xbrl",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 20,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/manusimidt/py-xbrl/blob/29dcc844ad7cc87195f3198e7e7ee42b45a45ece/pyproject.toml"
+            }
+          ],
+          "rank_hash": "adb91fb2e49dd38de85d5acab7bc6c20acb6406a41342a7d460d1160abab6b74",
+          "eligible": true,
+          "selected": false,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "Python-based parser for parsing XBRL and iXBRL files",
+            "language": "Python",
+            "size_kb": 506,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/manusimidt/py-xbrl"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/manusimidt/py-xbrl/blob/main/pyproject.toml",
+            "content_sha256": "e1f6adc6b8230898772281c9a8e94fa90eabcd9b02e6600f392fde614edf9da0",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=2.6.3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-07-13T13:48:49Z",
+              "2023-07-13T13:47:27Z"
+            ]
+          }
+        },
+        {
+          "repository": "Doriandarko/BabyAGIChatGPT",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 21,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/Doriandarko/BabyAGIChatGPT/blob/174491cbbc09d3f6ef0ec511e9e3b94e2615ffa0/pyproject.toml"
+            }
+          ],
+          "rank_hash": "5ee68ddc35043bf55c019a8089bbf367fdcaa37fffe54e62cf00e523d20ac7f2",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "A ChatGPT plugin to run BabyAI directly in the chat interface",
+            "language": "Python",
+            "size_kb": 29,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/Doriandarko/BabyAGIChatGPT"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "felafax/felafax",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 22,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/felafax/felafax/blob/09e3b81199eadb9307b1270cfb95aa50f75f6b3e/pyproject.toml"
+            }
+          ],
+          "rank_hash": "c62203b136242eabe308b720e8f650f9574c05cc399436ba1b26c8aa4f3ea992",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "not_primary_python"
+          ],
+          "metadata": {
+            "description": "Felafax is building AI infra for non-NVIDIA GPUs",
+            "language": "Jupyter Notebook",
+            "size_kb": 3520,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/felafax/felafax"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "enzet/map-machine",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 23,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/enzet/map-machine/blob/eab10c1ec9bcd0a78fa6db75d02e6219fcea562c/pyproject.toml"
+            }
+          ],
+          "rank_hash": "548165de2cba741305b4523404dbe1fc38ea4c807faf2125d81cccd2db5da7f1",
+          "eligible": true,
+          "selected": true,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "Python renderer for OpenStreetMap with custom icons intended to display as many map features as possible",
+            "language": "Python",
+            "size_kb": 45116,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/enzet/map-machine"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/enzet/map-machine/blob/main/pyproject.toml",
+            "content_sha256": "1bedb2418a3690717c61a56557dcf45bf17899fc0aabd263a2969aad556702b8",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3~=2.6.3",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-08-10T23:20:06Z",
+              "2023-07-07T07:52:45Z"
+            ]
+          }
+        },
+        {
+          "repository": "bellingcat/wayback-google-analytics",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 24,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/bellingcat/wayback-google-analytics/blob/e697ce9d0e2594175867e911b03198ae986ffce6/pyproject.toml"
+            }
+          ],
+          "rank_hash": "d0a24397986cf36c3719d124eac393407bcbba47a4b92cf517b11afc2e579287",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "A lightweight tool for scraping current and historic Google Analytics data",
+            "language": "Python",
+            "size_kb": 312,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/bellingcat/wayback-google-analytics"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "gremlin/gremlin-python",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 25,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/gremlin/gremlin-python/blob/6f52665e330a34cc5a167f28ebde05943f54f88c/pyproject.toml"
+            }
+          ],
+          "rank_hash": "92186d91e35895ccbe1994ba134608e8a57f7e47ff5ad3040cd943cd66a2c7ad",
+          "eligible": true,
+          "selected": false,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "A Python SDK for the Gremlin API",
+            "language": "Python",
+            "size_kb": 648,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/gremlin/gremlin-python"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/gremlin/gremlin-python/blob/main/pyproject.toml",
+            "content_sha256": "dc7f406ff36cc4ac4a6c788a6fb11cd7d19f81c11198e7fd2b1aaeea136c4f81",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=1.25.8",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-06-12T16:54:21Z",
+              "2023-05-19T21:32:19Z"
+            ]
+          }
+        },
+        {
+          "repository": "batfish/pybatfish",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 26,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/batfish/pybatfish/blob/9f0f76ff3c11ad81b4f505ad6975695cd94a259e/pyproject.toml"
+            }
+          ],
+          "rank_hash": "5eb9304300810cfc9594e95ada038d5d7ce9aa561ada41b93ac105c6505b3b47",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "not_primary_python"
+          ],
+          "metadata": {
+            "description": "Python client for Batfish: https://github.com/batfish/batfish",
+            "language": "Jupyter Notebook",
+            "size_kb": 5144,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/batfish/pybatfish"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "datastax/astra-assistants-api",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 27,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/datastax/astra-assistants-api/blob/6328c717fa9e3803b692329eb9899553aec08b2c/pyproject.toml"
+            }
+          ],
+          "rank_hash": "66717568353cb87db6ac4e52b074343b2eeb07b9828eed2d3f4aca695ae0fa6b",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "Drop in replacement for the OpenAI Assistants API ",
+            "language": "Python",
+            "size_kb": 4494,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/datastax/astra-assistants-api"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "NVIDIA-NeMo/Run",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 28,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/NVIDIA-NeMo/Run/blob/b85eb6742ea52bf51e71f10c9cc45927567403a9/pyproject.toml"
+            }
+          ],
+          "rank_hash": "04653f7a95f3098beac30a3910668de9dda13d854f1aa677d25f30936e199a45",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "A tool to configure, launch and manage your machine learning experiments.",
+            "language": "Python",
+            "size_kb": 9642,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/NVIDIA-NeMo/Run"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "MagnivOrg/prompt-layer-library",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 29,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/MagnivOrg/prompt-layer-library/blob/64abac79c1e096f9f2eeda7205cf20221d10b782/pyproject.toml"
+            }
+          ],
+          "rank_hash": "0aae04f699bfb99d82302f31f8b21da397024cd9558b9996f0361cce8ae3b9b2",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "no_direct_dependency_declaration"
+          ],
+          "metadata": {
+            "description": "🍰 PromptLayer - Maintain a log of your prompts and OpenAI API requests. Track, debug, and replay old completions.",
+            "language": "Python",
+            "size_kb": 1250,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "master",
+            "html_url": "https://github.com/MagnivOrg/prompt-layer-library"
+          },
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "urbanogilson/SICAR",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:pyproject.toml",
+              "rank": 30,
+              "path": "pyproject.toml",
+              "html_url": "https://github.com/urbanogilson/SICAR/blob/facffbf91a4998a2daa814a65d1d36ea99266f83/pyproject.toml"
+            }
+          ],
+          "rank_hash": "e0dae344b46fa8c04c27dcac5c44220dd82a2017474f320278848d27ea5c9e0d",
+          "eligible": true,
+          "selected": false,
+          "exclusion_reasons": [],
+          "metadata": {
+            "description": "This tool is designed for students, researchers, data scientists or anyone who would like to have access to SICAR files",
+            "language": "Python",
+            "size_kb": 19139,
+            "archived": false,
+            "fork": false,
+            "private": false,
+            "default_branch": "main",
+            "html_url": "https://github.com/urbanogilson/SICAR"
+          },
+          "dependency": {
+            "path": "pyproject.toml",
+            "source_url": "https://github.com/urbanogilson/SICAR/blob/main/pyproject.toml",
+            "content_sha256": "7d06d1c6ab2254e11f8ee33f71ac5282638e40a1fd1e38431debd22d6ea4fc39",
+            "observed_at": "2026-09-27T03:24:05.372186+00:00",
+            "declarations": [
+              {
+                "raw": "urllib3>=2.3.0",
+                "group": "project.dependencies"
+              }
+            ]
+          },
+          "activity": {
+            "at_least_two_commits": true,
+            "sample_committer_dates": [
+              "2023-08-10T14:50:47Z",
+              "2023-07-09T14:14:23Z"
+            ]
+          }
+        },
+        {
+          "repository": "juliomalegria/python-craigslist",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 1,
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/juliomalegria/python-craigslist/blob/bd85a3e46a467d84984c3ce89fc077cb4da6aa04/REQUIREMENTS.txt"
+            }
+          ],
+          "rank_hash": "78f9142265c9ec74fa0c704cd55efa1dafa6b454ec646b5a9a2c0abde1838434",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "MoonInTheRiver/NeuralSVB",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 2,
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/MoonInTheRiver/NeuralSVB/blob/7a80bc51806103f09c7448b0daf93f49615ce52f/Requirements.txt"
+            }
+          ],
+          "rank_hash": "4e02390e810e0ff15914970535e7b4a3ff54187b50010b147bcec8e951243508",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "opentok/Opentok-Python-SDK",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 3,
+              "path": ".requirements.txt",
+              "html_url": "https://github.com/opentok/Opentok-Python-SDK/blob/93ea3f9ff06e693014cf1242f32409a62366ae61/.requirements.txt"
+            }
+          ],
+          "rank_hash": "7d448163d7c9b667c5fdd9bb016e6a18c51f06903a3e7ca5024309eed2bd808c",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "nityansuman/warren",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 4,
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/nityansuman/warren/blob/23d47fff7fff075ed9b05b43ea5d5f71d461f2fa/REQUIREMENTS.txt"
+            }
+          ],
+          "rank_hash": "edb16ac2570380fea15f9d276b3ea65847a4538a680363cef2e680aca9f5f9cb",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "jalajthanaki/NLPython",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 5,
+              "path": "pip-requirements.txt",
+              "html_url": "https://github.com/jalajthanaki/NLPython/blob/47e6861590684a63a268002d345765fd3e7cf986/pip-requirements.txt"
+            }
+          ],
+          "rank_hash": "283e583587f3f3d0d8ec49a7c849508d1be13791afe8fb2592eec428e19b774a",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "goruck/smart-zoneminder",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 6,
+              "path": "ml-requirements.txt",
+              "html_url": "https://github.com/goruck/smart-zoneminder/blob/e2f7bf49f22f3aa00a082bc227de64237d8e7699/ml-requirements.txt"
+            }
+          ],
+          "rank_hash": "270e4b38fc1b1000bf2a619b8837ef5103f57801a25568e3caa9e3ada5575334",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "DrewThomasson/VoxNovel",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 7,
+              "path": "MAC-requirements.txt",
+              "html_url": "https://github.com/DrewThomasson/VoxNovel/blob/2d2fc9fd52ce2312ea75dd33bcd2da27b5762aba/MAC-requirements.txt"
+            }
+          ],
+          "rank_hash": "4247114d444f5a8284db92c291193b2fef3f0bdb582f2a28937c115a1c304909",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "netscaler/netscaler-adc-metrics-exporter",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 8,
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/netscaler/netscaler-adc-metrics-exporter/blob/32c7e925b1f0f943ad1dc944a6f8fc5de022de8b/pip_requirements.txt"
+            }
+          ],
+          "rank_hash": "a4713de6a1c532c304785b8a4eee8a521ff004594b1ea5c6a78db3eac3aab2ed",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ska-sa/katdal",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 9,
+              "path": "doc-requirements.txt",
+              "html_url": "https://github.com/ska-sa/katdal/blob/142dd342c886d35f9cc8defda3ad8ea1028fc880/doc-requirements.txt"
+            }
+          ],
+          "rank_hash": "55325c33b9250938569e4e11d353d53f55bdd0285c969323acee6aa1875ea010",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "pnnl/socialsim",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 10,
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/pnnl/socialsim/blob/06f0ce61d10ca08dd50d256fb30ac0ae81ead58d/pip_requirements.txt"
+            }
+          ],
+          "rank_hash": "299db54596b2f758b9d05c77382b468c7568c3bed3da84a6bf4a84cfadba8e9f",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "OpenToAllCTF/OTA-University",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 11,
+              "path": "REQUIREMENTS.txt",
+              "html_url": "https://github.com/OpenToAllCTF/OTA-University/blob/87ed6105e858b3fbfbe03298d456529be90a6c3b/REQUIREMENTS.txt"
+            }
+          ],
+          "rank_hash": "019b1e275d3c933cbb9b0d2989b6699d2f49eb7210414c0a28389705fd5464b8",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "sc2musa/Large-Language-Models-play-StarCraftII",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 12,
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/sc2musa/Large-Language-Models-play-StarCraftII/blob/48564d6647c9f39a44d11588f2b9cbefee940fdd/pip_requirements.txt"
+            }
+          ],
+          "rank_hash": "b6f6001db82444a6380a5d414aefa4a5150008f83f96fb43e5b0bec9077130df",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "daveoncode/python-string-utils",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 13,
+              "path": "dev.requirements.txt",
+              "html_url": "https://github.com/daveoncode/python-string-utils/blob/78929d88d90b1f90cb4837528ed955166bf0f559/dev.requirements.txt"
+            }
+          ],
+          "rank_hash": "6de5d147b3e9eac18b8fd90373c951001fa8a78e5ce843688beaf42ade9c4e97",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "eljost/pysisyphus",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 14,
+              "path": "doc-requirements.txt",
+              "html_url": "https://github.com/eljost/pysisyphus/blob/a4ce10dd6d7fdcb3d813f1c730eb365d29041999/doc-requirements.txt"
+            }
+          ],
+          "rank_hash": "d6e0f22ba49c010b24b20290e174aecc2957d3fddc9b84d52cb482061d802817",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "dadosgovbr/ckanext-dadosgovbr",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 15,
+              "path": "pip-requirements.txt",
+              "html_url": "https://github.com/dadosgovbr/ckanext-dadosgovbr/blob/7bd17cade8b6d673743a3b19e262c815d3b2d7cb/pip-requirements.txt"
+            }
+          ],
+          "rank_hash": "b1f3cf9d4c2fa1760fd032e12b220c372bc03be7cdfd117dbc5292f57ed073b8",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "jaychempan/LAE-DINO",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 16,
+              "path": "lae_requirements.txt",
+              "html_url": "https://github.com/jaychempan/LAE-DINO/blob/6b1519626e39d1f39f8ed1f38761c20f7e0e8c35/lae_requirements.txt"
+            }
+          ],
+          "rank_hash": "790f2b1afd0d2d8a43363811b7a49d9f1f5f19fc71a89bd99518d68e17507908",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "lrsoenksen/HAIM",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 17,
+              "path": "0-requirements.txt",
+              "html_url": "https://github.com/lrsoenksen/HAIM/blob/691b8838ab57417db5cbac0b8422a1e103033fef/0-requirements.txt"
+            }
+          ],
+          "rank_hash": "c8bd7adcc96344d2ccec4600ac2ee579c04842f84314902b6eadb273ba9af81d",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "mitchos/pyZscaler",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 18,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/mitchos/pyZscaler/blob/51002a5bec289700e54ffc1e92eb6b8576b6c181/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "904bc4a9e438270a70535273ff9fe52eb0eb4ce928936f4b061cad302e2bcdfd",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "hadi-abdine/Prot2Text",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 19,
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/hadi-abdine/Prot2Text/blob/1bc9fcf7236cd7297974ed8d201545fa0491c93c/Requirements.txt"
+            }
+          ],
+          "rank_hash": "73e2e33a522afdfe8ba83e8274afb1337600d5dffc16f445761bcf292b71023b",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "whyashthakker/RAG",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 20,
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/whyashthakker/RAG/blob/be521b3aea8d5566d786968e21e1c8d22050f688/Requirements.txt"
+            }
+          ],
+          "rank_hash": "7febf6c3e4194c8042c304eede3406df6bb06518318f06777de3bb6e13db0d28",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "horacio9a/chaturbate-anonymous",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 21,
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/horacio9a/chaturbate-anonymous/blob/24111dd08b768f4e69f53c08e6745580e1eec609/Requirements.txt"
+            }
+          ],
+          "rank_hash": "c945677822945c712c61476dbe3451e4477884f46c5d141e9c2b482656e569aa",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 22,
+              "path": "ch1_requirements.txt",
+              "html_url": "https://github.com/LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256/blob/046b578594121219edbe12a99e592af3a7374172/ch1_requirements.txt"
+            },
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 23,
+              "path": "ch3_requirements.txt",
+              "html_url": "https://github.com/LinkedInLearning/advanced-rag-applications-with-vector-databases-3886256/blob/046b578594121219edbe12a99e592af3a7374172/ch3_requirements.txt"
+            }
+          ],
+          "rank_hash": "4f272ca9b3b5cfacc2eadab731aeb9956747c0a0e537910065f581bb4f239c0a",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "Samuel1698/fakeViewport",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 24,
+              "path": "dev_requirements.txt",
+              "html_url": "https://github.com/Samuel1698/fakeViewport/blob/cd0375e08d1aeed9b95dc011e365f29c87c1220e/dev_requirements.txt"
+            }
+          ],
+          "rank_hash": "6b18f1aaeb51da425442ea79a5cc92cb607a2a0d94cb9011fba937516d592a3f",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "widelands/widelands-website",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 25,
+              "path": "pip_requirements.txt",
+              "html_url": "https://github.com/widelands/widelands-website/blob/dcf65be409759ba1735c99a56176bf5dcea31edd/pip_requirements.txt"
+            }
+          ],
+          "rank_hash": "8848c52869b7af0410ef7adf59d46445a4047ed2f461c0dfc0e8b8282d7a0380",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "Haoqiu-Yan/PerceptiveAgent",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 26,
+              "path": "syn_requirements.txt",
+              "html_url": "https://github.com/Haoqiu-Yan/PerceptiveAgent/blob/a5ef942cd5b44b08d22d78f7372860499a9d6654/syn_requirements.txt"
+            }
+          ],
+          "rank_hash": "f318d3c6621a14c40a3ab16919c3a674e7a8dc96a29a4144e3f41ccb2621a1a8",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "openego/eDisGo",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 27,
+              "path": "rtd_requirements.txt",
+              "html_url": "https://github.com/openego/eDisGo/blob/8cf7bc9815299c7b2da8bb204fe5fa9edd508795/rtd_requirements.txt"
+            }
+          ],
+          "rank_hash": "fe6fc360239caae3f77fe640193ed837465ca0f7d1d76cb50747c11fb9348151",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "PacktPublishing/Azure-AI102-Certification-Essentials",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 28,
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/PacktPublishing/Azure-AI102-Certification-Essentials/blob/b4e69e5304d7bd7e023c0ecf58c829fc32f9ccdd/Requirements.txt"
+            }
+          ],
+          "rank_hash": "b7fe42a97f1ad01556c9b3d5654bfc054dd53c9a1449cd63913c0d01a5d9e46d",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ynadji/hands-on-adversarial-ml",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 29,
+              "path": "all-requirements.txt",
+              "html_url": "https://github.com/ynadji/hands-on-adversarial-ml/blob/989917b51233f38f20bf1eef220c217400b0e395/all-requirements.txt"
+            }
+          ],
+          "rank_hash": "97014d55f255d9cd23766f473480af5ab113c75197cb12915cf453458730128a",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        },
+        {
+          "repository": "ayu-22/BPPNet-Back-Projected-Pyramid-Network",
+          "search_hits": [
+            {
+              "query": "urllib3 in:file filename:requirements.txt",
+              "rank": 30,
+              "path": "Requirements.txt",
+              "html_url": "https://github.com/ayu-22/BPPNet-Back-Projected-Pyramid-Network/blob/8c636a4f9914a5609c4b50ce74bba06f4dc8f425/Requirements.txt"
+            }
+          ],
+          "rank_hash": "ad8960469dcba5c6a2982c5f6f34854d056160d843ef85b674e3c5ac40999d99",
+          "eligible": false,
+          "selected": false,
+          "exclusion_reasons": [
+            "non_root_manifest"
+          ],
+          "metadata": null,
+          "dependency": null,
+          "activity": null
+        }
+      ],
+      "eligible_ranked": [
+        "atenreiro/opensquat",
+        "jamesturk/scrapelib",
+        "wimglenn/advent-of-code-data",
+        "Aiven-Open/pghoard",
+        "facundoolano/feedi",
+        "enzet/map-machine",
+        "cobrateam/splinter",
+        "gremlin/gremlin-python",
+        "manusimidt/py-xbrl",
+        "urbanogilson/SICAR",
+        "LinOTP/LinOTP",
+        "analysiscenter/batchflow"
+      ]
+    }
+  ],
+  "outcome_evidence_inspected": false
+}

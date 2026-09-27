@@ -1,0 +1,105 @@
+case:
+  case_id: urllib3-2.0.0
+  target_package: urllib3
+  target_version: 2.0.0
+  upstream_repository: urllib3/urllib3
+  release_timestamp: '2023-04-26T17:21:22.577020+00:00'
+  ecosystem: pypi
+  observation_window_start: '2023-03-27'
+  observation_window_end: '2023-08-24'
+  collection_rules:
+  - source: pypi
+    artifact_types:
+    - package_version
+  - source: github
+    artifact_types:
+    - repository
+    - releases
+    - issues
+    - pull_requests
+    - commits
+    - files
+    file_paths:
+    - pyproject.toml
+    - requirements.txt
+  created_at: '2026-09-27T03:24:05.372186+00:00'
+cohort:
+  cohort_id: urllib3-2.0.0-rule-based
+  case_id: urllib3-2.0.0
+  selection_method: rule_based
+  selection_rationale: First six eligible repositories by the predeclared SHA-256
+    ranking of a bounded GitHub code-search candidate frame; no release outcomes inspected.
+  created_at: '2026-09-27T03:24:05.372186+00:00'
+  repositories:
+  - repository: atenreiro/opensquat
+    project_name: opensquat
+    inclusion_reason: Direct urllib3 declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/atenreiro/opensquat/blob/master/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: urllib3>=2.6.3
+      content_sha256: 97431204737e03e9dda58719298f38f709ff9451012859264c9918b266488030
+      source_type: repository_file
+      source_identifier: atenreiro/opensquat:pyproject.toml
+    selection_confidence: high
+  - repository: jamesturk/scrapelib
+    project_name: scrapelib
+    inclusion_reason: Direct urllib3 declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/jamesturk/scrapelib/blob/main/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: urllib3
+      content_sha256: 4be8eaeb7aa9b8e3e3388d4c28be5b6965f79aa128a4b5ea70dcf81157b9c524
+      source_type: repository_file
+      source_identifier: jamesturk/scrapelib:pyproject.toml
+    selection_confidence: high
+  - repository: wimglenn/advent-of-code-data
+    project_name: advent-of-code-data
+    inclusion_reason: Direct urllib3 declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/wimglenn/advent-of-code-data/blob/main/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: urllib3
+      content_sha256: 5d50650659763aa0315b680d2689d59a127de44a64c6977b9239861c8531eaa1
+      source_type: repository_file
+      source_identifier: wimglenn/advent-of-code-data:pyproject.toml
+    selection_confidence: high
+  - repository: Aiven-Open/pghoard
+    project_name: pghoard
+    inclusion_reason: Direct urllib3 declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/Aiven-Open/pghoard/blob/main/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: urllib3==1.26.15
+      content_sha256: cf01b1e9676777089174e688e02e1e7b76902dbe2959987c23dd0e879aa9ae7c
+      source_type: repository_file
+      source_identifier: Aiven-Open/pghoard:pyproject.toml
+    selection_confidence: high
+  - repository: facundoolano/feedi
+    project_name: feedi
+    inclusion_reason: Direct urllib3 declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/facundoolano/feedi/blob/main/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: urllib3<2.3
+      content_sha256: 2b0defa090248b2c53dc4f3fd31c25620c098ae193b9384820f16f59af307cd4
+      source_type: repository_file
+      source_identifier: facundoolano/feedi:pyproject.toml
+    selection_confidence: high
+  - repository: enzet/map-machine
+    project_name: map-machine
+    inclusion_reason: Direct urllib3 declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/enzet/map-machine/blob/main/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: urllib3~=2.6.3
+      content_sha256: 1bedb2418a3690717c61a56557dcf45bf17899fc0aabd263a2969aad556702b8
+      source_type: repository_file
+      source_identifier: enzet/map-machine:pyproject.toml
+    selection_confidence: high

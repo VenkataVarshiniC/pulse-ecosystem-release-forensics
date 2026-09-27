@@ -1,0 +1,57 @@
+case:
+  case_id: pytest-8.0.0
+  target_package: pytest
+  target_version: 8.0.0
+  upstream_repository: pytest-dev/pytest
+  release_timestamp: '2024-01-27T21:47:54.913691+00:00'
+  ecosystem: pypi
+  observation_window_start: '2023-12-28'
+  observation_window_end: '2024-05-26'
+  collection_rules:
+  - source: pypi
+    artifact_types:
+    - package_version
+  - source: github
+    artifact_types:
+    - repository
+    - releases
+    - issues
+    - pull_requests
+    - commits
+    - files
+    file_paths:
+    - pyproject.toml
+    - requirements.txt
+  created_at: '2026-09-27T03:24:05.372186+00:00'
+cohort:
+  cohort_id: pytest-8.0.0-rule-based
+  case_id: pytest-8.0.0
+  selection_method: rule_based
+  selection_rationale: First six eligible repositories by the predeclared SHA-256
+    ranking of a bounded GitHub code-search candidate frame; no release outcomes inspected.
+  created_at: '2026-09-27T03:24:05.372186+00:00'
+  repositories:
+  - repository: bsc-wdc/qdislib
+    project_name: qdislib
+    inclusion_reason: Direct pytest declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/bsc-wdc/qdislib/blob/main/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: pytest
+      content_sha256: f87d06c858ba80f434df6cd3166107ff8e4bc097511fa1384f7eb41034de2b9b
+      source_type: repository_file
+      source_identifier: bsc-wdc/qdislib:pyproject.toml
+    selection_confidence: high
+  - repository: planetlabs/cosmolog
+    project_name: cosmolog
+    inclusion_reason: Direct pytest declaration in root pyproject.toml and at least
+      two public commits in the declared window.
+    dependency_evidence:
+      url: https://github.com/planetlabs/cosmolog/blob/master/pyproject.toml
+      observed_at: '2026-09-27T03:24:05.372186+00:00'
+      excerpt: pytest>=3.0.2
+      content_sha256: 2cafddda8d28677d810e2c0e765e9512caa54b02115c1922b0f04084ccf55e74
+      source_type: repository_file
+      source_identifier: planetlabs/cosmolog:pyproject.toml
+    selection_confidence: high
