@@ -18,4 +18,40 @@ Before the cohorts are frozen, allowed inspection is limited to identity, public
 
 ## Results
 
-Pending execution of the predeclared protocol. This section will be filled only from the recorded candidate ledger and frozen case definitions.
+The protocol was committed before release lookup (`fc3ec53`, clarified in `7f3c495`), and the selection implementation and logged PyPI metadata exposure were committed before candidate search (`5ce6442`). The generated [candidate and exclusion ledger](cohort-selection-ledger.json) and the two case definitions were frozen at `429d36e`, before any release-specific issue, PR, migration, remediation, detector, or historical-transition collection. The ledger contains both query result pages in API order, every evaluated repository, direct-dependency evidence, activity dates, exclusion reasons, eligible hash order, and the selected flag. Its selection timestamp is 2026-09-27 03:24 UTC.
+
+The three-package seed pool produced `pytest 8.0.0` (first PyPI file uploaded 2024-01-27 21:47:54 UTC) and `urllib3 2.0.0` (2023-04-26 17:21:22 UTC). `click` had no qualifying major boundary in 2023–2024; its 8.0.0 boundary was earlier. Both selected packages have public GitHub upstreams in PyPI metadata. These are metadata-based target selections, not choices based on known compatibility incidents. See the recorded [PyPI project metadata](https://docs.pypi.org/api/json/) and the exact package JSON URLs in the ledger.
+
+The 30-before/120-after policy yields 2023-12-28 through 2024-05-26 for pytest and 2023-03-27 through 2023-08-24 for urllib3. Both windows are inclusive UTC calendar dates. Case configurations are [pytest 8.0.0](../../cases/pytest-8.0.0.yaml) and [urllib3 2.0.0](../../cases/urllib3-2.0.0.yaml). The current-root manifest restriction and first-page code-search frame are explicit; the [GitHub code-search API](https://docs.github.com/en/rest/search/search#search-code) result order was captured rather than treated as a permanent global ordering.
+
+### Frozen pytest cohort
+
+Both selected repositories had at least two observable commits in the predeclared window and were public, non-archived, non-fork Python repositories under the size cap at selection time. Project type describes the metadata; it did not affect ranking.
+
+| Repository | Project type | Direct dependency evidence at selection | Manifest | Activity qualification | Inclusion reason | Confidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `bsc-wdc/qdislib` | Library | [`pytest` in the `ci` optional group](https://github.com/bsc-wdc/qdislib/blob/main/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct optional declaration and qualifying public activity | High for current declaration |
+| `planetlabs/cosmolog` | Unclassified Python project | [`pytest>=3.0.2` in the `test` optional group](https://github.com/planetlabs/cosmolog/blob/master/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct optional declaration and qualifying public activity | High for current declaration |
+
+The two queries returned 60 distinct repositories. **2 eligible, 2 selected, 58 excluded.** Every exclusion was a non-root manifest hit under the predeclared root-path rule. The cohort falls below the five-repository aim; no additional candidates were added after this was observed.
+
+### Frozen urllib3 cohort
+
+Each selected repository met the same metadata and activity filters, with direct evidence in root `pyproject.toml`. The `constraints` optional group in pghoard is recorded explicitly; it is a direct optional declaration, not a claim about base installation.
+
+| Repository | Project type | Direct dependency evidence at selection | Manifest | Activity qualification | Inclusion reason | Confidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| `atenreiro/opensquat` | Security tool | [`urllib3>=2.6.3`](https://github.com/atenreiro/opensquat/blob/master/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct base declaration and qualifying public activity | High for current declaration |
+| `jamesturk/scrapelib` | Library | [`urllib3`](https://github.com/jamesturk/scrapelib/blob/main/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct base declaration and qualifying public activity | High for current declaration |
+| `wimglenn/advent-of-code-data` | Developer utility | [`urllib3`](https://github.com/wimglenn/advent-of-code-data/blob/main/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct base declaration and qualifying public activity | High for current declaration |
+| `Aiven-Open/pghoard` | Backup service | [`urllib3==1.26.15` in the `constraints` optional group](https://github.com/Aiven-Open/pghoard/blob/main/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct optional declaration and qualifying public activity | High for current declaration |
+| `facundoolano/feedi` | Application | [`urllib3<2.3`](https://github.com/facundoolano/feedi/blob/main/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct base declaration and qualifying public activity | High for current declaration |
+| `enzet/map-machine` | Mapping tool | [`urllib3~=2.6.3`](https://github.com/enzet/map-machine/blob/main/pyproject.toml) | root `pyproject.toml` | ≥2 window commits | Direct base declaration and qualifying public activity | High for current declaration |
+
+The two queries returned 59 distinct repositories. **12 eligible, 6 selected, 47 excluded.** Exclusion reasons were 29 non-root manifest hits, 10 without a direct current declaration, 5 with fewer than two window commits, and 3 whose primary GitHub language was not Python. The six eligible but unselected repositories remain in the ledger with their hashes and evidence. No project type or apparent compatibility was used to override the ranking.
+
+### Interpretation and gate
+
+Current default-branch manifests were used only to verify positive dependency-based membership. Some current constraints mention versions released after the case window; they must **not** be interpreted as adoption, exclusion, or compatibility at release time. Historical dependency state remains to be collected later, and every frozen member stays in the denominator even if it becomes unavailable or has unresolvable packaging history. General activity was checked by requesting at most two commit records per candidate and retaining dates only; commit messages and diffs were not inspected. No accidental release-specific issue, PR, or remediation evidence was encountered. The PyPI yank flag exposure noted above was not used.
+
+Milestone 3 is **PARTIAL**. Two new releases and rule-based frozen cohorts exist with auditable direct-dependency evidence and a complete exclusion ledger, but the bounded first-page/root-manifest frame produced only two pytest repositories. The search frame is neither a random ecosystem sample nor stable across future index updates. The frozen ledger makes this execution reproducible; rerunning live search later may produce a different frame. No ecosystem-wide adoption or compatibility rate can be inferred from these cohorts.

@@ -14,4 +14,6 @@ Implemented path-scoped historical commit discovery, exact-ref manifest retrieva
 
 ## Later Phase 2 work — deferred
 
-Later milestones may evaluate detector precision and cohort-level completeness. Each requires its own evidence, tests, and review. No Phase 2 final decision follows from Milestones 1–2. Phase 0 and Phase 1 artifacts and their interpretations remain preserved.
+Milestone 3 froze two new Python/PyPI validation cases using predeclared release eligibility, bounded GitHub code-search candidate frames, direct dependency checks, deterministic SHA-256 ranking, and a complete exclusion ledger. The urllib3 cohort has six repositories; the pytest frame yielded only two under the predeclared root-manifest rule. The result is **PARTIAL**. See [cohort selection](cohort-selection.md) and its machine-readable ledger. No release-specific forensic outcome was inspected for selection, and no full cohort collection has begun.
+
+Later milestones may evaluate detector precision and cohort-level completeness. Each requires its own evidence, tests, and review. No Phase 2 final decision follows from Milestones 1–3. Phase 0 and Phase 1 artifacts and their interpretations remain preserved.
