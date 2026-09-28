@@ -1,0 +1,19 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "matched_frozen_outputs": true
+    },
+    {
+      "attempt": 2,
+      "matched_frozen_outputs": true
+    }
+  ],
+  "command": "uv run python scripts/reproduce_phase2_forensics.py",
+  "output_sha256": {
+    "data/processed/phase-2/pytest-8.0.0/forensics.json": "dae5253526bdb9f7552f05ba6c53de71d6cbf1276456f5b76577c13c9b0a963e",
+    "data/processed/phase-2/urllib3-2.0.0/forensics.json": "f173fb2da6be3b1227b29b99f40d30d3a48658cc0eae9a0578ed91c2be64139d",
+    "docs/phase-2/evaluation-data/end-to-end-validation.json": "07d895e50a482f8fd6575ec26accfc2f58bb937b61548b4e8fbedbd06ff204cf"
+  },
+  "version": "1.0"
+}

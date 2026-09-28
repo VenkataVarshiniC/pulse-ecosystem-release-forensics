@@ -1,0 +1,17 @@
+# Data-quality audit of frozen baseline artifacts
+
+Applied the [Milestone 1 framework](../analytics-data-quality.md) to the **actual inputs**, not merely proposed dbt tests. The [analysis helper](compute_baseline.py) fails on broken membership, task/attempt, candidate/review or digest links; its calculations are read-only over frozen evidence.
+
+| Dimension | Observed check/result | Classification and consequence |
+| --- | --- | --- |
+| Completeness | Frozen 2+6 member sets reconcile to report rows; 15+39 planned tasks each match one terminal attempt; 40/40 member-category report findings exist. | **Pass for represented records**. Historical/target-version/source breadth incomplete is a **source/method limitation**, not an absent row to coerce to NO. |
+| Provenance | All 54 analyzed release-case attempts label `collector`; successful snapshot digests verified; two candidate IDs link to same PR digest and terminal reviews. | **Pass for this bounded chain**. Connector-assisted HTTPX Phase 1 records and fixtures are outside release-case collector metrics. Positive YES lineage remains **untested** because none exists. |
+| Validity | Controlled task and finding statuses observed; optional 404 separate; report unavailable adoption/recovery. | **Pass for current values**. No evidence supports target-version installation or recovery eligibility. |
+| Uniqueness | Case-member, run-task, candidate ID and terminal decision identities unique; two rule firings share an artifact without sharing candidate ID. | **Pass now**; many-to-one source relationship must not inflate artifact/member rates. |
+| Referential integrity | Report/candidate case IDs match; every baseline candidate has one terminal review; task plan/outcome/attempt IDs match. | **Pass now**. Accepted-finding support bridge cannot be tested with 0 YES; **future enhancement**. |
+| Temporal integrity | Case release/window, source PR event, artifact capture and review time are distinct. One urllib3 declaration is after-only; report leaves friction/remediation UNKNOWN. | **Pass for preserved distinctions**; in-window path method missing older anchors is a **methodological limitation**. Emission time missing for MET-023 is an **analytical field gap**. |
+| Replay consistency | Two fresh reproductions of both cases matched existing report/summary hashes. | **Pass for frozen inputs**; no live-source stability claim. |
+| Grain integrity | Eight member rows, 54 task rows, two candidate/review rows, 40 stage rows; candidate→artifact many-to-one. | **Pass for current snapshot**, but `observation_id`, `finding_version` and `analysis_snapshot_id` absent: **design-review issue** before multi-run database. |
+| Missingness semantics | UNKNOWN findings have generic reason and repository-level missing-source lists; no per-stage coded source attribution. | **Expected UNKNOWN** for insufficient evidence; **data-contract limitation** for MET-013/015. A malformed/missing finding would instead be an analytical defect. |
+
+No evidence of a duplicate or identity mismatch was found in the audited current files. This is not a claim that PULSE exhaustively collected public evidence. The largest quality risk for a future database is **semantic fan-out or null coercion**, not a failing present hash check. The first future tests should preserve frozen membership, capture method, stage UNKNOWN, candidate/review separation, and exact analytical grain.

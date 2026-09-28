@@ -1,0 +1,14 @@
+# Analytical grain and identity validation
+
+The [analysis-only helper](compute_baseline.py) checks frozen member uniqueness, run plan↔outcome↔attempt identity, candidate IDs, case linkage, terminal review identity, collector provenance, and raw snapshot digests. The current reports are **snapshots**, not a versioned warehouse. Thus a key may be unique in today's files yet insufficient for future multi-run/multi-review modeling.
+
+| Proposed grain | Actual test/result | Missing key or fan-out hazard |
+| --- | --- | --- |
+| Repository investigation: case × repository | 2 and 6 report rows; unique names within case; set equals frozen cohort. **Pass for current snapshot.** | No persisted `analysis_snapshot_id`/case version in report; same member in another run would duplicate without explicit snapshot selection. |
+| Collection task: run × task | 15 and 39 planned IDs; each has one matching outcome and `.attempt.json`; unique in the frozen run. **Pass.** | Task ID alone persists across runs; include run ID. One task may have no raw snapshot after 404. |
+| Candidate review: candidate | Two unique candidate IDs; two corresponding terminal rejected reviews; pytest empty. **Pass for terminal snapshot.** | Multiple review events need candidate × review-event key; baseline and review ledger can duplicate candidate data. |
+| Evidence observation: case × repository × observation/artifact | 16 historical path-pair rows (two configured paths × eight members), but no stable `observation_id` in report. **Partial.** | A pair can hold before and after exact-ref file states; candidate and history observations may cite one artifact. Do not key by artifact alone. |
+| Lifecycle finding: case × repository × category × finding version | 40 current rows: 2×5 + 6×5; unique case/member/category in current reports. **Partial.** | Explicit finding version/analysis snapshot key absent. Version must be added before repeated runs can coexist. |
+| Source artifact support bridge | Two candidate IDs reference **one identical PR URL/content digest**; zero accepted finding links. **Many-to-many demonstrated; positive bridge untested.** | Joining candidate to artifact to member and stage without pre-aggregation would count one artifact twice and could multiply finding rates. |
+
+Canonical repository name is sufficient for the frozen cases but does not solve renames/aliases longitudinally. `dim_case` lacks an explicit case-version key; `dim_release` has package/version/source but release-boundary changes would need versioning. No SCD is required for these observations, but **snapshot selection is mandatory**. The future PostgreSQL design should add stable `analysis_snapshot_id`, `observation_id`, `finding_version`, source-method and review-event identity where relevant; this audit does not implement them.

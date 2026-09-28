@@ -1,0 +1,1594 @@
+{
+  "boundary": "Compact analysis-only extraction; raw snapshots are external and not copied.",
+  "external_source_files": [
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\21e892d45d6d45c98de9fece209be5e6.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "fd52044e12a5663b27eb12de77284688340022503e293d5d29e61fc12686ab22"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\54b3200afce442d7ba0eee914929810a.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "cd000bf5e4f98e120b21d62f8da41a31933371015df3d3f70fa1bd47ced042c9"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\662079f6f39e48a8a7c0678db2e98a96.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "7fa6cb86f7abdef8160ed0b2451b7ccbc2045e4ebc472ec74e44d135a0841ec7"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\69d9447da8b142b6b2e5e470094844ba.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "6049e67dd94a37fbd00a80f7bfe2905a458de60409754f28c9ddc5f30fedf966"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\6e84c4699361483fb8b5b6ba710893d9.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "306beceb1d50656dcf0ca8dd72d7fd0f4e6e92bdff0f38b21adaf68e11d22f9e"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\87a26ae2f4f646448f95d9ab0e76bb19.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "545651e5d3c2e1b26736aac1363307983cef1535f4ae7cddedf8e841938d09c6"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\a2c86ffb8594455293dbdd63ceb42aad.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "5f7ca2e5828acde851d37351a75e903a890a1c0b6977130d48e5ffa0e0ede3b1"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\d7cd6f8cf3234b6fa08f587910162cb9.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "4006640c28285910ae76ee3107c0c5008acd30f4651eaff5c907a4c0599cf30a"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\da0e2db4708942f383a84dc1b3302bca.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "2e8a75fdd316d8da1599cf29eece7be20763e1b84043c11337eeb2c256668b30"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\dad1895766824da7b5ebc26d29579ad0.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "39f16440437c4af7992120cc104b9d1cc361b9182f8102b5fb15e844e3ac0ec3"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\f3131c07e734434f901b0eb30f6d3a27.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "0015bc7397e2086fa41a362e27089d2852d379fa875a361776ac71f962a3e6d4"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\218a9c713b344d0cbc48f3fb20c91b48\\manifest.json",
+      "role": "collection manifest",
+      "sha256": "64c150f4f99082d5cd2f162a2173a010f290a3cdb4de2736c1e3e0b32e37249a"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\00f2525066804294833d1e2c90113459.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "a3e2d32c40f57ffaa0b807e60e9c5eb21e2725eb533db5547e12a2d9b4e4d1ac"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\2a79001d0b4740c7b20a4b920d201770.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "9542f1054a795000d5bfb8797155d8620cdfe88da30f13871bbdcbadc63b9d61"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\3f40f4456989432aa9c9d06f15631269.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "e83cc54d09585b8d020d14cfb07b7978f10ab57314e51af4d4b9dde87fbfa463"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\458895f8191f4b24ae859fc2eb3b2199.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "cbb9e55c91d33140c04b04fbef1563a78834a4daf09a1c4a49b4f44bb70352a8"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\4c4ed2102ea648c4a453991741b34bbd.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "0154d56d99ba6daa5505bda47474d479092b720656d913354f340639f413f53a"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\7d1b74ffec9848dfbf6ca4739e7866e9.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "740949d455a9cec814a3d706b3144427fd0c46af035a48ceb752b8296c9c6088"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\9df0078c341d418892dfbed60eb2e2d5.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "e0b781424ed5ac17fdd8e2e094dc18ce9026bcc4dfc2d5e981144744205979c0"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\a05e16c9ab4641f58e2fb8a887b8c889.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "212c27785af04fd0aa4460f687e3803d55d6e4d5eaf94f741beb4df822ebaa23"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\a11c64823720427fb9615f70777c61bd.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "1851ed31a6efe989efcd3a7d9a10eb6be0361a0db517929cecc15d5a609bbe4b"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\b06ec0561d03400da031aef51bc2556e.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "0f86ed0ac6540b2196e6c5645656f144fb8ac620cf79eaab1ad1feb7da336436"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\b64a3832544a437d9b65d95834d637b2.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "54f931ce45717d99d79adf495364ada6ce18f772727155c0ebded519da44d85f"
+    },
+    {
+      "case": "httpx-0.28.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m1-final-live\\data\\interim\\httpx-0.28.0\\runs\\ccae40970dac4573896892a9447bf2aa\\manifest.json",
+      "role": "collection manifest",
+      "sha256": "193d2b105dc66c7e317c06a64ccd184fca5242aa7d7ce034c3737d1dd37e8b1f"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-history-live\\data\\interim\\pytest-8.0.0\\historical\\357943cd594b400bae95717732a8edc7\\manifest.json",
+      "role": "history manifest",
+      "sha256": "e7e564586fcb4a282b0d88d8ceb5e9f465377ca4002260f390672ddc5da93903"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\005fb48c7fd846e8a6f6c3e5c7368b64.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "44d3772e177323c23471547a07bae15b9fa3816a1a4086b6cbd103975f14ff14"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\0403b8473a654f65ab0f1861e64770ad.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "b97b0ae72bdf4f5a4ae68546e5c23ac21706de2c9788e495247e8841f36de931"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\0bba59ac85174dbea4fe03b88fb3ccb0.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "d4936516e0d1601d0c7f83add1d57af3c83967720aab7f5097cce950bc73d682"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\290e070795154a589a801f856204176a.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "cea6a1db48e26acd63c9d5170618f5109eb5c15e0f09eaf02103832e3667b6d7"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\7bd4822e18fd43b293ed76170a8f5829.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "6aaffd0d40ee2111cfd283b6804ac13523e0b7321bd4cdbc4a94020f7731dac9"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\7e15f06d9168483a97e51c98781281d6.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "666ff0656e2fd9216159a03b6043c8b042bff042550348e1d8c1a695fb52ee5a"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\82b95301c74b483a9bbf679040911c83.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "e5a99ac5501b0fa270b9e5d91ee850c9ec43b56c78bfbe0c28882c66b6ff0c1d"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\8a4d27da3e8c478fa0190dc5b1236cf2.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "12d45c5f187aeda746d1752ed3014ec063b05832a78cc6f890cb8665347c8900"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\9f58d7a4a9d84d1fb823b14ef57b8ff1.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "ace3919f8a1b433919d1a997d4b95f454447500c55c0d2781b62ff16fa342f7c"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\a0d8d97f280446c080113de7be9587ed.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "9bdd8e9322835228c0044c774f67f2702f33fc2f6792e4e1040cbaa30d4d4f83"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\bbd2db3f5ed5427385bfccd1b1f2dbf8.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "f16433db1897e2e9f3075ec5fe801b17f3d6c07b3bea3d94e2985179348fbb18"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\bcb7c06b1b444fa9863f2a48aa527ee7.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "18d519fb08505933ee1988edcf0c129ab467bd74f3c3c897e383f5903a9146c8"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\c276e9cc22b84256a05ece5533d69772.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "81da2ad4d61caa15be81f2c88cf34adf81f42de3e848fb826adb80f0cde2e2f3"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\ddae9d71a4b94feb9f22b270c999dfd3.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "7930c04d1080d6d4ee6f7ea2b0f935a61413eb87d635b229dd654767b737f344"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\fda0546a9e5f4dabb57388e2b432463f.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "9eb11d81ea0f17a9ff89cd65280490f26e3f8f583e1b33e4432f3e14aa5b8c1b"
+    },
+    {
+      "case": "pytest-8.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-pytest-live\\data\\interim\\pytest-8.0.0\\runs\\806b4926db8c4f77a3ed68bec605b5fe\\manifest.json",
+      "role": "collection manifest",
+      "sha256": "0d47eff3e499d1006b218720fd31dcb754e981e910222f40d0d4b4bd19fe6e90"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-history-live\\data\\interim\\urllib3-2.0.0\\historical\\027bc3fc71334e138d8ec73bedde28a1\\manifest.json",
+      "role": "history manifest",
+      "sha256": "c6218ec3094a735e0a077fd16690ef8b636a2078ac3a4836312a34737ae21477"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\00192461c7be420aa37fedb3212a05b2.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "7c692b4b6bf4f1cf4cea8218562e02b477b866b63511ef3224cc962f1e3ac052"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\037b6ccbcb6b44fda8b7484d8927ce62.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "4f85a490c3dd3d9ac24a2a40a10ff904873dce4891acf154dd6b6c2010ebc867"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\064b5368c0074981be59b4a28cf340c4.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "8e9e27e7e793e6388129e2482c6409abaef5382e7e6fb57cd30428260b61ee08"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\0f5ac0076a2945d19a0b23e227a15f50.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "68a76576f7a8222ab2af00a8a6196edad944fcccca7a909ad686113ee230f829"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\1084b80a99744bb4a29c42d0da2c11df.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "7a6d06dd905cd5179348f31372be4129942bb021b81684c0587c48aab8ee5892"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\1421f9f41e4042a686c74ad1ed752f01.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "b488ce769048ffceaa8d362e2ffd07bef597c4384a018383c57b761abf0a65ef"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\22e5b2be40604b808f58a019688dbbbb.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "2d3cf706e9265a73470946e674d19d18c56b7d7598a18c8dbdeaf778e210cfac"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\2b654e6bc19d426aba797de3b3c00c6a.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "8d30cc141d3727b060feccd75b8397bf1ddabd5ab446d2245f0d29cf8475a5c6"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\2d0b21ab44e94006a2c99be97afda00b.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "502b73d82a9781d855abce7b794f2ab7a7d2816ac41eed82a421212f6d4d67ed"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\2e307d3bdcc048d381c5d29eacaac208.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "cff8955a916bb501250f9d69cfd0b2d4532e2b2e3d6cfd37911d983ec276a435"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\364c0f04641b40b8b711fa4f322285d5.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "6124531a920e7305880e023383c39b6075057484111a8b384f2a43854e6d1bb8"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\36962cc8a23b4075bbd33f6027e17caf.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "79b91d8468d24fc585566b4131a661b72b2555be10949243e59f547dcc028d04"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\396b63fb667d4598b0ff96a68a5811cd.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "d0b5b346ca3cbef1096d4d3661a7ba28692749e7911ef6948a035f516e7c60eb"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\45fd77cd5b7a40c6a3998f6bc2642836.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "e6ec2d8df484a6de705ecb781ab45a58187b0d25b05b200b0adde32d2c9fe654"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\477440ae09ff4ae99ab774cdc68f60c2.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "2830b509d7b3bd29504577e25a99d02336a5437755892cc93dbf14ca8b1d80d1"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\477767ac8457495d8933d5b694f49a4d.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "6b2a5d4eb3ec4ea6f86697fb63f582ad6ab20e6cf3c5cf6e9094d72c8191841c"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\4cbb5ddd27ce48489eb55d4cd1a9caef.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "596b1a732669b19558bc42a9613a7cc3f10287cfb4fd8d98b643f06da2a4efb7"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\4ff4861a11a046f3a3f33c9ce2c0c788.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "cbc8a4ecfcb9718cdf2f8175229d359028305e93a3ea6138c77b7e20e0170f26"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\56c201b328c543b6b7216f7161b315d5.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "c5c3060ee528fbcdaf57525f62d0807946a488664843660fe4eebd61e9081743"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\5716f1527f55449aab53917c3d7d58ef.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "df8dbbf71744bbd618b96e7c41534cb19b3747766816737a97e176a2ab5faf33"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\5c36054210b34a74b84d05e7d578a0f5.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "97fb003cfd43814824ba2bb29b5a3fa71165e21ca96e89dc3eb6d581dd30a27a"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\67e37468695b443fae6f592566830954.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "c4cafb63ad17e3b2fa2f5780dc3bbd3fed63716edb313cd2f7d90fca44bb03eb"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\6e525fa9742941708657b406835488f1.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "92deecf632fcf158f7c1bdf2b87d4b5ddf18b7e74db284c978921b603ac6de6f"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\82ce18e87600484882e0734a86e15ee1.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "905261ef588a3dcc67de9db93025c30032f60db97d406789e26e1e7fa9a89219"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\9128f016516e478a9355033f9264b087.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "16e086135922fc7ca3b88ab4fd91ca892db221949aa183b86e39ecf6dae83fe3"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\a4dd62d69c2b4b768fe36dd9a7045e1d.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "8558af37592d4f1755834895f7403c8891b0f6a50452372b2ec0ba97370cf0f5"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\b16abf63dc614cd6bbbe10c30faa37ba.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "54cf381b0921463fabfd587af8db9f00d712fcdbc07ca1bb2a1b435d73b04eec"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\bfa2119197f3498bb1eb000ca6afc927.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "a987d8aa25ce0f19c3473f2deac6c1d0b0207ef83d404ef8dd882857e9f825c2"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\c629422e60634a6b9672599d9f7fe8f6.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "b55f5afed864b1d49e0860646c8514316ccb82eafd124e4dfd411d294aa13004"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\c64f22ff2396436d9edde87bf6b38956.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "7072f6b48352bfefae9982e989738c28fd0f86c95233570ff4dc834d7d812f94"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\d14d129b9ed8497f949273550d2d87b9.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "59f2661c58c58fc2e80134d1ef5a0545d1708ae3e96b1fd962f8e3e7fb40d3d6"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\d1c456e8544c466bb811a501d5eb5e47.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "3aa4337ed8d8543febb0f6e34aaa0c203d64d06cf8cbcd0eae98f4bd0d51530d"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\d8d8dae0dd774308b4c0fbded01815ef.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "c71a6a73a3d7651b0caee2976ea2fb9f3bc2c48266748c3a9ada8311f1c32e9f"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\da8a012eb8d14cdd9f045140aab26120.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "c89d6aee638948fafe35bc17d002a8ba71ff6e2d441e97480e42db94c0676d14"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\dd1ff9a259974410bb92b0d0509abf3f.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "4aba6b6ab2a49339dda096d4aad15d5ea1462b805b271fc1615e72d3d38731bb"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\dd560f2808b549d39850c9b123e6fda1.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "1a0b011b17b8149ece403c6e6c4dc4a2254f794c78ff2875e49ef9fdf4083280"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\deb906061f2644b982bddb8ebb3b9222.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "775e8d1e08e4d4dfd51ff4015214c4d3cd6a205d315f07b940f664919709f362"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\f0c6d2d8ab4e4760b8da3d1fdcdc0cba.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "67987370ac29525cdb02ec98f5c6c598bf7ac943b4e7c377c7b1888173a8157e"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\fb1f320badb6450fb0795fdb27097886.attempt.json",
+      "role": "collector task attempt",
+      "sha256": "a2a6488876db65845995750f72fbcc23a0914677b48c6d7d9cb9a6c5a45822fb"
+    },
+    {
+      "case": "urllib3-2.0.0",
+      "path": "C:\\Users\\venka\\pulse-phase2-m4-urllib3-live\\data\\interim\\urllib3-2.0.0\\runs\\5ba100d9629143f880ce8f5779d6d747\\manifest.json",
+      "role": "collection manifest",
+      "sha256": "eb6933613db13ad0dcf8a8079c8e58be9583fe0feda5f43415f8536778cb0450"
+    }
+  ],
+  "release_cases": {
+    "pytest-8.0.0": {
+      "case_id": "pytest-8.0.0",
+      "operational_status": "complete",
+      "run_id": "806b4926db8c4f77a3ed68bec605b5fe",
+      "tasks": [
+        {
+          "attempt_id": "ddae9d71a4b94feb9f22b270c999dfd3",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "pytest-dev/pytest",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "d18379679d385ea83d0c40a829b77c113fec3d9d62f7333b76c220c56bef8d9c",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "20ebbf0aeea97e0083dc"
+        },
+        {
+          "attempt_id": "bbd2db3f5ed5427385bfccd1b1f2dbf8",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "planetlabs/cosmolog",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "27806fcb65b0ab1b224a"
+        },
+        {
+          "attempt_id": "005fb48c7fd846e8a6f6c3e5c7368b64",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "bsc-wdc/qdislib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "88cbdf876e3a94cca5d03702271ab2be3679cbeb2ffc04be756236b30bf23a04",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "29c5158533c1895203fb"
+        },
+        {
+          "attempt_id": "a0d8d97f280446c080113de7be9587ed",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "planetlabs/cosmolog",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "323b1f8599f7928c44e994308bb51289fa956c02bc80d482fb69fdcd1791bae9",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "3d51114c73de63667e46"
+        },
+        {
+          "attempt_id": "7bd4822e18fd43b293ed76170a8f5829",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "bsc-wdc/qdislib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "a749afcd976185737cb63323469a15c78f46cc95458b3420d4a94ba46249333f",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "4bea99b875d330dbaf26"
+        },
+        {
+          "attempt_id": "290e070795154a589a801f856204176a",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "bsc-wdc/qdislib",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "a120bf96ddaa825233f10430c07275be68d8336df71b02e3a0e8238c8dc230cd",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "50717f9d2c5f4463ba69"
+        },
+        {
+          "attempt_id": "0bba59ac85174dbea4fe03b88fb3ccb0",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "bsc-wdc/qdislib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "75063dbb0dcc73bab38072013e03a9ea45ff0d523889ca91052a3b6d9dc39b16",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "7f0b1210781b96a60c13"
+        },
+        {
+          "attempt_id": "c276e9cc22b84256a05ece5533d69772",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "bsc-wdc/qdislib",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "a46316b6c078b60b5aabdda8eef7a58f875aa5f736a940c5783d136a0ec54b2f",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "826144764c8ff2c915a1"
+        },
+        {
+          "attempt_id": "7e15f06d9168483a97e51c98781281d6",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "planetlabs/cosmolog",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "41d9087ecc4166f79e6aebf81d0f13a2e868ff08171ab1a80e374a03609eae53",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "879a9bb43627cfd5395e"
+        },
+        {
+          "attempt_id": "fda0546a9e5f4dabb57388e2b432463f",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "bsc-wdc/qdislib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "4e08641b094b5aef6e8e680423ba2fae1151b2a0923d1b9bed4f302a82a079fe",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "b606ac34cef572045d7e"
+        },
+        {
+          "attempt_id": "9f58d7a4a9d84d1fb823b14ef57b8ff1",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "planetlabs/cosmolog",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "028d5376deb822f00c342b063a9bf4fafa1f198a3417e73e5414dc15ec6ad2d2",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "c3e65d7a038b9f805305"
+        },
+        {
+          "attempt_id": "bcb7c06b1b444fa9863f2a48aa527ee7",
+          "capture_method": "collector",
+          "kind": "pypi_version",
+          "repository": null,
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "cf99e36f2bcdedff715aa8f34b6db03fc85bca9c9382ba2f086ffc8bc1078d42",
+          "source": "pypi",
+          "status": "succeeded",
+          "task_id": "cd4f785026bc17027ede"
+        },
+        {
+          "attempt_id": "0403b8473a654f65ab0f1861e64770ad",
+          "capture_method": "collector",
+          "kind": "github_releases",
+          "repository": "pytest-dev/pytest",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "1386fcb53e89555b5882736943d5942e2564098c1e11f9603ca56c4ac46b971a",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "e2cf9e5b3d0e0382f940"
+        },
+        {
+          "attempt_id": "82b95301c74b483a9bbf679040911c83",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "planetlabs/cosmolog",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "056bbe90d88720e2ff84e9738d18aefc963c96cc3e6ac2c0d3fed4b6b2c8774c",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "e8e6bf77b74251bce1cd"
+        },
+        {
+          "attempt_id": "8a4d27da3e8c478fa0190dc5b1236cf2",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "planetlabs/cosmolog",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "8d09c0b901184c8fc638eb547604e861485fd458c008758f7be6c2d898c55e81",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "ec55a06c1451044a1bbd"
+        }
+      ]
+    },
+    "urllib3-2.0.0": {
+      "case_id": "urllib3-2.0.0",
+      "operational_status": "complete",
+      "run_id": "5ba100d9629143f880ce8f5779d6d747",
+      "tasks": [
+        {
+          "attempt_id": "dd1ff9a259974410bb92b0d0509abf3f",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "enzet/map-machine",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "6719b6487e6c99d3471e52fdc27138e163db73d961eca5fa3988c7875b8906fc",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "0c902414fd5b9cfb97fd"
+        },
+        {
+          "attempt_id": "1084b80a99744bb4a29c42d0da2c11df",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "Aiven-Open/pghoard",
+          "request_count": 2,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "73eda2af7e38b29743ec79849b721a3297700a2c328a142fc0843dfc8551de97",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "0efa3ac65f7082772ee5"
+        },
+        {
+          "attempt_id": "6e525fa9742941708657b406835488f1",
+          "capture_method": "collector",
+          "kind": "pypi_version",
+          "repository": null,
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "68048688ee13bffdece182edf2541dac1fd417a0b50795a2fd5dc6b575610e7e",
+          "source": "pypi",
+          "status": "succeeded",
+          "task_id": "0f0ccbf0dd93cc2e4d2f"
+        },
+        {
+          "attempt_id": "22e5b2be40604b808f58a019688dbbbb",
+          "capture_method": "collector",
+          "kind": "github_releases",
+          "repository": "urllib3/urllib3",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "26434dc6cb6c576d739b2543b222d8bd3645addc132bbecff7f988104bf11cd8",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "11a75396eb2254f7dbb4"
+        },
+        {
+          "attempt_id": "deb906061f2644b982bddb8ebb3b9222",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "Aiven-Open/pghoard",
+          "request_count": 6,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "e7300fa88ce89eafe355d137872bf9735d1c8ab7ceb5ee5cb7290dccb3e7116d",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "150406024091a461307f"
+        },
+        {
+          "attempt_id": "d8d8dae0dd774308b4c0fbded01815ef",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "Aiven-Open/pghoard",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "8e319a8e8301aa83d5223ee7367e0243a6a47ea09b583f315922e5067fb666dd",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "3b2b6a0ba5708f14def1"
+        },
+        {
+          "attempt_id": "477767ac8457495d8933d5b694f49a4d",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "atenreiro/opensquat",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "013fdb8eb272d30c577d9227efde3247e9297da9f3f7f982cbe55758e243b313",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "3de443bd01e58f4cb72c"
+        },
+        {
+          "attempt_id": "00192461c7be420aa37fedb3212a05b2",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "wimglenn/advent-of-code-data",
+          "request_count": 2,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "3b9faa5f92bae6373062c9ad36af92757b2b893e76d9ae8e275a1a7a7923d37e",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "41d5741ac9814f89bd66"
+        },
+        {
+          "attempt_id": "45fd77cd5b7a40c6a3998f6bc2642836",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "atenreiro/opensquat",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "3b40d2d15f6e5a33d1a6e1c2f929bb20de225d90027f4e509c403767f68d5b9b",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "449fc9f348cc2fd689cf"
+        },
+        {
+          "attempt_id": "c629422e60634a6b9672599d9f7fe8f6",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "jamesturk/scrapelib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "6ea6bc0f4b32bc652f43d52cb1df99e5ca74954edb5795b1ddac8e9c8a97af1d",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "451c6dac077bd8ad3b0b"
+        },
+        {
+          "attempt_id": "f0c6d2d8ab4e4760b8da3d1fdcdc0cba",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "enzet/map-machine",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "efd8e643c0cb968d68a5d2a63a4e111e4930355329e27a5c51342cd56c3c3f33",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "4ba77e5988b58d8eab6c"
+        },
+        {
+          "attempt_id": "9128f016516e478a9355033f9264b087",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "jamesturk/scrapelib",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "4d8b0cb7892c5356942a"
+        },
+        {
+          "attempt_id": "dd560f2808b549d39850c9b123e6fda1",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "jamesturk/scrapelib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "ab676ad59ad184933933f46aec95fce4b31b05ac0bbc87a4a87cae96337d6da5",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "54c8caf415614ff4172d"
+        },
+        {
+          "attempt_id": "da8a012eb8d14cdd9f045140aab26120",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "wimglenn/advent-of-code-data",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "58a17d40d121f6f3a303"
+        },
+        {
+          "attempt_id": "0f5ac0076a2945d19a0b23e227a15f50",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "wimglenn/advent-of-code-data",
+          "request_count": 2,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "897c8439c5411ce13d0ffa43cd94c7a7f927164a749f7768d6e5560a9fc37b69",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "5a34843d77b7e4b49e40"
+        },
+        {
+          "attempt_id": "d1c456e8544c466bb811a501d5eb5e47",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "enzet/map-machine",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "693ab898de1943fd3aa1"
+        },
+        {
+          "attempt_id": "c64f22ff2396436d9edde87bf6b38956",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "enzet/map-machine",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "8f2bd7917b1827c318580efd28e197cdf16a35f392a2cf0b8c1ab9b69f1674b7",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "72a777222d4dfcd4de9a"
+        },
+        {
+          "attempt_id": "b16abf63dc614cd6bbbe10c30faa37ba",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "jamesturk/scrapelib",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "0936e4169681c7fa5a62c4827072d2ace529ab138fca34e092500155d3ae560c",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "845887d0ab9ddd5f0c7c"
+        },
+        {
+          "attempt_id": "36962cc8a23b4075bbd33f6027e17caf",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "enzet/map-machine",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "b67e22298d0b055a14281f7f0997417fc4ef8916125879d448efe550f8e641e4",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "8930c32472dac71539f6"
+        },
+        {
+          "attempt_id": "1421f9f41e4042a686c74ad1ed752f01",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "Aiven-Open/pghoard",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "9270117ea5f03e0ff1101e53fcfa44b83144c68760bbc4f2907860efaf0649e7",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "8f4cca096a3fdff4bfa2"
+        },
+        {
+          "attempt_id": "2e307d3bdcc048d381c5d29eacaac208",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "facundoolano/feedi",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "a391a0072f45aacd7121faeb3a474dfa4874adf51668b11ae27b636881c1d0fb",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "93ac29166f60677c5e67"
+        },
+        {
+          "attempt_id": "bfa2119197f3498bb1eb000ca6afc927",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "wimglenn/advent-of-code-data",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "844751c6800211de24cf6583d7ae84e911da36a0329c99220327a1cab927ded9",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "9fe2eaba663f197eb864"
+        },
+        {
+          "attempt_id": "5c36054210b34a74b84d05e7d578a0f5",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "Aiven-Open/pghoard",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "a4e49f04be6649f0d13c"
+        },
+        {
+          "attempt_id": "2d0b21ab44e94006a2c99be97afda00b",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "facundoolano/feedi",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "6dff7b4b17b2717b4d79d329f221d0056ce101a240ac44dcd2a8c82fb8ad3570",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "a8dcfa57c226ff181e44"
+        },
+        {
+          "attempt_id": "4ff4861a11a046f3a3f33c9ce2c0c788",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "facundoolano/feedi",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "b68527592a76776542cb"
+        },
+        {
+          "attempt_id": "82ce18e87600484882e0734a86e15ee1",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "facundoolano/feedi",
+          "request_count": 2,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "d5d4b55e30d3f30e00f7f35e10327429f4a25267d2f32111ca32f544cdeccc62",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "b6ef2d80ccd1f9a24c2f"
+        },
+        {
+          "attempt_id": "477440ae09ff4ae99ab774cdc68f60c2",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "jamesturk/scrapelib",
+          "request_count": 3,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "12f567d2e1dd428d5052131ad7285b2fc7048c9152b464b02420434fd268f5f7",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "cb51b348bbd224700c89"
+        },
+        {
+          "attempt_id": "364c0f04641b40b8b711fa4f322285d5",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "wimglenn/advent-of-code-data",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "86bcd64f461261e6b8194dbb37cccea64ec5d86b00aba392fee2bee8045168cb",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "cc6004b59a778507dba6"
+        },
+        {
+          "attempt_id": "4cbb5ddd27ce48489eb55d4cd1a9caef",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "Aiven-Open/pghoard",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "2a45285def5f7af6f2fc092f67921713726b978e41594566e57eabc52b36da8d",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "d421bbf229d209e2b33b"
+        },
+        {
+          "attempt_id": "67e37468695b443fae6f592566830954",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "wimglenn/advent-of-code-data",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "42168a90d81d5e26ca17d5302b868efe7d1fb00ebbf312f6b78122ebd0866319",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "d714c07b1619eab88ef4"
+        },
+        {
+          "attempt_id": "037b6ccbcb6b44fda8b7484d8927ce62",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "urllib3/urllib3",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "22cd0de405919e4e1563542792dc798620df8a276b3014f55483f0293b61bc06",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "d89617b835bc611ef35d"
+        },
+        {
+          "attempt_id": "a4dd62d69c2b4b768fe36dd9a7045e1d",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "atenreiro/opensquat",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "0c9516e96b0394500808d69525d2946a6d1587dccee36e040739de021d6fedad",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "dab8f370a30fc6cd5eb6"
+        },
+        {
+          "attempt_id": "396b63fb667d4598b0ff96a68a5811cd",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "jamesturk/scrapelib",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "5bd16da5886b30fd79fdd014b7df542326b8068329aa85e1443e13450aaef16f",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "dd93146fe6bbc61086a3"
+        },
+        {
+          "attempt_id": "064b5368c0074981be59b4a28cf340c4",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "facundoolano/feedi",
+          "request_count": 2,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "9b585447156feed07eff4d3f6ca761fa748cad0a77017f73d127278001b4acbb",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "e4af3b2ef4b97703a444"
+        },
+        {
+          "attempt_id": "d14d129b9ed8497f949273550d2d87b9",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "atenreiro/opensquat",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "fdc15eaab38f0fa151abd75ea5db37e5d0877f6a45d7882e5c4cb06910fc6986",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "e8e956dcfd01fc0894f4"
+        },
+        {
+          "attempt_id": "56c201b328c543b6b7216f7161b315d5",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "atenreiro/opensquat",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "e14964ff61229ef4a945279a5b32288e12c5e9261a8b91eb6dea6f55de2615fd",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "f60c33754b19d79ca4c5"
+        },
+        {
+          "attempt_id": "2b654e6bc19d426aba797de3b3c00c6a",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "facundoolano/feedi",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "095db52b17a6b0baed04dfb0876c5abeae95acf228bfee44169e9819332c747a",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "fb0894363e1c48d708a5"
+        },
+        {
+          "attempt_id": "5716f1527f55449aab53917c3d7d58ef",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "atenreiro/opensquat",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "544d3acf81401568ab1561b2a70413b9df2f6be2240c5dd3ed9e9e08a2f882a8",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "fdeb6fef6bbe9f934818"
+        },
+        {
+          "attempt_id": "fb1f320badb6450fb0795fdb27097886",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "enzet/map-machine",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "fd10f52f10b13d452776ef89928fad626162a08c20aac9d57077a5691e333b0a",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "ff1d07fc77d2939bb9b5"
+        }
+      ]
+    }
+  },
+  "separate_httpx_resume_validation": {
+    "first": {
+      "case_id": "httpx-0.28.0",
+      "operational_status": "complete",
+      "run_id": "218a9c713b344d0cbc48f3fb20c91b48",
+      "tasks": [
+        {
+          "attempt_id": "da0e2db4708942f383a84dc1b3302bca",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "1d2573b0dccc5288751ce367e50526cf4e3bf7e95f3dcfa54d5520a4477a7aa6",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "0c7c55242e8e10f82069"
+        },
+        {
+          "attempt_id": "d7cd6f8cf3234b6fa08f587910162cb9",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "27b6d96cf84a32fa88a5"
+        },
+        {
+          "attempt_id": "662079f6f39e48a8a7c0678db2e98a96",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "4d6a44348f804f696846"
+        },
+        {
+          "attempt_id": "69d9447da8b142b6b2e5e470094844ba",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "openai/openai-python",
+          "request_count": 2,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "57559c0376ebc9249cbf58a9d7c0831f8813ea189309b04e26ca3c1e30fd1e33",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "78c46de4a26a19b0f947"
+        },
+        {
+          "attempt_id": "dad1895766824da7b5ebc26d29579ad0",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "openai/openai-python",
+          "request_count": 24,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "315cb1a8544780b5c89c11ca24a49d091f4e0806509e13e3f1a77ebe169b0a02",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "815dd1cc0cb3116207f5"
+        },
+        {
+          "attempt_id": "f3131c07e734434f901b0eb30f6d3a27",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "openai/openai-python",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "008eebedeb74b53a585d5a0b519d983c8f63e6f457cd75648a365dc30dc3dadc",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "85d4ef49e18986439a43"
+        },
+        {
+          "attempt_id": "a2c86ffb8594455293dbdd63ceb42aad",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 1,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "9c215f791f9b659ecd64"
+        },
+        {
+          "attempt_id": "6e84c4699361483fb8b5b6ba710893d9",
+          "capture_method": "collector",
+          "kind": "pypi_version",
+          "repository": null,
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "4bacc710be08b1b03400717e4e8b3d1a4d8506c25db6709bcba515b384466c9a",
+          "source": "pypi",
+          "status": "succeeded",
+          "task_id": "a1f396dadac3e00da3af"
+        },
+        {
+          "attempt_id": "87a26ae2f4f646448f95d9ab0e76bb19",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "encode/httpx",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "7b2d18721947d4aecdc1947947720fa309159745fff90826c9c49776c76ee0f1",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "cfeeed36c46c541a4b1a"
+        },
+        {
+          "attempt_id": "21e892d45d6d45c98de9fece209be5e6",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "openai/openai-python",
+          "request_count": 21,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "02357e1c20e6a1df827692b2c526febd54857adc5efbbb121a5e5410059a86bf",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "db8edc797e4a0b900e85"
+        },
+        {
+          "attempt_id": "54b3200afce442d7ba0eee914929810a",
+          "capture_method": "collector",
+          "kind": "github_releases",
+          "repository": "encode/httpx",
+          "request_count": 1,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": null,
+          "snapshot_sha256": "52b8c21b2d9cba19711cb22860c831e1f02e617adfbc4b4019b243fbf02fc9e2",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "eca642977ab7f68cb926"
+        }
+      ]
+    },
+    "resumed": {
+      "case_id": "httpx-0.28.0",
+      "operational_status": "complete",
+      "run_id": "ccae40970dac4573896892a9447bf2aa",
+      "tasks": [
+        {
+          "attempt_id": "4c4ed2102ea648c4a453991741b34bbd",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": "da0e2db4708942f383a84dc1b3302bca",
+          "snapshot_sha256": "1d2573b0dccc5288751ce367e50526cf4e3bf7e95f3dcfa54d5520a4477a7aa6",
+          "source": "repository_file",
+          "status": "succeeded",
+          "task_id": "0c7c55242e8e10f82069"
+        },
+        {
+          "attempt_id": "7d1b74ffec9848dfbf6ca4739e7866e9",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": "d7cd6f8cf3234b6fa08f587910162cb9",
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "27b6d96cf84a32fa88a5"
+        },
+        {
+          "attempt_id": "a05e16c9ab4641f58e2fb8a887b8c889",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": "662079f6f39e48a8a7c0678db2e98a96",
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "4d6a44348f804f696846"
+        },
+        {
+          "attempt_id": "9df0078c341d418892dfbed60eb2e2d5",
+          "capture_method": "collector",
+          "kind": "github_commits",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "69d9447da8b142b6b2e5e470094844ba",
+          "snapshot_sha256": "57559c0376ebc9249cbf58a9d7c0831f8813ea189309b04e26ca3c1e30fd1e33",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "78c46de4a26a19b0f947"
+        },
+        {
+          "attempt_id": "3f40f4456989432aa9c9d06f15631269",
+          "capture_method": "collector",
+          "kind": "github_pull_requests",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "dad1895766824da7b5ebc26d29579ad0",
+          "snapshot_sha256": "315cb1a8544780b5c89c11ca24a49d091f4e0806509e13e3f1a77ebe169b0a02",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "815dd1cc0cb3116207f5"
+        },
+        {
+          "attempt_id": "b64a3832544a437d9b65d95834d637b2",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "f3131c07e734434f901b0eb30f6d3a27",
+          "snapshot_sha256": "008eebedeb74b53a585d5a0b519d983c8f63e6f457cd75648a365dc30dc3dadc",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "85d4ef49e18986439a43"
+        },
+        {
+          "attempt_id": "00f2525066804294833d1e2c90113459",
+          "capture_method": "collector",
+          "kind": "github_file",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "optional_probe",
+          "retry_count": 0,
+          "reused_from_attempt": "a2c86ffb8594455293dbdd63ceb42aad",
+          "snapshot_sha256": null,
+          "source": "repository_file",
+          "status": "not_found",
+          "task_id": "9c215f791f9b659ecd64"
+        },
+        {
+          "attempt_id": "a11c64823720427fb9615f70777c61bd",
+          "capture_method": "collector",
+          "kind": "pypi_version",
+          "repository": null,
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "6e84c4699361483fb8b5b6ba710893d9",
+          "snapshot_sha256": "4bacc710be08b1b03400717e4e8b3d1a4d8506c25db6709bcba515b384466c9a",
+          "source": "pypi",
+          "status": "succeeded",
+          "task_id": "a1f396dadac3e00da3af"
+        },
+        {
+          "attempt_id": "b06ec0561d03400da031aef51bc2556e",
+          "capture_method": "collector",
+          "kind": "github_repository",
+          "repository": "encode/httpx",
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "87a26ae2f4f646448f95d9ab0e76bb19",
+          "snapshot_sha256": "7b2d18721947d4aecdc1947947720fa309159745fff90826c9c49776c76ee0f1",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "cfeeed36c46c541a4b1a"
+        },
+        {
+          "attempt_id": "2a79001d0b4740c7b20a4b920d201770",
+          "capture_method": "collector",
+          "kind": "github_issues",
+          "repository": "openai/openai-python",
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "21e892d45d6d45c98de9fece209be5e6",
+          "snapshot_sha256": "02357e1c20e6a1df827692b2c526febd54857adc5efbbb121a5e5410059a86bf",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "db8edc797e4a0b900e85"
+        },
+        {
+          "attempt_id": "458895f8191f4b24ae859fc2eb3b2199",
+          "capture_method": "collector",
+          "kind": "github_releases",
+          "repository": "encode/httpx",
+          "request_count": 0,
+          "requirement": "required",
+          "retry_count": 0,
+          "reused_from_attempt": "54b3200afce442d7ba0eee914929810a",
+          "snapshot_sha256": "52b8c21b2d9cba19711cb22860c831e1f02e617adfbc4b4019b243fbf02fc9e2",
+          "source": "github",
+          "status": "succeeded",
+          "task_id": "eca642977ab7f68cb926"
+        }
+      ]
+    }
+  },
+  "version": "1.0"
+}
