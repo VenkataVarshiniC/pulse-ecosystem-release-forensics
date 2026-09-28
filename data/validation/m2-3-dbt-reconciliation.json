@@ -1,0 +1,287 @@
+{
+  "check_count": 37,
+  "checks": [
+    {
+      "actual": 2,
+      "check_id": "cases",
+      "expected": 2,
+      "source_model": "stg_pulse__cases",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "members",
+      "expected": 8,
+      "source_model": "int_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 54,
+      "check_id": "planned_release_tasks",
+      "expected": 54,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "retries",
+      "expected": 0,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "pytest-8.0.0.members",
+      "expected": 2,
+      "source_model": "int_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "pytest-8.0.0.core_collection_complete",
+      "expected": 2,
+      "source_model": "int_repository_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 11,
+      "check_id": "pytest-8.0.0.required_tasks",
+      "expected": 11,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 11,
+      "check_id": "pytest-8.0.0.required_succeeded",
+      "expected": 11,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "check_id": "pytest-8.0.0.optional_tasks",
+      "expected": 4,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "pytest-8.0.0.optional_not_found",
+      "expected": 1,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "pytest-8.0.0.paired_members",
+      "expected": 1,
+      "source_model": "int_repository_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "check_id": "urllib3-2.0.0.members",
+      "expected": 6,
+      "source_model": "int_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "check_id": "urllib3-2.0.0.core_collection_complete",
+      "expected": 6,
+      "source_model": "int_repository_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 27,
+      "check_id": "urllib3-2.0.0.required_tasks",
+      "expected": 27,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 27,
+      "check_id": "urllib3-2.0.0.required_succeeded",
+      "expected": 27,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "check_id": "urllib3-2.0.0.optional_tasks",
+      "expected": 12,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "check_id": "urllib3-2.0.0.optional_not_found",
+      "expected": 5,
+      "source_model": "int_collection_task_status",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "urllib3-2.0.0.paired_members",
+      "expected": 0,
+      "source_model": "int_repository_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "historical_pair.PAIRED",
+      "expected": 1,
+      "source_model": "stg_pulse__historical_pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "check_id": "historical_pair.AFTER_ONLY",
+      "expected": 6,
+      "source_model": "stg_pulse__historical_pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "check_id": "historical_pair.UNRESOLVED",
+      "expected": 9,
+      "source_model": "stg_pulse__historical_pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "candidates",
+      "expected": 2,
+      "source_model": "int_candidate_terminal_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "candidate_emitting_repositories",
+      "expected": 1,
+      "source_model": "int_repository_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "shared_candidate_artifacts",
+      "expected": 1,
+      "source_model": "int_candidate_terminal_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "reviews.ACCEPT",
+      "expected": 0,
+      "source_model": "int_candidate_terminal_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "reviews.REJECT",
+      "expected": 2,
+      "source_model": "int_candidate_terminal_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "sufficiency.SUFFICIENT",
+      "expected": 2,
+      "source_model": "int_stage_sufficiency",
+      "status": "PASS"
+    },
+    {
+      "actual": 38,
+      "check_id": "sufficiency.LEGACY_UNCLASSIFIED",
+      "expected": 38,
+      "source_model": "int_stage_sufficiency",
+      "status": "PASS"
+    },
+    {
+      "actual": 40,
+      "check_id": "findings",
+      "expected": 40,
+      "source_model": "int_finding_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 38,
+      "check_id": "findings.UNKNOWN",
+      "expected": 38,
+      "source_model": "int_finding_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "findings.NO_QUALIFYING_EVIDENCE_FOUND",
+      "expected": 2,
+      "source_model": "int_finding_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "observed_adoption.unknown",
+      "expected": 8,
+      "source_model": "int_finding_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "recovery_signal.unknown",
+      "expected": 8,
+      "source_model": "int_finding_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "draft_snapshots",
+      "expected": 2,
+      "source_model": "int_analysis_snapshot",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "snapshot_artifact_digest_mismatches",
+      "expected": 0,
+      "source_model": "int_analysis_snapshot",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "fixtures_in_source_captures",
+      "expected": 0,
+      "source_model": "stg_pulse__artifacts",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "noncollector_source_captures",
+      "expected": 0,
+      "source_model": "stg_pulse__artifacts",
+      "status": "PASS"
+    }
+  ],
+  "model_row_counts": {
+    "int_analysis_snapshot": 2,
+    "int_candidate_terminal_review": 2,
+    "int_case_repository": 8,
+    "int_collection_task_status": 54,
+    "int_finding_evidence": 40,
+    "int_repository_evidence": 8,
+    "int_stage_sufficiency": 40,
+    "stg_pulse__artifacts": 72,
+    "stg_pulse__candidates": 2,
+    "stg_pulse__cases": 2,
+    "stg_pulse__collection_tasks": 54,
+    "stg_pulse__dependency_observations": 11,
+    "stg_pulse__finding_support": 0,
+    "stg_pulse__findings": 40,
+    "stg_pulse__historical_pairs": 16,
+    "stg_pulse__memberships": 8,
+    "stg_pulse__reviews": 2,
+    "stg_pulse__snapshots": 2,
+    "stg_pulse__sufficiency": 40
+  },
+  "status": "PASS",
+  "version": "m2-3-dbt-reconciliation-v1"
+}

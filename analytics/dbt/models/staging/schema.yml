@@ -1,0 +1,175 @@
+version: 2
+
+models:
+  - name: stg_pulse__cases
+    description: "Grain: case_version_id. Selects a versioned case and its one target release; release time stays nullable and case status stays literal. No cohort or lifecycle inference."
+    columns:
+      - name: case_version_id
+        description: Versioned case primary key.
+        data_tests: [not_null, unique]
+      - name: case_name
+        description: Frozen source case identifier.
+        data_tests: [not_null]
+      - name: target_release_id
+        description: Original release identity, not a dbt-generated key.
+      - name: release_time
+        description: Sourced release event time; never retrieval time.
+      - name: case_status
+        description: Raw DRAFT/FROZEN case state.
+  - name: stg_pulse__memberships
+    description: "Grain: case_version_id × repository_id. Frozen member denominator with provider identity; no member is filtered for missing evidence."
+    columns:
+      - name: case_version_id
+        description: Source case version identifier.
+        data_tests: [not_null]
+      - name: repository_id
+        description: Source provider-stable repository identifier.
+        data_tests: [not_null]
+      - name: repository_name
+        description: Canonical display name, distinct from provider identity.
+      - name: selection_method
+        description: Original frozen cohort selection method.
+      - name: eligibility_status
+        description: Original inclusion status; not an evidence quality flag.
+  - name: stg_pulse__collection_tasks
+    description: "Grain: collection_task_id. Keeps planned required/optional task and terminal state; upstream tasks may have null repository. No attempt inference."
+    columns:
+      - name: collection_task_id
+        description: Original planned task identity.
+        data_tests: [not_null, unique]
+      - name: collection_run_id
+        description: Parent release collection run identity.
+      - name: repository_id
+        description: Nullable cohort repository for shared upstream tasks.
+      - name: required_flag
+        description: Source required versus optional semantics.
+      - name: terminal_status
+        description: Literal task outcome, including optional not_found.
+      - name: recorded_attempt_count
+        description: Task row's stored attempt count; actual journal attempts are computed later.
+  - name: stg_pulse__artifacts
+    description: "Grain: artifact_id. Source capture identity and method with separate event/retrieval clocks; no digest-based deduplication or authority promotion."
+    columns:
+      - name: artifact_id
+        description: Independent capture identity.
+        data_tests: [not_null, unique]
+      - name: source_id
+        description: Observed source registry identity.
+      - name: capture_method
+        description: Original collector, connector_assisted or fixture classification.
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['collector', 'connector_assisted', 'fixture']}
+      - name: source_event_time
+        description: Nullable source event clock; no fallback to retrieval time.
+      - name: retrieved_at
+        description: Capture retrieval clock, separate from source event.
+      - name: content_sha256
+        description: Byte digest of this capture; not an identity key.
+      - name: raw_snapshot_uri
+        description: Logical pointer to immutable raw bytes.
+  - name: stg_pulse__dependency_observations
+    description: "Grain: observation_id. Preserves declaration, resolution and path-state types, exact ref, parser provenance and absent values."
+    columns:
+      - name: observation_id
+        description: Parsed observation identity.
+        data_tests: [not_null, unique]
+      - name: artifact_id
+        description: Supporting raw capture identity.
+      - name: observation_type
+        description: Literal semantic type; a constraint is not an installed version.
+      - name: declared_constraint
+        description: Nullable declared constraint, never inferred resolution.
+      - name: resolved_version
+        description: Only populated for qualified resolved-version observations.
+      - name: observation_time
+        description: Nullable source observation time.
+  - name: stg_pulse__historical_pairs
+    description: "Grain: historical_pair_id. Retains PAIRED, AFTER_ONLY, UNRESOLVED and ambiguity separately; no chronology invented."
+    columns:
+      - name: historical_pair_id
+        description: Versioned pairing decision identity.
+        data_tests: [not_null, unique]
+      - name: pair_status
+        description: Original paired/after-only/unresolved decision.
+      - name: before_observation_id
+        description: Nullable before endpoint; absent for after-only.
+      - name: after_observation_id
+        description: Nullable after endpoint.
+      - name: reason
+        description: Source reconstruction reason.
+  - name: stg_pulse__candidates
+    description: "Grain: candidate_id. One detector firing, retaining shared artifact and copied-upstream origin; candidate presence is not accepted evidence."
+    columns:
+      - name: candidate_id
+        description: Independent candidate firing identity.
+        data_tests: [not_null, unique]
+      - name: artifact_id
+        description: Capture that emitted the candidate; may repeat across candidates.
+      - name: source_origin
+        description: Reviewed source origin including COPIED_UPSTREAM.
+      - name: emitted_at
+        description: Nullable candidate emission time, not PR event time.
+      - name: candidate_status
+        description: Literal EMITTED/WITHDRAWN detector status.
+  - name: stg_pulse__reviews
+    description: "Grain: review_id. One human review event; terminal coalescing belongs in intermediate."
+    columns:
+      - name: review_id
+        description: Review event identity.
+        data_tests: [not_null, unique]
+      - name: candidate_id
+        description: Reviewed candidate identity.
+      - name: review_cycle
+        description: Review cycle number.
+      - name: review_sequence
+        description: Ordered event within cycle.
+      - name: decision
+        description: Original ACCEPT, REJECT or NEEDS_EVIDENCE decision.
+  - name: stg_pulse__sufficiency
+    description: "Grain: assessment_id. Preserves original source status including LEGACY_UNCLASSIFIED and nullable assessed_at."
+    columns:
+      - name: assessment_id
+        description: Versioned assessment primary identity.
+        data_tests: [not_null, unique]
+      - name: sufficiency_status
+        description: Unchanged source vocabulary; legacy false is not modern insufficient.
+      - name: reason_code
+        description: Source reason code.
+      - name: assessed_at
+        description: Nullable source assessment time.
+  - name: stg_pulse__findings
+    description: "Grain: finding_id. Literal lifecycle finding version and assessment link; UNKNOWN is not bounded NO."
+    columns:
+      - name: finding_id
+        description: Versioned finding identity.
+        data_tests: [not_null, unique]
+      - name: finding_status
+        description: QUALIFYING_EVIDENCE, bounded NO or UNKNOWN.
+      - name: sufficiency_assessment_id
+        description: Matching scoped assessment identity.
+      - name: created_at
+        description: Nullable source finding creation time.
+  - name: stg_pulse__finding_support
+    description: "Grain: finding_id × support_type × support_id × support_role. Union of typed bridges only; empty for current frozen cases."
+    columns:
+      - name: finding_id
+        description: Finding being supported.
+      - name: support_type
+        description: Typed artifact, observation or review edge.
+      - name: support_id
+        description: Original typed support identity cast to text for the union.
+      - name: support_role
+        description: Original support-role label.
+  - name: stg_pulse__snapshots
+    description: "Grain: analysis_snapshot_id. Original input snapshot metadata; M2.3 never changes DRAFT state or publishes it."
+    columns:
+      - name: analysis_snapshot_id
+        description: Source snapshot identity.
+        data_tests: [not_null, unique]
+      - name: snapshot_state
+        description: Original DRAFT/VALIDATED/PUBLISHED/REVOKED state.
+      - name: manifest_sha256
+        description: Frozen input snapshot fingerprint, not a dbt output hash.
+      - name: generated_at
+        description: Loader snapshot generation time, excluded from deterministic business equality.

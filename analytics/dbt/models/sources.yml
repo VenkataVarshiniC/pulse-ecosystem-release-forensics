@@ -1,0 +1,209 @@
+version: 2
+
+sources:
+  - name: pulse_ingestion
+    schema: ingestion
+    description: Verified operational records from the frozen Phase 2 load. No historical-evidence freshness SLA applies.
+    tables:
+      - name: source_registry
+        description: One actually represented provider/source definition version.
+        columns:
+          - name: source_id
+            data_tests: [not_null, unique]
+          - name: access_class
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['public', 'restricted', 'unknown']}
+      - name: collection_run
+        description: One actual release or historical collection run.
+        columns:
+          - name: collection_run_id
+            data_tests: [not_null, unique]
+          - name: case_version_id
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'investigation_case')", field: case_version_id}
+          - name: run_kind
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['release_collection', 'historical_reconstruction']}
+      - name: collection_task
+        description: One planned release-run task; upstream tasks may have no cohort repository.
+        columns:
+          - name: collection_task_id
+            data_tests: [not_null, unique]
+          - name: collection_run_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_ingestion', 'collection_run')", field: collection_run_id}
+          - name: terminal_status
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['pending', 'succeeded', 'partial', 'rate_limited', 'not_found', 'unauthorized', 'failed']}
+      - name: task_attempt
+        description: One actual attempt per task/attempt number, not a fabricated retry.
+        columns:
+          - name: collection_task_id
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments: {to: "source('pulse_ingestion', 'collection_task')", field: collection_task_id}
+          - name: attempt_number
+            data_tests: [not_null]
+
+  - name: pulse_core
+    schema: core
+    description: Typed representation of verified external evidence; dbt does not mutate these rows.
+    tables:
+      - name: dependency_release
+        description: One ecosystem/package/exact-version release.
+        columns:
+          - name: release_id
+            data_tests: [not_null, unique]
+      - name: repository
+        description: One stable provider repository identity.
+        columns:
+          - name: repository_id
+            data_tests: [not_null, unique]
+      - name: investigation_case
+        description: One versioned case definition; the two M2.2 cases are FROZEN.
+        columns:
+          - name: case_version_id
+            data_tests: [not_null, unique]
+          - name: status
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['DRAFT', 'FROZEN']}
+      - name: cohort_membership
+        description: One case-version/repository inclusion; primary analytical denominator.
+        columns:
+          - name: case_version_id
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'investigation_case')", field: case_version_id}
+          - name: repository_id
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'repository')", field: repository_id}
+      - name: evidence_artifact
+        description: One immutable raw capture, with separate source-event and retrieval clocks.
+        columns:
+          - name: artifact_id
+            data_tests: [not_null, unique]
+          - name: source_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_ingestion', 'source_registry')", field: source_id}
+          - name: capture_method
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['collector', 'connector_assisted', 'fixture']}
+          - name: content_sha256
+            data_tests: [not_null]
+      - name: dependency_observation
+        description: One typed parsed observation, never an inferred installed version.
+        columns:
+          - name: observation_id
+            data_tests: [not_null, unique]
+          - name: artifact_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'evidence_artifact')", field: artifact_id}
+          - name: observation_type
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['CURRENT_DECLARATION', 'HISTORICAL_DECLARATION', 'RESOLVED_VERSION', 'PATH_STATE', 'COMPATIBILITY_CONTEXT']}
+      - name: historical_pair
+        description: One versioned pairing decision; AFTER_ONLY is distinct from PAIRED.
+        columns:
+          - name: historical_pair_id
+            data_tests: [not_null, unique]
+          - name: pair_status
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['PAIRED', 'AFTER_ONLY', 'UNRESOLVED', 'CROSS_FILE_AMBIGUITY']}
+      - name: candidate
+        description: One rule firing; multiple firings may share one artifact.
+        columns:
+          - name: candidate_id
+            data_tests: [not_null, unique]
+          - name: artifact_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'evidence_artifact')", field: artifact_id}
+          - name: source_origin
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['LOCAL_DOWNSTREAM', 'COPIED_UPSTREAM', 'UNRESOLVED']}
+      - name: analyst_review
+        description: One independent review event, including nonterminal NEEDS_EVIDENCE.
+        columns:
+          - name: review_id
+            data_tests: [not_null, unique]
+          - name: candidate_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'candidate')", field: candidate_id}
+          - name: decision
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['ACCEPT', 'REJECT', 'NEEDS_EVIDENCE']}
+      - name: sufficiency_assessment
+        description: One versioned assessment; LEGACY_UNCLASSIFIED is preserved.
+        columns:
+          - name: assessment_id
+            data_tests: [not_null, unique]
+          - name: sufficiency_status
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['SUFFICIENT', 'INSUFFICIENT', 'SOURCE_UNAVAILABLE', 'CONFLICTING', 'LEGACY_UNCLASSIFIED']}
+      - name: assessment_source_reason
+        description: Typed assessment/source/reason link; currently no frozen rows.
+        columns:
+          - name: assessment_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'sufficiency_assessment')", field: assessment_id}
+      - name: lifecycle_finding
+        description: One versioned finding; UNKNOWN remains distinct from bounded NO.
+        columns:
+          - name: finding_id
+            data_tests: [not_null, unique]
+          - name: sufficiency_assessment_id
+            data_tests:
+              - relationships:
+                  arguments: {to: "source('pulse_core', 'sufficiency_assessment')", field: assessment_id}
+          - name: finding_status
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['QUALIFYING_EVIDENCE', 'NO_QUALIFYING_EVIDENCE_FOUND', 'UNKNOWN']}
+      - name: finding_artifact_support
+        description: One finding/artifact/role support edge; no synthetic positive support.
+      - name: finding_observation_support
+        description: One finding/observation/role support edge.
+      - name: finding_review_support
+        description: One finding/review/role support edge.
+      - name: analysis_snapshot
+        description: One frozen input manifest snapshot; M2.2 rows remain DRAFT.
+        columns:
+          - name: analysis_snapshot_id
+            data_tests: [not_null, unique]
+          - name: state
+            data_tests:
+              - accepted_values:
+                  arguments: {values: ['DRAFT', 'VALIDATED', 'PUBLISHED', 'REVOKED']}
+      - name: snapshot_run
+        description: One snapshot/selected collection run edge.
+      - name: snapshot_artifact
+        description: One snapshot/selected artifact and expected hash edge.
+      - name: snapshot_candidate
+        description: One snapshot/selected candidate edge.
+      - name: snapshot_review
+        description: One snapshot/selected review edge.
+      - name: snapshot_assessment
+        description: One snapshot/selected assessment edge.
+      - name: snapshot_finding
+        description: One snapshot/selected finding edge.

@@ -1,0 +1,19 @@
+name: pulse_analytics
+version: '1.0.0'
+config-version: 2
+profile: pulse_analytics
+model-paths: [models]
+test-paths: [tests]
+macro-paths: [macros]
+target-path: target
+clean-targets: [target, dbt_packages]
+models:
+  pulse_analytics:
+    staging:
+      +materialized: view
+      +schema: dbt_staging
+    intermediate:
+      +materialized: view
+      +schema: dbt_intermediate
+data_tests:
+  +store_failures: true

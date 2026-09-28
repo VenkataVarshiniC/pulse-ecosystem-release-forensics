@@ -43,3 +43,6 @@ python -m uv run pytest tests/database -p no:cacheprovider
 ~~~
 
 Reset drops only the explicitly named pulse_dev or pulse_test database in the isolated cluster, recreates it, and reapplies migrations. It destroys rows in that selected local database; do not use it after real evidence loading without a backup. Database tests use fixture captures inside transactions that roll back; they never become source evidence or analytical metrics. In an environment without the local cluster, the general pytest suite skips these database probes. Setting PULSE_REQUIRE_DB_TESTS=1 makes missing database access a failure, which is the required database validation command and recommended future CI behavior when a PostgreSQL service is provisioned.
+
+M2.3 dbt views live in separate dbt-owned schemas. For transformation setup,
+clean rebuild and source-preserving validation, use the [dbt runbook](../../../analytics/dbt/README.md).

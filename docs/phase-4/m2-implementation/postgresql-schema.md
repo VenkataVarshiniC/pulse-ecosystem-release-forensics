@@ -32,3 +32,8 @@ The migration adds eight targeted lookup indexes beyond PK/unique indexes: task 
 Cross-row qualification remains an application/dbt/human-review concern under [M2-PREP's integrity contract](../m2-prep/database-integrity-contract.md): matching before/after ref/path/time, sufficiency prerequisites for a bounded NO, and accepted provenance for a YES. The typed FK support chain is implemented and tested, but a positive finding's semantic qualification is not asserted solely by a database CHECK. Snapshot metadata and typed input links are implemented; publication and dbt mart validation come later.
 
 Stakeholder-dependent disposition, portfolio priority, business completion and recovery tables are intentionally absent. Analysis snapshot metadata is structural and has no current published analytic dataset. The only substantive contract adjustment is an extra composite collector task/source/repository FK and a trigger protecting moves into frozen cohorts; both strengthen the documented identity rules.
+
+M2.3 adds dbt-managed views in `dbt_staging` and `dbt_intermediate`, plus a
+test-audit schema, without altering the source schemas. See the
+[transformation lineage](m2-3-dbt-lineage.md) for each view's grain and
+source-to-future-mart mapping.

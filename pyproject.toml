@@ -21,6 +21,10 @@ dependencies = [
 pulse = "pulse.cli:main"
 
 [dependency-groups]
+analytics = [
+    "dbt-core==1.11.15",
+    "dbt-postgres==1.11.0",
+]
 dev = [
   "pytest>=8.2,<10",
   "ruff>=0.6,<1",

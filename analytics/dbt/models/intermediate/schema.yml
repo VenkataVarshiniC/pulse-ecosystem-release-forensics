@@ -1,0 +1,136 @@
+version: 2
+
+models:
+  - name: int_case_repository
+    description: "Grain: case_version_id × repository_id. Preserved eight-member spine from frozen membership and versioned case/release. It is not a final dimension or published snapshot fact."
+    columns:
+      - name: case_version_id
+        description: Original case version identity.
+        data_tests: [not_null]
+      - name: repository_id
+        description: Original repository identity.
+        data_tests: [not_null]
+      - name: case_name
+        description: Frozen case label, kept distinct across pytest and urllib3.
+      - name: target_version
+        description: Exact investigated release version, not observed adoption.
+      - name: release_time
+        description: Sourced release clock.
+      - name: selection_method
+        description: Source cohort selection method.
+  - name: int_collection_task_status
+    description: "Grain: collection_task_id. Pre-aggregates actual attempts and captures at task grain; retries require attempt_number > 1. Optional not_found remains a literal outcome."
+    columns:
+      - name: collection_task_id
+        description: Source planned task identity.
+        data_tests: [not_null, unique]
+      - name: required_flag
+        description: Required versus optional source designation.
+      - name: terminal_status
+        description: Literal terminal task status.
+      - name: actual_attempt_count
+        description: Count of persisted attempt journal rows.
+      - name: retry_count
+        description: Number of attempt rows after attempt one; not inferred from outcome.
+      - name: capture_count
+        description: Collector captures linked to this task, with historical captures scoped separately.
+  - name: int_repository_evidence
+    description: "Grain: case_version_id × repository_id. Left-preserved member diagnostics from separately aggregated task, history, observation, artifact and candidate relations. Flags mean evidence presence, never adoption or recovery truth."
+    columns:
+      - name: case_version_id
+        description: Frozen case version identity.
+        data_tests: [not_null]
+      - name: repository_id
+        description: Frozen member identity.
+        data_tests: [not_null]
+      - name: core_collection_complete
+        description: Required member and shared upstream tasks succeeded; not a completeness claim for all historical evidence.
+      - name: has_historical_declaration
+        description: At least one exact-ref historical target declaration was parsed.
+      - name: has_paired_pre_release_history
+        description: A PAIRED decision exists; AFTER_ONLY does not qualify.
+      - name: has_after_only_history
+        description: An AFTER_ONLY decision exists, separate from paired history.
+      - name: has_exact_target_resolution_observation
+        description: Explicit RESOLVED_VERSION observation equals target; never inferred from a permissive constraint.
+      - name: candidate_count
+        description: Candidate identities aggregated before the member join.
+      - name: release_capture_count
+        description: Member-scoped collector release captures; upstream package and noncollector captures are excluded.
+      - name: historical_capture_count
+        description: Member-scoped collector historical query/file captures; noncollector captures are excluded.
+  - name: int_candidate_terminal_review
+    description: "Grain: candidate_id. Selects the latest ordered review event, keeping candidates with no review; ACCEPT/REJECT are terminal, NEEDS_EVIDENCE unresolved. Review acceptance alone is not a qualifying finding."
+    columns:
+      - name: candidate_id
+        description: Original firing identity, never replaced by artifact identity.
+        data_tests: [not_null, unique]
+      - name: artifact_id
+        description: Shared capture identity retained across both urllib3 candidates.
+      - name: selected_review_id
+        description: Latest review event, nullable for unreviewed candidate.
+      - name: latest_review_decision
+        description: Literal selected ACCEPT, REJECT or NEEDS_EVIDENCE.
+      - name: has_terminal_review
+        description: Latest decision is ACCEPT or REJECT, not merely candidate presence.
+      - name: has_accepted_review
+        description: Latest decision is ACCEPT; no lifecycle finding is inferred.
+  - name: int_stage_sufficiency
+    description: "Grain: assessment_id. Source sufficiency remains literal; analytical_status_family labels legacy uncertainty separately without replacing the source status."
+    columns:
+      - name: assessment_id
+        description: Versioned source assessment identity.
+        data_tests: [not_null, unique]
+      - name: source_sufficiency_status
+        description: Exact SUFFICIENT or LEGACY_UNCLASSIFIED status for frozen cases.
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['SUFFICIENT', 'INSUFFICIENT', 'SOURCE_UNAVAILABLE', 'CONFLICTING', 'LEGACY_UNCLASSIFIED']}
+      - name: analytical_status_family
+        description: Separate UNRESOLVED_LEGACY grouping or EXPLICIT_SOURCE_STATUS; not a modern sufficiency claim.
+      - name: recorded_source_reason_count
+        description: Count of explicitly linked source-reason rows; zero does not mean no missing source.
+      - name: assessed_at
+        description: Nullable source time; no dbt load-time fallback.
+  - name: int_finding_evidence
+    description: "Grain: finding_id. Counts typed support edges only after aggregating by finding; UNKNOWN/NO require no invented positive support. A typed edge alone does not prove qualification."
+    columns:
+      - name: finding_id
+        description: Versioned source finding identity.
+        data_tests: [not_null, unique]
+      - name: finding_status
+        description: Original bounded finding status; UNKNOWN stays distinct from NO.
+      - name: source_sufficiency_status
+        description: Related literal assessment status.
+      - name: support_artifact_count
+        description: Number of typed artifact support edges.
+      - name: support_observation_count
+        description: Number of typed observation support edges.
+      - name: support_review_count
+        description: Number of typed review support edges.
+      - name: provenance_status
+        description: Diagnostic for typed support presence, not a causal or quality verdict.
+  - name: int_analysis_snapshot
+    description: "Grain: analysis_snapshot_id. Counts chosen typed inputs and artifact digest mismatches separately; preserves DRAFT input state and never publishes."
+    columns:
+      - name: analysis_snapshot_id
+        description: Original snapshot identity.
+        data_tests: [not_null, unique]
+      - name: snapshot_state
+        description: Original source state; DRAFT is not PUBLISHED.
+      - name: manifest_sha256
+        description: Original input manifest fingerprint.
+      - name: selected_run_count
+        description: Number of chosen collection runs.
+      - name: selected_artifact_count
+        description: Number of chosen evidence captures.
+      - name: selected_candidate_count
+        description: Number of chosen candidate firings, independent of artifact count.
+      - name: selected_review_count
+        description: Number of chosen review events.
+      - name: selected_assessment_count
+        description: Number of chosen sufficiency assessments.
+      - name: selected_finding_count
+        description: Number of chosen findings.
+      - name: artifact_digest_mismatch_count
+        description: Count of chosen artifact digests differing from source capture digests.
