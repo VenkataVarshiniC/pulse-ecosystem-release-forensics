@@ -19,7 +19,18 @@ The first command creates a fresh cluster under ignored .local/postgres and a ge
 
 The bootstrap pulse_local role is a superuser **inside this isolated development cluster** so it can initialize and migrate schemas; it is not an application or BI account. Before any shared or production deployment, define separate least-privilege loader, transformation and read-only roles and upgrade to the current supported PostgreSQL minor release. This local setup makes no enterprise-security claim.
 
-The migration runner applies ordered VNNN__description.sql files. Each file must wrap DDL and its schema_migrations insertion in one transaction. Applied versions are skipped on repeat; a failing migration rolls back. Current revision: **1**. To change schema, add V002__name.sql with its own version row, run migrate on an empty test database and an already migrated test database, then document the change. Do not edit V001 after it has been shared as an immutable migration. No second migration framework is used.
+The migration runner applies ordered VNNN__description.sql files. Each file must wrap DDL and its schema_migrations insertion in one transaction. Applied versions are skipped on repeat; a failing migration rolls back. Current revision: **4**. V002 adds frozen upstream/historical capture scope and the legacy sufficiency mapping; V003 preserves absent interpretation times and replay audits; V004 retains historical raw task/attempt source keys. Future schema changes require a new numbered migration, tested on empty and already migrated test databases. Do not edit applied migrations. No second migration framework is used.
+
+For M2.2, set the four frozen-root environment variables documented in the [input manifest guide](m2-2-input-manifest.md). Verify all 142 file hashes **before** loading. Then run:
+
+~~~powershell
+python -m uv run python -m pulse.phase2_postgres verify
+python -m uv run python -m pulse.phase2_postgres load --all
+python -m uv run python -m pulse.phase2_postgres reconcile
+python -m uv run python -m pulse.phase2_postgres lineage
+~~~
+
+`load --all` loads pytest and urllib3 in separate transactions. An identical rerun reports `reused`; changed manifest identity on an existing key is rejected. `reconcile` writes `data/validation/m2-2-golden-reconciliation.json`; `lineage` writes `data/validation/m2-2-lineage.json`. These are deterministic validation artifacts. No external API is called and no analytical snapshot is published. Only `pulse_dev` receives real frozen evidence; integration tests use rolled-back `pulse_test` transactions.
 
 To verify empty rebuild or deliberately destroy development state:
 

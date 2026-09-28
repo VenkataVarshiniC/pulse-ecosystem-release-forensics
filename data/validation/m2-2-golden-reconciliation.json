@@ -1,0 +1,388 @@
+{
+  "assessment_status_counts": {
+    "LEGACY_UNCLASSIFIED": 38,
+    "SUFFICIENT": 2
+  },
+  "cases": {
+    "pytest-8.0.0": {
+      "artifacts": {
+        "actual": 21,
+        "expected": 21,
+        "status": "PASS"
+      },
+      "assessments": {
+        "actual": 10,
+        "expected": 10,
+        "status": "PASS"
+      },
+      "attempts": {
+        "actual": 15,
+        "expected": 15,
+        "status": "PASS"
+      },
+      "candidate_emitting_members": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "candidates": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "core_collection": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "findings": {
+        "actual": 10,
+        "expected": 10,
+        "status": "PASS"
+      },
+      "historical_declaration_members": {
+        "actual": 1,
+        "expected": 1,
+        "status": "PASS"
+      },
+      "historical_pairs": {
+        "actual": 4,
+        "expected": 4,
+        "status": "PASS"
+      },
+      "members": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "observations": {
+        "actual": 5,
+        "expected": 5,
+        "status": "PASS"
+      },
+      "observed_adoption_unknown": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "optional_not_found": {
+        "actual": 1,
+        "expected": 1,
+        "status": "PASS"
+      },
+      "optional_tasks": {
+        "actual": 4,
+        "expected": 4,
+        "status": "PASS"
+      },
+      "paired_pre_release": {
+        "actual": 1,
+        "expected": 1,
+        "status": "PASS"
+      },
+      "recovery_unknown": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "replay_matches": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "required_succeeded": {
+        "actual": 11,
+        "expected": 11,
+        "status": "PASS"
+      },
+      "required_tasks": {
+        "actual": 11,
+        "expected": 11,
+        "status": "PASS"
+      },
+      "retries": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "reviews_accepted": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "reviews_rejected": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "tasks": {
+        "actual": 15,
+        "expected": 15,
+        "status": "PASS"
+      }
+    },
+    "urllib3-2.0.0": {
+      "artifacts": {
+        "actual": 51,
+        "expected": 51,
+        "status": "PASS"
+      },
+      "assessments": {
+        "actual": 30,
+        "expected": 30,
+        "status": "PASS"
+      },
+      "attempts": {
+        "actual": 39,
+        "expected": 39,
+        "status": "PASS"
+      },
+      "candidate_emitting_members": {
+        "actual": 1,
+        "expected": 1,
+        "status": "PASS"
+      },
+      "candidates": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "core_collection": {
+        "actual": 6,
+        "expected": 6,
+        "status": "PASS"
+      },
+      "findings": {
+        "actual": 30,
+        "expected": 30,
+        "status": "PASS"
+      },
+      "historical_declaration_members": {
+        "actual": 1,
+        "expected": 1,
+        "status": "PASS"
+      },
+      "historical_pairs": {
+        "actual": 12,
+        "expected": 12,
+        "status": "PASS"
+      },
+      "members": {
+        "actual": 6,
+        "expected": 6,
+        "status": "PASS"
+      },
+      "observations": {
+        "actual": 6,
+        "expected": 6,
+        "status": "PASS"
+      },
+      "observed_adoption_unknown": {
+        "actual": 6,
+        "expected": 6,
+        "status": "PASS"
+      },
+      "optional_not_found": {
+        "actual": 5,
+        "expected": 5,
+        "status": "PASS"
+      },
+      "optional_tasks": {
+        "actual": 12,
+        "expected": 12,
+        "status": "PASS"
+      },
+      "paired_pre_release": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "recovery_unknown": {
+        "actual": 6,
+        "expected": 6,
+        "status": "PASS"
+      },
+      "replay_matches": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "required_succeeded": {
+        "actual": 27,
+        "expected": 27,
+        "status": "PASS"
+      },
+      "required_tasks": {
+        "actual": 27,
+        "expected": 27,
+        "status": "PASS"
+      },
+      "retries": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "reviews_accepted": {
+        "actual": 0,
+        "expected": 0,
+        "status": "PASS"
+      },
+      "reviews_rejected": {
+        "actual": 2,
+        "expected": 2,
+        "status": "PASS"
+      },
+      "tasks": {
+        "actual": 39,
+        "expected": 39,
+        "status": "PASS"
+      }
+    }
+  },
+  "checks": 66,
+  "finding_status_counts": {
+    "NO_QUALIFYING_EVIDENCE_FOUND": 2,
+    "UNKNOWN": 38
+  },
+  "global": {
+    "artifact_without_collector_provenance": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "assessment_without_member": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "candidate_without_artifact": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "case_population": {
+      "actual": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    "duplicate_candidate_source_keys": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "duplicate_task_business_keys": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "finding_support_edges": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "finding_without_assessment": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "findings_total": {
+      "actual": 40,
+      "expected": 40,
+      "status": "PASS"
+    },
+    "fixture_artifacts": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "member_population": {
+      "actual": 8,
+      "expected": 8,
+      "status": "PASS"
+    },
+    "membership_without_repository": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "non_collector_artifacts": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "observation_without_artifact": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "published_snapshots": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "qualifying_findings": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "review_without_candidate": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "support_edges_without_parent": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "task_without_source": {
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    "two_candidates_one_artifact": {
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    }
+  },
+  "historical_pair_status_counts": {
+    "AFTER_ONLY": 6,
+    "PAIRED": 1,
+    "UNRESOLVED": 9
+  },
+  "row_counts": {
+    "core.analysis_snapshot": 2,
+    "core.analyst_review": 2,
+    "core.assessment_source_reason": 0,
+    "core.candidate": 2,
+    "core.cohort_membership": 8,
+    "core.dependency_observation": 11,
+    "core.dependency_release": 2,
+    "core.evidence_artifact": 72,
+    "core.external_evidence_reference": 1,
+    "core.finding_artifact_support": 0,
+    "core.finding_observation_support": 0,
+    "core.finding_review_support": 0,
+    "core.historical_pair": 16,
+    "core.investigation_case": 2,
+    "core.lifecycle_finding": 40,
+    "core.repository": 8,
+    "core.repository_alias": 8,
+    "core.snapshot_artifact": 72,
+    "core.snapshot_assessment": 40,
+    "core.snapshot_candidate": 2,
+    "core.snapshot_finding": 40,
+    "core.snapshot_review": 2,
+    "core.snapshot_run": 4,
+    "core.sufficiency_assessment": 40,
+    "ingestion.collection_run": 4,
+    "ingestion.collection_task": 54,
+    "ingestion.load_audit": 2,
+    "ingestion.replay_attempt": 4,
+    "ingestion.source_registry": 9,
+    "ingestion.task_attempt": 54
+  },
+  "status": "PASS",
+  "version": "m2-2-golden-v1"
+}

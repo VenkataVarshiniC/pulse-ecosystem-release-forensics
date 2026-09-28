@@ -1,0 +1,60 @@
+{
+  "candidates_and_reviews": [
+    {
+      "artifact_id": "2bcc971b-ac8a-5876-9679-b6b0416aa1df",
+      "candidate_id": "9ef49fc3-7c96-575f-ab9e-2300de69993c",
+      "raw_snapshot_uri": "urllib3_collection/data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/cb51b348bbd224700c89-20260927T045706.049506Z-477440ae09ff4ae99ab774cdc68f60c2.json",
+      "reason_code": "generic_dependency_mention",
+      "review_decision": "REJECT",
+      "sha256": "12f567d2e1dd428d5052131ad7285b2fc7048c9152b464b02420434fd268f5f7"
+    },
+    {
+      "artifact_id": "2bcc971b-ac8a-5876-9679-b6b0416aa1df",
+      "candidate_id": "b2198ece-1a49-53ec-929f-60419a6e79e4",
+      "raw_snapshot_uri": "urllib3_collection/data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/cb51b348bbd224700c89-20260927T045706.049506Z-477440ae09ff4ae99ab774cdc68f60c2.json",
+      "reason_code": "bot_or_dependency_update_noise",
+      "review_decision": "REJECT",
+      "sha256": "12f567d2e1dd428d5052131ad7285b2fc7048c9152b464b02420434fd268f5f7"
+    }
+  ],
+  "checks": {
+    "both_reviews_reject": true,
+    "candidate_artifact_hash_matches_manifest": true,
+    "historical_capture_hash_matches_manifest": true,
+    "member_alias_capture_hash_matches_manifest": true,
+    "task_capture_hash_matches_manifest": true,
+    "two_candidates_share_one_artifact": true,
+    "unknown_finding_in_draft_snapshot": true
+  },
+  "historical_observation": {
+    "observation_id": "124f6471-afbb-5e05-8ff2-93089bf2d293",
+    "raw_snapshot_uri": "pytest_history/data/raw/pytest-8.0.0/repository_file/planetlabs__cosmolog/86b5f4ec30ecfc998df1-20260927T045833.485819Z-42033b2e3de44fa09e052470eefab428.json",
+    "repository_ref": "949163d11dc03fcd4f6098413252cb0bab034490",
+    "sha256": "36cfa8cfbd058662a611949d2b849cae845008a1ce271bbac8d9055761eb2fb3",
+    "type": "HISTORICAL_DECLARATION"
+  },
+  "membership": {
+    "case": "pytest-8.0.0",
+    "raw_snapshot_uri": "pytest_collection/data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/4bea99b875d330dbaf26-20260927T045631.847957Z-7bd4822e18fd43b293ed76170a8f5829.json",
+    "repository": "bsc-wdc/qdislib",
+    "sha256": "a749afcd976185737cb63323469a15c78f46cc95458b3420d4a94ba46249333f",
+    "supporting_artifact_id": "81016e32-ac3f-50ce-82a7-25ba71c054f5"
+  },
+  "status": "PASS",
+  "task": {
+    "plan_task_key": "29c5158533c1895203fb",
+    "raw_snapshot_uri": "pytest_collection/data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/29c5158533c1895203fb-20260927T045632.128490Z-005fb48c7fd846e8a6f6c3e5c7368b64.json",
+    "repository": "bsc-wdc/qdislib",
+    "sha256": "88cbdf876e3a94cca5d03702271ab2be3679cbeb2ffc04be756236b30bf23a04",
+    "terminal_status": "succeeded"
+  },
+  "unknown_finding": {
+    "case": "pytest-8.0.0",
+    "category": "observed_adoption",
+    "draft_snapshot_links": 1,
+    "finding_id": "05401ef8-f52e-5bce-bfb4-14ae18cfd022",
+    "finding_status": "UNKNOWN",
+    "sufficiency_status": "LEGACY_UNCLASSIFIED"
+  },
+  "version": "m2-2-lineage-v1"
+}

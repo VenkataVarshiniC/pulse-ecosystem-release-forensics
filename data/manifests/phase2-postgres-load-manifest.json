@@ -1,0 +1,1436 @@
+{
+  "version": 1,
+  "root_environment": {
+    "pytest_collection": "PULSE_PHASE2_PYTEST_COLLECTION_ROOT",
+    "pytest_history": "PULSE_PHASE2_PYTEST_HISTORY_ROOT",
+    "urllib3_collection": "PULSE_PHASE2_URLLIB3_COLLECTION_ROOT",
+    "urllib3_history": "PULSE_PHASE2_URLLIB3_HISTORY_ROOT"
+  },
+  "cases": [
+    "pytest-8.0.0",
+    "urllib3-2.0.0"
+  ],
+  "inputs": [
+    {
+      "root": "repo",
+      "path": "docs/phase-2/evaluation-data/review-ledger.jsonl",
+      "case": "both",
+      "repository": null,
+      "role": "review_ledger",
+      "sha256": "f78b18859195796ab6a29efae1150f30f147d2a7b9296b5183097c4e39ea2fe0",
+      "capture_method": "derived_frozen",
+      "interpretation": "review_jsonl_v1"
+    },
+    {
+      "root": "repo",
+      "path": "docs/phase-4/baseline-analysis/replay-audit.json",
+      "case": "both",
+      "repository": null,
+      "role": "replay_audit",
+      "sha256": "e8bd959508f1f6a05ffc8e6fb0a973413f11f9f9f46723e0f47399f73a50d666",
+      "capture_method": "derived_frozen",
+      "interpretation": "replay_audit_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/005fb48c7fd846e8a6f6c3e5c7368b64.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "collector_task_attempt",
+      "sha256": "44d3772e177323c23471547a07bae15b9fa3816a1a4086b6cbd103975f14ff14",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/0403b8473a654f65ab0f1861e64770ad.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "pytest-dev/pytest",
+      "role": "collector_task_attempt",
+      "sha256": "b97b0ae72bdf4f5a4ae68546e5c23ac21706de2c9788e495247e8841f36de931",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/0bba59ac85174dbea4fe03b88fb3ccb0.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "collector_task_attempt",
+      "sha256": "d4936516e0d1601d0c7f83add1d57af3c83967720aab7f5097cce950bc73d682",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/290e070795154a589a801f856204176a.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "collector_task_attempt",
+      "sha256": "cea6a1db48e26acd63c9d5170618f5109eb5c15e0f09eaf02103832e3667b6d7",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/7bd4822e18fd43b293ed76170a8f5829.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "collector_task_attempt",
+      "sha256": "6aaffd0d40ee2111cfd283b6804ac13523e0b7321bd4cdbc4a94020f7731dac9",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/7e15f06d9168483a97e51c98781281d6.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "collector_task_attempt",
+      "sha256": "666ff0656e2fd9216159a03b6043c8b042bff042550348e1d8c1a695fb52ee5a",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/82b95301c74b483a9bbf679040911c83.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "collector_task_attempt",
+      "sha256": "e5a99ac5501b0fa270b9e5d91ee850c9ec43b56c78bfbe0c28882c66b6ff0c1d",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/8a4d27da3e8c478fa0190dc5b1236cf2.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "collector_task_attempt",
+      "sha256": "12d45c5f187aeda746d1752ed3014ec063b05832a78cc6f890cb8665347c8900",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/9f58d7a4a9d84d1fb823b14ef57b8ff1.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "collector_task_attempt",
+      "sha256": "ace3919f8a1b433919d1a997d4b95f454447500c55c0d2781b62ff16fa342f7c",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/a0d8d97f280446c080113de7be9587ed.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "collector_task_attempt",
+      "sha256": "9bdd8e9322835228c0044c774f67f2702f33fc2f6792e4e1040cbaa30d4d4f83",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/bbd2db3f5ed5427385bfccd1b1f2dbf8.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "collector_task_attempt",
+      "sha256": "f16433db1897e2e9f3075ec5fe801b17f3d6c07b3bea3d94e2985179348fbb18",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/bcb7c06b1b444fa9863f2a48aa527ee7.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "collector_task_attempt",
+      "sha256": "18d519fb08505933ee1988edcf0c129ab467bd74f3c3c897e383f5903a9146c8",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/c276e9cc22b84256a05ece5533d69772.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "collector_task_attempt",
+      "sha256": "81da2ad4d61caa15be81f2c88cf34adf81f42de3e848fb826adb80f0cde2e2f3",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/ddae9d71a4b94feb9f22b270c999dfd3.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "pytest-dev/pytest",
+      "role": "collector_task_attempt",
+      "sha256": "7930c04d1080d6d4ee6f7ea2b0f935a61413eb87d635b229dd654767b737f344",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/fda0546a9e5f4dabb57388e2b432463f.attempt.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "collector_task_attempt",
+      "sha256": "9eb11d81ea0f17a9ff89cd65280490f26e3f8f583e1b33e4432f3e14aa5b8c1b",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/interim/pytest-8.0.0/runs/806b4926db8c4f77a3ed68bec605b5fe/manifest.json",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "collection_manifest",
+      "sha256": "0d47eff3e499d1006b218720fd31dcb754e981e910222f40d0d4b4bd19fe6e90",
+      "capture_method": "collector",
+      "interpretation": "collection_manifest_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/29c5158533c1895203fb-20260927T045632.128490Z-005fb48c7fd846e8a6f6c3e5c7368b64.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "raw_capture",
+      "sha256": "88cbdf876e3a94cca5d03702271ab2be3679cbeb2ffc04be756236b30bf23a04",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/4bea99b875d330dbaf26-20260927T045631.847957Z-7bd4822e18fd43b293ed76170a8f5829.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "raw_capture",
+      "sha256": "a749afcd976185737cb63323469a15c78f46cc95458b3420d4a94ba46249333f",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/7f0b1210781b96a60c13-20260927T045632.410800Z-0bba59ac85174dbea4fe03b88fb3ccb0.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "raw_capture",
+      "sha256": "75063dbb0dcc73bab38072013e03a9ea45ff0d523889ca91052a3b6d9dc39b16",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/b606ac34cef572045d7e-20260927T045632.840241Z-fda0546a9e5f4dabb57388e2b432463f.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "raw_capture",
+      "sha256": "4e08641b094b5aef6e8e680423ba2fae1151b2a0923d1b9bed4f302a82a079fe",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/planetlabs__cosmolog/3d51114c73de63667e46-20260927T045634.415112Z-a0d8d97f280446c080113de7be9587ed.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "raw_capture",
+      "sha256": "323b1f8599f7928c44e994308bb51289fa956c02bc80d482fb69fdcd1791bae9",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/planetlabs__cosmolog/879a9bb43627cfd5395e-20260927T045633.551346Z-7e15f06d9168483a97e51c98781281d6.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "raw_capture",
+      "sha256": "41d9087ecc4166f79e6aebf81d0f13a2e868ff08171ab1a80e374a03609eae53",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/planetlabs__cosmolog/c3e65d7a038b9f805305-20260927T045634.806536Z-9f58d7a4a9d84d1fb823b14ef57b8ff1.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "raw_capture",
+      "sha256": "028d5376deb822f00c342b063a9bf4fafa1f198a3417e73e5414dc15ec6ad2d2",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/planetlabs__cosmolog/e8e6bf77b74251bce1cd-20260927T045633.984037Z-82b95301c74b483a9bbf679040911c83.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "raw_capture",
+      "sha256": "056bbe90d88720e2ff84e9738d18aefc963c96cc3e6ac2c0d3fed4b6b2c8774c",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/pytest-dev__pytest/20ebbf0aeea97e0083dc-20260927T045631.012842Z-ddae9d71a4b94feb9f22b270c999dfd3.json",
+      "case": "pytest-8.0.0",
+      "repository": "pytest-dev/pytest",
+      "role": "raw_capture",
+      "sha256": "d18379679d385ea83d0c40a829b77c113fec3d9d62f7333b76c220c56bef8d9c",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/github/pytest-dev__pytest/e2cf9e5b3d0e0382f940-20260927T045631.552187Z-0403b8473a654f65ab0f1861e64770ad.json",
+      "case": "pytest-8.0.0",
+      "repository": "pytest-dev/pytest",
+      "role": "raw_capture",
+      "sha256": "1386fcb53e89555b5882736943d5942e2564098c1e11f9603ca56c4ac46b971a",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/pypi/upstream/cd4f785026bc17027ede-20260927T045630.583522Z-bcb7c06b1b444fa9863f2a48aa527ee7.json",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "raw_capture",
+      "sha256": "cf99e36f2bcdedff715aa8f34b6db03fc85bca9c9382ba2f086ffc8bc1078d42",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/repository_file/bsc-wdc__qdislib/50717f9d2c5f4463ba69-20260927T045633.041692Z-290e070795154a589a801f856204176a.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "raw_capture",
+      "sha256": "a120bf96ddaa825233f10430c07275be68d8336df71b02e3a0e8238c8dc230cd",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/repository_file/bsc-wdc__qdislib/826144764c8ff2c915a1-20260927T045633.276760Z-c276e9cc22b84256a05ece5533d69772.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "raw_capture",
+      "sha256": "a46316b6c078b60b5aabdda8eef7a58f875aa5f736a940c5783d136a0ec54b2f",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_collection",
+      "path": "data/raw/pytest-8.0.0/repository_file/planetlabs__cosmolog/ec55a06c1451044a1bbd-20260927T045634.969876Z-8a4d27da3e8c478fa0190dc5b1236cf2.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "raw_capture",
+      "sha256": "8d09c0b901184c8fc638eb547604e861485fd458c008758f7be6c2d898c55e81",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/interim/pytest-8.0.0/historical/357943cd594b400bae95717732a8edc7/manifest.json",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "history_manifest",
+      "sha256": "e7e564586fcb4a282b0d88d8ceb5e9f465377ca4002260f390672ddc5da93903",
+      "capture_method": "collector",
+      "interpretation": "history_manifest_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/153cc4765bde6a0e924e-20260927T045832.664089Z-522c92624d8846439cd6177db05087e0.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "historical_query_capture",
+      "sha256": "30e958d9a5294c00ca9169178a75ceed083e1b74cb1bfb8379030e06ca96758f",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/github/bsc-wdc__qdislib/eb36511d61c06fbb139a-20260927T045833.075186Z-53c369ec02e44798a39f8866a5f89409.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "historical_query_capture",
+      "sha256": "42cb8e34d342845a37ff3fab86ee65d47e154d1417a1744f3a4fcf27498e9752",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/github/planetlabs__cosmolog/6983fe394d0822c4b9b0-20260927T045833.255609Z-dbb51cac4a89439d850132db5131b92d.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "historical_query_capture",
+      "sha256": "b4a2a3ef8bb81c66dd1d7d8d65625b3e115f2dcc652dd27437f90d2726c9e2af",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/github/planetlabs__cosmolog/bab812ac9b199f9e7f46-20260927T045833.765294Z-18a40794522f427abd7f6d3032338782.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "historical_query_capture",
+      "sha256": "29a2479b3bd97f7f7c0590a4a085b70126787a452c55457d096aada79a6f6d12",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/repository_file/bsc-wdc__qdislib/a0603a50f6030793169c-20260927T045832.804805Z-e88bbcaf9f934767a00ae76a270cf61b.json",
+      "case": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "role": "historical_file_capture",
+      "sha256": "cb5c64f6c2f039fbecf554613a53dcc719c393ca3dec3ec10dae67147a260573",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/repository_file/planetlabs__cosmolog/75685c989cada1abb19a-20260927T045833.608798Z-2433b0fda43244b6b76eeb8f7118d522.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "historical_file_capture",
+      "sha256": "6996d0dff2569588dfe76c4692749c883ea537c5dc335f0abfc1f4c4dfd4f743",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "pytest_history",
+      "path": "data/raw/pytest-8.0.0/repository_file/planetlabs__cosmolog/86b5f4ec30ecfc998df1-20260927T045833.485819Z-42033b2e3de44fa09e052470eefab428.json",
+      "case": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "role": "historical_file_capture",
+      "sha256": "36cfa8cfbd058662a611949d2b849cae845008a1ce271bbac8d9055761eb2fb3",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "repo",
+      "path": "cases/pytest-8.0.0.yaml",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "case_definition",
+      "sha256": "b7a8a33b1763a0ef3215f7a6004a8b5401d27d606b7ba3e907b10c228425ccd9",
+      "capture_method": "derived_frozen",
+      "interpretation": "case_yaml_v1"
+    },
+    {
+      "root": "repo",
+      "path": "data/processed/phase-2/pytest-8.0.0/accepted-evidence.jsonl",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "accepted_ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capture_method": "derived_frozen",
+      "interpretation": "accepted_jsonl_v1"
+    },
+    {
+      "root": "repo",
+      "path": "data/processed/phase-2/pytest-8.0.0/forensics.json",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "forensics_report",
+      "sha256": "dae5253526bdb9f7552f05ba6c53de71d6cbf1276456f5b76577c13c9b0a963e",
+      "capture_method": "derived_frozen",
+      "interpretation": "forensics_json_v1"
+    },
+    {
+      "root": "repo",
+      "path": "docs/phase-2/evaluation-data/baseline-pytest-8.0.0.jsonl",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "candidate_baseline",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capture_method": "derived_frozen",
+      "interpretation": "candidate_jsonl_v1"
+    },
+    {
+      "root": "repo",
+      "path": "docs/phase-2/evaluation-data/baseline-pytest-8.0.0.manifest.json",
+      "case": "pytest-8.0.0",
+      "repository": null,
+      "role": "candidate_baseline_manifest",
+      "sha256": "183fd2f9b4f9163ff5e91ce0467c5724733c6eb64d12c89f45df8419b42da9c1",
+      "capture_method": "derived_frozen",
+      "interpretation": "baseline_manifest_v1"
+    },
+    {
+      "root": "repo",
+      "path": "cases/urllib3-2.0.0.yaml",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "case_definition",
+      "sha256": "21487b2bdd614525fa5c25aa60bc305adc05bd08473c75b0314a2671a2127148",
+      "capture_method": "derived_frozen",
+      "interpretation": "case_yaml_v1"
+    },
+    {
+      "root": "repo",
+      "path": "data/processed/phase-2/urllib3-2.0.0/accepted-evidence.jsonl",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "accepted_ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capture_method": "derived_frozen",
+      "interpretation": "accepted_jsonl_v1"
+    },
+    {
+      "root": "repo",
+      "path": "data/processed/phase-2/urllib3-2.0.0/forensics.json",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "forensics_report",
+      "sha256": "f173fb2da6be3b1227b29b99f40d30d3a48658cc0eae9a0578ed91c2be64139d",
+      "capture_method": "derived_frozen",
+      "interpretation": "forensics_json_v1"
+    },
+    {
+      "root": "repo",
+      "path": "docs/phase-2/evaluation-data/baseline-urllib3-2.0.0.jsonl",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "candidate_baseline",
+      "sha256": "30e24393818b5009520cab51374f052ddb35417f5476bc146bab31bf2450d37e",
+      "capture_method": "derived_frozen",
+      "interpretation": "candidate_jsonl_v1"
+    },
+    {
+      "root": "repo",
+      "path": "docs/phase-2/evaluation-data/baseline-urllib3-2.0.0.manifest.json",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "candidate_baseline_manifest",
+      "sha256": "6a601891a9b58a190af56250eab33ac31dfb4f77397a359959ae7b1cab202e50",
+      "capture_method": "derived_frozen",
+      "interpretation": "baseline_manifest_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/00192461c7be420aa37fedb3212a05b2.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "collector_task_attempt",
+      "sha256": "7c692b4b6bf4f1cf4cea8218562e02b477b866b63511ef3224cc962f1e3ac052",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/037b6ccbcb6b44fda8b7484d8927ce62.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "urllib3/urllib3",
+      "role": "collector_task_attempt",
+      "sha256": "4f85a490c3dd3d9ac24a2a40a10ff904873dce4891acf154dd6b6c2010ebc867",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/064b5368c0074981be59b4a28cf340c4.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "collector_task_attempt",
+      "sha256": "8e9e27e7e793e6388129e2482c6409abaef5382e7e6fb57cd30428260b61ee08",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/0f5ac0076a2945d19a0b23e227a15f50.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "collector_task_attempt",
+      "sha256": "68a76576f7a8222ab2af00a8a6196edad944fcccca7a909ad686113ee230f829",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/1084b80a99744bb4a29c42d0da2c11df.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "collector_task_attempt",
+      "sha256": "7a6d06dd905cd5179348f31372be4129942bb021b81684c0587c48aab8ee5892",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/1421f9f41e4042a686c74ad1ed752f01.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "collector_task_attempt",
+      "sha256": "b488ce769048ffceaa8d362e2ffd07bef597c4384a018383c57b761abf0a65ef",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/22e5b2be40604b808f58a019688dbbbb.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "urllib3/urllib3",
+      "role": "collector_task_attempt",
+      "sha256": "2d3cf706e9265a73470946e674d19d18c56b7d7598a18c8dbdeaf778e210cfac",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/2b654e6bc19d426aba797de3b3c00c6a.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "collector_task_attempt",
+      "sha256": "8d30cc141d3727b060feccd75b8397bf1ddabd5ab446d2245f0d29cf8475a5c6",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/2d0b21ab44e94006a2c99be97afda00b.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "collector_task_attempt",
+      "sha256": "502b73d82a9781d855abce7b794f2ab7a7d2816ac41eed82a421212f6d4d67ed",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/2e307d3bdcc048d381c5d29eacaac208.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "collector_task_attempt",
+      "sha256": "cff8955a916bb501250f9d69cfd0b2d4532e2b2e3d6cfd37911d983ec276a435",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/364c0f04641b40b8b711fa4f322285d5.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "collector_task_attempt",
+      "sha256": "6124531a920e7305880e023383c39b6075057484111a8b384f2a43854e6d1bb8",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/36962cc8a23b4075bbd33f6027e17caf.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "collector_task_attempt",
+      "sha256": "79b91d8468d24fc585566b4131a661b72b2555be10949243e59f547dcc028d04",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/396b63fb667d4598b0ff96a68a5811cd.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "collector_task_attempt",
+      "sha256": "d0b5b346ca3cbef1096d4d3661a7ba28692749e7911ef6948a035f516e7c60eb",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/45fd77cd5b7a40c6a3998f6bc2642836.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "collector_task_attempt",
+      "sha256": "e6ec2d8df484a6de705ecb781ab45a58187b0d25b05b200b0adde32d2c9fe654",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/477440ae09ff4ae99ab774cdc68f60c2.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "collector_task_attempt",
+      "sha256": "2830b509d7b3bd29504577e25a99d02336a5437755892cc93dbf14ca8b1d80d1",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/477767ac8457495d8933d5b694f49a4d.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "collector_task_attempt",
+      "sha256": "6b2a5d4eb3ec4ea6f86697fb63f582ad6ab20e6cf3c5cf6e9094d72c8191841c",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/4cbb5ddd27ce48489eb55d4cd1a9caef.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "collector_task_attempt",
+      "sha256": "596b1a732669b19558bc42a9613a7cc3f10287cfb4fd8d98b643f06da2a4efb7",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/4ff4861a11a046f3a3f33c9ce2c0c788.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "collector_task_attempt",
+      "sha256": "cbc8a4ecfcb9718cdf2f8175229d359028305e93a3ea6138c77b7e20e0170f26",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/56c201b328c543b6b7216f7161b315d5.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "collector_task_attempt",
+      "sha256": "c5c3060ee528fbcdaf57525f62d0807946a488664843660fe4eebd61e9081743",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/5716f1527f55449aab53917c3d7d58ef.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "collector_task_attempt",
+      "sha256": "df8dbbf71744bbd618b96e7c41534cb19b3747766816737a97e176a2ab5faf33",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/5c36054210b34a74b84d05e7d578a0f5.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "collector_task_attempt",
+      "sha256": "97fb003cfd43814824ba2bb29b5a3fa71165e21ca96e89dc3eb6d581dd30a27a",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/67e37468695b443fae6f592566830954.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "collector_task_attempt",
+      "sha256": "c4cafb63ad17e3b2fa2f5780dc3bbd3fed63716edb313cd2f7d90fca44bb03eb",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/6e525fa9742941708657b406835488f1.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "collector_task_attempt",
+      "sha256": "92deecf632fcf158f7c1bdf2b87d4b5ddf18b7e74db284c978921b603ac6de6f",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/82ce18e87600484882e0734a86e15ee1.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "collector_task_attempt",
+      "sha256": "905261ef588a3dcc67de9db93025c30032f60db97d406789e26e1e7fa9a89219",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/9128f016516e478a9355033f9264b087.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "collector_task_attempt",
+      "sha256": "16e086135922fc7ca3b88ab4fd91ca892db221949aa183b86e39ecf6dae83fe3",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/a4dd62d69c2b4b768fe36dd9a7045e1d.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "collector_task_attempt",
+      "sha256": "8558af37592d4f1755834895f7403c8891b0f6a50452372b2ec0ba97370cf0f5",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/b16abf63dc614cd6bbbe10c30faa37ba.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "collector_task_attempt",
+      "sha256": "54cf381b0921463fabfd587af8db9f00d712fcdbc07ca1bb2a1b435d73b04eec",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/bfa2119197f3498bb1eb000ca6afc927.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "collector_task_attempt",
+      "sha256": "a987d8aa25ce0f19c3473f2deac6c1d0b0207ef83d404ef8dd882857e9f825c2",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/c629422e60634a6b9672599d9f7fe8f6.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "collector_task_attempt",
+      "sha256": "b55f5afed864b1d49e0860646c8514316ccb82eafd124e4dfd411d294aa13004",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/c64f22ff2396436d9edde87bf6b38956.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "collector_task_attempt",
+      "sha256": "7072f6b48352bfefae9982e989738c28fd0f86c95233570ff4dc834d7d812f94",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/d14d129b9ed8497f949273550d2d87b9.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "collector_task_attempt",
+      "sha256": "59f2661c58c58fc2e80134d1ef5a0545d1708ae3e96b1fd962f8e3e7fb40d3d6",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/d1c456e8544c466bb811a501d5eb5e47.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "collector_task_attempt",
+      "sha256": "3aa4337ed8d8543febb0f6e34aaa0c203d64d06cf8cbcd0eae98f4bd0d51530d",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/d8d8dae0dd774308b4c0fbded01815ef.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "collector_task_attempt",
+      "sha256": "c71a6a73a3d7651b0caee2976ea2fb9f3bc2c48266748c3a9ada8311f1c32e9f",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/da8a012eb8d14cdd9f045140aab26120.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "collector_task_attempt",
+      "sha256": "c89d6aee638948fafe35bc17d002a8ba71ff6e2d441e97480e42db94c0676d14",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/dd1ff9a259974410bb92b0d0509abf3f.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "collector_task_attempt",
+      "sha256": "4aba6b6ab2a49339dda096d4aad15d5ea1462b805b271fc1615e72d3d38731bb",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/dd560f2808b549d39850c9b123e6fda1.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "collector_task_attempt",
+      "sha256": "1a0b011b17b8149ece403c6e6c4dc4a2254f794c78ff2875e49ef9fdf4083280",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/deb906061f2644b982bddb8ebb3b9222.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "collector_task_attempt",
+      "sha256": "775e8d1e08e4d4dfd51ff4015214c4d3cd6a205d315f07b940f664919709f362",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/f0c6d2d8ab4e4760b8da3d1fdcdc0cba.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "collector_task_attempt",
+      "sha256": "67987370ac29525cdb02ec98f5c6c598bf7ac943b4e7c377c7b1888173a8157e",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/fb1f320badb6450fb0795fdb27097886.attempt.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "collector_task_attempt",
+      "sha256": "a2a6488876db65845995750f72fbcc23a0914677b48c6d7d9cb9a6c5a45822fb",
+      "capture_method": "collector",
+      "interpretation": "collector_task_attempt_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/interim/urllib3-2.0.0/runs/5ba100d9629143f880ce8f5779d6d747/manifest.json",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "collection_manifest",
+      "sha256": "eb6933613db13ad0dcf8a8079c8e58be9583fe0feda5f43415f8536778cb0450",
+      "capture_method": "collector",
+      "interpretation": "collection_manifest_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/Aiven-Open__pghoard/0efa3ac65f7082772ee5-20260927T045713.426014Z-1084b80a99744bb4a29c42d0da2c11df.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "raw_capture",
+      "sha256": "73eda2af7e38b29743ec79849b721a3297700a2c328a142fc0843dfc8551de97",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/Aiven-Open__pghoard/150406024091a461307f-20260927T045717.585817Z-deb906061f2644b982bddb8ebb3b9222.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "raw_capture",
+      "sha256": "e7300fa88ce89eafe355d137872bf9735d1c8ab7ceb5ee5cb7290dccb3e7116d",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/Aiven-Open__pghoard/3b2b6a0ba5708f14def1-20260927T045712.177283Z-d8d8dae0dd774308b4c0fbded01815ef.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "raw_capture",
+      "sha256": "8e319a8e8301aa83d5223ee7367e0243a6a47ea09b583f315922e5067fb666dd",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/Aiven-Open__pghoard/8f4cca096a3fdff4bfa2-20260927T045717.910668Z-1421f9f41e4042a686c74ad1ed752f01.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "raw_capture",
+      "sha256": "9270117ea5f03e0ff1101e53fcfa44b83144c68760bbc4f2907860efaf0649e7",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/atenreiro__opensquat/3de443bd01e58f4cb72c-20260927T045700.940943Z-477767ac8457495d8933d5b694f49a4d.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "raw_capture",
+      "sha256": "013fdb8eb272d30c577d9227efde3247e9297da9f3f7f982cbe55758e243b313",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/atenreiro__opensquat/449fc9f348cc2fd689cf-20260927T045702.090158Z-45fd77cd5b7a40c6a3998f6bc2642836.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "raw_capture",
+      "sha256": "3b40d2d15f6e5a33d1a6e1c2f929bb20de225d90027f4e509c403767f68d5b9b",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/atenreiro__opensquat/dab8f370a30fc6cd5eb6-20260927T045701.466181Z-a4dd62d69c2b4b768fe36dd9a7045e1d.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "raw_capture",
+      "sha256": "0c9516e96b0394500808d69525d2946a6d1587dccee36e040739de021d6fedad",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/atenreiro__opensquat/e8e956dcfd01fc0894f4-20260927T045702.446158Z-d14d129b9ed8497f949273550d2d87b9.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "raw_capture",
+      "sha256": "fdc15eaab38f0fa151abd75ea5db37e5d0877f6a45d7882e5c4cb06910fc6986",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/enzet__map-machine/0c902414fd5b9cfb97fd-20260927T045721.932870Z-dd1ff9a259974410bb92b0d0509abf3f.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "raw_capture",
+      "sha256": "6719b6487e6c99d3471e52fdc27138e163db73d961eca5fa3988c7875b8906fc",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/enzet__map-machine/4ba77e5988b58d8eab6c-20260927T045722.733055Z-f0c6d2d8ab4e4760b8da3d1fdcdc0cba.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "raw_capture",
+      "sha256": "efd8e643c0cb968d68a5d2a63a4e111e4930355329e27a5c51342cd56c3c3f33",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/enzet__map-machine/72a777222d4dfcd4de9a-20260927T045721.293479Z-c64f22ff2396436d9edde87bf6b38956.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "raw_capture",
+      "sha256": "8f2bd7917b1827c318580efd28e197cdf16a35f392a2cf0b8c1ab9b69f1674b7",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/enzet__map-machine/ff1d07fc77d2939bb9b5-20260927T045722.440610Z-fb1f320badb6450fb0795fdb27097886.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "raw_capture",
+      "sha256": "fd10f52f10b13d452776ef89928fad626162a08c20aac9d57077a5691e333b0a",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/facundoolano__feedi/93ac29166f60677c5e67-20260927T045720.008962Z-2e307d3bdcc048d381c5d29eacaac208.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "raw_capture",
+      "sha256": "a391a0072f45aacd7121faeb3a474dfa4874adf51668b11ae27b636881c1d0fb",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/facundoolano__feedi/b6ef2d80ccd1f9a24c2f-20260927T045719.406332Z-82ce18e87600484882e0734a86e15ee1.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "raw_capture",
+      "sha256": "d5d4b55e30d3f30e00f7f35e10327429f4a25267d2f32111ca32f544cdeccc62",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/facundoolano__feedi/e4af3b2ef4b97703a444-20260927T045720.783526Z-064b5368c0074981be59b4a28cf340c4.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "raw_capture",
+      "sha256": "9b585447156feed07eff4d3f6ca761fa748cad0a77017f73d127278001b4acbb",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/facundoolano__feedi/fb0894363e1c48d708a5-20260927T045718.388746Z-2b654e6bc19d426aba797de3b3c00c6a.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "raw_capture",
+      "sha256": "095db52b17a6b0baed04dfb0876c5abeae95acf228bfee44169e9819332c747a",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/451c6dac077bd8ad3b0b-20260927T045702.995328Z-c629422e60634a6b9672599d9f7fe8f6.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "raw_capture",
+      "sha256": "6ea6bc0f4b32bc652f43d52cb1df99e5ca74954edb5795b1ddac8e9c8a97af1d",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/54c8caf415614ff4172d-20260927T045703.742897Z-dd560f2808b549d39850c9b123e6fda1.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "raw_capture",
+      "sha256": "ab676ad59ad184933933f46aec95fce4b31b05ac0bbc87a4a87cae96337d6da5",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/845887d0ab9ddd5f0c7c-20260927T045706.451342Z-b16abf63dc614cd6bbbe10c30faa37ba.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "raw_capture",
+      "sha256": "0936e4169681c7fa5a62c4827072d2ace529ab138fca34e092500155d3ae560c",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/cb51b348bbd224700c89-20260927T045706.049506Z-477440ae09ff4ae99ab774cdc68f60c2.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "raw_capture",
+      "sha256": "12f567d2e1dd428d5052131ad7285b2fc7048c9152b464b02420434fd268f5f7",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/urllib3__urllib3/11a75396eb2254f7dbb4-20260927T045700.725065Z-22e5b2be40604b808f58a019688dbbbb.json",
+      "case": "urllib3-2.0.0",
+      "repository": "urllib3/urllib3",
+      "role": "raw_capture",
+      "sha256": "26434dc6cb6c576d739b2543b222d8bd3645addc132bbecff7f988104bf11cd8",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/urllib3__urllib3/d89617b835bc611ef35d-20260927T045700.205502Z-037b6ccbcb6b44fda8b7484d8927ce62.json",
+      "case": "urllib3-2.0.0",
+      "repository": "urllib3/urllib3",
+      "role": "raw_capture",
+      "sha256": "22cd0de405919e4e1563542792dc798620df8a276b3014f55483f0293b61bc06",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/wimglenn__advent-of-code-data/41d5741ac9814f89bd66-20260927T045709.588298Z-00192461c7be420aa37fedb3212a05b2.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "raw_capture",
+      "sha256": "3b9faa5f92bae6373062c9ad36af92757b2b893e76d9ae8e275a1a7a7923d37e",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/wimglenn__advent-of-code-data/5a34843d77b7e4b49e40-20260927T045710.405703Z-0f5ac0076a2945d19a0b23e227a15f50.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "raw_capture",
+      "sha256": "897c8439c5411ce13d0ffa43cd94c7a7f927164a749f7768d6e5560a9fc37b69",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/wimglenn__advent-of-code-data/9fe2eaba663f197eb864-20260927T045707.169225Z-bfa2119197f3498bb1eb000ca6afc927.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "raw_capture",
+      "sha256": "844751c6800211de24cf6583d7ae84e911da36a0329c99220327a1cab927ded9",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/github/wimglenn__advent-of-code-data/d714c07b1619eab88ef4-20260927T045708.110166Z-67e37468695b443fae6f592566830954.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "raw_capture",
+      "sha256": "42168a90d81d5e26ca17d5302b868efe7d1fb00ebbf312f6b78122ebd0866319",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/pypi/upstream/0f0ccbf0dd93cc2e4d2f-20260927T045659.872637Z-6e525fa9742941708657b406835488f1.json",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "raw_capture",
+      "sha256": "68048688ee13bffdece182edf2541dac1fd417a0b50795a2fd5dc6b575610e7e",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/Aiven-Open__pghoard/d421bbf229d209e2b33b-20260927T045718.074805Z-4cbb5ddd27ce48489eb55d4cd1a9caef.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "raw_capture",
+      "sha256": "2a45285def5f7af6f2fc092f67921713726b978e41594566e57eabc52b36da8d",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/atenreiro__opensquat/f60c33754b19d79ca4c5-20260927T045702.775203Z-56c201b328c543b6b7216f7161b315d5.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "raw_capture",
+      "sha256": "e14964ff61229ef4a945279a5b32288e12c5e9261a8b91eb6dea6f55de2615fd",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/atenreiro__opensquat/fdeb6fef6bbe9f934818-20260927T045702.606263Z-5716f1527f55449aab53917c3d7d58ef.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "raw_capture",
+      "sha256": "544d3acf81401568ab1561b2a70413b9df2f6be2240c5dd3ed9e9e08a2f882a8",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/enzet__map-machine/8930c32472dac71539f6-20260927T045722.904212Z-36962cc8a23b4075bbd33f6027e17caf.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "raw_capture",
+      "sha256": "b67e22298d0b055a14281f7f0997417fc4ef8916125879d448efe550f8e641e4",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/facundoolano__feedi/a8dcfa57c226ff181e44-20260927T045720.928721Z-2d0b21ab44e94006a2c99be97afda00b.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "raw_capture",
+      "sha256": "6dff7b4b17b2717b4d79d329f221d0056ce101a240ac44dcd2a8c82fb8ad3570",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/jamesturk__scrapelib/dd93146fe6bbc61086a3-20260927T045706.760112Z-396b63fb667d4598b0ff96a68a5811cd.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "raw_capture",
+      "sha256": "5bd16da5886b30fd79fdd014b7df542326b8068329aa85e1443e13450aaef16f",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_collection",
+      "path": "data/raw/urllib3-2.0.0/repository_file/wimglenn__advent-of-code-data/cc6004b59a778507dba6-20260927T045710.605687Z-364c0f04641b40b8b711fa4f322285d5.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "raw_capture",
+      "sha256": "86bcd64f461261e6b8194dbb37cccea64ec5d86b00aba392fee2bee8045168cb",
+      "capture_method": "collector",
+      "interpretation": "collector_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/interim/urllib3-2.0.0/historical/027bc3fc71334e138d8ec73bedde28a1/manifest.json",
+      "case": "urllib3-2.0.0",
+      "repository": null,
+      "role": "history_manifest",
+      "sha256": "c6218ec3094a735e0a077fd16690ef8b636a2078ac3a4836312a34737ae21477",
+      "capture_method": "collector",
+      "interpretation": "history_manifest_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/Aiven-Open__pghoard/66a4c9f06bb24cf56e40-20260927T045836.527881Z-1945a95f3b334464a4c06951aaeeeb95.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "historical_query_capture",
+      "sha256": "068e80362eaf8f972f7991f5441af6101c0524c502bbebd670e4f3de3ff70a95",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/Aiven-Open__pghoard/a976806dcaca1ab0b884-20260927T045836.362631Z-5e7ccf5dd711440597c9d3617af6f0bc.json",
+      "case": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "role": "historical_query_capture",
+      "sha256": "eb92d3a4eead33353baf22bcec35631abdc9ecb7b207eed9123ffbdd8bd547ef",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/atenreiro__opensquat/88095ec76e8bb4215760-20260927T045834.798890Z-aba73ac06aec4115932175a386a68ddc.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "historical_query_capture",
+      "sha256": "c760b777b4c7b3a26b731568e3838698efbd4f0a70cf6a84473fde8230c6ae8e",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/atenreiro__opensquat/e64208202d2fae6c2850-20260927T045834.974119Z-32afc480d4884032b346e18b448f0689.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "historical_query_capture",
+      "sha256": "acf43dd1a7fe05df1274266d70dd52cf4145111bbbc2a9599dea4f0f98e5ca46",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/enzet__map-machine/52ec1be19c455d21288b-20260927T045837.419701Z-7702966eae994fbd849923d7bcabe14e.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "historical_query_capture",
+      "sha256": "0b5ee5bbc45e885d2bca3489dc940d089c252f268e9e901d05f8a25928a0ca60",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/enzet__map-machine/eea9c470558e0f0419ad-20260927T045837.561168Z-b919937e9a70412181ebad6a2ba4ea16.json",
+      "case": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "role": "historical_query_capture",
+      "sha256": "036a090aeb48123beb1b9c860c0b966f947f03efea62177a45333500537bc63e",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/facundoolano__feedi/b368cb9a2f8d6d41c8eb-20260927T045837.060333Z-452a602e082c44c7a7d9bd20fa343529.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "historical_query_capture",
+      "sha256": "207efe94a7c7501d3afeba4336db04e0c619eb1b7567b76159ec879af15fc354",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/facundoolano__feedi/b50089e477a018b48f6f-20260927T045836.768591Z-e95c467d91704ebca4d42887a7434701.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "historical_query_capture",
+      "sha256": "5c96d04d30a4dce64a06bf8294cd509672804abde22488ec0163adc78e88ae0c",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/350277aad1a30e94581a-20260927T045835.333808Z-27e961b814f8490ab2e62d360639d0e7.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "historical_query_capture",
+      "sha256": "9ecd5ae05c899df8f068a9d9948cb406c20b6ce3cc7e44380ec41d973c58e107",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/jamesturk__scrapelib/812ef4472fc94abbec77-20260927T045835.594575Z-5feb5a40598349e7b2753744b4961431.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "historical_query_capture",
+      "sha256": "0c58ab8325bcbc9026b6b94322795a0cd33822ab018d45af4215e00092cd2003",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/wimglenn__advent-of-code-data/644f5e67c3864790e2d5-20260927T045835.839993Z-2f61bbb341ae46e4930195d29889529a.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "historical_query_capture",
+      "sha256": "feb5bf3ae3ee6522a1197ebd0b54ee13c7237e9363fe0ecabde9c85c69e11607",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/github/wimglenn__advent-of-code-data/eda18a77e96a41800343-20260927T045836.130353Z-5e5d37f13d25412c83139feb6a806564.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "historical_query_capture",
+      "sha256": "51f01ff47765eb804ac3f2cff390b48793e9e0ef89a2ffe72079c32e8e8826b5",
+      "capture_method": "collector",
+      "interpretation": "historical_query_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/repository_file/atenreiro__opensquat/2bb3eb4869dc7d73d0e0-20260927T045835.096930Z-0739e7c29ec340e58417febd328b07be.json",
+      "case": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "role": "historical_file_capture",
+      "sha256": "41befd7830c8a2a7cae128a99e1e6b86a9bea4e974aac874f6ff7fef43244e46",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/repository_file/facundoolano__feedi/1053688dbf86bee60dd4-20260927T045836.872027Z-90c83e458ed943c9877a6d98b4a28bc2.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "historical_file_capture",
+      "sha256": "c7e61304fc1eb18ac396eaa88aab193c89e193160f418e767de8190fa69b4d8a",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/repository_file/facundoolano__feedi/22741dd9d9f2fcf89702-20260927T045837.202746Z-cdfe445a7b344f58aaf1b8bb7aac741f.json",
+      "case": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "role": "historical_file_capture",
+      "sha256": "9e3e79cdf6961892c25f080abf8c903c208f1580c343ac3b9123219b89f4028e",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/repository_file/jamesturk__scrapelib/f2b83073099f89504859-20260927T045835.448158Z-a847385d6fe04340aa922c4a75c8af7b.json",
+      "case": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "role": "historical_file_capture",
+      "sha256": "bd79ff8d0fbbc6959f753ca7f6d46c3588a78fbbc3dbbdc6234d0640d25496b0",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    },
+    {
+      "root": "urllib3_history",
+      "path": "data/raw/urllib3-2.0.0/repository_file/wimglenn__advent-of-code-data/a903573edfa17b30c7fb-20260927T045835.978221Z-9b6537f50df34c80b6c0e6794c067fc2.json",
+      "case": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "role": "historical_file_capture",
+      "sha256": "fafbf06096a25f7b3310c9c5af7046e9cf767460c93dd399ce7a67024a796330",
+      "capture_method": "collector",
+      "interpretation": "historical_file_snapshot_v1"
+    }
+  ],
+  "manifest_sha256": "09d66f72862cfaa1a664cb1fc5c42a5b8fe28dbaeb35bd7f42364bdbff50a743"
+}

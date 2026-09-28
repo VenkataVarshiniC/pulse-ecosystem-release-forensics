@@ -1,5 +1,7 @@
 # M2.1 PostgreSQL relational foundation
 
+This document describes the **M2.1 starting schema**. M2.2 subsequently applied V002–V004 and loaded the two frozen Phase 2 cases. The current schema and load mapping are documented in [the M2.2 mapping](phase2-to-postgres-mapping.md), with operational commands in the [runbook](migration-runbook.md). Statements below that no real evidence is loaded describe the M2.1 checkpoint, not the current database.
+
 Migration [V001](../../../infra/postgres/migrations/V001__base_relational_foundation.sql) implements the stable [M2-PREP physical contract](../m2-prep/postgresql-physical-model.md) in PostgreSQL 16.14. The database is an index and typed interpretation of external immutable raw evidence, not the original forensic source. No frozen Phase 2 evidence, dbt marts, Power BI objects or stakeholder disposition tables are loaded or built.
 
 | Schema | Table(s) | Grain and key |

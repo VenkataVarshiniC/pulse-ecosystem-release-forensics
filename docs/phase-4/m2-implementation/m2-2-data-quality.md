@@ -1,0 +1,13 @@
+# M2.2 data quality and semantic limits
+
+The frozen source inventory is complete for the **declared M2.2 manifest**: 142/142 files verified by SHA-256. This does not assert completeness of all historical GitHub or PyPI activity. Required release tasks succeeded 38/38; six optional 404 responses remain `not_found`, not failed collection. All 54 planned tasks have one source journal attempt and zero retries.
+
+Historical declaration coverage remains limited: pytest 1/2 and urllib3 1/6 members. Only pytest has one stronger paired pre-release path. Six decisions are after-only and nine unresolved; no after-only decision was promoted to a before/after pair. The 11 typed observations are 8 path states plus 3 target declarations, with no inferred resolved version or adoption.
+
+The Phase 2 report stores stage sufficiency as Boolean. The database preserves 2 `true` as `SUFFICIENT` and 38 `false` as `LEGACY_UNCLASSIFIED`; it does **not** guess which of `INSUFFICIENT`, `SOURCE_UNAVAILABLE` or `CONFLICTING` applies. There are 38 UNKNOWN findings and 2 bounded NO findings. Adoption and recovery are UNKNOWN for every member. No accepted positive event exists in the frozen population, and all three finding-support edge tables are correctly empty. The typed rows remain traceable through the DRAFT snapshot and source file hashes.
+
+Two urllib3 candidates arose from a single downstream PR artifact containing copied upstream text. Both are retained as emitted detector outputs and rejected independent review outcomes; neither is accepted downstream-specific friction or remediation. Candidate emission time was not recorded; the PR event time is not substituted. Assessment and finding creation times were also absent in the frozen report and remain NULL.
+
+Historical captures carry collector task/attempt identifiers in raw payloads but lack a complete planned-task journal. M2.2 records their historical run and source identifiers without adding false task/attempt rows. The four replay rows reproduce the existing audit of two matching report-output attempts, not a new external collection. Captures are classified `collector` because the Phase 2 raw files were produced by the collectors; derived reports, baselines and review ledgers are manifest inputs but not new captures.
+
+Current validations establish relational integrity and faithful loading of these eight predeclared members. They do not establish broader detector recall, primary-stakeholder value, organizational decisions, recovery success or a published analytics product. Phase 3/M1B's 27 secondary PR observations, M2.1 fixtures and any external newly retrieved evidence are outside the loaded population.
