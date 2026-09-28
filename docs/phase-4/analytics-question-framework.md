@@ -1,0 +1,16 @@
+# Decision-oriented analytics question tree
+
+Every question is scoped to a declared case, its frozen cohort, and an explicit observation window. A cross-case comparison is descriptive unless comparable source plans and selection methods are documented. The [metric contracts](metrics-framework.md) specify denominators.
+
+| Domain | Decision question | Decision it could inform | Evidence boundary |
+| --- | --- | --- | --- |
+| A. Investigation coverage | Which members have enough evidence for each lifecycle category, and where does coverage fail? Which source classes and historical paths are repeatedly unavailable? | Select a source-method improvement or label a case inconclusive. | Collection completion is distinct from stage sufficiency; exact-ref declaration is not adoption. |
+| B. Investigation pathway | From declared members, how many have complete required collection and sufficient context? Where do emitted candidates, reviews, accepted evidence and repository outcomes occur? | Locate a collection, context, review, or presentation bottleneck. | Candidate branch is optional; do not interpret attrition as consumer conversion or lack of impact. |
+| C. Candidate and review quality | Which rules/source origins produce accepted, rejected, or unresolved candidates? Are emissions concentrated in one artifact or repository? | Decide which rule warrants investigation and which evidence needs review. | Reviewed-emitted denominator only; no recall without independently labeled non-emissions. |
+| D. Sufficiency and uncertainty | Which stage/case/repository answers remain UNKNOWN and for what reason? Does paired pre-release history improve bounded finding eligibility? | Prioritize an evidence-acquisition test. | UNKNOWN is neither NO nor a negative-outcome numerator. Observed association is not proof of method effect. |
+| E. Release and repository differences | How do coverage and dispositions vary by package, release, repository, source and selection method? | Identify cases requiring different investigation paths. | Phase 2 convenience cases are not ecosystem-representative; avoid pooled incidence. |
+| F. Investigation effort proxies | How many artifacts/candidates are inspected, and what time between recorded review timestamps, if available? | Plan a review workflow experiment. | These are activity descriptors, not labor, productivity, or time saved. |
+| G. Collection reliability | Which required tasks fail, optional probes return verified not-found, retries occur, resumes reuse verified tasks, or replay mismatches appear? | Improve collector reliability and auditability. | Optional not-found is a completed probe, not dependency absence. No manufactured resume rate. |
+| H. Stakeholder value | Does a provenance-rich UNKNOWN guide next action? Does prioritization reduce needless review? What constitutes completion and trust? | Decide whether/how to build a product. | **PENDING PRIMARY RESEARCH**. No current value KPI, baseline, user outcome, or labor savings. |
+
+Potential consulting outputs are a current-state diagnostic, evidence-gap prioritization, candidate-error mechanism analysis, and conditional implementation choices. Each must retain source and uncertainty rather than inventing stakeholder impact.

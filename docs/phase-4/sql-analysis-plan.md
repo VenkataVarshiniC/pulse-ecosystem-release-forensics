@@ -1,0 +1,18 @@
+# Decision-led SQL analysis plan (future)
+
+No production SQL is written or run in this milestone. Query outputs must include case, frozen frame/window, method version, counts, denominator and unavailable reasons. Start from the appropriate [fact grain](analytical-grain.md); pre-aggregate candidates, artifacts and findings before joining to membership.
+
+| Decision question and planned output | Expected grain / SQL technique | Integrity test before interpretation |
+| --- | --- | --- |
+| Where does required-source coverage break down by case and source? | Planned task → member joins and filtered conditional aggregation; per case × source status counts, required vs optional. | Reconcile all frozen members and tasks; optional 404 ≠ required failure. |
+| Which members gain a pre-release paired-path declaration versus after-only context? | CTE for exact-ref observations; `ROW_NUMBER` only to choose a **documented** nearest qualifying before/after anchor, with explicit tie rule; `LAG`/`LEAD` within repository/path to inspect adjacent states. | Ref/time ordering must be trustworthy; path moves and older unchanged declarations remain unresolved. |
+| At which investigation branch is the largest evidence gap? | Left join frozen membership to separately aggregated task/context/assessment facts; conditional distinct-member counts for F0–F5 and B1–B3. | Never multiply rates across unlike grains or call B1 mandatory. |
+| Which rules create reviewable signal versus copied-upstream noise? | Candidate → terminal review joins; filtered accepted/rejected aggregates by rule/source origin, ranking and percent-of-total with `NULLIF` denominator guards. | One bot PR can create multiple dependent firings; no population precision/recall claim. |
+| Why is a stage UNKNOWN and which missing source dominates? | Stage assessment → reason bridge; CTE for unique member-stage denominator, filtered aggregates and reason count. | Multi-label percentages may exceed 100%; blank reason is a defect. |
+| How do release and historical-context cohorts differ descriptively? | `bridge_case_repository` to versioned member/stage facts; cohort conditional aggregation and within-case rank; report raw counts and completeness. | Convenience samples and differing source plans prohibit causal or population effects. |
+| Is review latency observable, and how does its distribution vary? | Candidate event → terminal review; timestamp/date arithmetic, percentile distribution, optional rolling window only if repeated comparable cases exist. | Emission/review clocks verified; elapsed time is not analyst labor. |
+| Did a new run/replay change conclusions or only source capture? | Pair explicitly versioned snapshots with full outer comparison; `LAG` by case/member/category over report versions; count reasoned status transitions. | A live recapture is not deterministic replay; no silent overwrite. |
+| Which accepted findings lack an intact evidence chain? | Finding → support bridge → review/observation → artifact/task, anti-join for missing links. | Must return zero before publishing accepted-finding metrics. |
+| Is recovery eligible under a future method? | Eligible event/window/source CTE with explicit denominator; date-window join to downstream evidence. | Keep unavailable until source and eligible population are established. |
+
+CTEs, multi-table joins, windows (`LAG`/`LEAD`, `ROW_NUMBER`), filtered aggregates, date arithmetic, cohort comparisons, ranking, percent-of-total and rolling summaries are chosen only for the specific questions above. A feature is not a deliverable by itself. Window ordering on lifecycle categories is forbidden; source timestamps may be ordered for provenance without asserting event causality.
