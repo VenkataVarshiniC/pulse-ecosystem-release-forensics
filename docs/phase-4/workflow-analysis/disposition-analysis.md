@@ -1,0 +1,5 @@
+# Terminal disposition of selected dependency PRs
+
+The base sample has **20/20 terminal PRs** at cutoff: **9/20 merged**, **11/20 closed without merge**. Among the 11 closures, **8/11** explicitly say superseded, **2/11** say no longer needed per bot, and **1/11** has an ignored-release bot response. The close-reason categories partition the 11 closures; the corresponding base-denominator counts are 8/20, 2/20 and 1/20. Of the two no-longer-needed base cases, only one has a visible human rebase command. The other is not silently recoded as that workflow.
+
+The purposive discussion sample has four merges and three closures without merge; all three discussion closures have a visible rebase command plus up-to-date/no-longer-needed bot response. These counts illustrate behavior and are not prevalence. The base sample has approvals on four merged PRs, but five other merged PRs lack a coded explicit approval. A merged PR is a GitHub disposition, **not** proof of compatibility success or recovery. Closure is also not failure: explicit supersession and ignored/up-to-date replies can reflect routine proposal lifecycle.

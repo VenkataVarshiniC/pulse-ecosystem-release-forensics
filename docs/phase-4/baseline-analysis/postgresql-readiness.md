@@ -13,3 +13,7 @@
 | `analytics` finding/observation/recovery marts | **PARTIAL/BLOCKED** | Per-category status diagnostic only; historical pair observations. | Stage reason linkage, observation key, positive provenance, target-version/recovery denominators. |
 
 The main design surprise is not database performance; it is **semantic incompleteness**. A physically valid table could still calculate a false adoption/recovery rate if it coerces missing evidence to zero, merges after-only with pre-release context, or multiplies one artifact's two candidate firings. PostgreSQL preference remains provisional and implementation-gated by Phase 3 HOLD.
+
+## Milestone 1B PR-workflow dataset decision
+
+The frozen Phase 3 sample adds a **research PR observation** grain (sample × repository × PR), with explicit sample selection, origin of upstream text, human signal, close reason and elapsed PR duration. It does **not** justify a `fct_dependency_update_pr` in PULSE's operational analytics model. The 20 base and seven purposive discussion PRs are public secondary research selected through a title/earliest-page, bot-heavy protocol, not product-generated cases or a governed customer workflow feed. Keep this dataset and its [descriptive contracts](../workflow-analysis/workflow-dataset-contract.md) in the separate secondary-research layer. Reconsider a future PR fact only after stakeholder use case, stable acquisition/provenance, permissions, versioned sample/cohort membership, event timestamps, deduplication and decision-grain contracts are validated. No database or DDL is added.
