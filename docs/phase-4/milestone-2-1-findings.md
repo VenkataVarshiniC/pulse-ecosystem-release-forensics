@@ -1,0 +1,23 @@
+# Phase 4 Milestone 2.1 findings — PostgreSQL relational foundation
+
+**Classification: PASS for the authorized stable foundation.** The [owner decision](m2-implementation/owner-decision.md) is a conditional GO for technical foundation only; primary stakeholder reconciliation remains pending. This milestone does not validate product demand or authorize adoption/recovery claims. No M2.2 loading, dbt or Power BI work began.
+
+| Area | Result |
+| --- | --- |
+| Environment/version | Native isolated PostgreSQL **16.14** cluster under ignored .local/postgres, loopback 127.0.0.1:55432, separate pulse_dev/pulse_test. PostgreSQL 16 is supported; this exact minor is pinned to the tested host. Docker was unavailable. |
+| Migration mechanism | One transactional version-controlled SQL migration, [V001](../../infra/postgres/migrations/V001__base_relational_foundation.sql), tracked in public.schema_migrations. Empty build, reset/rebuild and repeated no-op migration verified via [runbook](m2-implementation/migration-runbook.md). |
+| Schemas/tables | ingestion and core created: **5 ingestion + 24 core tables**, plus public.schema_migrations. No analytics/dbt schema or stakeholder disposition table. Inventory and grain in [schema documentation](m2-implementation/postgresql-schema.md). |
+| Constraints | UUID PKs, typed FKs including collector task/source/repository and member scope, scoped unique keys, nonnegative counts/versions, window ordering, 64-lowercase-hex digest checks, controlled status/method values, frozen case/cohort and immutable artifact triggers. Cross-row qualification is reserved for application/dbt/human review as specified in M2-PREP. |
+| Indexes | Eight targeted lookup indexes beyond PK/unique indexes; no speculative broad indexing. |
+| Identity/provenance | Case version and membership are frozen; repository provider ID is distinct from display alias; capture fingerprint is unique but content hash is not. Raw URI/ref, source event versus retrieval time, capture method, task/source chain and provider references persist. Two candidate rows can cite one artifact. |
+| UNKNOWN and review | Finding UNKNOWN is a controlled value distinct from NO_QUALIFYING_EVIDENCE_FOUND. Sufficiency distinguishes SUFFICIENT, INSUFFICIENT, SOURCE_UNAVAILABLE, CONFLICTING. Review event NEEDS_EVIDENCE is nonterminal and distinct from REJECT; one terminal decision per candidate/cycle. |
+| Finding support | Artifact, observation and review links use separate FK-backed tables. A test-only positive finding resolves through ACCEPT review and fixture artifact. Semantic qualification is not inferred from FK presence alone. |
+| Snapshot | Analysis snapshot UUID, manifest digest, case/source-plan/rule/metric/model/loader versions, generation time, state and typed chosen-input links are present. No snapshot was published. |
+| Fixtures/tests | Test rows use capture_method=fixture and fixture:// locators inside rollback transactions in pulse_test. **22 database tests passed**, including positive lineage, UNKNOWN separation, two candidates/one artifact, same bytes/two captures, frozen membership, cross-repository/question FK rejection and loopback/SCRAM setting. Fixture tables are empty afterward. These rows are not PULSE observations or metric inputs. |
+| Full validation | Ruff passed; full pytest **156 passed** (the prior 134 tests remain plus 22 database tests). The clean pulse_test rebuild and repeated migration were verified. |
+| Security/config | Generated 256-bit password stored only in ignored .env; data/log under ignored .local; loopback and SCRAM; no GitHub/API credential stored in tables. The local bootstrap database role is an isolated-cluster superuser for migrations, not an application/BI account. |
+| Contract deviations | No semantic weakening. An additional composite collector task/source/repository FK and frozen-cohort destination guard strengthen M2-PREP. PostgreSQL 16.14 is the tested pin although a newer minor exists; upgrade before any shared deployment. Cross-row YES/NO qualification remains at the planned application/dbt/human layer. |
+| Gated areas | No investigation disposition, portfolio score, business-completion or recovery semantics are operationalized. Stakeholder role, demand, workflow and value remain unvalidated. |
+| M2.2 readiness | Base schema, migration and database test harness are ready. Actual frozen evidence loading still needs the governed external raw-root/id mapping and its own acceptance checks; it was not started here. |
+
+The database contains schema only; actual Phase 2 frozen analytical evidence was **not** loaded. No dbt project/models, Power BI connection, PR or merge was created in this milestone.
