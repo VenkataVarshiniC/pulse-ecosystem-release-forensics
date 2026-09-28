@@ -37,3 +37,8 @@ M2.3 adds dbt-managed views in `dbt_staging` and `dbt_intermediate`, plus a
 test-audit schema, without altering the source schemas. See the
 [transformation lineage](m2-3-dbt-lineage.md) for each view's grain and
 source-to-future-mart mapping.
+
+M2.4 adds 11 dbt-managed validation tables in `analytics`: four dimensions,
+five facts and two bridges. Their two input snapshots remain DRAFT, so the
+tables are not published analytical results. See the [analytical model](m2-4-analytical-model.md)
+for exact grains, relationships and publication blockers.

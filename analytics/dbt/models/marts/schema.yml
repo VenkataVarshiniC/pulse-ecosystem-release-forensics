@@ -1,0 +1,306 @@
+version: 2
+
+models:
+  - name: dim_case
+    description: "One versioned frozen case per case_key. Carries sourced release, plan and window metadata; no result or causal interpretation."
+    columns:
+      - name: case_key
+        description: Stable case-version UUID and dimension primary key.
+        data_tests: [not_null, unique]
+      - name: release_key
+        description: Source target release UUID; resolves to dim_release.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_release')", field: release_key}
+      - name: case_status
+        description: Source DRAFT/FROZEN case state, not analytical publication state.
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['DRAFT', 'FROZEN']}
+      - name: window_start
+        description: Source-defined investigation window start, not inferred from capture time.
+      - name: window_end
+        description: Source-defined investigation window end.
+      - name: rule_version
+        description: Case rule version, separate from the placeholder input-snapshot rule version.
+  - name: dim_repository
+    description: "One stable source repository_id represented in the frozen cohort. Names are labels, never analytical keys."
+    columns:
+      - name: repository_key
+        description: Stable repository UUID and dimension primary key.
+        data_tests: [not_null, unique]
+      - name: provider_repository_id
+        description: Provider identity where verified; nullable for provisional identities.
+      - name: canonical_full_name
+        description: Current canonical display label, not immutable identity.
+      - name: identity_status
+        description: Source verified/provisional identity state.
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['verified', 'provisional']}
+  - name: dim_release
+    description: "One source release_id represented by a versioned case. Release timestamp is sourced and nullable."
+    columns:
+      - name: release_key
+        description: Release UUID and dimension primary key.
+        data_tests: [not_null, unique]
+      - name: package_name
+        description: Normalized target dependency package.
+      - name: version
+        description: Exact investigated dependency release version.
+      - name: release_time
+        description: Sourced release event time, not a dbt build time.
+      - name: release_artifact_id
+        description: Source evidence capture for release metadata when recorded.
+  - name: dim_evidence_source
+    description: "One represented source_id from tasks or captures. Actual method counts describe collector/connector-assisted/fixture captures; an uncaptured task does not acquire a fictitious method."
+    columns:
+      - name: source_key
+        description: Source registry UUID and dimension primary key.
+        data_tests: [not_null, unique]
+      - name: source_type
+        description: Actual provider source type.
+      - name: source_version
+        description: Source definition version.
+      - name: access_class
+        description: Source access classification.
+      - name: collector_capture_count
+        description: Captures with actual collector provenance, not a task success rate.
+      - name: connector_assisted_capture_count
+        description: Captures retrieved with connector assistance; not unattended evidence.
+      - name: fixture_capture_count
+        description: Fixture captures present at source; never operational evidence.
+  - name: bridge_case_repository
+    description: "One input snapshot × case version × frozen member. Exact denominator spine including members without candidates or observations; DRAFT rows are validation-only."
+    columns:
+      - name: analysis_snapshot_id
+        description: Input manifest identity; must be explicitly filtered before use.
+        data_tests: [not_null]
+      - name: case_key
+        description: Versioned case key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_case')", field: case_key}
+      - name: repository_key
+        description: Stable repository key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_repository')", field: repository_key}
+      - name: snapshot_state
+        description: Literal input state; DRAFT is not published.
+      - name: input_manifest_sha256
+        description: Original frozen input manifest fingerprint.
+      - name: mart_model_version
+        description: Explicit validation model contract; not a publication approval.
+      - name: source_snapshot_model_version
+        description: Source snapshot's recorded model version, retained even if obsolete.
+      - name: source_metric_definition_version
+        description: Source snapshot's recorded metric version, retained even if placeholder.
+  - name: fct_collection_task
+    description: "One input snapshot × selected release collection_task_id. Task attempts and captures were aggregated before joining; optional not_found remains distinct from required failure."
+    columns:
+      - name: analysis_snapshot_id
+        description: Selected input snapshot identity.
+        data_tests: [not_null]
+      - name: collection_task_id
+        description: Original planned task identity.
+        data_tests: [not_null]
+      - name: case_key
+        description: Versioned case dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_case')", field: case_key}
+      - name: repository_key
+        description: Nullable member key for shared upstream package tasks.
+        data_tests:
+          - relationships:
+              arguments: {to: "ref('dim_repository')", field: repository_key}
+      - name: source_key
+        description: Source definition dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_evidence_source')", field: source_key}
+      - name: required_flag
+        description: Source required versus optional plan status.
+      - name: terminal_status
+        description: Literal task outcome, including optional not_found.
+      - name: actual_attempt_count
+        description: Count from actual attempt journal, not inferred retries.
+      - name: retry_count
+        description: Attempt numbers after one.
+      - name: optional_not_found
+        description: True only for an optional task with not_found terminal outcome.
+  - name: fct_repository_investigation
+    description: "One input snapshot × case version × repository. Starts from declared bridge; lower-grain candidates/findings are preaggregated. Evidence diagnostics do not establish adoption, recovery or causality."
+    columns:
+      - name: analysis_snapshot_id
+        description: Input snapshot identity; DRAFT rows cannot be presented as published outcomes.
+        data_tests: [not_null]
+      - name: case_key
+        description: Versioned case dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_case')", field: case_key}
+      - name: repository_key
+        description: Stable repository dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_repository')", field: repository_key}
+      - name: paired_path_count
+        description: Explicit paired historical path count; after-only cannot contribute.
+      - name: after_only_path_count
+        description: Explicit after-only count, separate from paired history.
+      - name: candidate_count
+        description: Selected candidate identity count, not artifact count.
+      - name: accepted_review_numerator
+        description: Accepted selected candidate reviews; no acceptance rate inferred.
+      - name: terminal_review_denominator
+        description: Selected ACCEPT/REJECT candidate reviews; zero makes rate unavailable.
+      - name: reviewed_acceptance_available
+        description: Whether terminal review denominator is positive.
+      - name: unknown_finding_count
+        description: Literal UNKNOWN findings, not negative findings.
+      - name: observation_count
+        description: Selected typed observation identities, preaggregated before member join.
+      - name: observed_adoption_status
+        description: Source finding status; UNKNOWN is evidence limitation, not zero adoption.
+      - name: recovery_signal_status
+        description: Source finding status; UNKNOWN is not failed recovery.
+  - name: fct_candidate_review
+    description: "One input snapshot × selected candidate. Review selection uses only snapshot_review edges, not later unselected review events; shared artifact does not collapse candidates."
+    columns:
+      - name: analysis_snapshot_id
+        description: Input snapshot identity.
+        data_tests: [not_null]
+      - name: candidate_id
+        description: Original detector firing identity.
+        data_tests: [not_null]
+      - name: case_key
+        description: Versioned case dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_case')", field: case_key}
+      - name: repository_key
+        description: Stable repository dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_repository')", field: repository_key}
+      - name: source_key
+        description: Capturing source definition.
+        data_tests:
+          - relationships:
+              arguments: {to: "ref('dim_evidence_source')", field: source_key}
+      - name: artifact_id
+        description: Shared raw capture identity; may repeat across candidate rows.
+      - name: capture_method
+        description: Actual raw capture provenance; fixture excluded from this fact.
+      - name: terminal_review_status
+        description: Selected ACCEPT/REJECT/NEEDS_EVIDENCE decision or NULL if unreviewed.
+      - name: accepted_indicator
+        description: Nullable for unreviewed candidate, true only for selected ACCEPT.
+      - name: rejected_indicator
+        description: Nullable for unreviewed candidate, true only for selected REJECT.
+      - name: unresolved_indicator
+        description: True for unreviewed or selected NEEDS_EVIDENCE candidate.
+  - name: fct_lifecycle_finding
+    description: "One input snapshot × selected finding_id, with selected assessment and typed support counts. UNKNOWN and LEGACY_UNCLASSIFIED remain literal; support does not infer qualification."
+    columns:
+      - name: analysis_snapshot_id
+        description: Input snapshot identity.
+        data_tests: [not_null]
+      - name: finding_id
+        description: Original versioned finding identity.
+        data_tests: [not_null]
+      - name: case_key
+        description: Versioned case dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_case')", field: case_key}
+      - name: repository_key
+        description: Stable repository dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_repository')", field: repository_key}
+      - name: finding_status
+        description: Literal qualified, bounded NO or UNKNOWN state.
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['QUALIFYING_EVIDENCE', 'NO_QUALIFYING_EVIDENCE_FOUND', 'UNKNOWN']}
+      - name: source_sufficiency_status
+        description: Original assessment status including LEGACY_UNCLASSIFIED.
+      - name: analytical_status_family
+        description: Separate grouping; does not replace source status.
+      - name: assessment_id
+        description: Selected source assessment identity.
+      - name: provenance_status
+        description: Typed-support diagnostic; not a causal or quality verdict.
+  - name: fct_evidence_observation
+    description: "One input snapshot × observation on a selected nonfixture artifact. Declaration and resolution types, exact ref, source clock and retrieval clock remain distinct."
+    columns:
+      - name: analysis_snapshot_id
+        description: Input snapshot identity.
+        data_tests: [not_null]
+      - name: observation_id
+        description: Original typed observation identity.
+        data_tests: [not_null]
+      - name: case_key
+        description: Versioned case dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_case')", field: case_key}
+      - name: repository_key
+        description: Stable repository dimension key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('dim_repository')", field: repository_key}
+      - name: source_key
+        description: Capturing source definition.
+        data_tests:
+          - relationships:
+              arguments: {to: "ref('dim_evidence_source')", field: source_key}
+      - name: observation_type
+        description: Literal declaration, resolved version, path state or context type.
+      - name: declared_constraint
+        description: Source declaration, never inferred as installed version.
+      - name: resolved_version
+        description: Explicit resolved version only.
+      - name: source_event_time
+        description: Nullable source event clock, never replaced by retrieval time.
+      - name: retrieved_at
+        description: Distinct raw capture retrieval clock.
+      - name: capture_method
+        description: Actual capture provenance; fixture excluded.
+  - name: bridge_finding_evidence
+    description: "One input snapshot × selected finding × typed support edge. Only actual selected-input edges enter; zero rows is valid. Drill-through only, never a finding denominator."
+    columns:
+      - name: analysis_snapshot_id
+        description: Input snapshot identity.
+        data_tests: [not_null]
+      - name: finding_id
+        description: Selected parent finding identity.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: "ref('stg_pulse__findings')", field: finding_id}
+      - name: support_type
+        description: Explicit artifact, observation or review support type.
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['artifact', 'observation', 'review']}
+      - name: support_id
+        description: Original typed support UUID rendered as text for the normalized bridge.
+      - name: support_role
+        description: Source role of the support edge.

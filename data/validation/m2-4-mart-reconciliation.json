@@ -1,0 +1,330 @@
+{
+  "check_count": 40,
+  "checks": [
+    {
+      "actual": 2,
+      "check_id": "rows.dim_case",
+      "expected": 2,
+      "source_model": "dim_case",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "rows.dim_repository",
+      "expected": 8,
+      "source_model": "dim_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "rows.dim_release",
+      "expected": 2,
+      "source_model": "dim_release",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "rows.bridge_case_repository",
+      "expected": 8,
+      "source_model": "bridge_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "rows.bridge_finding_evidence",
+      "expected": 0,
+      "source_model": "bridge_finding_evidence",
+      "status": "PASS"
+    },
+    {
+      "actual": 54,
+      "check_id": "rows.fct_collection_task",
+      "expected": 54,
+      "source_model": "fct_collection_task",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "rows.fct_repository_investigation",
+      "expected": 8,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "rows.fct_candidate_review",
+      "expected": 2,
+      "source_model": "fct_candidate_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 40,
+      "check_id": "rows.fct_lifecycle_finding",
+      "expected": 40,
+      "source_model": "fct_lifecycle_finding",
+      "status": "PASS"
+    },
+    {
+      "actual": 11,
+      "check_id": "rows.fct_evidence_observation",
+      "expected": 11,
+      "source_model": "fct_evidence_observation",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "check_id": "source_definitions_represented",
+      "expected": 9,
+      "source_model": "dim_evidence_source",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "pytest-8.0.0.members",
+      "expected": 2,
+      "source_model": "bridge_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 11,
+      "check_id": "pytest-8.0.0.required_succeeded",
+      "expected": 11,
+      "source_model": "fct_collection_task",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "pytest-8.0.0.optional_not_found",
+      "expected": 1,
+      "source_model": "fct_collection_task",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "pytest-8.0.0.paired",
+      "expected": 1,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "check_id": "urllib3-2.0.0.members",
+      "expected": 6,
+      "source_model": "bridge_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 27,
+      "check_id": "urllib3-2.0.0.required_succeeded",
+      "expected": 27,
+      "source_model": "fct_collection_task",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "check_id": "urllib3-2.0.0.optional_not_found",
+      "expected": 5,
+      "source_model": "fct_collection_task",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "urllib3-2.0.0.paired",
+      "expected": 0,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "history.paired_path_count",
+      "expected": 1,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "check_id": "history.after_only_path_count",
+      "expected": 6,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "check_id": "history.unresolved_path_count",
+      "expected": 9,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "candidate_emitting_repositories",
+      "expected": 1,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "check_id": "shared_candidate_artifacts",
+      "expected": 1,
+      "source_model": "fct_candidate_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "reviews.ACCEPT",
+      "expected": 0,
+      "source_model": "fct_candidate_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "reviews.REJECT",
+      "expected": 2,
+      "source_model": "fct_candidate_review",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "sufficiency.SUFFICIENT",
+      "expected": 2,
+      "source_model": "fct_lifecycle_finding",
+      "status": "PASS"
+    },
+    {
+      "actual": 38,
+      "check_id": "sufficiency.LEGACY_UNCLASSIFIED",
+      "expected": 38,
+      "source_model": "fct_lifecycle_finding",
+      "status": "PASS"
+    },
+    {
+      "actual": 38,
+      "check_id": "findings.UNKNOWN",
+      "expected": 38,
+      "source_model": "fct_lifecycle_finding",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "findings.NO_QUALIFYING_EVIDENCE_FOUND",
+      "expected": 2,
+      "source_model": "fct_lifecycle_finding",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "observed_adoption_status.unknown",
+      "expected": 8,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "check_id": "recovery_signal_status.unknown",
+      "expected": 8,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "zero_candidate_denominator",
+      "expected": 2,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "fixture_mart_rows",
+      "expected": 0,
+      "source_model": "fct_candidate_review/fct_evidence_observation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "snapshot_manifest_mismatches",
+      "expected": 0,
+      "source_model": "bridge_case_repository",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "check_id": "draft_snapshots",
+      "expected": 2,
+      "source_model": "core.analysis_snapshot",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "published_snapshots",
+      "expected": 0,
+      "source_model": "core.analysis_snapshot",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "snapshot_artifact_digest_mismatches",
+      "expected": 0,
+      "source_model": "int_analysis_snapshot",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "mart_grain_duplicates",
+      "expected": 0,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "check_id": "orphan_repository_keys",
+      "expected": 0,
+      "source_model": "fct_repository_investigation",
+      "status": "PASS"
+    }
+  ],
+  "mart_row_counts": {
+    "bridge_case_repository": 8,
+    "bridge_finding_evidence": 0,
+    "dim_case": 2,
+    "dim_evidence_source": 9,
+    "dim_release": 2,
+    "dim_repository": 8,
+    "fct_candidate_review": 2,
+    "fct_collection_task": 54,
+    "fct_evidence_observation": 11,
+    "fct_lifecycle_finding": 40,
+    "fct_repository_investigation": 8
+  },
+  "snapshot_publication": {
+    "blocker_codes": [
+      "INPUT_SNAPSHOT_DRAFT",
+      "MART_MODEL_VERSION_NOT_IN_INPUT_MANIFEST",
+      "METRIC_VERSION_UNMODELED",
+      "RULE_VERSION_UNRECORDED"
+    ],
+    "published_count": 0,
+    "status": "NOT_PUBLISHED"
+  },
+  "snapshots": [
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "input_manifest_sha256": "6232ead11123e3d54b959d4ddbe1dc4ae180bc99bb0b8c5ccb55cc6a45ceb5d2",
+      "source_metric_definition_version": "not_yet_modeled",
+      "source_model_version": "postgres-core-v4",
+      "source_rule_version": "unrecorded_in_frozen_report",
+      "state": "DRAFT"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "input_manifest_sha256": "a905a8b4957decd78e406d231e3aaf6e7c0c71dbfd4aaf70daaa086e22027201",
+      "source_metric_definition_version": "not_yet_modeled",
+      "source_model_version": "postgres-core-v4",
+      "source_rule_version": "unrecorded_in_frozen_report",
+      "state": "DRAFT"
+    }
+  ],
+  "status": "PASS",
+  "version": "m2-4-mart-reconciliation-v1"
+}

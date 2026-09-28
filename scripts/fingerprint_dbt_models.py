@@ -1,4 +1,4 @@
-"""Compare all 19 dbt model rows across repeated builds."""
+"""Compare all dbt model rows across repeated builds."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ from pathlib import Path
 
 from psycopg import sql
 from reconcile_dbt import MODELS
+from reconcile_marts import MARTS
 
 from pulse.phase2_postgres.loader import connect
 
@@ -19,7 +20,8 @@ STATE = ROOT / ".local" / "m2-3-model-fingerprint.json"
 def fingerprint() -> dict[str, str]:
     result = {}
     with connect("pulse_dev") as conn:
-        for model, schema in sorted(MODELS.items()):
+        models = MODELS | {model: "analytics" for model in MARTS}
+        for model, schema in sorted(models.items()):
             query = sql.SQL("SELECT to_jsonb(t)::text FROM {}.{} t").format(
                 sql.Identifier(schema), sql.Identifier(model)
             )

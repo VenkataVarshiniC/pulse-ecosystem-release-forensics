@@ -15,5 +15,8 @@ models:
     intermediate:
       +materialized: view
       +schema: dbt_intermediate
+    marts:
+      +materialized: table
+      +schema: analytics
 data_tests:
   +store_failures: true

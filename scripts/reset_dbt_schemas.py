@@ -1,4 +1,4 @@
-"""Drop only the four dbt-owned local schemas before a clean M2.3 rebuild."""
+"""Drop only dbt-owned local schemas before a clean transformation rebuild."""
 
 from __future__ import annotations
 
@@ -8,7 +8,9 @@ from psycopg import sql
 
 from pulse.phase2_postgres.loader import connect
 
-DBT_SCHEMAS = ("dbt_staging", "dbt_intermediate", "dbt_test__audit", "dbt_scratch")
+DBT_SCHEMAS = (
+    "dbt_staging", "dbt_intermediate", "analytics", "dbt_test__audit", "dbt_scratch"
+)
 
 
 def main() -> int:
