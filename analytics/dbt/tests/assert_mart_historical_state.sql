@@ -1,13 +1,18 @@
 with paths as (
-    select sum(paired_path_count) as paired,
+    select s.rule_version, sum(f.paired_path_count) as paired,
            sum(after_only_path_count) as after_only,
            sum(unresolved_path_count) as unresolved
-    from {{ ref('fct_repository_investigation') }}
-), case_pairs as (
-    select c.case_name, sum(f.paired_path_count) as paired
     from {{ ref('fct_repository_investigation') }} f
+    join {{ ref('int_analysis_snapshot') }} s
+        on f.analysis_snapshot_id = s.analysis_snapshot_id
+    group by s.rule_version
+), case_pairs as (
+    select s.rule_version, c.case_name, sum(f.paired_path_count) as paired
+    from {{ ref('fct_repository_investigation') }} f
+    join {{ ref('int_analysis_snapshot') }} s
+        on f.analysis_snapshot_id = s.analysis_snapshot_id
     join {{ ref('dim_case') }} c on f.case_key = c.case_key
-    group by c.case_name
+    group by s.rule_version, c.case_name
 )
 select 'historical_status_totals' as failure from paths
 where paired <> 1 or after_only <> 6 or unresolved <> 9

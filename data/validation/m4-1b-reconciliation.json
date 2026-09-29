@@ -1,0 +1,36 @@
+{
+  "counts": {
+    "bounded_no": 2,
+    "candidate_artifacts": 1,
+    "candidates": 2,
+    "cases": 2,
+    "false_outcomes": 0,
+    "findings": 40,
+    "inherited_rejects": 2,
+    "insufficient": 38,
+    "mart_rows": {
+      "bridge_case_repository": 8,
+      "bridge_finding_evidence": 0,
+      "fct_candidate_review": 2,
+      "fct_collection_task": 54,
+      "fct_evidence_observation": 11,
+      "fct_lifecycle_finding": 40,
+      "fct_repository_investigation": 8
+    },
+    "members": 8,
+    "metric_outputs": 46,
+    "selected_artifacts": 72,
+    "sufficient": 2,
+    "unknown": 38
+  },
+  "metric_sha256": "febd43d2586d421a1f9ef64ae1b710db9484794ab9bf1a684e92a78eeabb595f",
+  "release_id": "m4-1b-9979f0a7b15d6e70b90f",
+  "snapshot_ids": {
+    "pytest": "08852d5f-9843-5406-a69b-7039ea2ddaa4",
+    "urllib3": "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"
+  },
+  "snapshot_states": {
+    "pytest-8.0.0": "PUBLISHED_VALIDATION",
+    "urllib3-2.0.0": "PUBLISHED_VALIDATION"
+  }
+}
