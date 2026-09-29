@@ -9,12 +9,14 @@ description = "Post-release intelligence for reconstructing open-source ecosyste
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+  "fastapi>=0.115,<1",
   "httpx>=0.27,<1",
   "packaging>=24,<27",
   "psycopg[binary]==3.3.6",
   "pydantic>=2.7,<3",
   "python-dotenv>=1.0,<2",
   "pyyaml>=6,<7",
+  "uvicorn>=0.30,<1",
 ]
 
 [project.scripts]
