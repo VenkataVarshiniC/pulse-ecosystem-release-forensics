@@ -194,7 +194,7 @@ sources:
           - name: state
             data_tests:
               - accepted_values:
-                  arguments: {values: ['DRAFT', 'VALIDATED', 'PUBLISHED', 'REVOKED']}
+                  arguments: {values: ['DRAFT', 'VALIDATED', 'PUBLISHED', 'PUBLISHED_VALIDATION', 'REVOKED']}
       - name: snapshot_run
         description: One snapshot/selected collection run edge.
       - name: snapshot_artifact

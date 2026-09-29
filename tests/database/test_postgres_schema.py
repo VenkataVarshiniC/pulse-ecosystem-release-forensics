@@ -138,7 +138,7 @@ def test_revision_and_schemas(pg: tuple[str, dict[str, str]]) -> None:
         "SELECT schema_name FROM information_schema.schemata "
         "WHERE schema_name IN ('ingestion','core') ORDER BY schema_name;",
     )
-    assert output.splitlines() == ["1", "2", "3", "4", "core", "ingestion"]
+    assert output.splitlines() == ["1", "2", "3", "4", "5", "core", "ingestion"]
 
 
 def test_local_authentication_settings(pg: tuple[str, dict[str, str]]) -> None:

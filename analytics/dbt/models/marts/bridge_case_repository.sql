@@ -4,7 +4,8 @@ select
     s.manifest_sha256 as input_manifest_sha256,
     s.model_version as source_snapshot_model_version,
     s.metric_definition_version as source_metric_definition_version,
-    'm2-4-validation-v1'::text as mart_model_version,
+    case when s.rule_version = 'unrecorded_in_frozen_report'
+         then 'm2-4-validation-v1'::text else s.model_version end as mart_model_version,
     m.case_version_id as case_key,
     m.repository_id as repository_key,
     m.case_version_id,

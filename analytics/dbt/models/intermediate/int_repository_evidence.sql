@@ -68,15 +68,6 @@ member_artifacts as (
         count(*) filter (where artifact_type <> 'raw_capture') as historical_capture_count
     from artifact_scope
     group by case_version_id, repository_id
-),
-member_candidates as (
-    select
-        case_version_id,
-        repository_id,
-        count(*) as candidate_count,
-        count(*) filter (where has_terminal_review) as terminal_review_count
-    from {{ ref('int_candidate_terminal_review') }}
-    group by case_version_id, repository_id
 )
 select
     spine.case_version_id,
@@ -102,11 +93,7 @@ select
     coalesce(o.exact_target_resolution_count, 0) > 0
         as has_exact_target_resolution_observation,
     coalesce(a.release_capture_count, 0) as release_capture_count,
-    coalesce(a.historical_capture_count, 0) as historical_capture_count,
-    coalesce(c.candidate_count, 0) as candidate_count,
-    coalesce(c.candidate_count, 0) > 0 as has_candidate,
-    coalesce(c.terminal_review_count, 0) as terminal_review_count,
-    coalesce(c.terminal_review_count, 0) > 0 as has_terminal_review
+    coalesce(a.historical_capture_count, 0) as historical_capture_count
 from {{ ref('int_case_repository') }} spine
 left join member_tasks t
     on spine.case_version_id = t.case_version_id and spine.repository_id = t.repository_id
@@ -117,5 +104,3 @@ left join observations o
     on spine.case_version_id = o.case_version_id and spine.repository_id = o.repository_id
 left join member_artifacts a
     on spine.case_version_id = a.case_version_id and spine.repository_id = a.repository_id
-left join member_candidates c
-    on spine.case_version_id = c.case_version_id and spine.repository_id = c.repository_id

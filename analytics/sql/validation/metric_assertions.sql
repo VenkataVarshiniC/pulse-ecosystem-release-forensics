@@ -12,7 +12,11 @@ with member_counts as (
            coalesce(sum(legacy_unclassified_count),0) as legacy_findings,
            count(*) filter (where observed_adoption_status <> 'UNKNOWN'
                               or recovery_signal_status <> 'UNKNOWN') as false_outcomes
-    from analytics.fct_repository_investigation group by 1,2
+    from analytics.fct_repository_investigation
+    where analysis_snapshot_id in (
+        select analysis_snapshot_id from core.analysis_snapshot
+        where rule_version = 'unrecorded_in_frozen_report')
+    group by 1,2
 ), candidate_counts as (
     select case_key, analysis_snapshot_id, count(*) as emitted,
            count(distinct artifact_id) as artifacts,
@@ -20,7 +24,11 @@ with member_counts as (
            count(*) filter (where terminal_review_status = 'ACCEPT') as accepted,
            count(*) filter (where terminal_review_status = 'REJECT') as rejected,
            count(*) filter (where capture_method = 'fixture') as fixtures
-    from analytics.fct_candidate_review group by 1,2
+    from analytics.fct_candidate_review
+    where analysis_snapshot_id in (
+        select analysis_snapshot_id from core.analysis_snapshot
+        where rule_version = 'unrecorded_in_frozen_report')
+    group by 1,2
 ), task_counts as (
     select case_key, analysis_snapshot_id, count(*) as tasks,
            count(*) filter (where required_flag) as required_tasks,
@@ -29,7 +37,11 @@ with member_counts as (
            count(*) filter (where not required_flag) as optional_tasks,
            count(*) filter (where optional_not_found) as optional_not_found,
            count(*) filter (where retry_count > 0) as retried
-    from analytics.fct_collection_task group by 1,2
+    from analytics.fct_collection_task
+    where analysis_snapshot_id in (
+        select analysis_snapshot_id from core.analysis_snapshot
+        where rule_version = 'unrecorded_in_frozen_report')
+    group by 1,2
 ), actual as (
     select c.target_package as case_name, m.analysis_snapshot_id, m.members, m.core_members,
            m.historical_members, m.paired_members, m.after_only_paths,
