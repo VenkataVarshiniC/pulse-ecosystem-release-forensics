@@ -1,0 +1,23 @@
+# M4.1 rule-system inventory
+
+This inventory describes the **new offline replay** at source commit `b2b638bb97c8b6a136a8f9f3f19334547219ec19`, not the unrecorded historical Phase 2 execution. Exact file hashes and the release identifier are in [`m4-1-rule-manifest.json`](../../../data/manifests/m4-1-rule-manifest.json). Case YAML is separately covered by the 142-file frozen input manifest. The manifest also pins supporting models, planner, journal and replay code. Source hashes normalize CRLF to LF so they verify across checkouts.
+
+| Purpose | Source / function or rule ID | Inputs | Output and downstream effect |
+|---|---|---|---|
+| Case/cohort/window parsing | `src/pulse/config/cases.py:load_case` | Frozen case definition | Declared denominator and detector target; no silent cohort change. |
+| Capture normalization and selection | `src/pulse/pipeline.py:detect_raw_candidates`, `src/pulse/collection/raw.py:RawSnapshot` | Only manifest-verified collector raw files | Text artifacts with source identifier, timestamp and preserved payload. |
+| Candidate text rules | `src/pulse/evidence/detectors.py:detect_text_candidates`; `text.version_specific_friction`, `text.version_specific_remediation`, `text.support_release` | Package/version named in title/body plus keyword sets; source type | Tentative lifecycle candidates and reasons; matching copied release notes remains tentative. |
+| Dependency candidate rules | `src/pulse/evidence/detectors.py:detect_transition_candidate`; `dependency.target_excluded`, `dependency.target_accepted` | Parsed, paired transition | Tentative remediation/adoption candidate when kind qualifies. |
+| Source-origin span | `src/pulse/phase4_replay.py:source_origin` | Preserved evidence excerpt/source type | `COPIED_UPSTREAM` only for explicit PR `Sourced from` span; otherwise `UNRESOLVED`. It does not establish whole-PR origin or downstream impact. |
+| Historical anchors | `src/pulse/history/pairing.py:select_ref_pair`; `manifest_path_first_change` | Verified path-scoped commit query, release/window | Before/after exact refs or unresolved state; after-only is not a pair. |
+| Dependency parsing/transition | `src/pulse/history/runner.py:_decode_content`, `src/pulse/dependencies/parsers.py:parse_dependency_file_with_diagnostics`, `src/pulse/dependencies/transitions.py:detect_transition` | Verified exact-ref file captures | Target observations, parse uncertainty, transition candidate eligibility. |
+| Historical qualification | `src/pulse/detector_evaluation.py:historical_context`; `src/pulse/phase2_forensics.py:_release_boundary_dependency_supported` | Pair/file statuses and pre-release declaration | Historical supported/unknown and negative-finding precondition. |
+| Review qualification | `src/pulse/phase4_replay.py:normalized`, `exact_legacy_match`; `src/pulse/detector_evaluation.py:ReviewedCandidate` | Full candidate payload and preserved review ledger | Inherited review evidence only for exact equivalence; changed/new candidates require review. |
+| Selected collection completeness | `src/pulse/phase2_forensics.py:_read_collection`, `_coverage`; planner/journal | Frozen plan, attempts, snapshots | Source coverage; required failure cannot become complete. |
+| Accepted event conversion | `src/pulse/analysis/forensics.py:accepted_to_events` | Accepted reviewed candidates only | Event set; rejected/needs-review candidates never become accepted events. |
+| Stage sufficiency | `src/pulse/phase2_forensics.py:build_phase2_report` | Source completeness, review completeness, paired pre-release context | Five new replay boolean assessments per member. `False` is replay **INSUFFICIENT**, not a retroactive rewrite of legacy `LEGACY_UNCLASSIFIED`. |
+| Finding status | `src/pulse/phase2_forensics.py:_finding` | Accepted events and stage sufficiency | YES if qualified event; bounded NO only when sufficient; otherwise UNKNOWN. |
+| Bounded forensic metrics | `src/pulse/phase2_forensics.py:_metric`, `build_phase2_report` | Replayed member/candidate/finding state | Descriptive coverage and explicitly unavailable adoption/recovery. |
+| Database/metric gate | `src/pulse/phase2_postgres/loader.py`, `analytics/metrics/metric_registry.yml`, `scripts/run_metric_pack.py` | Governed snapshot and marts | Existing loader is historical-frozen specific; M4.1 has **not** added replay rows or run 23 contracts on a new snapshot. This is a publication blocker, not a completed transformation. |
+
+The Python runtime and locked dependency set are recorded in the machine manifest. The rule ID list covers candidate detection, while `evaluation_components` covers pairing, qualification and findings. Rule release `rule-replay-b2b638bb97c8-e10fb03f467e267f` applies only to the new replay.

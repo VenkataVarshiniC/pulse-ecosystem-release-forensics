@@ -1,0 +1,34 @@
+{
+  "schema": "pulse.m4-1-bi-release-manifest.v1",
+  "bi_release_id": "m4-1-publication-hold-b3be08da423c5c98",
+  "snapshot_id": null,
+  "input_manifest_sha256": "09d66f72862cfaa1a664cb1fc5c42a5b8fe28dbaeb35bd7f42364bdbff50a743",
+  "rule_manifest_sha256": "b9f09c03b5e72aa44cbb334e71261b4c72c966e899c0e9b962ddb97d1d858896",
+  "rule_release_id": "rule-replay-b2b638bb97c8-e10fb03f467e267f",
+  "metric_contract_version": "m2-5-metric-registry-v1",
+  "mart_model_version": "m2-4-831121996a8f-c98464051fc0",
+  "dbt_core_version": "1.11.15",
+  "rule_source_git_commit": "b2b638bb97c8b6a136a8f9f3f19334547219ec19",
+  "offline_replay_sha256": "b3be08da423c5c988be9151178b0da137a6d5bd1aedd300afbfc2c825cc48f13",
+  "major_row_counts": {
+    "frozen_files": 142,
+    "cases": 2,
+    "declared_members": 8,
+    "replay_candidates": 2,
+    "inherited_review_evidence": 2,
+    "replay_findings": 40,
+    "database_replay_rows": 0
+  },
+  "metric_baseline_fingerprint": null,
+  "legacy_metric_baseline_fingerprint": "0f5ba89981c3d1c49af876b7792975a9592638953977ffbeba04fca979e50987",
+  "publication_state": "HOLD_NO_GOVERNED_SNAPSHOT",
+  "stakeholder_gate_state": "NOT_YET_VALIDATED",
+  "power_bi_eligibility": "PUBLICATION_HOLD",
+  "limitations": [
+    "Offline replay is deterministic but has not been loaded into a new governed PostgreSQL snapshot.",
+    "The 23 metric contracts were not executed against a replay snapshot; the legacy baseline is not a substitute.",
+    "Legacy DRAFT snapshots retain unrecorded historical rule provenance.",
+    "No genuine stakeholder dashboard audience or decision validation was found in authorized project material.",
+    "Adoption and recovery remain unobserved; cohort results are not ecosystem-representative."
+  ]
+}

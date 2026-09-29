@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import json
 
-from pulse.phase2_postgres.manifest import ROOT, canonical_digest, sha256
+from pulse.phase2_postgres.manifest import ROOT, canonical_digest
+from pulse.phase4_replay import source_sha256
 
-BASE_COMMIT = "b6966a2ca17922c93ed7f6f1c115735632e84055"
+BASE_COMMIT = "b2b638bb97c8b6a136a8f9f3f19334547219ec19"
 RULE_FILES = (
     "src/pulse/analysis/forensics.py",
     "src/pulse/collection/journal.py",
@@ -38,7 +39,8 @@ def build_manifest() -> dict:
             "Offline replay of the two frozen Phase 2 cases; current rules, "
             "not historical attribution"
         ),
-        "source_files": {name: sha256(ROOT / name) for name in RULE_FILES},
+        "source_hash_encoding": "sha256-of-file-bytes-with-CRLF-normalized-to-LF",
+        "source_files": {name: source_sha256(ROOT / name) for name in RULE_FILES},
         "candidate_rules": [
             "text.version_specific_friction",
             "text.version_specific_remediation",

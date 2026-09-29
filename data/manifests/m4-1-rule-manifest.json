@@ -1,0 +1,54 @@
+{
+  "candidate_rules": [
+    "text.version_specific_friction",
+    "text.version_specific_remediation",
+    "text.support_release",
+    "dependency.target_excluded",
+    "dependency.target_accepted"
+  ],
+  "created_at": "2026-09-29T01:02:05Z",
+  "evaluation_components": [
+    "manifest_path_first_change",
+    "parse_dependency_file_with_diagnostics",
+    "detect_transition",
+    "historical_context",
+    "_coverage",
+    "_release_boundary_dependency_supported",
+    "_finding",
+    "accepted_to_events",
+    "exact-candidate-v1"
+  ],
+  "known_limitations": [
+    "The source commit identifies current replay rules, not historical Phase 2 execution.",
+    "No new source collection; unobserved adoption and recovery remain unavailable.",
+    "Historical capture replay verifies pairing and parsed observations but retains frozen collection attempt metadata."
+  ],
+  "manifest_sha256": "b9f09c03b5e72aa44cbb334e71261b4c72c966e899c0e9b962ddb97d1d858896",
+  "parser_evaluation_version": "source-file-sha256-bound",
+  "python_runtime": "CPython 3.14; packaging and Pydantic versions locked by uv.lock",
+  "rule_release_id": "rule-replay-b2b638bb97c8-e10fb03f467e267f",
+  "schema": "pulse.m4-1-rule-manifest.v1",
+  "scope": "Offline replay of the two frozen Phase 2 cases; current rules, not historical attribution",
+  "source_files": {
+    "scripts/run_m4_1_replay.py": "2d38d4f982fcbad7be6ef56ca35541fe5e30e971a0252cc204aa7b6d20bf7baa",
+    "src/pulse/analysis/forensics.py": "b235e5f999d826a6f3d804c9fc7f77552243cb7748764ed42634f4b9e685b8ea",
+    "src/pulse/collection/journal.py": "944dcaf1f7e5e1a70d6de6c79280d9ba9490c38efe5a959d2fddbc1cd5f9034d",
+    "src/pulse/collection/planner.py": "433563f4d27ca99039b86fc3b62fb7819b60922d042b0ba7f9dfd84b4d520ae5",
+    "src/pulse/config/cases.py": "bc2e0d23f8ee1d27cacd508521ea4dda8649ad728e441027df9077476a183730",
+    "src/pulse/dependencies/models.py": "a6465ba788e14c13c4da91658bc58b02802d69a1b0a242f8301a93b2f794ea58",
+    "src/pulse/dependencies/parsers.py": "253cce83c10e66811a4d958414e046e8c5fb5cd6e170fadccf4ca662bed51e63",
+    "src/pulse/dependencies/transitions.py": "37df3f8160f70d6702e867128058a4976117482c938c1d5eb3fd270d79be7635",
+    "src/pulse/detector_evaluation.py": "cccccafd8a11745823690d93f40833916b0b265cdee26cba239aa6bfe2c9884f",
+    "src/pulse/evidence/detectors.py": "2792bb3da6af3dfc399c6b46c147b19f757143a11cb68002b3ce83700e5935a8",
+    "src/pulse/history/models.py": "bdbffcec8cc369ba670cd240f7aa52c290cb0d00a779d55759739f79d619220e",
+    "src/pulse/history/pairing.py": "24029495031c8a1b9ddebe57e3aed12c904783689ff0c410e1101758cbdb0c5f",
+    "src/pulse/history/runner.py": "a7cbff1e30387206b69e416d14c20b01989cb821fe7bef4dd609b163498f564a",
+    "src/pulse/models/review.py": "958540e5d2478529323eefe60fea2b723b6b337840d0053accaf9144bbeeecd8",
+    "src/pulse/phase2_forensics.py": "e8ec49c9a82098bc2a12a4f4081ca3becf1eb99e615de4f2a1549eda73c5b0f4",
+    "src/pulse/phase2_postgres/loader.py": "f4d8a6474832b413527ba2ff62ac35c0c923cc82ea297bb341c887661d092532",
+    "src/pulse/phase4_replay.py": "c5142c200cd03dd989b781e2ca982e5de847aad9f3b06d8a4458302991171274",
+    "src/pulse/pipeline.py": "a03fa319a4bb25e91467019d2ae1824d8734e149a9f3ce0af5f73243c0851f2d"
+  },
+  "source_git_commit": "b2b638bb97c8b6a136a8f9f3f19334547219ec19",
+  "source_hash_encoding": "sha256-of-file-bytes-with-CRLF-normalized-to-LF"
+}
