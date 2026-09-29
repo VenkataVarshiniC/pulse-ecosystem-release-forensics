@@ -1,0 +1,1541 @@
+{
+  "analysis_version": "m3-bounded-product-analysis-v1",
+  "analytical_questions": {
+    "Q10_unsupported_decisions": [
+      "population_a.segment_readiness",
+      "formal_inference"
+    ],
+    "Q1_investigative_certainty": [
+      "population_a.cases.*.funnel",
+      "population_a.finding_status_by_category"
+    ],
+    "Q2_historical_context": [
+      "population_a.cohort_summary"
+    ],
+    "Q3_candidate_generation": [
+      "population_a.candidate_origin_and_review"
+    ],
+    "Q4_human_review": [
+      "population_a.cases.*.metrics.MET-009",
+      "population_a.candidate_origin_and_review"
+    ],
+    "Q5_unknown_findings": [
+      "population_a.unknown_reason_codes",
+      "population_a.cases.*.cooccurring_evidence_indicators"
+    ],
+    "Q6_evidence_sources": [
+      "population_a.cases.*.source_usage"
+    ],
+    "Q7_case_comparison": [
+      "population_a.case_comparison"
+    ],
+    "Q8_public_pr_workflow": [
+      "population_b.base_observations",
+      "population_b.base_duration_hours"
+    ],
+    "Q9_metric_availability": [
+      "population_a.metric_contract_availability"
+    ]
+  },
+  "formal_inference": "FORMAL INFERENCE NOT JUSTIFIED",
+  "input_sha256": {
+    "analytics_release_manifest": "c543f41fbcabaafdd68c1ac5aa315218baf909166fc2f22af294fb2420c079da",
+    "m2_5_diagnostics": "a24fb8f7cdee8321742f3e24b71ba98673113efa51ee5064ff9c4d6701598c06",
+    "m2_5_metric_baseline": "0f5ba89981c3d1c49af876b7792975a9592638953977ffbeba04fca979e50987",
+    "pr_observations": "fa56ed46a7a8269046c92e0100740d9d5b8028908046943169a0925847968972",
+    "pr_workflow_metrics": "767dd3e64560757f0a0157803ae7375c3bb047b72a63f3ca4a10e84ec0781a2a"
+  },
+  "population_a": {
+    "candidate_origin_and_review": [
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "artifact_id": "2bcc971b-ac8a-5876-9679-b6b0416aa1df",
+        "candidate_id": "9ef49fc3-7c96-575f-ab9e-2300de69993c",
+        "candidate_rule_id": "text.version_specific_friction",
+        "candidate_rule_version": "unrecorded_in_frozen_baseline",
+        "capture_method": "collector",
+        "case_name": "urllib3",
+        "repository_id": "6148574c-d66c-58b7-aab9-e375eb399f83",
+        "source_origin": "COPIED_UPSTREAM",
+        "terminal_review_reason": "generic_dependency_mention",
+        "terminal_review_status": "REJECT"
+      },
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "artifact_id": "2bcc971b-ac8a-5876-9679-b6b0416aa1df",
+        "candidate_id": "b2198ece-1a49-53ec-929f-60419a6e79e4",
+        "candidate_rule_id": "text.version_specific_remediation",
+        "candidate_rule_version": "unrecorded_in_frozen_baseline",
+        "capture_method": "collector",
+        "case_name": "urllib3",
+        "repository_id": "6148574c-d66c-58b7-aab9-e375eb399f83",
+        "source_origin": "COPIED_UPSTREAM",
+        "terminal_review_reason": "bot_or_dependency_update_noise",
+        "terminal_review_status": "REJECT"
+      }
+    ],
+    "case_comparison": [
+      {
+        "accepted_reviews": 0,
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "candidate_artifacts": 0,
+        "candidate_members": 0,
+        "candidates": 0,
+        "case_name": "pytest-8.0.0",
+        "collected_members": 2,
+        "collection_coverage": "1.00000000000000000000",
+        "historical_coverage": "0.50000000000000000000",
+        "historical_members": 1,
+        "members": 2,
+        "optional_not_found": 1,
+        "paired_members": 1,
+        "planned_tasks": 15,
+        "rejected_reviews": 0,
+        "required_succeeded": 11,
+        "required_tasks": 11,
+        "unknown_findings": "8"
+      },
+      {
+        "accepted_reviews": 0,
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "candidate_artifacts": 1,
+        "candidate_members": 1,
+        "candidates": 2,
+        "case_name": "urllib3-2.0.0",
+        "collected_members": 6,
+        "collection_coverage": "1.00000000000000000000",
+        "historical_coverage": "0.16666666666666666667",
+        "historical_members": 1,
+        "members": 6,
+        "optional_not_found": 5,
+        "paired_members": 0,
+        "planned_tasks": 39,
+        "rejected_reviews": 2,
+        "required_succeeded": 27,
+        "required_tasks": 27,
+        "unknown_findings": "30"
+      }
+    ],
+    "cases": {
+      "pytest": {
+        "cooccurring_evidence_indicators": {
+          "any_legacy_sufficiency": 2,
+          "any_unknown_finding": 2,
+          "no_exact_ref_declaration": 1,
+          "zero_candidates": 2
+        },
+        "funnel": [
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 2,
+            "step": "F0_DECLARED",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 2,
+            "step": "F1_CORE_COLLECTED",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 1,
+            "step": "F2_CONTEXT_DECLARATION",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 1,
+            "step": "F2_PAIRED_SUBCOUNT",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 0,
+            "step": "B1_CANDIDATE_MEMBERS",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": null,
+            "numerator": 0,
+            "step": "B1_CANDIDATE_IDS",
+            "unit": "candidate_ids"
+          },
+          {
+            "category": null,
+            "denominator": 0,
+            "numerator": 0,
+            "step": "B2_TERMINAL_REVIEW",
+            "unit": "candidate_ids"
+          },
+          {
+            "category": null,
+            "denominator": 0,
+            "numerator": 0,
+            "step": "B3_ACCEPTED",
+            "unit": "candidate_ids"
+          },
+          {
+            "category": "migration_friction",
+            "denominator": 2,
+            "numerator": 1,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "observed_adoption",
+            "denominator": 2,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "adoption_readiness",
+            "denominator": 2,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "remediation",
+            "denominator": 2,
+            "numerator": 1,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "recovery_signal",
+            "denominator": 2,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "migration_friction",
+            "denominator": 2,
+            "numerator": 1,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "observed_adoption",
+            "denominator": 2,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "adoption_readiness",
+            "denominator": 2,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "remediation",
+            "denominator": 2,
+            "numerator": 1,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "recovery_signal",
+            "denominator": 2,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": null,
+            "step": "F5_REPOSITORY_OUTCOME",
+            "unit": "members"
+          }
+        ],
+        "historical_member_indicators": {
+          "after_only_present": 1,
+          "exact_ref_declaration": 1,
+          "paired_pre_release": 1,
+          "unresolved_path_present": 2
+        },
+        "member_count": 2,
+        "metrics": {
+          "MET-001": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-001",
+            "metric_value": "1.000000",
+            "name": "Repository Core Collection Coverage",
+            "numerator": 2,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "bridge_case_repository",
+              "fct_repository_investigation",
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-002": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-002",
+            "metric_value": "0.500000",
+            "name": "Historical Context Coverage",
+            "numerator": 1,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "bridge_case_repository",
+              "fct_repository_investigation",
+              "fct_evidence_observation"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-008": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-008",
+            "metric_value": "0.000000",
+            "name": "Candidate Emission Coverage",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "bridge_case_repository",
+              "fct_repository_investigation",
+              "fct_candidate_review"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-009": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 0,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-009",
+            "metric_value": null,
+            "name": "Reviewed-Candidate Acceptance",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review"
+            ],
+            "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+            "unavailable_reason": "ZERO_DENOMINATOR: mathematically undefined; no eligible observations"
+          },
+          "MET-010": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 0,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-010",
+            "metric_value": null,
+            "name": "Reviewed-Candidate Rejection",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review"
+            ],
+            "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+            "unavailable_reason": "ZERO_DENOMINATOR: mathematically undefined; no eligible observations"
+          },
+          "MET-011": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 0,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-011",
+            "metric_value": null,
+            "name": "Unresolved Candidate Share",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review"
+            ],
+            "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+            "unavailable_reason": "ZERO_DENOMINATOR: mathematically undefined; no eligible observations"
+          },
+          "MET-016": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 11,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-016",
+            "metric_value": "1.000000",
+            "name": "Required-Task Completion",
+            "numerator": 11,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-017": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 4,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-017",
+            "metric_value": "0.250000",
+            "name": "Optional Not-Found Share",
+            "numerator": 1,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-018": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 15,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-018",
+            "metric_value": "0.000000",
+            "name": "Retry Incidence",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-022": {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case": "pytest",
+            "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-022",
+            "metric_value": "0.000000",
+            "name": "Candidate Density",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review",
+              "bridge_case_repository"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          }
+        },
+        "source_usage": [
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 2,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 2,
+            "selected_capture_count": 2,
+            "source_id": "a8b52074-7f06-535a-8f5b-d690c2b2c7a6",
+            "source_type": "github_commits",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 2,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 2,
+            "selected_capture_count": 2,
+            "source_id": "9aca1461-bbe2-5ee0-a0b5-d26f5df79db5",
+            "source_type": "github_issues",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 2,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 2,
+            "selected_capture_count": 2,
+            "source_id": "8f4fd3e8-0a42-58aa-b47c-da52c99bd40e",
+            "source_type": "github_pull_requests",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 1,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 0,
+            "selected_capture_count": 1,
+            "source_id": "6dd26bda-c29d-565d-9989-99e37b8eb202",
+            "source_type": "github_releases",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 3,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 2,
+            "selected_capture_count": 3,
+            "source_id": "da07a199-1cb5-59d6-972c-e4f31510764b",
+            "source_type": "github_repository",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 4,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 2,
+            "selected_capture_count": 4,
+            "source_id": "9d3d42aa-d5b9-5f63-a04b-f69b0edb82d0",
+            "source_type": "historical_query_capture",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 1,
+            "connector_assisted_count": 0,
+            "provider": "pypi",
+            "repository_count": 0,
+            "selected_capture_count": 1,
+            "source_id": "52a594d7-d46e-53d7-8111-59c25249823f",
+            "source_type": "pypi_version",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 3,
+            "connector_assisted_count": 0,
+            "provider": "repository_file",
+            "repository_count": 2,
+            "selected_capture_count": 3,
+            "source_id": "7360a6ad-3d5b-50e5-9a48-4de7452301f2",
+            "source_type": "github_file",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+            "case_name": "pytest-8.0.0",
+            "collector_count": 3,
+            "connector_assisted_count": 0,
+            "provider": "repository_file",
+            "repository_count": 2,
+            "selected_capture_count": 3,
+            "source_id": "cb772762-d04b-5d88-927d-3c7c4ce8c487",
+            "source_type": "historical_file_capture",
+            "source_version": "phase2-frozen-source-v1"
+          }
+        ]
+      },
+      "urllib3": {
+        "cooccurring_evidence_indicators": {
+          "any_legacy_sufficiency": 6,
+          "any_unknown_finding": 6,
+          "no_exact_ref_declaration": 5,
+          "zero_candidates": 5
+        },
+        "funnel": [
+          {
+            "category": null,
+            "denominator": 6,
+            "numerator": 6,
+            "step": "F0_DECLARED",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 6,
+            "numerator": 6,
+            "step": "F1_CORE_COLLECTED",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 6,
+            "numerator": 1,
+            "step": "F2_CONTEXT_DECLARATION",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F2_PAIRED_SUBCOUNT",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": 6,
+            "numerator": 1,
+            "step": "B1_CANDIDATE_MEMBERS",
+            "unit": "members"
+          },
+          {
+            "category": null,
+            "denominator": null,
+            "numerator": 2,
+            "step": "B1_CANDIDATE_IDS",
+            "unit": "candidate_ids"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 2,
+            "step": "B2_TERMINAL_REVIEW",
+            "unit": "candidate_ids"
+          },
+          {
+            "category": null,
+            "denominator": 2,
+            "numerator": 0,
+            "step": "B3_ACCEPTED",
+            "unit": "candidate_ids"
+          },
+          {
+            "category": "migration_friction",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "observed_adoption",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "adoption_readiness",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "remediation",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "recovery_signal",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F3_STAGE_SUFFICIENT",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "migration_friction",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "observed_adoption",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "adoption_readiness",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "remediation",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": "recovery_signal",
+            "denominator": 6,
+            "numerator": 0,
+            "step": "F4_BOUNDED_FINDING",
+            "unit": "member_stage_pairs"
+          },
+          {
+            "category": null,
+            "denominator": 6,
+            "numerator": null,
+            "step": "F5_REPOSITORY_OUTCOME",
+            "unit": "members"
+          }
+        ],
+        "historical_member_indicators": {
+          "after_only_present": 4,
+          "exact_ref_declaration": 1,
+          "paired_pre_release": 0,
+          "unresolved_path_present": 5
+        },
+        "member_count": 6,
+        "metrics": {
+          "MET-001": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 6,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-001",
+            "metric_value": "1.000000",
+            "name": "Repository Core Collection Coverage",
+            "numerator": 6,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "bridge_case_repository",
+              "fct_repository_investigation",
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-002": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 6,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-002",
+            "metric_value": "0.166667",
+            "name": "Historical Context Coverage",
+            "numerator": 1,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "bridge_case_repository",
+              "fct_repository_investigation",
+              "fct_evidence_observation"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-008": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 6,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-008",
+            "metric_value": "0.166667",
+            "name": "Candidate Emission Coverage",
+            "numerator": 1,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "bridge_case_repository",
+              "fct_repository_investigation",
+              "fct_candidate_review"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-009": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-009",
+            "metric_value": "0.000000",
+            "name": "Reviewed-Candidate Acceptance",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-010": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-010",
+            "metric_value": "1.000000",
+            "name": "Reviewed-Candidate Rejection",
+            "numerator": 2,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-011": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 2,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-011",
+            "metric_value": "0.000000",
+            "name": "Unresolved Candidate Share",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-016": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 27,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-016",
+            "metric_value": "1.000000",
+            "name": "Required-Task Completion",
+            "numerator": 27,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-017": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 12,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-017",
+            "metric_value": "0.416667",
+            "name": "Optional Not-Found Share",
+            "numerator": 5,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-018": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 39,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-018",
+            "metric_value": "0.000000",
+            "name": "Retry Incidence",
+            "numerator": 0,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_collection_task"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          },
+          "MET-022": {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case": "urllib3",
+            "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+            "component_scope": null,
+            "contract_status": "READY",
+            "denominator": 6,
+            "metric_contract_version": "m2-5-metric-registry-v1",
+            "metric_id": "MET-022",
+            "metric_value": "0.333333",
+            "name": "Candidate Density",
+            "numerator": 2,
+            "snapshot_state": "DRAFT",
+            "source_marts": [
+              "fct_candidate_review",
+              "bridge_case_repository"
+            ],
+            "status": "READY",
+            "unavailable_reason": null
+          }
+        },
+        "source_usage": [
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 6,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 6,
+            "selected_capture_count": 6,
+            "source_id": "a8b52074-7f06-535a-8f5b-d690c2b2c7a6",
+            "source_type": "github_commits",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 6,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 6,
+            "selected_capture_count": 6,
+            "source_id": "9aca1461-bbe2-5ee0-a0b5-d26f5df79db5",
+            "source_type": "github_issues",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 6,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 6,
+            "selected_capture_count": 6,
+            "source_id": "8f4fd3e8-0a42-58aa-b47c-da52c99bd40e",
+            "source_type": "github_pull_requests",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 1,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 0,
+            "selected_capture_count": 1,
+            "source_id": "6dd26bda-c29d-565d-9989-99e37b8eb202",
+            "source_type": "github_releases",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 7,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 6,
+            "selected_capture_count": 7,
+            "source_id": "da07a199-1cb5-59d6-972c-e4f31510764b",
+            "source_type": "github_repository",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 12,
+            "connector_assisted_count": 0,
+            "provider": "github",
+            "repository_count": 6,
+            "selected_capture_count": 12,
+            "source_id": "9d3d42aa-d5b9-5f63-a04b-f69b0edb82d0",
+            "source_type": "historical_query_capture",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 1,
+            "connector_assisted_count": 0,
+            "provider": "pypi",
+            "repository_count": 0,
+            "selected_capture_count": 1,
+            "source_id": "52a594d7-d46e-53d7-8111-59c25249823f",
+            "source_type": "pypi_version",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 7,
+            "connector_assisted_count": 0,
+            "provider": "repository_file",
+            "repository_count": 6,
+            "selected_capture_count": 7,
+            "source_id": "7360a6ad-3d5b-50e5-9a48-4de7452301f2",
+            "source_type": "github_file",
+            "source_version": "phase2-frozen-source-v1"
+          },
+          {
+            "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+            "case_name": "urllib3-2.0.0",
+            "collector_count": 5,
+            "connector_assisted_count": 0,
+            "provider": "repository_file",
+            "repository_count": 4,
+            "selected_capture_count": 5,
+            "source_id": "cb772762-d04b-5d88-927d-3c7c4ce8c487",
+            "source_type": "historical_file_capture",
+            "source_version": "phase2-frozen-source-v1"
+          }
+        ]
+      }
+    },
+    "cohort_summary": {
+      "after_only_path_present": 5,
+      "candidate_emitting_member": 1,
+      "cohort_overlap_note": "Historical path indicators can co-occur within a member; these counts are descriptive, not a mutually exclusive transition funnel.",
+      "declared_members": 8,
+      "exact_ref_declaration_absent": 6,
+      "exact_ref_declaration_present": 2,
+      "paired_pre_release_present": 1,
+      "unresolved_path_present": 7,
+      "zero_candidate_member": 7
+    },
+    "finding_context": [
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 2,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "adoption_readiness",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 1,
+        "finding_status": "NO_QUALIFYING_EVIDENCE_FOUND",
+        "lifecycle_category": "migration_friction",
+        "reason_code": "no_qualifying_evidence_found",
+        "source_sufficiency_status": "SUFFICIENT"
+      },
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 1,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "migration_friction",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 2,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "observed_adoption",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 2,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "recovery_signal",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 1,
+        "finding_status": "NO_QUALIFYING_EVIDENCE_FOUND",
+        "lifecycle_category": "remediation",
+        "reason_code": "no_qualifying_evidence_found",
+        "source_sufficiency_status": "SUFFICIENT"
+      },
+      {
+        "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+        "case_name": "pytest",
+        "finding_count": 1,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "remediation",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "case_name": "urllib3",
+        "finding_count": 6,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "adoption_readiness",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "case_name": "urllib3",
+        "finding_count": 6,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "migration_friction",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "case_name": "urllib3",
+        "finding_count": 6,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "observed_adoption",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "case_name": "urllib3",
+        "finding_count": 6,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "recovery_signal",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      },
+      {
+        "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+        "case_name": "urllib3",
+        "finding_count": 6,
+        "finding_status": "UNKNOWN",
+        "lifecycle_category": "remediation",
+        "reason_code": "unknown_insufficient_data",
+        "source_sufficiency_status": "LEGACY_UNCLASSIFIED"
+      }
+    ],
+    "finding_status_by_category": {
+      "adoption_readiness": {
+        "UNKNOWN": 8
+      },
+      "migration_friction": {
+        "NO_QUALIFYING_EVIDENCE_FOUND": 1,
+        "UNKNOWN": 7
+      },
+      "observed_adoption": {
+        "UNKNOWN": 8
+      },
+      "recovery_signal": {
+        "UNKNOWN": 8
+      },
+      "remediation": {
+        "NO_QUALIFYING_EVIDENCE_FOUND": 1,
+        "UNKNOWN": 7
+      }
+    },
+    "limitation": "Two purposively validated release cases; overlapping evidence indicators are not causes or independent cohorts; DRAFT validation output only.",
+    "members": 8,
+    "metric_contract_availability": {
+      "BLOCKED_STAKEHOLDER": 1,
+      "PARTIAL_EVIDENCE": 6,
+      "PARTIAL_PLATFORM": 1,
+      "READY": 10,
+      "UNAVAILABLE_EVIDENCE": 5
+    },
+    "population": "A_frozen_forensic_validation",
+    "segment_inventory": [
+      {
+        "dimension": "after_only_history",
+        "member_count": 3,
+        "segment": "false"
+      },
+      {
+        "dimension": "after_only_history",
+        "member_count": 5,
+        "segment": "true"
+      },
+      {
+        "dimension": "candidate_presence",
+        "member_count": 7,
+        "segment": "false"
+      },
+      {
+        "dimension": "candidate_presence",
+        "member_count": 1,
+        "segment": "true"
+      },
+      {
+        "dimension": "case",
+        "member_count": 2,
+        "segment": "pytest-8.0.0"
+      },
+      {
+        "dimension": "case",
+        "member_count": 6,
+        "segment": "urllib3-2.0.0"
+      },
+      {
+        "dimension": "core_collection",
+        "member_count": 8,
+        "segment": "true"
+      },
+      {
+        "dimension": "paired_history",
+        "member_count": 7,
+        "segment": "false"
+      },
+      {
+        "dimension": "paired_history",
+        "member_count": 1,
+        "segment": "true"
+      },
+      {
+        "dimension": "repository_provider",
+        "member_count": 8,
+        "segment": "github"
+      }
+    ],
+    "segment_readiness": [
+      {
+        "reason": "Two named validation cases support descriptive side-by-side counts only.",
+        "segment": "case/release",
+        "status": "USABLE"
+      },
+      {
+        "reason": "2/8 versus 6/8 supports evidence-gap counts, not outcome comparison.",
+        "segment": "exact-ref declaration present/absent",
+        "status": "USABLE"
+      },
+      {
+        "reason": "Only one member has paired history.",
+        "segment": "paired pre-release history",
+        "status": "SPARSE"
+      },
+      {
+        "reason": "Path statuses overlap within members and do not prove release effects.",
+        "segment": "after-only and unresolved paths",
+        "status": "SPARSE"
+      },
+      {
+        "reason": "Two dependent candidates come from one artifact and one repository.",
+        "segment": "candidate emission/rule/origin/review",
+        "status": "SPARSE"
+      },
+      {
+        "reason": "Selected captures diagnose acquisition, not source utility.",
+        "segment": "evidence source/capture method",
+        "status": "USABLE"
+      },
+      {
+        "reason": "All eight members are GitHub and core-collected.",
+        "segment": "repository provider and core collection",
+        "status": "INVARIANT"
+      },
+      {
+        "reason": "Qualified outcomes or stakeholder research are absent.",
+        "segment": "adoption/recovery/business outcome/role/value",
+        "status": "UNAVAILABLE"
+      }
+    ],
+    "unknown_reason_codes": {
+      "unknown_insufficient_data": 38
+    }
+  },
+  "population_b": {
+    "base_duration_hours": {
+      "iqr": 607.7,
+      "iqr_lower_fence": -775.25,
+      "iqr_upper_fence": 1655.55,
+      "max": 5823.4,
+      "mean": 708.79,
+      "median": 167.25,
+      "min": 0.0,
+      "n": 20,
+      "outliers_1_5_iqr": [
+        {
+          "hours": 2032.5,
+          "pr_number": 605,
+          "repository": "delphix/virtualization-sdk",
+          "url": "https://github.com/delphix/virtualization-sdk/pull/605"
+        },
+        {
+          "hours": 5823.4,
+          "pr_number": 39,
+          "repository": "gugarosa/statys",
+          "url": "https://github.com/gugarosa/statys/pull/39"
+        }
+      ],
+      "population_std_dev": 1290.29,
+      "q1": 136.3,
+      "q3": 744.0
+    },
+    "base_human_interaction_by_disposition": [
+      {
+        "count": 4,
+        "outcome": "merged",
+        "visible_human_interaction": false
+      },
+      {
+        "count": 10,
+        "outcome": "closed_without_merge",
+        "visible_human_interaction": false
+      },
+      {
+        "count": 5,
+        "outcome": "merged",
+        "visible_human_interaction": true
+      },
+      {
+        "count": 1,
+        "outcome": "closed_without_merge",
+        "visible_human_interaction": true
+      }
+    ],
+    "base_n": 20,
+    "base_observations": {
+      "approval": 4,
+      "bot_command": 1,
+      "close_reasons": {
+        "ignored_per_bot": 1,
+        "no_longer_needed_per_bot": 2,
+        "superseded": 8
+      },
+      "copied_upstream_text": 13,
+      "count": 20,
+      "duration_hours": {
+        "iqr": 607.7,
+        "max": 5823.4,
+        "median": 167.25,
+        "min": 0.0,
+        "n": 20,
+        "q1": 136.3,
+        "q3": 744.0
+      },
+      "evidence": {
+        "changelog": 9,
+        "ci_check_discussion": 0,
+        "compatibility_score": 16,
+        "documentation": 0,
+        "linked_downstream_issue": 0,
+        "linked_upstream_issue": 13,
+        "linked_upstream_issue_in_copied_text": 13,
+        "lockfile_diff": 6,
+        "manifest_diff": 14,
+        "other_automated_status": 3,
+        "release_notes": 10,
+        "security_advisory": 0,
+        "test_results": 0
+      },
+      "exception_label_count_per_pr": {
+        "0": 8,
+        "1": 12
+      },
+      "exception_labels": {
+        "other_explicit_bot_close": 2,
+        "rebase_requested_already_up_to_date_reply": 1,
+        "retained_older_version": 1,
+        "superseded": 8
+      },
+      "human_interaction": 6,
+      "human_review": 5,
+      "outcomes": {
+        "closed_without_merge": 11,
+        "merged": 9
+      },
+      "substantive_comment": 1,
+      "zero_visible_interaction": 14
+    },
+    "base_workflow_metrics": [
+      {
+        "d": 20,
+        "interpretation": "Visible public human interaction.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-001",
+        "n": 6,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.3
+      },
+      {
+        "d": 20,
+        "interpretation": "Explicit visible approval.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-002",
+        "n": 4,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.2
+      },
+      {
+        "d": 20,
+        "interpretation": "Merged terminal PR disposition, not successful migration.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-003",
+        "n": 9,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.45
+      },
+      {
+        "d": 20,
+        "interpretation": "Explicit supersession, not wasted work.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-004",
+        "n": 8,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.4
+      },
+      {
+        "d": 20,
+        "interpretation": "Coded source, test, or configuration modification beyond dependency files.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-005",
+        "n": 0,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.0
+      },
+      {
+        "d": 20,
+        "interpretation": "Copied upstream notes/changelog in PR body.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-006",
+        "n": 13,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.65
+      },
+      {
+        "d": 20,
+        "interpretation": "At least one explicitly coded workflow exception; multi-label, not severity.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-007",
+        "n": 12,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.6
+      },
+      {
+        "d": 20,
+        "interpretation": "Compatibility badge/link present, score unverified.",
+        "limitation": "Descriptive within the frozen, title/first-page-biased Dependabot base sample; not a population estimate or measure of private work.",
+        "metric_id": "WF-MET-008",
+        "n": 16,
+        "sample": "base",
+        "unit": "share_of_frozen_base_prs",
+        "value": 0.8
+      },
+      {
+        "d": 20,
+        "interpretation": "Elapsed creation-to-terminal time; distribution and quartile method required.",
+        "limitation": "Not engineering time, productivity, delay cause, or time saved.",
+        "metric_id": "WF-MET-009",
+        "n": 20,
+        "sample": "base",
+        "unit": "elapsed_hours_median",
+        "value": 167.25
+      }
+    ],
+    "discussion_observations_separate": {
+      "approval": 4,
+      "bot_command": 6,
+      "close_reasons": {
+        "no_longer_needed_per_bot": 3
+      },
+      "copied_upstream_text": 6,
+      "count": 7,
+      "duration_hours": {
+        "iqr": 2031.6,
+        "max": 2032.5,
+        "median": 139.4,
+        "min": 0.8,
+        "n": 7,
+        "q1": 0.85,
+        "q3": 2032.45
+      },
+      "evidence": {
+        "changelog": 1,
+        "ci_check_discussion": 1,
+        "compatibility_score": 7,
+        "documentation": 0,
+        "linked_downstream_issue": 0,
+        "linked_upstream_issue": 6,
+        "linked_upstream_issue_in_copied_text": 6,
+        "lockfile_diff": 1,
+        "manifest_diff": 6,
+        "other_automated_status": 3,
+        "release_notes": 5,
+        "security_advisory": 0,
+        "test_results": 1
+      },
+      "exception_label_count_per_pr": {
+        "0": 3,
+        "1": 3,
+        "3": 1
+      },
+      "exception_labels": {
+        "compatibility_concern": 1,
+        "rebase_requested_already_up_to_date_reply": 3,
+        "source_code_modification": 1,
+        "test_failure": 1
+      },
+      "human_interaction": 7,
+      "human_review": 4,
+      "outcomes": {
+        "closed_without_merge": 3,
+        "merged": 4
+      },
+      "substantive_comment": 1,
+      "zero_visible_interaction": 0
+    },
+    "limitation": "Convenience, title/first-page-biased base sample; seven discussion PRs were purposively chosen and excluded from every base rate. Duration is open-to-terminal elapsed time, not engineering work.",
+    "population": "B_selected_public_dependabot_prs",
+    "purposive_discussion_n": 7
+  },
+  "population_boundary": "A has 8 declared forensic members in 2 cases; B has 20 base and 7 separate purposive Dependabot PRs. No cross-population rates.",
+  "publication_state": "validation analytical outputs; two DRAFT snapshots; BI blocked"
+}

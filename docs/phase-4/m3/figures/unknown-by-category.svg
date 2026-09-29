@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="335" viewBox="0 0 900 335">
+<rect width="900" height="100%" fill="white"/>
+<text x="28" y="34" font-size="20" font-family="Arial" fill="#182438">UNKNOWN lifecycle findings by category</text>
+<text x="28" y="57" font-size="12" font-family="Arial" fill="#42536d">Population A: 40 member-category findings; UNKNOWN is an evidence state</text>
+<text x="28" y="95" font-size="13" font-family="Arial" fill="#182438">adoption readiness</text>
+<rect x="300" y="78" width="520.0" height="24" fill="#586bb3"/>
+<text x="830.0" y="95" font-size="13" font-family="Arial" fill="#182438">8</text>
+<text x="28" y="137" font-size="13" font-family="Arial" fill="#182438">migration friction</text>
+<rect x="300" y="120" width="455.0" height="24" fill="#586bb3"/>
+<text x="765.0" y="137" font-size="13" font-family="Arial" fill="#182438">7</text>
+<text x="28" y="179" font-size="13" font-family="Arial" fill="#182438">observed adoption</text>
+<rect x="300" y="162" width="520.0" height="24" fill="#586bb3"/>
+<text x="830.0" y="179" font-size="13" font-family="Arial" fill="#182438">8</text>
+<text x="28" y="221" font-size="13" font-family="Arial" fill="#182438">recovery signal</text>
+<rect x="300" y="204" width="520.0" height="24" fill="#586bb3"/>
+<text x="830.0" y="221" font-size="13" font-family="Arial" fill="#182438">8</text>
+<text x="28" y="263" font-size="13" font-family="Arial" fill="#182438">remediation</text>
+<rect x="300" y="246" width="455.0" height="24" fill="#586bb3"/>
+<text x="765.0" y="263" font-size="13" font-family="Arial" fill="#182438">7</text>
+</svg>

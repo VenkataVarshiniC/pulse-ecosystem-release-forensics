@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="293" viewBox="0 0 900 293">
+<rect width="900" height="100%" fill="white"/>
+<text x="28" y="34" font-size="20" font-family="Arial" fill="#182438">Candidate review path</text>
+<text x="28" y="57" font-size="12" font-family="Arial" fill="#42536d">Population A: candidate IDs; 2 emitted in urllib3, none in pytest</text>
+<text x="28" y="95" font-size="13" font-family="Arial" fill="#182438">Emitted candidate IDs</text>
+<rect x="300" y="78" width="520.0" height="24" fill="#8f5fa8"/>
+<text x="830.0" y="95" font-size="13" font-family="Arial" fill="#182438">2</text>
+<text x="28" y="137" font-size="13" font-family="Arial" fill="#182438">Terminally reviewed IDs</text>
+<rect x="300" y="120" width="520.0" height="24" fill="#8f5fa8"/>
+<text x="830.0" y="137" font-size="13" font-family="Arial" fill="#182438">2</text>
+<text x="28" y="179" font-size="13" font-family="Arial" fill="#182438">Accepted IDs</text>
+<rect x="300" y="162" width="0.0" height="24" fill="#8f5fa8"/>
+<text x="310.0" y="179" font-size="13" font-family="Arial" fill="#182438">0</text>
+<text x="28" y="221" font-size="13" font-family="Arial" fill="#182438">Rejected IDs</text>
+<rect x="300" y="204" width="520.0" height="24" fill="#8f5fa8"/>
+<text x="830.0" y="221" font-size="13" font-family="Arial" fill="#182438">2</text>
+</svg>
