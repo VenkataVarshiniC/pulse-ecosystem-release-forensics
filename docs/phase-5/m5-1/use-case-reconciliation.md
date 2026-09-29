@@ -1,0 +1,14 @@
+# Six Phase 3 use cases mapped to the proposed application
+
+The [six original use cases](../../phase-3/use-cases.md) are provisional BA flows, not observed stakeholder practice or implemented UI. Their requirement IDs and AC remain authoritative. “Supported” here describes the *proposed product specification*; no screen or API exists yet.
+
+| Use case | M5.1 classification | Product path, evidence basis and limit |
+|---|---|---|
+| UC-01 Define release investigation | **PARTIALLY_SUPPORTED** | Investigation List/Overview displays existing typed release, cohort and window (BR-001/SR-001/FR-001). Creating/editing a case in UI is deferred: scope owner and setup interaction are unvalidated; MVP is read-only over declared cases. |
+| UC-02 Review source and historical sufficiency | **DIRECTLY_SUPPORTED_BY_PRODUCT** as a specification | Repository → Evidence Explorer → Finding Detail exposes task outcome, exact refs, after-only/missing anchor and sufficiency (BR-002/SR-002/004, FR-002/004/005/006). Existing method is partial for comprehensive historical/resolved-version/conflict acquisition; the UI must show gaps. |
+| UC-03 Review candidate evidence | **PARTIALLY_SUPPORTED** | Candidate Review specifies artifact/rule/origin, inherited provenance and three reasoned decisions (BR-003/SR-003/FR-007/008). Current published replay is read-only; actual interactive review needs an authorized DRAFT candidate and safe append-only versioning. |
+| UC-04 Compare repository attention | **DEFERRED** | Overview can show literal repository evidence gaps and candidate counts, but explainable attention suggestions/override (BR-004/SR-005/FR-011) depend on a real portfolio decision owner and factors. No score or override workflow is specified as current MVP. |
+| UC-05 Produce bounded forensic report | **PARTIALLY_SUPPORTED** | Existing deterministic backend generation and published snapshot support a product read path for findings/coverage (BR-002/003, FR-009/010/012, NFR-001/002/003). M5.1 does not add report-generation UI or claim complete accepted-positive provenance; current findings are 38 UNKNOWN/two NO. |
+| UC-06 Handle unresolved case and disposition | **PARTIALLY_SUPPORTED** for inspection; closure **DEFERRED** | Finding/Repository screens explain unresolved evidence and PR-versus-recovery distinction (SR-004/006, FR-006/009/012). Human closure owner, criterion and durable disposition are unvalidated, so no “close/recovered” button or state is invented. |
+
+No use case is silently dropped or treated as stakeholder-approved. Analytical-only comparison belongs to the deferred [Power BI handoff](../../phase-4/m4-2/power-bi-build-handoff.md); the application remains an operational investigation surface. These classifications must be revisited after genuine interviews or Google Form responses.
