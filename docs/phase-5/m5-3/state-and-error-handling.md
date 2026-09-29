@@ -1,0 +1,11 @@
+# State and error handling
+
+Every API-backed screen renders an explicit loading state, a structured error with retry, or the selected data. A failed read never becomes an empty array or zero count. The retry repeats the same case, snapshot, repository, filters and cursor. Scope validation rejects missing/malformed route IDs before a request; an envelope whose returned case/snapshot disagrees with the route becomes `PROVENANCE_MISMATCH`.
+
+M5.2 JSON errors are `{code, message}`. The UI has distinct copy for `INVALID_SNAPSHOT`, `NOT_FOUND_IN_SELECTED_COHORT`, `PROVENANCE_MISMATCH`, `DATABASE_UNAVAILABLE`, `DATABASE_ERROR`, `PUBLISHED_IMMUTABLE`, `STALE_REVIEW`, `INVALID_DECISION_REASON`, `REVIEWER_NOT_AUTHORIZED`, and network failure. `SOURCE_UNAVAILABLE` is primarily a *successful* governed source/sufficiency state; a source task can be unavailable while a finding remains UNKNOWN. It is not rendered as an empty successful evidence collection.
+
+UNKNOWN is labeled `UNKNOWN · Unanswered` and explained as insufficient qualifying evidence. `INSUFFICIENT` has its own evidence-completeness badge. `NO_QUALIFYING_EVIDENCE_FOUND` is labeled `Bounded NO` with the explicit method/scope boundary; it is not a claim that the event never happened. Valid empty candidate lists say “No candidate emitted,” without inferring no incident. No support edge says “No explicit support link recorded,” without inventing lineage. Null source event time says “Event time unavailable”; retrieval time stays separate.
+
+Published `PUBLISHED_VALIDATION` candidate reads have `review_write_enabled=false`. The frontend has no review form or POST path. Inherited REJECT is labeled as reused prior review evidence, not a current-user decision. If a future DRAFT workflow is added, M5.4 must first resolve trusted reviewer authority, exact write eligibility, stale-review UX and API contract; this UI does not treat a user-entered identity as authority.
+
+The API filters public URLs. The frontend further requires an HTTPS locator without credentials, local hostnames or sensitive query keys before rendering an external link. A null/unsafe primary locator produces “Direct source link unavailable”; safe related public references can still appear separately. Raw file paths and payloads are not exposed by this screen.

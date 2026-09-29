@@ -1,0 +1,9 @@
+# M5.4 integration handoff
+
+M5.3 supplies seven read-only operational routes in `frontend/`. The backend remains the M5.2 `/api/v1` contract with two allowlisted published snapshots. To reproduce locally, start the existing PostgreSQL and FastAPI service on `127.0.0.1:8000`, then run `npm ci` and `npm run dev` in `frontend/`. Open `http://127.0.0.1:5173/investigations`. Set `VITE_PULSE_API_BASE_URL` only when using an alternative allowed local API origin. Keep `snapshot_id` in every case-scoped route.
+
+M5.4 should validate the complete navigation and error path against the actual backend and published dataset, including API request URLs, cohort membership, all five findings per member, candidate/artifact lineage and null clocks. Perform desktop/narrow-screen and keyboard visual QA; capture reproducible screenshots as files. Confirm the governed counts (2 investigations, 8 members, 40 findings, 38 UNKNOWN, 2 bounded NO, 2 inherited REJECT candidates from 1 artifact) from API responses, not frontend constants. Exercise wrong snapshot, wrong member, database unavailable and retry without source or database mutation.
+
+The current UI does **not** implement candidate review writes. M5.2 production writes are disabled on published data; a future DRAFT flow requires a separate authority and review policy decision. The current frontend also does not establish stakeholder utility or screen priority: G8 is `NOT_YET_VALIDATED`. Power BI M4.2 is still deferred. Do not interpret this smoke check as stakeholder acceptance, unattended collection validation, or a qualifying positive finding.
+
+The explicit TypeScript interfaces should be reconciled with `data/validation/m5-2-openapi.json` whenever the API changes. The current read-only routes, structured error handling and source URL constraints are the integration baseline.
