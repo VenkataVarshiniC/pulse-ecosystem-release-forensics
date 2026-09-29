@@ -1,0 +1,916 @@
+{
+  "cases": [
+    "pytest",
+    "urllib3"
+  ],
+  "contract_version": "m2-5-metric-registry-v1",
+  "metrics_per_case": 23,
+  "registry_sha256": "06b572ce66fa91477577081f1a145f5f9b5047270a07d5c42353dcd66bc8242d",
+  "results": [
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-001",
+      "metric_value": "1.000000",
+      "name": "Repository Core Collection Coverage",
+      "numerator": 2,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "bridge_case_repository",
+        "fct_repository_investigation",
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-002",
+      "metric_value": "0.500000",
+      "name": "Historical Context Coverage",
+      "numerator": 1,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "bridge_case_repository",
+        "fct_repository_investigation",
+        "fct_evidence_observation"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-003",
+      "metric_value": null,
+      "name": "Target-Version Evidence Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_evidence_observation",
+        "bridge_case_repository"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Ref, environment, time and provenance for resolved version absent."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "overall required tasks; no stage-source map",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 11,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-004",
+      "metric_value": null,
+      "name": "Stage Source Completeness",
+      "numerator": 11,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task",
+        "fct_lifecycle_finding"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "Category-to-required-source map absent; overall task results observed."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "reported assessments; 38 legacy statuses retained",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 10,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-005",
+      "metric_value": null,
+      "name": "Stage Evidence Sufficiency",
+      "numerator": 2,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "bridge_case_repository"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "38 legacy assessments lack four-way classification."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "BLOCKED_STAKEHOLDER",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-006",
+      "metric_value": null,
+      "name": "Investigation Outcome Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_repository_investigation",
+        "fct_lifecycle_finding"
+      ],
+      "status": "BLOCKED_STAKEHOLDER",
+      "unavailable_reason": "Findings exist but approved required question set does not."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-007",
+      "metric_value": null,
+      "name": "Recovery-Evidence Eligibility Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_repository_investigation",
+        "fct_lifecycle_finding"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Accepted event and downstream recovery source absent."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-008",
+      "metric_value": "0.000000",
+      "name": "Candidate Emission Coverage",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "bridge_case_repository",
+        "fct_repository_investigation",
+        "fct_candidate_review"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 0,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-009",
+      "metric_value": null,
+      "name": "Reviewed-Candidate Acceptance",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+      "unavailable_reason": "ZERO_DENOMINATOR: mathematically undefined; no eligible observations"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 0,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-010",
+      "metric_value": null,
+      "name": "Reviewed-Candidate Rejection",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+      "unavailable_reason": "ZERO_DENOMINATOR: mathematically undefined; no eligible observations"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 0,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-011",
+      "metric_value": null,
+      "name": "Unresolved Candidate Share",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+      "unavailable_reason": "ZERO_DENOMINATOR: mathematically undefined; no eligible observations"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "reported categories; required stakeholder question set absent",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 10,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-012",
+      "metric_value": null,
+      "name": "UNKNOWN Finding Rate",
+      "numerator": 8,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "bridge_case_repository"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "40 findings exist; approved required question set absent."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "UNKNOWN count only; controlled reason numerator unavailable",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 8,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-013",
+      "metric_value": null,
+      "name": "UNKNOWN Reason Distribution",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "UNKNOWN counts exist; controlled reason partition absent."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-014",
+      "metric_value": null,
+      "name": "Conflicting Evidence Rate",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Complete conflict coding absent."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "UNKNOWN count only; missing required source attribution unavailable",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 8,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-015",
+      "metric_value": null,
+      "name": "Missing-Source Contribution",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "fct_collection_task"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "Stage-source map and reason links absent."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 11,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-016",
+      "metric_value": "1.000000",
+      "name": "Required-Task Completion",
+      "numerator": 11,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 4,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-017",
+      "metric_value": "0.250000",
+      "name": "Optional Not-Found Share",
+      "numerator": 1,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 15,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-018",
+      "metric_value": "0.000000",
+      "name": "Retry Incidence",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "no documented resumed run in these cases",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-019",
+      "metric_value": null,
+      "name": "Verified Resume Reuse",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "Resumed-run audit and reuse links absent for frozen cases."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": "source replay audit exists but no governed replay mart",
+      "contract_status": "PARTIAL_PLATFORM",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-020",
+      "metric_value": null,
+      "name": "Deterministic Replay Success",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "future_replay_audit_mart"
+      ],
+      "status": "PARTIAL_PLATFORM",
+      "unavailable_reason": "Four source replay attempts exist but lack mart lineage."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-021",
+      "metric_value": null,
+      "name": "Accepted-Finding Provenance Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "bridge_finding_evidence"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "No YES finding or positive support chain."
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-022",
+      "metric_value": "0.000000",
+      "name": "Candidate Density",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review",
+        "bridge_case_repository"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case": "pytest",
+      "case_version_id": "1d1ba33c-f4d3-530b-b13d-2748a04a1443",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-023",
+      "metric_value": null,
+      "name": "Review Resolution Duration",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Candidate emission times absent; PR event time cannot substitute."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 6,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-001",
+      "metric_value": "1.000000",
+      "name": "Repository Core Collection Coverage",
+      "numerator": 6,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "bridge_case_repository",
+        "fct_repository_investigation",
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 6,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-002",
+      "metric_value": "0.166667",
+      "name": "Historical Context Coverage",
+      "numerator": 1,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "bridge_case_repository",
+        "fct_repository_investigation",
+        "fct_evidence_observation"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-003",
+      "metric_value": null,
+      "name": "Target-Version Evidence Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_evidence_observation",
+        "bridge_case_repository"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Ref, environment, time and provenance for resolved version absent."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "overall required tasks; no stage-source map",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 27,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-004",
+      "metric_value": null,
+      "name": "Stage Source Completeness",
+      "numerator": 27,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task",
+        "fct_lifecycle_finding"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "Category-to-required-source map absent; overall task results observed."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "reported assessments; 38 legacy statuses retained",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 30,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-005",
+      "metric_value": null,
+      "name": "Stage Evidence Sufficiency",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "bridge_case_repository"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "38 legacy assessments lack four-way classification."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "BLOCKED_STAKEHOLDER",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-006",
+      "metric_value": null,
+      "name": "Investigation Outcome Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_repository_investigation",
+        "fct_lifecycle_finding"
+      ],
+      "status": "BLOCKED_STAKEHOLDER",
+      "unavailable_reason": "Findings exist but approved required question set does not."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-007",
+      "metric_value": null,
+      "name": "Recovery-Evidence Eligibility Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_repository_investigation",
+        "fct_lifecycle_finding"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Accepted event and downstream recovery source absent."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 6,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-008",
+      "metric_value": "0.166667",
+      "name": "Candidate Emission Coverage",
+      "numerator": 1,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "bridge_case_repository",
+        "fct_repository_investigation",
+        "fct_candidate_review"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-009",
+      "metric_value": "0.000000",
+      "name": "Reviewed-Candidate Acceptance",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-010",
+      "metric_value": "1.000000",
+      "name": "Reviewed-Candidate Rejection",
+      "numerator": 2,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 2,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-011",
+      "metric_value": "0.000000",
+      "name": "Unresolved Candidate Share",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "reported categories; required stakeholder question set absent",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 30,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-012",
+      "metric_value": null,
+      "name": "UNKNOWN Finding Rate",
+      "numerator": 30,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "bridge_case_repository"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "40 findings exist; approved required question set absent."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "UNKNOWN count only; controlled reason numerator unavailable",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 30,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-013",
+      "metric_value": null,
+      "name": "UNKNOWN Reason Distribution",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "UNKNOWN counts exist; controlled reason partition absent."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-014",
+      "metric_value": null,
+      "name": "Conflicting Evidence Rate",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Complete conflict coding absent."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "UNKNOWN count only; missing required source attribution unavailable",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": 30,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-015",
+      "metric_value": null,
+      "name": "Missing-Source Contribution",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "fct_collection_task"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "Stage-source map and reason links absent."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 27,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-016",
+      "metric_value": "1.000000",
+      "name": "Required-Task Completion",
+      "numerator": 27,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 12,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-017",
+      "metric_value": "0.416667",
+      "name": "Optional Not-Found Share",
+      "numerator": 5,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 39,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-018",
+      "metric_value": "0.000000",
+      "name": "Retry Incidence",
+      "numerator": 0,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "no documented resumed run in these cases",
+      "contract_status": "PARTIAL_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-019",
+      "metric_value": null,
+      "name": "Verified Resume Reuse",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_collection_task"
+      ],
+      "status": "PARTIAL_EVIDENCE",
+      "unavailable_reason": "Resumed-run audit and reuse links absent for frozen cases."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": "source replay audit exists but no governed replay mart",
+      "contract_status": "PARTIAL_PLATFORM",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-020",
+      "metric_value": null,
+      "name": "Deterministic Replay Success",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "future_replay_audit_mart"
+      ],
+      "status": "PARTIAL_PLATFORM",
+      "unavailable_reason": "Four source replay attempts exist but lack mart lineage."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-021",
+      "metric_value": null,
+      "name": "Accepted-Finding Provenance Coverage",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_lifecycle_finding",
+        "bridge_finding_evidence"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "No YES finding or positive support chain."
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "READY",
+      "denominator": 6,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-022",
+      "metric_value": "0.333333",
+      "name": "Candidate Density",
+      "numerator": 2,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review",
+        "bridge_case_repository"
+      ],
+      "status": "READY",
+      "unavailable_reason": null
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case": "urllib3",
+      "case_version_id": "e9f8f3b2-c842-5127-b968-bf60d8f9ad71",
+      "component_scope": null,
+      "contract_status": "UNAVAILABLE_EVIDENCE",
+      "denominator": null,
+      "metric_contract_version": "m2-5-metric-registry-v1",
+      "metric_id": "MET-023",
+      "metric_value": null,
+      "name": "Review Resolution Duration",
+      "numerator": null,
+      "snapshot_state": "DRAFT",
+      "source_marts": [
+        "fct_candidate_review"
+      ],
+      "status": "UNAVAILABLE_EVIDENCE",
+      "unavailable_reason": "Candidate emission times absent; PR event time cannot substitute."
+    }
+  ],
+  "scope": "two frozen Phase 2 validation cases; DRAFT analytical snapshots"
+}

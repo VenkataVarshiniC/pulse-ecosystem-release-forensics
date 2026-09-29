@@ -1,0 +1,734 @@
+{
+  "case_comparison": [
+    {
+      "accepted_reviews": 0,
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "candidate_artifacts": 0,
+      "candidate_members": 0,
+      "candidates": 0,
+      "case_name": "pytest-8.0.0",
+      "collected_members": 2,
+      "collection_coverage": "1.00000000000000000000",
+      "historical_coverage": "0.50000000000000000000",
+      "historical_members": 1,
+      "members": 2,
+      "optional_not_found": 1,
+      "paired_members": 1,
+      "planned_tasks": 15,
+      "rejected_reviews": 0,
+      "required_succeeded": 11,
+      "required_tasks": 11,
+      "unknown_findings": "8"
+    },
+    {
+      "accepted_reviews": 0,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "candidate_artifacts": 1,
+      "candidate_members": 1,
+      "candidates": 2,
+      "case_name": "urllib3-2.0.0",
+      "collected_members": 6,
+      "collection_coverage": "1.00000000000000000000",
+      "historical_coverage": "0.16666666666666666667",
+      "historical_members": 1,
+      "members": 6,
+      "optional_not_found": 5,
+      "paired_members": 0,
+      "planned_tasks": 39,
+      "rejected_reviews": 2,
+      "required_succeeded": 27,
+      "required_tasks": 27,
+      "unknown_findings": "30"
+    }
+  ],
+  "pytest/evidence_gaps": [
+    {
+      "after_only_path_count": 1,
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 0,
+      "canonical_full_name": "bsc-wdc/qdislib",
+      "case_name": "pytest-8.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": false,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "528665fa-8dec-50f8-8796-426343976613",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 1
+    },
+    {
+      "after_only_path_count": 0,
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "bounded_no_finding_count": 2,
+      "candidate_count": 0,
+      "canonical_full_name": "planetlabs/cosmolog",
+      "case_name": "pytest-8.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": true,
+      "has_paired_pre_release_history": true,
+      "legacy_unclassified_count": 3,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "e7097a3d-9658-5ab9-8e52-fb8f69bdb59e",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 3,
+      "unresolved_path_count": 1
+    }
+  ],
+  "pytest/investigation_funnel": [
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 2,
+      "step": "F0_DECLARED",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 2,
+      "step": "F1_CORE_COLLECTED",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 1,
+      "step": "F2_CONTEXT_DECLARATION",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 1,
+      "step": "F2_PAIRED_SUBCOUNT",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 0,
+      "step": "B1_CANDIDATE_MEMBERS",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": null,
+      "numerator": 0,
+      "step": "B1_CANDIDATE_IDS",
+      "unit": "candidate_ids"
+    },
+    {
+      "category": null,
+      "denominator": 0,
+      "numerator": 0,
+      "step": "B2_TERMINAL_REVIEW",
+      "unit": "candidate_ids"
+    },
+    {
+      "category": null,
+      "denominator": 0,
+      "numerator": 0,
+      "step": "B3_ACCEPTED",
+      "unit": "candidate_ids"
+    },
+    {
+      "category": "migration_friction",
+      "denominator": 2,
+      "numerator": 1,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "observed_adoption",
+      "denominator": 2,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "adoption_readiness",
+      "denominator": 2,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "remediation",
+      "denominator": 2,
+      "numerator": 1,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "recovery_signal",
+      "denominator": 2,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "migration_friction",
+      "denominator": 2,
+      "numerator": 1,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "observed_adoption",
+      "denominator": 2,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "adoption_readiness",
+      "denominator": 2,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "remediation",
+      "denominator": 2,
+      "numerator": 1,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "recovery_signal",
+      "denominator": 2,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": null,
+      "step": "F5_REPOSITORY_OUTCOME",
+      "unit": "members"
+    }
+  ],
+  "pytest/source_coverage": [
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 2,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 2,
+      "selected_capture_count": 2,
+      "source_id": "a8b52074-7f06-535a-8f5b-d690c2b2c7a6",
+      "source_type": "github_commits",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 2,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 2,
+      "selected_capture_count": 2,
+      "source_id": "9aca1461-bbe2-5ee0-a0b5-d26f5df79db5",
+      "source_type": "github_issues",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 2,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 2,
+      "selected_capture_count": 2,
+      "source_id": "8f4fd3e8-0a42-58aa-b47c-da52c99bd40e",
+      "source_type": "github_pull_requests",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 1,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 0,
+      "selected_capture_count": 1,
+      "source_id": "6dd26bda-c29d-565d-9989-99e37b8eb202",
+      "source_type": "github_releases",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 3,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 2,
+      "selected_capture_count": 3,
+      "source_id": "da07a199-1cb5-59d6-972c-e4f31510764b",
+      "source_type": "github_repository",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 4,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 2,
+      "selected_capture_count": 4,
+      "source_id": "9d3d42aa-d5b9-5f63-a04b-f69b0edb82d0",
+      "source_type": "historical_query_capture",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 1,
+      "connector_assisted_count": 0,
+      "provider": "pypi",
+      "repository_count": 0,
+      "selected_capture_count": 1,
+      "source_id": "52a594d7-d46e-53d7-8111-59c25249823f",
+      "source_type": "pypi_version",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 3,
+      "connector_assisted_count": 0,
+      "provider": "repository_file",
+      "repository_count": 2,
+      "selected_capture_count": 3,
+      "source_id": "7360a6ad-3d5b-50e5-9a48-4de7452301f2",
+      "source_type": "github_file",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest-8.0.0",
+      "collector_count": 3,
+      "connector_assisted_count": 0,
+      "provider": "repository_file",
+      "repository_count": 2,
+      "selected_capture_count": 3,
+      "source_id": "cb772762-d04b-5d88-927d-3c7c4ce8c487",
+      "source_type": "historical_file_capture",
+      "source_version": "phase2-frozen-source-v1"
+    }
+  ],
+  "segment_inventory": [
+    {
+      "dimension": "after_only_history",
+      "member_count": 3,
+      "segment": "false"
+    },
+    {
+      "dimension": "after_only_history",
+      "member_count": 5,
+      "segment": "true"
+    },
+    {
+      "dimension": "candidate_presence",
+      "member_count": 7,
+      "segment": "false"
+    },
+    {
+      "dimension": "candidate_presence",
+      "member_count": 1,
+      "segment": "true"
+    },
+    {
+      "dimension": "case",
+      "member_count": 2,
+      "segment": "pytest-8.0.0"
+    },
+    {
+      "dimension": "case",
+      "member_count": 6,
+      "segment": "urllib3-2.0.0"
+    },
+    {
+      "dimension": "core_collection",
+      "member_count": 8,
+      "segment": "true"
+    },
+    {
+      "dimension": "paired_history",
+      "member_count": 7,
+      "segment": "false"
+    },
+    {
+      "dimension": "paired_history",
+      "member_count": 1,
+      "segment": "true"
+    },
+    {
+      "dimension": "repository_provider",
+      "member_count": 8,
+      "segment": "github"
+    }
+  ],
+  "urllib3/evidence_gaps": [
+    {
+      "after_only_path_count": 0,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 0,
+      "canonical_full_name": "Aiven-Open/pghoard",
+      "case_name": "urllib3-2.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": false,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "921409f6-ea74-5c3d-b477-1b34794dfee2",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 2
+    },
+    {
+      "after_only_path_count": 1,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 0,
+      "canonical_full_name": "atenreiro/opensquat",
+      "case_name": "urllib3-2.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": false,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "d99adb97-9f5d-5f77-a5d1-1bc1107b5de9",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 1
+    },
+    {
+      "after_only_path_count": 0,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 0,
+      "canonical_full_name": "enzet/map-machine",
+      "case_name": "urllib3-2.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": false,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "ca79f1cb-680f-5878-80af-9dfb615ba8fa",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 2
+    },
+    {
+      "after_only_path_count": 2,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 0,
+      "canonical_full_name": "facundoolano/feedi",
+      "case_name": "urllib3-2.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": false,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "46253644-8322-5bdf-aa9c-c7569922af7a",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 0
+    },
+    {
+      "after_only_path_count": 1,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 2,
+      "canonical_full_name": "jamesturk/scrapelib",
+      "case_name": "urllib3-2.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": false,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "6148574c-d66c-58b7-aab9-e375eb399f83",
+      "terminal_review_count": 2,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 1
+    },
+    {
+      "after_only_path_count": 1,
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "bounded_no_finding_count": 0,
+      "candidate_count": 0,
+      "canonical_full_name": "wimglenn/advent-of-code-data",
+      "case_name": "urllib3-2.0.0",
+      "core_collection_complete": true,
+      "has_historical_declaration": true,
+      "has_paired_pre_release_history": false,
+      "legacy_unclassified_count": 5,
+      "observed_adoption_status": "UNKNOWN",
+      "recovery_signal_status": "UNKNOWN",
+      "repository_id": "229a7593-4f02-5bb9-b480-8294e3a0771d",
+      "terminal_review_count": 0,
+      "unknown_finding_count": 5,
+      "unresolved_path_count": 1
+    }
+  ],
+  "urllib3/investigation_funnel": [
+    {
+      "category": null,
+      "denominator": 6,
+      "numerator": 6,
+      "step": "F0_DECLARED",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 6,
+      "numerator": 6,
+      "step": "F1_CORE_COLLECTED",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 6,
+      "numerator": 1,
+      "step": "F2_CONTEXT_DECLARATION",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F2_PAIRED_SUBCOUNT",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": 6,
+      "numerator": 1,
+      "step": "B1_CANDIDATE_MEMBERS",
+      "unit": "members"
+    },
+    {
+      "category": null,
+      "denominator": null,
+      "numerator": 2,
+      "step": "B1_CANDIDATE_IDS",
+      "unit": "candidate_ids"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 2,
+      "step": "B2_TERMINAL_REVIEW",
+      "unit": "candidate_ids"
+    },
+    {
+      "category": null,
+      "denominator": 2,
+      "numerator": 0,
+      "step": "B3_ACCEPTED",
+      "unit": "candidate_ids"
+    },
+    {
+      "category": "migration_friction",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "observed_adoption",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "adoption_readiness",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "remediation",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "recovery_signal",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F3_STAGE_SUFFICIENT",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "migration_friction",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "observed_adoption",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "adoption_readiness",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "remediation",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": "recovery_signal",
+      "denominator": 6,
+      "numerator": 0,
+      "step": "F4_BOUNDED_FINDING",
+      "unit": "member_stage_pairs"
+    },
+    {
+      "category": null,
+      "denominator": 6,
+      "numerator": null,
+      "step": "F5_REPOSITORY_OUTCOME",
+      "unit": "members"
+    }
+  ],
+  "urllib3/source_coverage": [
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 6,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 6,
+      "selected_capture_count": 6,
+      "source_id": "a8b52074-7f06-535a-8f5b-d690c2b2c7a6",
+      "source_type": "github_commits",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 6,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 6,
+      "selected_capture_count": 6,
+      "source_id": "9aca1461-bbe2-5ee0-a0b5-d26f5df79db5",
+      "source_type": "github_issues",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 6,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 6,
+      "selected_capture_count": 6,
+      "source_id": "8f4fd3e8-0a42-58aa-b47c-da52c99bd40e",
+      "source_type": "github_pull_requests",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 1,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 0,
+      "selected_capture_count": 1,
+      "source_id": "6dd26bda-c29d-565d-9989-99e37b8eb202",
+      "source_type": "github_releases",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 7,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 6,
+      "selected_capture_count": 7,
+      "source_id": "da07a199-1cb5-59d6-972c-e4f31510764b",
+      "source_type": "github_repository",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 12,
+      "connector_assisted_count": 0,
+      "provider": "github",
+      "repository_count": 6,
+      "selected_capture_count": 12,
+      "source_id": "9d3d42aa-d5b9-5f63-a04b-f69b0edb82d0",
+      "source_type": "historical_query_capture",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 1,
+      "connector_assisted_count": 0,
+      "provider": "pypi",
+      "repository_count": 0,
+      "selected_capture_count": 1,
+      "source_id": "52a594d7-d46e-53d7-8111-59c25249823f",
+      "source_type": "pypi_version",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 7,
+      "connector_assisted_count": 0,
+      "provider": "repository_file",
+      "repository_count": 6,
+      "selected_capture_count": 7,
+      "source_id": "7360a6ad-3d5b-50e5-9a48-4de7452301f2",
+      "source_type": "github_file",
+      "source_version": "phase2-frozen-source-v1"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3-2.0.0",
+      "collector_count": 5,
+      "connector_assisted_count": 0,
+      "provider": "repository_file",
+      "repository_count": 4,
+      "selected_capture_count": 5,
+      "source_id": "cb772762-d04b-5d88-927d-3c7c4ce8c487",
+      "source_type": "historical_file_capture",
+      "source_version": "phase2-frozen-source-v1"
+    }
+  ]
+}

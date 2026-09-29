@@ -1,0 +1,267 @@
+registry_name: pulse_phase4_metrics
+contract_version: m2-5-metric-registry-v1
+source_contract: docs/phase-4/metrics-framework.md
+source_lineage: docs/phase-4/m2-prep/metric-lineage-matrix.md
+defaults:
+  member_rate: &member_rate
+    grain: case snapshot x repository
+    filters: One frozen case version and analysis snapshot; declared members only.
+    valid_population: Frozen declared cohort.
+    null_behavior: A zero or unverified denominator yields NULL and an explicit reason.
+    stakeholder_dependency: none
+  candidate_rate: &candidate_rate
+    grain: case snapshot x emitted candidate
+    filters: One frozen candidate baseline and selected review ledger.
+    valid_population: Emitted candidates in the selected input snapshot.
+    null_behavior: Zero denominator yields NULL, never zero percent.
+    stakeholder_dependency: none
+  task_rate: &task_rate
+    grain: case snapshot x planned release task
+    filters: One frozen release collection plan and selected run.
+    valid_population: Planned release tasks with verified source identity.
+    null_behavior: Missing or zero eligible denominator yields NULL with reason.
+    stakeholder_dependency: none
+  stage_rate: &stage_rate
+    grain: case snapshot x repository x lifecycle category
+    filters: One versioned case question set and selected assessment/finding.
+    valid_population: Declared member-stage questions for the named category.
+    null_behavior: Missing required method or records withhold the contract rate.
+    stakeholder_dependency: Question-set interpretation pending.
+metrics:
+  MET-001:
+    <<: *member_rate
+    name: Repository Core Collection Coverage
+    purpose: Planned required-source acquisition for declared members.
+    numerator: Members whose required planned core tasks succeeded.
+    denominator: All declared case members.
+    source_marts: [bridge_case_repository, fct_repository_investigation, fct_collection_task]
+    status: READY
+    evidence_dependency: Frozen plan and terminal task outcomes.
+  MET-002:
+    <<: *member_rate
+    name: Historical Context Coverage
+    purpose: Exact-ref target declaration evidence coverage, not adoption.
+    numerator: Members with parsed historical target declaration at an exact ref.
+    denominator: All declared case members.
+    source_marts: [bridge_case_repository, fct_repository_investigation, fct_evidence_observation]
+    filters: Exclude current-only declarations; paired history is a separate breakdown.
+    status: READY
+    evidence_dependency: Typed historical declaration and exact repository ref.
+  MET-003:
+    <<: *member_rate
+    name: Target-Version Evidence Coverage
+    purpose: Qualified resolved-version evidence availability, not adoption.
+    numerator: Members with qualified installed or resolved target-version evidence.
+    denominator: All declared case members.
+    source_marts: [fct_evidence_observation, bridge_case_repository]
+    filters: Exclude permissive declarations and proposed changes.
+    status: UNAVAILABLE_EVIDENCE
+    evidence_dependency: Ref, environment, time and provenance for resolved version absent.
+    stakeholder_dependency: Source method and relevance pending.
+  MET-004:
+    <<: *stage_rate
+    name: Stage Source Completeness
+    purpose: Category-specific required-source collection.
+    numerator: Member-stage pairs with every declared required stage source complete.
+    denominator: Declared member-stage pairs for that category.
+    source_marts: [fct_collection_task, fct_lifecycle_finding]
+    status: PARTIAL_EVIDENCE
+    evidence_dependency: Category-to-required-source map absent; overall task results observed.
+    stakeholder_dependency: Stage source set may change after method review.
+  MET-005:
+    <<: *stage_rate
+    name: Stage Evidence Sufficiency
+    purpose: Eligibility for a bounded category answer.
+    numerator: Explicitly SUFFICIENT assessed member-stage pairs.
+    denominator: All declared assessed member-stage pairs for the named category.
+    source_marts: [fct_lifecycle_finding, bridge_case_repository]
+    filters: Preserve source status including LEGACY_UNCLASSIFIED.
+    status: PARTIAL_EVIDENCE
+    evidence_dependency: 38 legacy assessments lack four-way classification.
+  MET-006:
+    <<: *member_rate
+    name: Investigation Outcome Coverage
+    purpose: Defensible repository-level answers to approved required questions.
+    numerator: Members whose approved required questions all resolve to YES or bounded NO.
+    denominator: All declared case members.
+    source_marts: [fct_repository_investigation, fct_lifecycle_finding]
+    status: BLOCKED_STAKEHOLDER
+    evidence_dependency: Findings exist but approved required question set does not.
+    stakeholder_dependency: Required question and useful-completion definition.
+  MET-007:
+    <<: *member_rate
+    name: Recovery-Evidence Eligibility Coverage
+    purpose: Whether recovery could be assessed, not recovery success.
+    numerator: Members satisfying accepted event, source and window eligibility.
+    denominator: All declared case members.
+    source_marts: [fct_repository_investigation, fct_lifecycle_finding]
+    filters: Exclude PR merge alone; explicit event and window required.
+    status: UNAVAILABLE_EVIDENCE
+    evidence_dependency: Accepted event and downstream recovery source absent.
+    stakeholder_dependency: Recovery meaning and completion policy pending.
+  MET-008:
+    <<: *member_rate
+    name: Candidate Emission Coverage
+    purpose: Members with reviewable detector output.
+    numerator: Declared members with at least one emitted candidate ID.
+    denominator: All declared case members.
+    source_marts: [bridge_case_repository, fct_repository_investigation, fct_candidate_review]
+    status: READY
+    evidence_dependency: Frozen candidate baseline and member identities.
+  MET-009:
+    <<: *candidate_rate
+    name: Reviewed-Candidate Acceptance
+    purpose: Accepted share of terminally reviewed emissions.
+    numerator: Emitted candidate IDs with selected terminal ACCEPT.
+    denominator: Emitted candidate IDs with selected terminal ACCEPT or REJECT.
+    source_marts: [fct_candidate_review]
+    status: READY
+    evidence_dependency: Complete selected review ledger.
+    stakeholder_dependency: Acceptance criteria may change by versioned method.
+  MET-010:
+    <<: *candidate_rate
+    name: Reviewed-Candidate Rejection
+    purpose: Nonqualifying review mix among terminally reviewed emissions.
+    numerator: Emitted candidate IDs with selected terminal REJECT.
+    denominator: Emitted candidate IDs with selected terminal ACCEPT or REJECT.
+    source_marts: [fct_candidate_review]
+    status: READY
+    evidence_dependency: Complete selected review ledger.
+  MET-011:
+    <<: *candidate_rate
+    name: Unresolved Candidate Share
+    purpose: Emitted candidates lacking terminal review.
+    numerator: Emitted candidates unreviewed or selected NEEDS_EVIDENCE.
+    denominator: All emitted candidates in frozen baseline.
+    source_marts: [fct_candidate_review]
+    status: READY
+    evidence_dependency: Candidate baseline and selected reviews.
+    stakeholder_dependency: Resolution policy pending.
+  MET-012:
+    <<: *stage_rate
+    name: UNKNOWN Finding Rate
+    purpose: Uncertainty across required member-stage findings.
+    numerator: Required member-stage findings with literal UNKNOWN.
+    denominator: Verified required member-stage findings under approved question set.
+    source_marts: [fct_lifecycle_finding, bridge_case_repository]
+    status: PARTIAL_EVIDENCE
+    evidence_dependency: 40 findings exist; approved required question set absent.
+  MET-013:
+    <<: *stage_rate
+    name: UNKNOWN Reason Distribution
+    purpose: Named reasons for uncertainty.
+    grain: case snapshot x repository x category x reason
+    numerator: UNKNOWN pairs citing a named controlled reason.
+    denominator: UNKNOWN member-stage pairs under same question set.
+    source_marts: [fct_lifecycle_finding]
+    status: PARTIAL_EVIDENCE
+    evidence_dependency: UNKNOWN counts exist; controlled reason partition absent.
+    stakeholder_dependency: none for source-reason diagnostic.
+  MET-014:
+    <<: *stage_rate
+    name: Conflicting Evidence Rate
+    purpose: Explicit source contradictions under a governed taxonomy.
+    numerator: Member-stage assessments explicitly CONFLICTING under taxonomy.
+    denominator: All assessed required member-stage pairs.
+    source_marts: [fct_lifecycle_finding]
+    status: UNAVAILABLE_EVIDENCE
+    evidence_dependency: Complete conflict coding absent.
+    stakeholder_dependency: Conflict-resolution policy pending.
+  MET-015:
+    <<: *stage_rate
+    name: Missing-Source Contribution
+    purpose: Required source classes cited by UNKNOWN findings.
+    grain: case snapshot x repository x category x source
+    numerator: UNKNOWN pairs citing a named missing required source.
+    denominator: UNKNOWN pairs under the same declared required-source map.
+    source_marts: [fct_lifecycle_finding, fct_collection_task]
+    status: PARTIAL_EVIDENCE
+    evidence_dependency: Stage-source map and reason links absent.
+    stakeholder_dependency: Source prioritization pending.
+  MET-016:
+    <<: *task_rate
+    name: Required-Task Completion
+    purpose: Planned required probe reliability.
+    numerator: Required tasks with verified successful terminal outcome.
+    denominator: All required tasks in frozen plan.
+    source_marts: [fct_collection_task]
+    filters: Required release tasks only; failures remain denominator.
+    status: READY
+    evidence_dependency: Planned task and terminal journal outcome.
+  MET-017:
+    <<: *task_rate
+    name: Optional Not-Found Share
+    purpose: Optional probes with verified not-found outcome.
+    numerator: Optional tasks with terminal not_found and verified attempt.
+    denominator: Optional tasks with verified terminal outcome.
+    source_marts: [fct_collection_task]
+    filters: Exclude required and unattempted tasks.
+    status: READY
+    evidence_dependency: Optional plan and attempt journal.
+  MET-018:
+    <<: *task_rate
+    name: Retry Incidence
+    purpose: Actual retries in attempted planned tasks.
+    numerator: Attempted tasks with at least one recorded retry.
+    denominator: Attempted planned tasks with actual attempt logs.
+    source_marts: [fct_collection_task]
+    filters: Attempt journal required; no synthetic retry from status.
+    status: READY
+    evidence_dependency: Actual attempt numbers.
+  MET-019:
+    <<: *task_rate
+    name: Verified Resume Reuse
+    purpose: Verified result reuse in documented resumed run.
+    numerator: Eligible tasks with immutable prior result reused and verified.
+    denominator: Eligible tasks in documented resumed run.
+    source_marts: [fct_collection_task]
+    valid_population: Documented resumed release-case runs, currently none.
+    status: PARTIAL_EVIDENCE
+    evidence_dependency: Resumed-run audit and reuse links absent for frozen cases.
+  MET-020:
+    <<: *task_rate
+    name: Deterministic Replay Success
+    purpose: Verified frozen-input replay agreement.
+    grain: case x replay attempt x version
+    numerator: Verified replay attempts matching declared canonical output.
+    denominator: Executed verified replay attempts.
+    source_marts: [future_replay_audit_mart]
+    filters: Do not substitute dbt reruns or never-attempted replays.
+    valid_population: Governed replay audit not yet modeled in M2.4 marts.
+    status: PARTIAL_PLATFORM
+    evidence_dependency: Four source replay attempts exist but lack mart lineage.
+  MET-021:
+    <<: *stage_rate
+    name: Accepted-Finding Provenance Coverage
+    purpose: Source-chain integrity for qualifying YES findings.
+    grain: case snapshot x finding version
+    numerator: YES findings with intact accepted or qualified direct support.
+    denominator: All YES findings.
+    source_marts: [fct_lifecycle_finding, bridge_finding_evidence]
+    status: UNAVAILABLE_EVIDENCE
+    evidence_dependency: No YES finding or positive support chain.
+    stakeholder_dependency: Evidence display preference pending.
+  MET-022:
+    <<: *member_rate
+    name: Candidate Density
+    purpose: Review-material volume per declared member.
+    grain: case snapshot x candidate aggregated to member
+    numerator: Emitted candidate IDs.
+    denominator: Declared case members.
+    source_marts: [fct_candidate_review, bridge_case_repository]
+    null_behavior: Missing baseline or zero cohort unavailable; unit candidates/member.
+    status: READY
+    evidence_dependency: Frozen candidate and cohort identities.
+    stakeholder_dependency: Burden interpretation pending.
+  MET-023:
+    <<: *candidate_rate
+    name: Review Resolution Duration
+    purpose: Elapsed candidate availability to terminal review.
+    numerator: Sum of nonnegative eligible elapsed intervals; median primary.
+    denominator: Terminal reviews with trusted emission and review clocks.
+    source_marts: [fct_candidate_review]
+    filters: Exclude missing or ambiguous emission clocks.
+    valid_population: Trusted emitted/reviewed timestamp pairs, currently none.
+    status: UNAVAILABLE_EVIDENCE
+    evidence_dependency: Candidate emission times absent; PR event time cannot substitute.
+    stakeholder_dependency: Workflow-time interpretation pending.

@@ -1,0 +1,46 @@
+{
+  "analytical_release_id": "m2-5-7073e60a805b4bbe7634",
+  "dbt_version": "1.11.15",
+  "generated_at_utc": "2026-09-28T23:40:02.843073+00:00",
+  "known_limitations": [
+    "Frozen Phase 2 case/finding and candidate-rule version is unrecorded.",
+    "Snapshot metric/model version fields predate M2.5 governance.",
+    "38 legacy sufficiency assessments and 38 UNKNOWN findings remain unresolved.",
+    "No qualified observed adoption, recovery, or stakeholder-approved outcome metric.",
+    "Two release cases and eight members support validation only, not ecosystem inference."
+  ],
+  "manifest_schema": "m2-5-analytics-release-v1",
+  "mart_model_sha256": "c98464051fc07783e6bf811bd751546cc246263ca4497e7dc454884365e66759",
+  "mart_model_version": "m2-4-831121996a8f-c98464051fc0",
+  "metric_baseline_sha256": "0f5ba89981c3d1c49af876b7792975a9592638953977ffbeba04fca979e50987",
+  "metric_contract_version": "m2-5-metric-registry-v1",
+  "metric_registry_sha256": "06b572ce66fa91477577081f1a145f5f9b5047270a07d5c42353dcd66bc8242d",
+  "postgresql_major_version": 16,
+  "power_bi_gate": "BLOCKED_NO_PUBLISHED_SNAPSHOT",
+  "publication_decision": "HOLD_DRAFT",
+  "publication_scope": "bounded two-case frozen validation dataset; not representative ecosystem data",
+  "rule_version": "UNRESOLVED: unrecorded_in_frozen_report; frozen rule identity untraceable",
+  "snapshots": [
+    {
+      "analysis_snapshot_id": "2cecea1d-7b8f-5843-b4c1-39b7d99a9393",
+      "case_name": "pytest",
+      "manifest_sha256": "6232ead11123e3d54b959d4ddbe1dc4ae180bc99bb0b8c5ccb55cc6a45ceb5d2",
+      "metric_definition_version": "not_yet_modeled",
+      "model_version": "postgres-core-v4",
+      "rule_version": "unrecorded_in_frozen_report",
+      "state": "DRAFT"
+    },
+    {
+      "analysis_snapshot_id": "5a9b4836-44a1-5419-bd95-679a3877ed11",
+      "case_name": "urllib3",
+      "manifest_sha256": "a905a8b4957decd78e406d231e3aaf6e7c0c71dbfd4aaf70daaa086e22027201",
+      "metric_definition_version": "not_yet_modeled",
+      "model_version": "postgres-core-v4",
+      "rule_version": "unrecorded_in_frozen_report",
+      "state": "DRAFT"
+    }
+  ],
+  "source_commit": "831121996a8fb674bee3a0bd4aeeb0e5dfb428b7",
+  "source_input_manifest_sha256": "9772e8b9c3b1a5c5d3a22ec1db272e2aa5c07a9d3e0061866a41fa56c2ab0510",
+  "sql_diagnostics_sha256": "a24fb8f7cdee8321742f3e24b71ba98673113efa51ee5064ff9c4d6701598c06"
+}
