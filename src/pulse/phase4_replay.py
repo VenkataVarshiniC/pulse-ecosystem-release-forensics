@@ -43,9 +43,14 @@ def read_rule_manifest(path: Path = MANIFEST) -> dict[str, Any]:
     if canonical_digest(body) != manifest["manifest_sha256"]:
         raise ValueError("Rule manifest fingerprint mismatch")
     for name, digest in manifest["source_files"].items():
-        if sha256(ROOT / name) != digest:
+        if source_sha256(ROOT / name) != digest:
             raise ValueError(f"Rule source drift: {name}")
     return manifest
+
+
+def source_sha256(path: Path) -> str:
+    """Hash source bytes with checkout-independent LF line endings."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def normalized(candidate: ReviewableEvidence) -> dict[str, Any]:
