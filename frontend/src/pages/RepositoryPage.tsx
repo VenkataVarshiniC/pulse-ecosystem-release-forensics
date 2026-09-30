@@ -35,7 +35,7 @@ export function RepositoryPage() {
               <Link className="text-link" to={routes.artifact(scope, o.artifact_id)}>Inspect source artifact →</Link>
             </div>)}</div>}
         </section>
-        <section className="section-block"><div className="section-title"><h2>Historical context</h2><span>{data.historical_pairs.length} pairs</span></div>
+        <section className="section-block"><div className="section-title"><h2>Historical context</h2><span>{data.historical_pairs.length} context records</span></div>
           {data.historical_pairs.length === 0 ? <EmptyState title="No historical pair recorded">An absent pair does not establish a pre-release state.</EmptyState>
             : <div className="record-list">{data.historical_pairs.map((pair) => <div className="record" key={pair.historical_pair_id}>
               <div className="record-head"><Status value={pair.pair_status} /><span>{pair.path_ref}</span></div>

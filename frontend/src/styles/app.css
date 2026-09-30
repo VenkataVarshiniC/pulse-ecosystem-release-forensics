@@ -166,6 +166,7 @@ small {
 }
 .app-content {
   max-width:1380px;
+  min-width:0;
   margin:auto;
   padding:0 clamp(1rem,3vw,3rem)
 }
@@ -243,6 +244,7 @@ main {
   padding-bottom:.3rem
 }
 .section-block {
+  min-width:0;
   margin:1.9rem 0;
   padding:1.5rem;
   background:var(--paper);
@@ -486,6 +488,7 @@ td small,th small {
   gap:.7rem
 }
 .record {
+  min-width:0;
   border:1px solid var(--line);
   padding:1rem;
   border-radius:7px
@@ -684,7 +687,7 @@ td small,th small {
 }
 @media(max-width:700px) {
   .two-column {
-  grid-template-columns:1fr
+  grid-template-columns:minmax(0,1fr)
 }
 .investigation-row {
   grid-template-columns:1fr
@@ -712,7 +715,7 @@ td small,th small {
   grid-template-columns:1fr
 }
 .fact-strip {
-  grid-template-columns:1fr
+  grid-template-columns:minmax(0,1fr)
 }
 .fact-strip>div {
   border-right:0;
@@ -728,7 +731,9 @@ td small,th small {
   width:100%
 }
 .context-strip {
-  font-size:.66rem
+  font-size:.66rem;
+  flex-wrap:wrap;
+  padding:.6rem 0
 }
 .provenance-chain {
   gap:.4rem
