@@ -1,0 +1,23 @@
+{
+  "task_id": "99b44720c52dc483645a",
+  "case_id": "pytest-8.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "planetlabs/cosmolog",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "660a6b8b1e6ca61813e0503d8f090909a290f971",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:32.675801Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/planetlabs/cosmolog/660a6b8b1e6ca61813e0503d8f090909a290f971/requirements.txt",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "707bf3a090b248cd81f4f336c0b6bf82",
+  "stats": null
+}

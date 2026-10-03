@@ -1,0 +1,23 @@
+{
+  "task_id": "1b69aa5369269a9ec92a",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "facundoolano/feedi",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "9326792ee7c43745c4f3988e0252e01dd529cdcb",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:36.307072Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/facundoolano/feedi/9326792ee7c43745c4f3988e0252e01dd529cdcb/requirements.txt",
+    "content_base64": "Zmxhc2s+PTIuMy4yCmZlZWRwYXJzZXI+PTYuMC4xMApmYXZpY29uPj0wLjcuMApyZXF1ZXN0cz49Mi4zMS4wCnNxbGFsY2hlbXk+PTIuMC4xOQpmbGFzay1zcWxhbGNoZW15Pj0zLjAuNQpiZWF1dGlmdWxzb3VwND49NC4xMi4yCmx4bWw+PTQuOS4zCk1hc3RvZG9uLXB5Pj0xLjguMQpnZXZlbnQ9PTIzLjcuMApodWV5PT0yLjQuNQphbGVtYmljPT0xLjExLjIKc3RrY2xpZW50PT0wLjEuMQo="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "e105cc27d6d448b589972562bc4e45d6",
+  "stats": null
+}

@@ -1,0 +1,1980 @@
+{
+  "evaluation_version": "p7-evaluation-v1",
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "treatment_method": "p7-boundary-anchor-depth-v1",
+  "reconstruction_version": "repository-boundary-pair-v1",
+  "prerequisite_version": "p7-question-prerequisites-v1",
+  "baseline_digests": {
+    "cases/pytest-8.0.0.yaml": "b7a8a33b1763a0ef3215f7a6004a8b5401d27d606b7ba3e907b10c228425ccd9",
+    "cases/urllib3-2.0.0.yaml": "21487b2bdd614525fa5c25aa60bc305adc05bd08473c75b0314a2671a2127148",
+    "data/processed/phase-2/pytest-8.0.0/forensics.json": "dae5253526bdb9f7552f05ba6c53de71d6cbf1276456f5b76577c13c9b0a963e",
+    "data/processed/phase-2/urllib3-2.0.0/forensics.json": "f173fb2da6be3b1227b29b99f40d30d3a48658cc0eae9a0578ed91c2be64139d",
+    "data/processed/m4-1/replay.json": "b3be08da423c5c988be9151178b0da137a6d5bd1aedd300afbfc2c825cc48f13",
+    "data/validation/m4-1b-reconciliation.json": "21307803968ddad2ecb2ec70a3e06bd5421e66ce15a22c855262be2295ef07fe",
+    "data/validation/m4-1b-publication-manifest.json": "62de6ac5fd1e914740dbb651aa2c0ccfd0fc7295e0af1ee52ed44bf9dee6be8f"
+  },
+  "baseline": {
+    "declared_members": 8,
+    "core_collected_members": 8,
+    "historical_records": 16,
+    "history_states": {
+      "PAIRED": 1,
+      "AFTER_ONLY": 6,
+      "UNRESOLVED": 9
+    },
+    "eligible_assessments": 40,
+    "sufficient": 2,
+    "insufficient": 38,
+    "findings": {
+      "YES": 0,
+      "NO_QUALIFYING_EVIDENCE_FOUND": 2,
+      "UNKNOWN": 38
+    },
+    "support_links": 0,
+    "candidates": {
+      "candidates": 2,
+      "accepted": 0,
+      "rejected": 2,
+      "distinct_artifacts": 1
+    }
+  },
+  "treatment": {
+    "declared_members": 8,
+    "core_collected_members": 8,
+    "historical_records": 16,
+    "history_states": {
+      "PAIRED": 5,
+      "AFTER_ONLY": 1,
+      "UNRESOLVED": 10
+    },
+    "eligible_assessments": 40,
+    "sufficient": 6,
+    "insufficient": 34,
+    "findings": {
+      "YES": 0,
+      "NO_QUALIFYING_EVIDENCE_FOUND": 6,
+      "UNKNOWN": 34
+    },
+    "support_links": 0,
+    "candidates": {
+      "candidates": 2,
+      "accepted": 0,
+      "rejected": 2,
+      "distinct_artifacts": 1
+    }
+  },
+  "history_delta": {
+    "PAIRED": 4,
+    "AFTER_ONLY": -5,
+    "UNRESOLVED": 1
+  },
+  "finding_delta": {
+    "YES": 0,
+    "NO_QUALIFYING_EVIDENCE_FOUND": 4,
+    "UNKNOWN": -4
+  },
+  "unknown_delta": -4,
+  "bounded_no_delta": 4,
+  "positive_delta": 0,
+  "support_link_delta": 0,
+  "candidate_invariant": true,
+  "source_availability_attempts": {
+    "NOT_PLANNED": 0,
+    "AVAILABLE": 27,
+    "NOT_FOUND": 16,
+    "INCOMPLETE": 2,
+    "SOURCE_UNAVAILABLE": 0,
+    "STRUCTURALLY_UNAVAILABLE": 3,
+    "CONFLICTING": 0
+  },
+  "source_availability_prerequisites": {
+    "NOT_PLANNED": 24,
+    "AVAILABLE": 22,
+    "NOT_FOUND": 8,
+    "INCOMPLETE": 2,
+    "SOURCE_UNAVAILABLE": 0,
+    "STRUCTURALLY_UNAVAILABLE": 0,
+    "CONFLICTING": 0
+  },
+  "unresolved_history_reasons": {
+    "Approved path was absent at both bounded refs; other paths were not searched.": 7,
+    "At least one bounded exact-ref state was unavailable or ineligible for comparison.": 3
+  },
+  "unresolved_question_reasons": {
+    "RECOVERY_ELIGIBILITY_UNAVAILABLE": 8,
+    "REQUIRED_EVIDENCE_PREREQUISITE_UNMET": 10,
+    "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE": 16
+  },
+  "metrics": [
+    {
+      "metric_id": "P7-M01",
+      "name": "Prerequisite coverage",
+      "numerator": 6,
+      "denominator": 40,
+      "value": 0.15,
+      "status": "EXPERIMENTAL",
+      "interpretation": "Member-question assessments with every required prerequisite."
+    },
+    {
+      "metric_id": "P7-M02",
+      "name": "Paired historical-context availability",
+      "numerator": 5,
+      "denominator": 16,
+      "value": 0.3125,
+      "status": "EXPERIMENTAL",
+      "interpretation": "Exact-ref before/after path states, not adoption."
+    },
+    {
+      "metric_id": "P7-M03",
+      "name": "Lifecycle-question sufficiency",
+      "numerator": 6,
+      "denominator": 40,
+      "value": 0.15,
+      "status": "EXPERIMENTAL",
+      "interpretation": "Questions eligible for a bounded answer."
+    },
+    {
+      "metric_id": "P7-M04",
+      "name": "Bounded decision availability",
+      "numerator": 6,
+      "denominator": 40,
+      "value": 0.15,
+      "status": "EXPERIMENTAL",
+      "interpretation": "Supported positive or bounded NO findings."
+    },
+    {
+      "metric_id": "P7-M05",
+      "name": "Support-link completeness",
+      "numerator": null,
+      "denominator": 0,
+      "value": null,
+      "status": "UNAVAILABLE_ZERO_DENOMINATOR",
+      "interpretation": "Positive findings with intact support paths."
+    },
+    {
+      "metric_id": "P7-M06",
+      "name": "UNKNOWN reason coverage",
+      "numerator": 34,
+      "denominator": 34,
+      "value": 1.0,
+      "status": "EXPERIMENTAL",
+      "interpretation": "UNKNOWN findings with controlled reasons."
+    },
+    {
+      "metric_id": "P7-M07",
+      "name": "Historical method delta",
+      "numerator": 7,
+      "denominator": 16,
+      "value": 0.4375,
+      "status": "EXPERIMENTAL",
+      "interpretation": "Comparable member-path records whose state changed."
+    },
+    {
+      "metric_id": "P7-M08",
+      "name": "Provenance completeness",
+      "numerator": 48,
+      "denominator": 48,
+      "value": 1.0,
+      "status": "EXPERIMENTAL",
+      "interpretation": "Treatment attempts with intact provenance."
+    }
+  ],
+  "history_records": [
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "path": "pyproject.toml",
+      "baseline_state": "AFTER_ONLY",
+      "treatment_state": "AFTER_ONLY",
+      "before": {
+        "repository": "bsc-wdc/qdislib",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+        "event_time": "2024-01-10T07:51:38Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "1f4cd7913b4cf2a8f4d1"
+      },
+      "after": {
+        "repository": "bsc-wdc/qdislib",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "2190392d57312b8e48941cdcc6fd1fd9f317d495",
+        "event_time": "2024-05-16T08:35:45Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "pytest"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "9c01ac8932b6bafebe6e"
+      },
+      "unresolved_reason": "Approved path was absent at the exact pre-release ref and available after release.",
+      "stop_reason": "PATH_NOT_FOUND_AT_REF",
+      "provenance_attempt_ids": [
+        "1f4cd7913b4cf2a8f4d1",
+        "9c01ac8932b6bafebe6e"
+      ]
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "path": "requirements.txt",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "bsc-wdc/qdislib",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+        "event_time": "2024-01-10T07:51:38Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "a69e59ba9d1dd2774cf9"
+      },
+      "after": {
+        "repository": "bsc-wdc/qdislib",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "2190392d57312b8e48941cdcc6fd1fd9f317d495",
+        "event_time": "2024-05-16T08:35:45Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "2f613522633958e5eef4"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "a69e59ba9d1dd2774cf9",
+        "2f613522633958e5eef4"
+      ]
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "path": "pyproject.toml",
+      "baseline_state": "PAIRED",
+      "treatment_state": "PAIRED",
+      "before": {
+        "repository": "planetlabs/cosmolog",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "79cea4c99000a03d480169d7cf287fef48aebd93",
+        "event_time": "2024-01-17T18:14:41Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "pytest>=3.0.2"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "dec6205ee7494d6c0040"
+      },
+      "after": {
+        "repository": "planetlabs/cosmolog",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "660a6b8b1e6ca61813e0503d8f090909a290f971",
+        "event_time": "2024-03-12T20:35:20Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "pytest>=3.0.2"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "7cda6a4d5ead707d13c8"
+      },
+      "unresolved_reason": null,
+      "stop_reason": "BOUNDED_REQUESTS_COMPLETE",
+      "provenance_attempt_ids": [
+        "dec6205ee7494d6c0040",
+        "7cda6a4d5ead707d13c8"
+      ]
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "path": "requirements.txt",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "planetlabs/cosmolog",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "79cea4c99000a03d480169d7cf287fef48aebd93",
+        "event_time": "2024-01-17T18:14:41Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "1a71f91e8709fc0c15b2"
+      },
+      "after": {
+        "repository": "planetlabs/cosmolog",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "660a6b8b1e6ca61813e0503d8f090909a290f971",
+        "event_time": "2024-03-12T20:35:20Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "99b44720c52dc483645a"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "1a71f91e8709fc0c15b2",
+        "99b44720c52dc483645a"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "path": "pyproject.toml",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "atenreiro/opensquat",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "295d58a4f33723d5985cadbfb4984401e9ee84ed",
+        "event_time": "2023-03-11T16:35:48Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "d33be0751d94729ba2d3"
+      },
+      "after": {
+        "repository": "atenreiro/opensquat",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "6b671f1758d639571e71f460b1843ea8e1877db0",
+        "event_time": "2023-06-04T09:14:40Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "29be924eaa6414eb0b38"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "d33be0751d94729ba2d3",
+        "29be924eaa6414eb0b38"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "path": "requirements.txt",
+      "baseline_state": "AFTER_ONLY",
+      "treatment_state": "PAIRED",
+      "before": {
+        "repository": "atenreiro/opensquat",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "295d58a4f33723d5985cadbfb4984401e9ee84ed",
+        "event_time": "2023-03-11T16:35:48Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "fa2cbd4f8151d38c478b"
+      },
+      "after": {
+        "repository": "atenreiro/opensquat",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "6b671f1758d639571e71f460b1843ea8e1877db0",
+        "event_time": "2023-06-04T09:14:40Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "b11a44b608b7de517275"
+      },
+      "unresolved_reason": null,
+      "stop_reason": "BOUNDED_REQUESTS_COMPLETE",
+      "provenance_attempt_ids": [
+        "fa2cbd4f8151d38c478b",
+        "b11a44b608b7de517275"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "path": "pyproject.toml",
+      "baseline_state": "AFTER_ONLY",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "jamesturk/scrapelib",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "59bb9d42dee5a0cedd563dd00d00659a7cdf72c7",
+        "event_time": "2023-03-26T03:20:40Z",
+        "availability": "INCOMPLETE",
+        "target_declarations": [],
+        "diagnostics": [
+          "Unparsed dependency declarations prevent exhaustive comparison."
+        ],
+        "source_attempt_id": "a3b8f2df23618b305680"
+      },
+      "after": {
+        "repository": "jamesturk/scrapelib",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "b27b5435469173c473f02139562b0ff4766296ce",
+        "event_time": "2023-06-29T17:19:40Z",
+        "availability": "INCOMPLETE",
+        "target_declarations": [],
+        "diagnostics": [
+          "Unparsed dependency declarations prevent exhaustive comparison."
+        ],
+        "source_attempt_id": "0885882d3edab99fd9c7"
+      },
+      "unresolved_reason": "At least one bounded exact-ref state was unavailable or ineligible for comparison.",
+      "stop_reason": "PARSE_INCOMPLETE",
+      "provenance_attempt_ids": [
+        "a3b8f2df23618b305680",
+        "0885882d3edab99fd9c7"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "path": "requirements.txt",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "jamesturk/scrapelib",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "59bb9d42dee5a0cedd563dd00d00659a7cdf72c7",
+        "event_time": "2023-03-26T03:20:40Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "31ab6ec896cfd778b9ab"
+      },
+      "after": {
+        "repository": "jamesturk/scrapelib",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "b27b5435469173c473f02139562b0ff4766296ce",
+        "event_time": "2023-06-29T17:19:40Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "3648ce0fba594aca7183"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "31ab6ec896cfd778b9ab",
+        "3648ce0fba594aca7183"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "path": "pyproject.toml",
+      "baseline_state": "AFTER_ONLY",
+      "treatment_state": "PAIRED",
+      "before": {
+        "repository": "wimglenn/advent-of-code-data",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "f45bb6d66d6a50a20958fb275e4486711fb784cd",
+        "event_time": "2023-04-09T04:54:03Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "urllib3"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "b54934c0234b6e880c44"
+      },
+      "after": {
+        "repository": "wimglenn/advent-of-code-data",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "c94c84491a7a94f399bd5bc32da4a1a65c81c175",
+        "event_time": "2023-07-29T04:18:03Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "urllib3"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "316df4d6e22c367d2388"
+      },
+      "unresolved_reason": null,
+      "stop_reason": "BOUNDED_REQUESTS_COMPLETE",
+      "provenance_attempt_ids": [
+        "b54934c0234b6e880c44",
+        "316df4d6e22c367d2388"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "path": "requirements.txt",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "wimglenn/advent-of-code-data",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "f45bb6d66d6a50a20958fb275e4486711fb784cd",
+        "event_time": "2023-04-09T04:54:03Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "b0fd5bda38737eaceba9"
+      },
+      "after": {
+        "repository": "wimglenn/advent-of-code-data",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "c94c84491a7a94f399bd5bc32da4a1a65c81c175",
+        "event_time": "2023-07-29T04:18:03Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "9bad6089e1fb8770bbf7"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "b0fd5bda38737eaceba9",
+        "9bad6089e1fb8770bbf7"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "path": "pyproject.toml",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "Aiven-Open/pghoard",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "0d177de79c63317a4668bb07b10304915de60d64",
+        "event_time": "2023-03-30T02:15:03Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "a0e2ce7a54d915e04856"
+      },
+      "after": {
+        "repository": "Aiven-Open/pghoard",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532",
+        "event_time": "2023-07-06T11:40:29Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "35a0770e99c785b67755"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "a0e2ce7a54d915e04856",
+        "35a0770e99c785b67755"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "path": "requirements.txt",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "PAIRED",
+      "before": {
+        "repository": "Aiven-Open/pghoard",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "0d177de79c63317a4668bb07b10304915de60d64",
+        "event_time": "2023-03-30T02:15:03Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "ff87bff7c6837a06b8fd"
+      },
+      "after": {
+        "repository": "Aiven-Open/pghoard",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532",
+        "event_time": "2023-07-06T11:40:29Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "5829563a858a1fdcba7c"
+      },
+      "unresolved_reason": null,
+      "stop_reason": "BOUNDED_REQUESTS_COMPLETE",
+      "provenance_attempt_ids": [
+        "ff87bff7c6837a06b8fd",
+        "5829563a858a1fdcba7c"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "path": "pyproject.toml",
+      "baseline_state": "AFTER_ONLY",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "facundoolano/feedi",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": null,
+        "event_time": null,
+        "availability": "STRUCTURALLY_UNAVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [
+          "Exact-ref file request was not planned after the anchor stop."
+        ],
+        "source_attempt_id": "64e391d6b677169e3339"
+      },
+      "after": {
+        "repository": "facundoolano/feedi",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "9326792ee7c43745c4f3988e0252e01dd529cdcb",
+        "event_time": "2023-08-24T14:21:10Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "cd821b47de03e92a548e"
+      },
+      "unresolved_reason": "At least one bounded exact-ref state was unavailable or ineligible for comparison.",
+      "stop_reason": "ANCHOR_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "64e391d6b677169e3339",
+        "cd821b47de03e92a548e"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "path": "requirements.txt",
+      "baseline_state": "AFTER_ONLY",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "facundoolano/feedi",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": null,
+        "event_time": null,
+        "availability": "STRUCTURALLY_UNAVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [
+          "Exact-ref file request was not planned after the anchor stop."
+        ],
+        "source_attempt_id": "2b49aaecd4d997bd1e60"
+      },
+      "after": {
+        "repository": "facundoolano/feedi",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "9326792ee7c43745c4f3988e0252e01dd529cdcb",
+        "event_time": "2023-08-24T14:21:10Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "1b69aa5369269a9ec92a"
+      },
+      "unresolved_reason": "At least one bounded exact-ref state was unavailable or ineligible for comparison.",
+      "stop_reason": "ANCHOR_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "2b49aaecd4d997bd1e60",
+        "1b69aa5369269a9ec92a"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "path": "pyproject.toml",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "UNRESOLVED",
+      "before": {
+        "repository": "enzet/map-machine",
+        "path": "pyproject.toml",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "f080e50a9d3df48c208352803340d484ab75b9d8",
+        "event_time": "2023-01-06T19:38:08Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "f40328b5bd40fd68510c"
+      },
+      "after": {
+        "repository": "enzet/map-machine",
+        "path": "pyproject.toml",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "825eb34191ebdfcd5a634806a39b4aa536f9d430",
+        "event_time": "2023-08-10T23:20:06Z",
+        "availability": "NOT_FOUND",
+        "target_declarations": [],
+        "diagnostics": [],
+        "source_attempt_id": "7e1062527a869e0a65ef"
+      },
+      "unresolved_reason": "Approved path was absent at both bounded refs; other paths were not searched.",
+      "stop_reason": "BOTH_PATH_STATES_NOT_FOUND",
+      "provenance_attempt_ids": [
+        "f40328b5bd40fd68510c",
+        "7e1062527a869e0a65ef"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "path": "requirements.txt",
+      "baseline_state": "UNRESOLVED",
+      "treatment_state": "PAIRED",
+      "before": {
+        "repository": "enzet/map-machine",
+        "path": "requirements.txt",
+        "anchor_role": "PRE_RELEASE",
+        "ref": "f080e50a9d3df48c208352803340d484ab75b9d8",
+        "event_time": "2023-01-06T19:38:08Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "urllib3>=1.25.6"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "ddff6fc32d18e733fc6e"
+      },
+      "after": {
+        "repository": "enzet/map-machine",
+        "path": "requirements.txt",
+        "anchor_role": "OBSERVATION_END",
+        "ref": "825eb34191ebdfcd5a634806a39b4aa536f9d430",
+        "event_time": "2023-08-10T23:20:06Z",
+        "availability": "AVAILABLE",
+        "target_declarations": [
+          "urllib3>=1.25.6"
+        ],
+        "diagnostics": [],
+        "source_attempt_id": "889b03cd43c49b9f703a"
+      },
+      "unresolved_reason": null,
+      "stop_reason": "BOUNDED_REQUESTS_COMPLETE",
+      "provenance_attempt_ids": [
+        "ddff6fc32d18e733fc6e",
+        "889b03cd43c49b9f703a"
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "PAIRED_PRE_RELEASE_TARGET_DECLARATION"
+        }
+      ],
+      "sufficiency": "SUFFICIENT",
+      "finding": "NO_QUALIFYING_EVIDENCE_FOUND",
+      "reason_code": "NO_ACCEPTED_QUALIFYING_EVIDENCE_WITHIN_BOUNDED_METHOD",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "PAIRED_PRE_RELEASE_TARGET_DECLARATION"
+        }
+      ],
+      "sufficiency": "SUFFICIENT",
+      "finding": "NO_QUALIFYING_EVIDENCE_FOUND",
+      "reason_code": "NO_ACCEPTED_QUALIFYING_EVIDENCE_WITHIN_BOUNDED_METHOD",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "INCOMPLETE",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "INCOMPLETE",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "PAIRED_PRE_RELEASE_TARGET_DECLARATION"
+        }
+      ],
+      "sufficiency": "SUFFICIENT",
+      "finding": "NO_QUALIFYING_EVIDENCE_FOUND",
+      "reason_code": "NO_ACCEPTED_QUALIFYING_EVIDENCE_WITHIN_BOUNDED_METHOD",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "PAIRED_PRE_RELEASE_TARGET_DECLARATION"
+        }
+      ],
+      "sufficiency": "SUFFICIENT",
+      "finding": "NO_QUALIFYING_EVIDENCE_FOUND",
+      "reason_code": "NO_ACCEPTED_QUALIFYING_EVIDENCE_WITHIN_BOUNDED_METHOD",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "NOT_FOUND",
+          "satisfied": false,
+          "reason_code": "PRE_RELEASE_TARGET_DECLARATION_UNAVAILABLE"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "REQUIRED_EVIDENCE_PREREQUISITE_UNMET",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "question": "adoption_readiness",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "question": "observed_adoption",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "qualified_resolved_or_installed_version",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RESOLVED_VERSION_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RESOLVED_VERSION_EVIDENCE_UNAVAILABLE",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "question": "migration_friction",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "PAIRED_PRE_RELEASE_TARGET_DECLARATION"
+        }
+      ],
+      "sufficiency": "SUFFICIENT",
+      "finding": "NO_QUALIFYING_EVIDENCE_FOUND",
+      "reason_code": "NO_ACCEPTED_QUALIFYING_EVIDENCE_WITHIN_BOUNDED_METHOD",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "question": "remediation",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "core_and_review_sources",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "CORE_AND_REVIEW_COMPLETE"
+        },
+        {
+          "name": "paired_pre_release_target_declaration",
+          "availability": "AVAILABLE",
+          "satisfied": true,
+          "reason_code": "PAIRED_PRE_RELEASE_TARGET_DECLARATION"
+        }
+      ],
+      "sufficiency": "SUFFICIENT",
+      "finding": "NO_QUALIFYING_EVIDENCE_FOUND",
+      "reason_code": "NO_ACCEPTED_QUALIFYING_EVIDENCE_WITHIN_BOUNDED_METHOD",
+      "support_attempt_ids": []
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "question": "recovery_signal",
+      "contract_version": "p7-question-prerequisites-v1",
+      "prerequisites": [
+        {
+          "name": "eligible_downstream_recovery_source_and_window",
+          "availability": "NOT_PLANNED",
+          "satisfied": false,
+          "reason_code": "RECOVERY_SOURCE_NOT_PLANNED"
+        }
+      ],
+      "sufficiency": "INSUFFICIENT",
+      "finding": "UNKNOWN",
+      "reason_code": "RECOVERY_ELIGIBILITY_UNAVAILABLE",
+      "support_attempt_ids": []
+    }
+  ],
+  "member_changes": [
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "bsc-wdc/qdislib",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 1,
+        "UNRESOLVED": 1
+      },
+      "treatment_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 1,
+        "UNRESOLVED": 1
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 0,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "new_evidence_paths": [],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [],
+      "sufficiency_changes": [],
+      "finding_changes": [],
+      "no_change_reason": "Treatment evidence did not change a bounded history or finding state.",
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "PATH_NOT_FOUND_AT_REF"
+      ],
+      "provenance_attempt_ids": [
+        "1f4cd7913b4cf2a8f4d1",
+        "2f613522633958e5eef4",
+        "9c01ac8932b6bafebe6e",
+        "a69e59ba9d1dd2774cf9"
+      ]
+    },
+    {
+      "case_id": "pytest-8.0.0",
+      "repository": "planetlabs/cosmolog",
+      "baseline_history": {
+        "PAIRED": 1,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 1
+      },
+      "treatment_history": {
+        "PAIRED": 1,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 1
+      },
+      "baseline_sufficient": 2,
+      "treatment_sufficient": 2,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 2,
+        "UNKNOWN": 3
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 2,
+        "UNKNOWN": 3
+      },
+      "new_evidence_paths": [],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [],
+      "sufficiency_changes": [],
+      "finding_changes": [],
+      "no_change_reason": "Treatment evidence did not change a bounded history or finding state.",
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "BOUNDED_REQUESTS_COMPLETE"
+      ],
+      "provenance_attempt_ids": [
+        "1a71f91e8709fc0c15b2",
+        "7cda6a4d5ead707d13c8",
+        "99b44720c52dc483645a",
+        "dec6205ee7494d6c0040"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "atenreiro/opensquat",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 1,
+        "UNRESOLVED": 1
+      },
+      "treatment_history": {
+        "PAIRED": 1,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 1
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 0,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "new_evidence_paths": [
+        "requirements.txt"
+      ],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [
+        "requirements.txt: AFTER_ONLY -> PAIRED"
+      ],
+      "sufficiency_changes": [],
+      "finding_changes": [],
+      "no_change_reason": null,
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "BOUNDED_REQUESTS_COMPLETE"
+      ],
+      "provenance_attempt_ids": [
+        "29be924eaa6414eb0b38",
+        "b11a44b608b7de517275",
+        "d33be0751d94729ba2d3",
+        "fa2cbd4f8151d38c478b"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "jamesturk/scrapelib",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 1,
+        "UNRESOLVED": 1
+      },
+      "treatment_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 2
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 0,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "new_evidence_paths": [],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [
+        "pyproject.toml: AFTER_ONLY -> UNRESOLVED"
+      ],
+      "sufficiency_changes": [],
+      "finding_changes": [],
+      "no_change_reason": null,
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "PARSE_INCOMPLETE"
+      ],
+      "provenance_attempt_ids": [
+        "0885882d3edab99fd9c7",
+        "31ab6ec896cfd778b9ab",
+        "3648ce0fba594aca7183",
+        "a3b8f2df23618b305680"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "wimglenn/advent-of-code-data",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 1,
+        "UNRESOLVED": 1
+      },
+      "treatment_history": {
+        "PAIRED": 1,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 1
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 2,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 2,
+        "UNKNOWN": 3
+      },
+      "new_evidence_paths": [
+        "pyproject.toml"
+      ],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [
+        "pyproject.toml: AFTER_ONLY -> PAIRED"
+      ],
+      "sufficiency_changes": [
+        "migration_friction: INSUFFICIENT -> SUFFICIENT",
+        "remediation: INSUFFICIENT -> SUFFICIENT"
+      ],
+      "finding_changes": [
+        "migration_friction: UNKNOWN -> NO_QUALIFYING_EVIDENCE_FOUND",
+        "remediation: UNKNOWN -> NO_QUALIFYING_EVIDENCE_FOUND"
+      ],
+      "no_change_reason": null,
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "BOUNDED_REQUESTS_COMPLETE"
+      ],
+      "provenance_attempt_ids": [
+        "316df4d6e22c367d2388",
+        "9bad6089e1fb8770bbf7",
+        "b0fd5bda38737eaceba9",
+        "b54934c0234b6e880c44"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "Aiven-Open/pghoard",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 2
+      },
+      "treatment_history": {
+        "PAIRED": 1,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 1
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 0,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "new_evidence_paths": [
+        "requirements.txt"
+      ],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [
+        "requirements.txt: UNRESOLVED -> PAIRED"
+      ],
+      "sufficiency_changes": [],
+      "finding_changes": [],
+      "no_change_reason": null,
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "BOUNDED_REQUESTS_COMPLETE"
+      ],
+      "provenance_attempt_ids": [
+        "35a0770e99c785b67755",
+        "5829563a858a1fdcba7c",
+        "a0e2ce7a54d915e04856",
+        "ff87bff7c6837a06b8fd"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "facundoolano/feedi",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 2,
+        "UNRESOLVED": 0
+      },
+      "treatment_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 2
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 0,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "new_evidence_paths": [],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [
+        "pyproject.toml: AFTER_ONLY -> UNRESOLVED",
+        "requirements.txt: AFTER_ONLY -> UNRESOLVED"
+      ],
+      "sufficiency_changes": [],
+      "finding_changes": [],
+      "no_change_reason": null,
+      "stop_reasons": [
+        "ANCHOR_NOT_FOUND"
+      ],
+      "provenance_attempt_ids": [
+        "1b69aa5369269a9ec92a",
+        "2b49aaecd4d997bd1e60",
+        "64e391d6b677169e3339",
+        "cd821b47de03e92a548e"
+      ]
+    },
+    {
+      "case_id": "urllib3-2.0.0",
+      "repository": "enzet/map-machine",
+      "baseline_history": {
+        "PAIRED": 0,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 2
+      },
+      "treatment_history": {
+        "PAIRED": 1,
+        "AFTER_ONLY": 0,
+        "UNRESOLVED": 1
+      },
+      "baseline_sufficient": 0,
+      "treatment_sufficient": 2,
+      "baseline_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 0,
+        "UNKNOWN": 5
+      },
+      "treatment_findings": {
+        "YES": 0,
+        "NO_QUALIFYING_EVIDENCE_FOUND": 2,
+        "UNKNOWN": 3
+      },
+      "new_evidence_paths": [
+        "requirements.txt"
+      ],
+      "source_types": [
+        "github_repository_commits",
+        "github_exact_ref_file"
+      ],
+      "history_changes": [
+        "requirements.txt: UNRESOLVED -> PAIRED"
+      ],
+      "sufficiency_changes": [
+        "migration_friction: INSUFFICIENT -> SUFFICIENT",
+        "remediation: INSUFFICIENT -> SUFFICIENT"
+      ],
+      "finding_changes": [
+        "migration_friction: UNKNOWN -> NO_QUALIFYING_EVIDENCE_FOUND",
+        "remediation: UNKNOWN -> NO_QUALIFYING_EVIDENCE_FOUND"
+      ],
+      "no_change_reason": null,
+      "stop_reasons": [
+        "BOTH_PATH_STATES_NOT_FOUND",
+        "BOUNDED_REQUESTS_COMPLETE"
+      ],
+      "provenance_attempt_ids": [
+        "7e1062527a869e0a65ef",
+        "889b03cd43c49b9f703a",
+        "ddff6fc32d18e733fc6e",
+        "f40328b5bd40fd68510c"
+      ]
+    }
+  ],
+  "provenance_complete": true,
+  "baseline_unchanged": true
+}

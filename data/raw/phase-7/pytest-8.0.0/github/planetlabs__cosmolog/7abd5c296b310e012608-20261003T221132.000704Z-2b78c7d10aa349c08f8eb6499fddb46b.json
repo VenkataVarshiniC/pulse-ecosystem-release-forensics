@@ -1,0 +1,111 @@
+{
+  "task_id": "7abd5c296b310e012608",
+  "case_id": "pytest-8.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "planetlabs/cosmolog",
+  "query": {
+    "kind": "github_commits",
+    "until": "2024-01-27T21:47:54.913691+00:00",
+    "per_page": 1,
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:32.000704Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/planetlabs/cosmolog/commits",
+    "body": [
+      {
+        "sha": "79cea4c99000a03d480169d7cf287fef48aebd93",
+        "node_id": "C_kwDOBc-QRNoAKDc5Y2VhNGM5OTAwMGEwM2Q0ODAxNjlkN2NmMjg3ZmVmNDhhZWJkOTM",
+        "commit": {
+          "author": {
+            "name": "Isil Demir",
+            "email": "isildemir.id@gmail.com",
+            "date": "2024-01-17T18:14:41Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2024-01-17T18:14:41Z"
+          },
+          "message": "Merge pull request #20 from planetlabs/python-312\n\nAdd support for Python 3.12, drop support for Python 3.6",
+          "tree": {
+            "sha": "2747798852b03fff80cbc13eddd00d81fb902f3e",
+            "url": "https://api.github.com/repos/planetlabs/cosmolog/git/trees/2747798852b03fff80cbc13eddd00d81fb902f3e"
+          },
+          "url": "https://api.github.com/repos/planetlabs/cosmolog/git/commits/79cea4c99000a03d480169d7cf287fef48aebd93",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlqBkRCRC1aQ7uu5UhlAAAbXYQAC8tSIkuMF39aAaoIyO+XgJv\nL4DzDJUQIUJtaqk2pMubHaU0GDTtAlwgxUOPqL2fFcV5Y8SImRy2WgNAbN5u4BHE\niFE741JqpmMf+cCRrp1fAtFv+e/7uHSn/6UXcgUK8hIDh3ozjikfWL/Yz22YGPTJ\nyI6AJD128xLZGdqvPuLl3HahkzWcmpUpEm8YYhRaIIEOQg9COCDzyMXGPgAm0XSX\nOh0g3zNlNTHL/ixeOx7bxQR6tsnZ+QQ45fRBMtV20Xr/3MnXjYbPJY6Msbi1uYBZ\naM+CPkeRtFjMPdhncbRg7xNG4hQi6v5zbMOPnFlHufl6A2nzktbp5p9ElzVQrBrk\nVwmNKsi6XYXckjHYYKJu8ZgFLA1n5TK8kKf0+BnYi2Ql0gYDFbXlfXWC/S4be1PP\nDmNfLYhWA8gM3RYZJ0C3+j441kwJPGT/WwqLppFiuLSTQmX2v1udpSxx/Y+wdBvu\n8Kkkvkm4Xvwpz1QEAjWdidLWqwplTXq8E2VPf6wMx+0O1rP+AH7Est4UONL2MAx0\nKRBLFrH8J1tlLrw9N2pR6yBsvqjJ3ku7n59oe6t7Opy7LJJKMTxb83JzGvnZZeOh\nSiO/Tt8HiXpU9YiCJUSpX+y6f+M5SnufXUDdy1nwM3SfJdbAhfbTwPmjRvR+zNv8\nqVkqjTGH9bUdkE1bSjzB\n=rQr5\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree 2747798852b03fff80cbc13eddd00d81fb902f3e\nparent ae21aa2c57ca827584f11af066ea1e78a9f665e0\nparent 949163d11dc03fcd4f6098413252cb0bab034490\nauthor Isil Demir <isildemir.id@gmail.com> 1705515281 -0800\ncommitter GitHub <noreply@github.com> 1705515281 -0800\n\nMerge pull request #20 from planetlabs/python-312\n\nAdd support for Python 3.12, drop support for Python 3.6",
+            "verified_at": "2024-11-08T22:16:03Z"
+          }
+        },
+        "url": "https://api.github.com/repos/planetlabs/cosmolog/commits/79cea4c99000a03d480169d7cf287fef48aebd93",
+        "html_url": "https://github.com/planetlabs/cosmolog/commit/79cea4c99000a03d480169d7cf287fef48aebd93",
+        "comments_url": "https://api.github.com/repos/planetlabs/cosmolog/commits/79cea4c99000a03d480169d7cf287fef48aebd93/comments",
+        "author": {
+          "login": "isilien",
+          "id": 3133876,
+          "node_id": "MDQ6VXNlcjMxMzM4NzY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/3133876?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/isilien",
+          "html_url": "https://github.com/isilien",
+          "followers_url": "https://api.github.com/users/isilien/followers",
+          "following_url": "https://api.github.com/users/isilien/following{/other_user}",
+          "gists_url": "https://api.github.com/users/isilien/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/isilien/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/isilien/subscriptions",
+          "organizations_url": "https://api.github.com/users/isilien/orgs",
+          "repos_url": "https://api.github.com/users/isilien/repos",
+          "events_url": "https://api.github.com/users/isilien/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/isilien/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "ae21aa2c57ca827584f11af066ea1e78a9f665e0",
+            "url": "https://api.github.com/repos/planetlabs/cosmolog/commits/ae21aa2c57ca827584f11af066ea1e78a9f665e0",
+            "html_url": "https://github.com/planetlabs/cosmolog/commit/ae21aa2c57ca827584f11af066ea1e78a9f665e0"
+          },
+          {
+            "sha": "949163d11dc03fcd4f6098413252cb0bab034490",
+            "url": "https://api.github.com/repos/planetlabs/cosmolog/commits/949163d11dc03fcd4f6098413252cb0bab034490",
+            "html_url": "https://github.com/planetlabs/cosmolog/commit/949163d11dc03fcd4f6098413252cb0bab034490"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "2b78c7d10aa349c08f8eb6499fddb46b",
+  "stats": null
+}

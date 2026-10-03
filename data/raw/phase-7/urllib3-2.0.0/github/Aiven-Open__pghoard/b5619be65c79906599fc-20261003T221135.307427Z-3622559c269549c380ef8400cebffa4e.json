@@ -1,0 +1,111 @@
+{
+  "task_id": "b5619be65c79906599fc",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "Aiven-Open/pghoard",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-08-24T23:59:59.999999+00:00",
+    "per_page": 1,
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:35.307427Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits",
+    "body": [
+      {
+        "sha": "87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532",
+        "node_id": "C_kwDOAj2qntoAKDg3YTAxZTliOGRiNGI5ZDkzOTllNWU3MDczYWE4Y2ZlZmZiYzY1MzI",
+        "commit": {
+          "author": {
+            "name": "Alexander Olekhnovich",
+            "email": "alexole@users.noreply.github.com",
+            "date": "2023-07-06T11:40:29Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2023-07-06T11:40:29Z"
+          },
+          "message": "Merge pull request #592 from aiven/skip_recompression_in_startup\n\nverify uncompressed file does not exists under /xlog and /timeline [BF-1358]",
+          "tree": {
+            "sha": "d14a28da6d704e2558929cc2d82ff0104c2f1f88",
+            "url": "https://api.github.com/repos/Aiven-Open/pghoard/git/trees/d14a28da6d704e2558929cc2d82ff0104c2f1f88"
+          },
+          "url": "https://api.github.com/repos/Aiven-Open/pghoard/git/commits/87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkpqgtCRBK7hj4Ov3rIwAAYwEIADvXrf5ggow3Fl/cionQRdWE\nGDx8t/6zyADNkgE/ylsFaqSKLDvX008E566foIcvT1eLS2IZpQPO31yzNBVRqUVl\nj8lGyR8AWklXr5Gr3KzF8kZY/boixXO93fGDuIYs5ddUfCtZPeeqPUG9ys0ujISl\nd5dzKflA9h2V4qzfj0tyDrNs+NdOul3bm66jpK/W2cIZrlWL8bz1oakMNbcALJEk\nGjNgm+QmjMRQH3o3lqIo/n3NES6eqGUfAiB+a07NJzpnIBN6WSFvSk2repqXWjOC\nQxT9nhPNuE/oGj9zyZR0jEQXXnzbEu13A4/Jbv8Tfpki4Bv3YnW9QIxkfEzg0PI=\n=iKB5\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree d14a28da6d704e2558929cc2d82ff0104c2f1f88\nparent 6dce5bf682bbdf81ad37e5050e7862cdcf6e1958\nparent 60d6bf64a5801efe430f5b722bb53c9e8e330e7f\nauthor Alexander Olekhnovich <alexole@users.noreply.github.com> 1688643629 +0200\ncommitter GitHub <noreply@github.com> 1688643629 +0200\n\nMerge pull request #592 from aiven/skip_recompression_in_startup\n\nverify uncompressed file does not exists under /xlog and /timeline [BF-1358]",
+            "verified_at": "2024-01-16T19:59:59Z"
+          }
+        },
+        "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532",
+        "html_url": "https://github.com/Aiven-Open/pghoard/commit/87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532",
+        "comments_url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/87a01e9b8db4b9d9399e5e7073aa8cfeffbc6532/comments",
+        "author": {
+          "login": "alexole",
+          "id": 1321868,
+          "node_id": "MDQ6VXNlcjEzMjE4Njg=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1321868?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/alexole",
+          "html_url": "https://github.com/alexole",
+          "followers_url": "https://api.github.com/users/alexole/followers",
+          "following_url": "https://api.github.com/users/alexole/following{/other_user}",
+          "gists_url": "https://api.github.com/users/alexole/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/alexole/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/alexole/subscriptions",
+          "organizations_url": "https://api.github.com/users/alexole/orgs",
+          "repos_url": "https://api.github.com/users/alexole/repos",
+          "events_url": "https://api.github.com/users/alexole/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/alexole/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "6dce5bf682bbdf81ad37e5050e7862cdcf6e1958",
+            "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/6dce5bf682bbdf81ad37e5050e7862cdcf6e1958",
+            "html_url": "https://github.com/Aiven-Open/pghoard/commit/6dce5bf682bbdf81ad37e5050e7862cdcf6e1958"
+          },
+          {
+            "sha": "60d6bf64a5801efe430f5b722bb53c9e8e330e7f",
+            "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/60d6bf64a5801efe430f5b722bb53c9e8e330e7f",
+            "html_url": "https://github.com/Aiven-Open/pghoard/commit/60d6bf64a5801efe430f5b722bb53c9e8e330e7f"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "3622559c269549c380ef8400cebffa4e",
+  "stats": null
+}

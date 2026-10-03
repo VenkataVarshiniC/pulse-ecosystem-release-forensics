@@ -1,0 +1,23 @@
+{
+  "task_id": "b11a44b608b7de517275",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "atenreiro/opensquat",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "6b671f1758d639571e71f460b1843ea8e1877db0",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:33.365040Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/atenreiro/opensquat/6b671f1758d639571e71f460b1843ea8e1877db0/requirements.txt",
+    "content_base64": "c3Ryc2ltcHkKY29uZnVzYWJsZV9ob21vZ2x5cGhzCmhvbW9nbHlwaHMKY29sb3JhbWEKcmVxdWVzdHMKbnVtcHkKcHl0ZXN0CnB5dGVzdC1jb3YKY29kZWNvdgpjb3ZlcmFnZQpibGFjawpmbGFrZTgKYmVhdXRpZnVsc291cDQKZG5zcHl0aG9uCnBhY2thZ2luZw=="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "0bfbcaee2f7b4bc79ced68789a3da81d",
+  "stats": null
+}

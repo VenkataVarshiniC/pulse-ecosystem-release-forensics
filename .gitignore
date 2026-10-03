@@ -24,6 +24,10 @@ data/interim/*
 data/processed/*
 !data/processed/phase-2/
 !data/processed/phase-2/**
+!data/raw/phase-7/
+!data/raw/phase-7/**
+!data/processed/phase-7/
+!data/processed/phase-7/**
 !data/**/.gitkeep
 !data/processed/evidence-ledger.jsonl
 !data/raw/httpx-0.28.0/

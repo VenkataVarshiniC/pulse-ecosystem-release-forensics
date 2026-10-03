@@ -1,0 +1,106 @@
+{
+  "task_id": "761ccc8a71c03193a33e",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "atenreiro/opensquat",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-08-24T23:59:59.999999+00:00",
+    "per_page": 1,
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:32.930629Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/atenreiro/opensquat/commits",
+    "body": [
+      {
+        "sha": "6b671f1758d639571e71f460b1843ea8e1877db0",
+        "node_id": "C_kwDOD5KOu9oAKDZiNjcxZjE3NThkNjM5NTcxZTcxZjQ2MGIxODQzZWE4ZTE4NzdkYjA",
+        "commit": {
+          "author": {
+            "name": "Andre Tenreiro",
+            "email": "andre@opensquat.com",
+            "date": "2023-06-04T09:14:40Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2023-06-04T09:14:40Z"
+          },
+          "message": "Update __init__.py",
+          "tree": {
+            "sha": "f64dd3117a465075c31353c0eccc86e1a290beaa",
+            "url": "https://api.github.com/repos/atenreiro/opensquat/git/trees/f64dd3117a465075c31353c0eccc86e1a290beaa"
+          },
+          "url": "https://api.github.com/repos/atenreiro/opensquat/git/commits/6b671f1758d639571e71f460b1843ea8e1877db0",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkfFYACRBK7hj4Ov3rIwAAniMIAIBm+Kjsxq0/8Th1ruFWABZo\ny+3dszOITQiECOAEcKVrlsY/QHhwd4hl35/7JCgNJZHxtlboGCcNDHGcAXoQ01og\ncXBazdoTddKCU6vtCjuJDGzH4C1VndINP9E/jkL2e/V/tZ8kK4rXFJy+Haao98ua\ng8auQtyUE02RrD3bgaWIAhhb7dPXxDaBg4lrOVu2wYKIvv/TLhdRYtG70nBPSUbT\nnVupWwRGynYmSlg8h+qWaVTAlI9ldlnW5lI7HWe/28AzF3QO1y6em6u661b8YPI/\nCyrsz5czhLDjFuZ6aAt88gOmqLAv5oLjzUOTpl3opIM1jeJ83H4m/0SuWnjTKk4=\n=U8y4\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree f64dd3117a465075c31353c0eccc86e1a290beaa\nparent 3ff6a14f87ddb5e5fab780abf8dcfce419343b88\nauthor Andre Tenreiro <andre@opensquat.com> 1685870080 +0800\ncommitter GitHub <noreply@github.com> 1685870080 +0800\n\nUpdate __init__.py",
+            "verified_at": "2024-01-16T19:59:59Z"
+          }
+        },
+        "url": "https://api.github.com/repos/atenreiro/opensquat/commits/6b671f1758d639571e71f460b1843ea8e1877db0",
+        "html_url": "https://github.com/atenreiro/opensquat/commit/6b671f1758d639571e71f460b1843ea8e1877db0",
+        "comments_url": "https://api.github.com/repos/atenreiro/opensquat/commits/6b671f1758d639571e71f460b1843ea8e1877db0/comments",
+        "author": {
+          "login": "atenreiro",
+          "id": 10222828,
+          "node_id": "MDQ6VXNlcjEwMjIyODI4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/10222828?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/atenreiro",
+          "html_url": "https://github.com/atenreiro",
+          "followers_url": "https://api.github.com/users/atenreiro/followers",
+          "following_url": "https://api.github.com/users/atenreiro/following{/other_user}",
+          "gists_url": "https://api.github.com/users/atenreiro/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/atenreiro/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/atenreiro/subscriptions",
+          "organizations_url": "https://api.github.com/users/atenreiro/orgs",
+          "repos_url": "https://api.github.com/users/atenreiro/repos",
+          "events_url": "https://api.github.com/users/atenreiro/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/atenreiro/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "3ff6a14f87ddb5e5fab780abf8dcfce419343b88",
+            "url": "https://api.github.com/repos/atenreiro/opensquat/commits/3ff6a14f87ddb5e5fab780abf8dcfce419343b88",
+            "html_url": "https://github.com/atenreiro/opensquat/commit/3ff6a14f87ddb5e5fab780abf8dcfce419343b88"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "613cc56e69ca414a9aa5f0d8f94332f5",
+  "stats": null
+}

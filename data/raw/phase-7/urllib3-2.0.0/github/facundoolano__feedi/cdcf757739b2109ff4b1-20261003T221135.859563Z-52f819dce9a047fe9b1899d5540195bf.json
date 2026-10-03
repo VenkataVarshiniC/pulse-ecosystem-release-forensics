@@ -1,0 +1,23 @@
+{
+  "task_id": "cdcf757739b2109ff4b1",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "facundoolano/feedi",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-04-26T17:21:22.577020+00:00",
+    "per_page": 1,
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:35.859563Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/facundoolano/feedi/commits",
+    "body": []
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "52f819dce9a047fe9b1899d5540195bf",
+  "stats": null
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "f40328b5bd40fd68510c",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "enzet/map-machine",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "f080e50a9d3df48c208352803340d484ab75b9d8",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:36.736995Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/enzet/map-machine/f080e50a9d3df48c208352803340d484ab75b9d8/pyproject.toml",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "678863972dee466f8c6aadadca3f1957",
+  "stats": null
+}

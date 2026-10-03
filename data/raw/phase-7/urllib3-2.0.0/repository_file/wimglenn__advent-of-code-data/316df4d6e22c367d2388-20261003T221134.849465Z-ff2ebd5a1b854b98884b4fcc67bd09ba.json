@@ -1,0 +1,23 @@
+{
+  "task_id": "316df4d6e22c367d2388",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "wimglenn/advent-of-code-data",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "c94c84491a7a94f399bd5bc32da4a1a65c81c175",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:34.849465Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/wimglenn/advent-of-code-data/c94c84491a7a94f399bd5bc32da4a1a65c81c175/pyproject.toml",
+    "content_base64": "W2J1aWxkLXN5c3RlbV0KcmVxdWlyZXMgPSBbInNldHVwdG9vbHM+PTYxLjIiXQpidWlsZC1iYWNrZW5kID0gInNldHVwdG9vbHMuYnVpbGRfbWV0YSIKCltwcm9qZWN0XQpuYW1lID0gImFkdmVudC1vZi1jb2RlLWRhdGEiCnZlcnNpb24gPSAiMi4wLjEiCmRlc2NyaXB0aW9uID0gIkdldCB5b3VyIHB1enpsZSBkYXRhIHdpdGggYSBzaW5nbGUgaW1wb3J0IgpyZXF1aXJlcy1weXRob24gPSAiPj0zLjkiCmNsYXNzaWZpZXJzID0gWwogICAgIkludGVuZGVkIEF1ZGllbmNlIDo6IERldmVsb3BlcnMiLAogICAgIlByb2dyYW1taW5nIExhbmd1YWdlIDo6IFB5dGhvbiA6OiAzIiwKICAgICJMaWNlbnNlIDo6IE9TSSBBcHByb3ZlZCA6OiBNSVQgTGljZW5zZSIsCiAgICAiVG9waWMgOjogU29mdHdhcmUgRGV2ZWxvcG1lbnQgOjogTGlicmFyaWVzIiwKICAgICJUb3BpYyA6OiBHYW1lcy9FbnRlcnRhaW5tZW50IDo6IFB1enpsZSBHYW1lcyIsCl0KZGVwZW5kZW5jaWVzID0gWwogICAgImJlYXV0aWZ1bHNvdXA0IiwKICAgICJwZWJibGUiLAogICAgInVybGxpYjMiLAogICAgJ3R6ZGF0YSA7IHBsYXRmb3JtX3N5c3RlbSA9PSAiV2luZG93cyInLAogICAgImFvY2QtZXhhbXBsZS1wYXJzZXIgPj0gMjAyMy4yIiwKXQoKW1twcm9qZWN0LmF1dGhvcnNdXQpuYW1lID0gIldpbSBHbGVubiIKZW1haWwgPSAiaGV5QHdpbWdsZW5uLmNvbSIKCltwcm9qZWN0LmxpY2Vuc2VdCnRleHQgPSAiTUlUIgoKW3Byb2plY3QucmVhZG1lXQpmaWxlID0gIlJFQURNRS5yc3QiCmNvbnRlbnQtdHlwZSA9ICJ0ZXh0L3gtcnN0IgoKW3Byb2plY3QudXJsc10KSG9tZXBhZ2UgPSAiaHR0cHM6Ly9naXRodWIuY29tL3dpbWdsZW5uL2FkdmVudC1vZi1jb2RlLWRhdGEiCgpbcHJvamVjdC5vcHRpb25hbC1kZXBlbmRlbmNpZXNdCm5iID0gWyJJUHl0aG9uIiwgImp1cHl0ZXItc2VydmVyIl0KCltwcm9qZWN0LnNjcmlwdHNdCmFvY2QgPSAiYW9jZC5jbGk6bWFpbiIKYW9jID0gImFvY2QucnVubmVyOm1haW4iCmFvY2QtdG9rZW4gPSAiYW9jZC5jb29raWVzOnNjcmFwZV9zZXNzaW9uX3Rva2VucyIKYW9jZSA9ICJhb2NkLmV4YW1wbGVzOm1haW4iCgpbdG9vbC5zZXR1cHRvb2xzXQpwYWNrYWdlcyA9IFsiYW9jZCJdCgpbcHJvamVjdC5lbnRyeS1wb2ludHNdCiJhZHZlbnRvZmNvZGUudXNlciIgPSB7fSAgIyBmb3IgdXNlciBzb2x2ZXJzCiJhZHZlbnRvZmNvZGUuZXhhbXBsZXMiID0ge30gICMgZm9yIGV4YW1wbGUtcGFyc2VyIGltcGxlbWVudGF0aW9ucwo="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "ff2ebd5a1b854b98884b4fcc67bd09ba",
+  "stats": null
+}

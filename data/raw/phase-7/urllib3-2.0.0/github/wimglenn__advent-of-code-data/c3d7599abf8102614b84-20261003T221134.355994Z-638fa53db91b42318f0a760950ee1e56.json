@@ -1,0 +1,106 @@
+{
+  "task_id": "c3d7599abf8102614b84",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "wimglenn/advent-of-code-data",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-04-26T17:21:22.577020+00:00",
+    "per_page": 1,
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:34.355994Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/wimglenn/advent-of-code-data/commits",
+    "body": [
+      {
+        "sha": "f45bb6d66d6a50a20958fb275e4486711fb784cd",
+        "node_id": "C_kwDOBH_k5toAKGY0NWJiNmQ2NmQ2YTUwYTIwOTU4ZmIyNzVlNDQ4NjcxMWZiNzg0Y2Q",
+        "commit": {
+          "author": {
+            "name": "wim glenn",
+            "email": "hey@wimglenn.com",
+            "date": "2023-04-09T04:54:03Z"
+          },
+          "committer": {
+            "name": "wim glenn",
+            "email": "hey@wimglenn.com",
+            "date": "2023-04-09T04:54:03Z"
+          },
+          "message": "make the names match the models.Puzzle class",
+          "tree": {
+            "sha": "1b4d66d718ef1696eb0826cf09b248394e323a83",
+            "url": "https://api.github.com/repos/wimglenn/advent-of-code-data/git/trees/1b4d66d718ef1696eb0826cf09b248394e323a83"
+          },
+          "url": "https://api.github.com/repos/wimglenn/advent-of-code-data/git/commits/f45bb6d66d6a50a20958fb275e4486711fb784cd",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/wimglenn/advent-of-code-data/commits/f45bb6d66d6a50a20958fb275e4486711fb784cd",
+        "html_url": "https://github.com/wimglenn/advent-of-code-data/commit/f45bb6d66d6a50a20958fb275e4486711fb784cd",
+        "comments_url": "https://api.github.com/repos/wimglenn/advent-of-code-data/commits/f45bb6d66d6a50a20958fb275e4486711fb784cd/comments",
+        "author": {
+          "login": "wimglenn",
+          "id": 6615374,
+          "node_id": "MDQ6VXNlcjY2MTUzNzQ=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6615374?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/wimglenn",
+          "html_url": "https://github.com/wimglenn",
+          "followers_url": "https://api.github.com/users/wimglenn/followers",
+          "following_url": "https://api.github.com/users/wimglenn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/wimglenn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/wimglenn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/wimglenn/subscriptions",
+          "organizations_url": "https://api.github.com/users/wimglenn/orgs",
+          "repos_url": "https://api.github.com/users/wimglenn/repos",
+          "events_url": "https://api.github.com/users/wimglenn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/wimglenn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "wimglenn",
+          "id": 6615374,
+          "node_id": "MDQ6VXNlcjY2MTUzNzQ=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6615374?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/wimglenn",
+          "html_url": "https://github.com/wimglenn",
+          "followers_url": "https://api.github.com/users/wimglenn/followers",
+          "following_url": "https://api.github.com/users/wimglenn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/wimglenn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/wimglenn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/wimglenn/subscriptions",
+          "organizations_url": "https://api.github.com/users/wimglenn/orgs",
+          "repos_url": "https://api.github.com/users/wimglenn/repos",
+          "events_url": "https://api.github.com/users/wimglenn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/wimglenn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "304d2f35dac508d7230c35605b52b1e04b4d3756",
+            "url": "https://api.github.com/repos/wimglenn/advent-of-code-data/commits/304d2f35dac508d7230c35605b52b1e04b4d3756",
+            "html_url": "https://github.com/wimglenn/advent-of-code-data/commit/304d2f35dac508d7230c35605b52b1e04b4d3756"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "638fa53db91b42318f0a760950ee1e56",
+  "stats": null
+}

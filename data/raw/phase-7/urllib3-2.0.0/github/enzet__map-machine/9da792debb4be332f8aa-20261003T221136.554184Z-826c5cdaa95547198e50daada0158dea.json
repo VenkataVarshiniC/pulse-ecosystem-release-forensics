@@ -1,0 +1,106 @@
+{
+  "task_id": "9da792debb4be332f8aa",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "enzet/map-machine",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-08-24T23:59:59.999999+00:00",
+    "per_page": 1,
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:36.554184Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/enzet/map-machine/commits",
+    "body": [
+      {
+        "sha": "825eb34191ebdfcd5a634806a39b4aa536f9d430",
+        "node_id": "C_kwDOAl9N79oAKDgyNWViMzQxOTFlYmRmY2Q1YTYzNDgwNmEzOWI0YWE1MzZmOWQ0MzA",
+        "commit": {
+          "author": {
+            "name": "Sergey Vartanov",
+            "email": "me@enzet.ru",
+            "date": "2023-08-10T23:20:06Z"
+          },
+          "committer": {
+            "name": "Sergey Vartanov",
+            "email": "me@enzet.ru",
+            "date": "2023-08-10T23:20:06Z"
+          },
+          "message": "Issue #150: get rid of shape duplication.",
+          "tree": {
+            "sha": "8af4a89ba962510ed249aadc80a2fbfb720b633f",
+            "url": "https://api.github.com/repos/enzet/map-machine/git/trees/8af4a89ba962510ed249aadc80a2fbfb720b633f"
+          },
+          "url": "https://api.github.com/repos/enzet/map-machine/git/commits/825eb34191ebdfcd5a634806a39b4aa536f9d430",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/enzet/map-machine/commits/825eb34191ebdfcd5a634806a39b4aa536f9d430",
+        "html_url": "https://github.com/enzet/map-machine/commit/825eb34191ebdfcd5a634806a39b4aa536f9d430",
+        "comments_url": "https://api.github.com/repos/enzet/map-machine/commits/825eb34191ebdfcd5a634806a39b4aa536f9d430/comments",
+        "author": {
+          "login": "enzet",
+          "id": 2399987,
+          "node_id": "MDQ6VXNlcjIzOTk5ODc=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2399987?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/enzet",
+          "html_url": "https://github.com/enzet",
+          "followers_url": "https://api.github.com/users/enzet/followers",
+          "following_url": "https://api.github.com/users/enzet/following{/other_user}",
+          "gists_url": "https://api.github.com/users/enzet/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/enzet/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/enzet/subscriptions",
+          "organizations_url": "https://api.github.com/users/enzet/orgs",
+          "repos_url": "https://api.github.com/users/enzet/repos",
+          "events_url": "https://api.github.com/users/enzet/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/enzet/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "enzet",
+          "id": 2399987,
+          "node_id": "MDQ6VXNlcjIzOTk5ODc=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2399987?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/enzet",
+          "html_url": "https://github.com/enzet",
+          "followers_url": "https://api.github.com/users/enzet/followers",
+          "following_url": "https://api.github.com/users/enzet/following{/other_user}",
+          "gists_url": "https://api.github.com/users/enzet/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/enzet/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/enzet/subscriptions",
+          "organizations_url": "https://api.github.com/users/enzet/orgs",
+          "repos_url": "https://api.github.com/users/enzet/repos",
+          "events_url": "https://api.github.com/users/enzet/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/enzet/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "0da966f17055d64e9286c4b68e46fb402804f50b",
+            "url": "https://api.github.com/repos/enzet/map-machine/commits/0da966f17055d64e9286c4b68e46fb402804f50b",
+            "html_url": "https://github.com/enzet/map-machine/commit/0da966f17055d64e9286c4b68e46fb402804f50b"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "826c5cdaa95547198e50daada0158dea",
+  "stats": null
+}

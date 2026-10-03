@@ -1,0 +1,111 @@
+{
+  "task_id": "142005f860cc85b933a7",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "jamesturk/scrapelib",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-08-24T23:59:59.999999+00:00",
+    "per_page": 1,
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:33.622882Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/jamesturk/scrapelib/commits",
+    "body": [
+      {
+        "sha": "b27b5435469173c473f02139562b0ff4766296ce",
+        "node_id": "C_kwDOAAuaPNoAKGIyN2I1NDM1NDY5MTczYzQ3M2YwMjEzOTU2MmIwZmY0NzY2Mjk2Y2U",
+        "commit": {
+          "author": {
+            "name": "James Turk",
+            "email": "dev@jamesturk.net",
+            "date": "2023-06-29T17:19:40Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2023-06-29T17:19:40Z"
+          },
+          "message": "Merge pull request #235 from fgregg/data_in_key_for_request_signature\n\nadd `data` to the argument signature of the key_for_request signature",
+          "tree": {
+            "sha": "b56d29612a286b7e33540f01bc7dcc1fa616d7f8",
+            "url": "https://api.github.com/repos/jamesturk/scrapelib/git/trees/b56d29612a286b7e33540f01bc7dcc1fa616d7f8"
+          },
+          "url": "https://api.github.com/repos/jamesturk/scrapelib/git/commits/b27b5435469173c473f02139562b0ff4766296ce",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJknb0sCRBK7hj4Ov3rIwAANgMIAATaOPAuFg5ew8S03VGWFRVS\npeT1m+RqgM/Wwe1wXXaqMH0uOAJbo30S8pBA8qSy/ND+4x2lxI3Ct4aZ1zxfOg2V\n93KFNsTR22U3pOYOTFvQF1/fqp1wj3DCuLnkiezGDFPZC3XdShrKDgjxMCpnrtCg\nXPOEYx6+3VnaZwHfpklr/dj+NPr/GJyx1d7VFMKj2Vp6gsv+jT3xHQOFQzbbHrEy\n3qPuFer+E5Q8qaA0Bmh+iUR4ro/tFFd/cQ0bhBTMn8gbfrPHjdYluan+1S4PcloA\nI205Rug9kkBG45nf/Z3dFP3Kah5uVDa8kEkdivYzl/1qdEZfJsJll5Yn15eh954=\n=CIQh\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree b56d29612a286b7e33540f01bc7dcc1fa616d7f8\nparent 76764ee296a1332114a0377b65cf8af3fe185e53\nparent 11919cbe33b412544be718ccb1edb8d99c97a014\nauthor James Turk <dev@jamesturk.net> 1688059180 -0400\ncommitter GitHub <noreply@github.com> 1688059180 -0400\n\nMerge pull request #235 from fgregg/data_in_key_for_request_signature\n\nadd `data` to the argument signature of the key_for_request signature",
+            "verified_at": "2024-11-06T19:29:47Z"
+          }
+        },
+        "url": "https://api.github.com/repos/jamesturk/scrapelib/commits/b27b5435469173c473f02139562b0ff4766296ce",
+        "html_url": "https://github.com/jamesturk/scrapelib/commit/b27b5435469173c473f02139562b0ff4766296ce",
+        "comments_url": "https://api.github.com/repos/jamesturk/scrapelib/commits/b27b5435469173c473f02139562b0ff4766296ce/comments",
+        "author": {
+          "login": "jamesturk",
+          "id": 8034,
+          "node_id": "MDQ6VXNlcjgwMzQ=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8034?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jamesturk",
+          "html_url": "https://github.com/jamesturk",
+          "followers_url": "https://api.github.com/users/jamesturk/followers",
+          "following_url": "https://api.github.com/users/jamesturk/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jamesturk/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jamesturk/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jamesturk/subscriptions",
+          "organizations_url": "https://api.github.com/users/jamesturk/orgs",
+          "repos_url": "https://api.github.com/users/jamesturk/repos",
+          "events_url": "https://api.github.com/users/jamesturk/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jamesturk/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "76764ee296a1332114a0377b65cf8af3fe185e53",
+            "url": "https://api.github.com/repos/jamesturk/scrapelib/commits/76764ee296a1332114a0377b65cf8af3fe185e53",
+            "html_url": "https://github.com/jamesturk/scrapelib/commit/76764ee296a1332114a0377b65cf8af3fe185e53"
+          },
+          {
+            "sha": "11919cbe33b412544be718ccb1edb8d99c97a014",
+            "url": "https://api.github.com/repos/jamesturk/scrapelib/commits/11919cbe33b412544be718ccb1edb8d99c97a014",
+            "html_url": "https://github.com/jamesturk/scrapelib/commit/11919cbe33b412544be718ccb1edb8d99c97a014"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "3dd7451f9e294a4a8f1bf95575732e7c",
+  "stats": null
+}

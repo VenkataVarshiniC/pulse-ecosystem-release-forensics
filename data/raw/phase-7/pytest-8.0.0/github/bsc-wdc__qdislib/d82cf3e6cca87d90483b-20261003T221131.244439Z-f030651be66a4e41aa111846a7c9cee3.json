@@ -1,0 +1,106 @@
+{
+  "task_id": "d82cf3e6cca87d90483b",
+  "case_id": "pytest-8.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "bsc-wdc/qdislib",
+  "query": {
+    "kind": "github_commits",
+    "until": "2024-01-27T21:47:54.913691+00:00",
+    "per_page": 1,
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:31.244439Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/bsc-wdc/qdislib/commits",
+    "body": [
+      {
+        "sha": "2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+        "node_id": "C_kwDOOjbrFdoAKDJmMWRkMTE0N2RmNGI2Mzc5YTI3MGM4NzQ5YzdmNjI5Zjk5NDdlNmM",
+        "commit": {
+          "author": {
+            "name": "mtejedor",
+            "email": "mtejedor@bsc.es",
+            "date": "2024-01-10T07:51:38Z"
+          },
+          "committer": {
+            "name": "mtejedor",
+            "email": "mtejedor@bsc.es",
+            "date": "2024-01-10T07:51:38Z"
+          },
+          "message": "Add files",
+          "tree": {
+            "sha": "83d00b500035bd4efdd0383d41bf0cd9332fed14",
+            "url": "https://api.github.com/repos/bsc-wdc/qdislib/git/trees/83d00b500035bd4efdd0383d41bf0cd9332fed14"
+          },
+          "url": "https://api.github.com/repos/bsc-wdc/qdislib/git/commits/2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/bsc-wdc/qdislib/commits/2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+        "html_url": "https://github.com/bsc-wdc/qdislib/commit/2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+        "comments_url": "https://api.github.com/repos/bsc-wdc/qdislib/commits/2f1dd1147df4b6379a270c8749c7f629f9947e6c/comments",
+        "author": {
+          "login": "martejedor",
+          "id": 93734854,
+          "node_id": "U_kgDOBZZHxg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/93734854?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/martejedor",
+          "html_url": "https://github.com/martejedor",
+          "followers_url": "https://api.github.com/users/martejedor/followers",
+          "following_url": "https://api.github.com/users/martejedor/following{/other_user}",
+          "gists_url": "https://api.github.com/users/martejedor/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/martejedor/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/martejedor/subscriptions",
+          "organizations_url": "https://api.github.com/users/martejedor/orgs",
+          "repos_url": "https://api.github.com/users/martejedor/repos",
+          "events_url": "https://api.github.com/users/martejedor/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/martejedor/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "martejedor",
+          "id": 93734854,
+          "node_id": "U_kgDOBZZHxg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/93734854?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/martejedor",
+          "html_url": "https://github.com/martejedor",
+          "followers_url": "https://api.github.com/users/martejedor/followers",
+          "following_url": "https://api.github.com/users/martejedor/following{/other_user}",
+          "gists_url": "https://api.github.com/users/martejedor/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/martejedor/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/martejedor/subscriptions",
+          "organizations_url": "https://api.github.com/users/martejedor/orgs",
+          "repos_url": "https://api.github.com/users/martejedor/repos",
+          "events_url": "https://api.github.com/users/martejedor/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/martejedor/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "777ec26e59d16a27ea19ee20ee635c324602f60e",
+            "url": "https://api.github.com/repos/bsc-wdc/qdislib/commits/777ec26e59d16a27ea19ee20ee635c324602f60e",
+            "html_url": "https://github.com/bsc-wdc/qdislib/commit/777ec26e59d16a27ea19ee20ee635c324602f60e"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "f030651be66a4e41aa111846a7c9cee3",
+  "stats": null
+}

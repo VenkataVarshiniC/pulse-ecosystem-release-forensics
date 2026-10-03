@@ -1,0 +1,23 @@
+{
+  "task_id": "889b03cd43c49b9f703a",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "enzet/map-machine",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "825eb34191ebdfcd5a634806a39b4aa536f9d430",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:37.012964Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/enzet/map-machine/825eb34191ebdfcd5a634806a39b4aa536f9d430/requirements.txt",
+    "content_base64": "Q2Fpcm9TVkc+PTIuNS4wCmNvbG91cj49MC4xLjUKbnVtcHk+PTEuMTguMQpQaWxsb3c+PTguMi4wCnBvcnRvbGFuPj0xLjAuMQpweWNhaXJvPj0xLjIwLjEKcHl0ZXN0Pj02LjIuMgpQeVlBTUw+PTQuMmIxCnNldHVwdG9vbHM+PTUxLjAuMApTaGFwZWx5Pj0xLjcuMQpzdmd3cml0ZT49MS40CnVybGxpYjM+PTEuMjUuNgo="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "04d7070a1d0d4039a3a35611bcf319aa",
+  "stats": null
+}

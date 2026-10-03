@@ -1,0 +1,23 @@
+{
+  "task_id": "b0fd5bda38737eaceba9",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "wimglenn/advent-of-code-data",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "f45bb6d66d6a50a20958fb275e4486711fb784cd",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:34.951492Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/wimglenn/advent-of-code-data/f45bb6d66d6a50a20958fb275e4486711fb784cd/requirements.txt",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "663e205cd59b4191a7d3fc3960b95b31",
+  "stats": null
+}

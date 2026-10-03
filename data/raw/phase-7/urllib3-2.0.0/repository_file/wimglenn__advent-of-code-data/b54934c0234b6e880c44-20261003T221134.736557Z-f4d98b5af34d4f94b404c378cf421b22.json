@@ -1,0 +1,23 @@
+{
+  "task_id": "b54934c0234b6e880c44",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "wimglenn/advent-of-code-data",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "f45bb6d66d6a50a20958fb275e4486711fb784cd",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:34.736557Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/wimglenn/advent-of-code-data/f45bb6d66d6a50a20958fb275e4486711fb784cd/pyproject.toml",
+    "content_base64": "W2J1aWxkLXN5c3RlbV0KcmVxdWlyZXMgPSBbInNldHVwdG9vbHM+PTYxLjIiXQpidWlsZC1iYWNrZW5kID0gInNldHVwdG9vbHMuYnVpbGRfbWV0YSIKCltwcm9qZWN0XQpuYW1lID0gImFkdmVudC1vZi1jb2RlLWRhdGEiCnZlcnNpb24gPSAiMi4wLjAiCmRlc2NyaXB0aW9uID0gIkdldCB5b3VyIHB1enpsZSBkYXRhIHdpdGggYSBzaW5nbGUgaW1wb3J0IgpyZXF1aXJlcy1weXRob24gPSAiPj0zLjkiCmNsYXNzaWZpZXJzID0gWwogICAgIkludGVuZGVkIEF1ZGllbmNlIDo6IERldmVsb3BlcnMiLAogICAgIlByb2dyYW1taW5nIExhbmd1YWdlIDo6IFB5dGhvbiA6OiAzIiwKICAgICJMaWNlbnNlIDo6IE9TSSBBcHByb3ZlZCA6OiBNSVQgTGljZW5zZSIsCiAgICAiVG9waWMgOjogU29mdHdhcmUgRGV2ZWxvcG1lbnQgOjogTGlicmFyaWVzIiwKICAgICJUb3BpYyA6OiBHYW1lcy9FbnRlcnRhaW5tZW50IDo6IFB1enpsZSBHYW1lcyIsCl0KZGVwZW5kZW5jaWVzID0gWwogICAgImJlYXV0aWZ1bHNvdXA0IiwKICAgICJwZWJibGUiLAogICAgInVybGxpYjMiLAogICAgJ3R6ZGF0YSA7IHBsYXRmb3JtX3N5c3RlbSA9PSAiV2luZG93cyInLApdCgpbW3Byb2plY3QuYXV0aG9yc11dCm5hbWUgPSAiV2ltIEdsZW5uIgplbWFpbCA9ICJoZXlAd2ltZ2xlbm4uY29tIgoKW3Byb2plY3QubGljZW5zZV0KdGV4dCA9ICJNSVQiCgpbcHJvamVjdC5yZWFkbWVdCmZpbGUgPSAiUkVBRE1FLnJzdCIKY29udGVudC10eXBlID0gInRleHQveC1yc3QiCgpbcHJvamVjdC51cmxzXQpIb21lcGFnZSA9ICJodHRwczovL2dpdGh1Yi5jb20vd2ltZ2xlbm4vYWR2ZW50LW9mLWNvZGUtZGF0YSIKCltwcm9qZWN0Lm9wdGlvbmFsLWRlcGVuZGVuY2llc10KbmIgPSBbIklQeXRob24iLCAianVweXRlci1zZXJ2ZXIiXQoKW3Byb2plY3Quc2NyaXB0c10KYW9jZCA9ICJhb2NkLmNsaTptYWluIgphb2MgPSAiYW9jZC5ydW5uZXI6bWFpbiIKYW9jZC10b2tlbiA9ICJhb2NkLmNvb2tpZXM6c2NyYXBlX3Nlc3Npb25fdG9rZW5zIgoKW3Rvb2wuc2V0dXB0b29sc10KcGFja2FnZXMgPSBbImFvY2QiXQoKW3Byb2plY3QuZW50cnktcG9pbnRzLiJhZHZlbnRvZmNvZGUudXNlciJdCg=="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "f4d98b5af34d4f94b404c378cf421b22",
+  "stats": null
+}

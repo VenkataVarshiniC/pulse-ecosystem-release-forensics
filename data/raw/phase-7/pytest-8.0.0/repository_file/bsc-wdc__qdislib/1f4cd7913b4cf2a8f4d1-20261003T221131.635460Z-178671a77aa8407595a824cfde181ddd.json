@@ -1,0 +1,23 @@
+{
+  "task_id": "1f4cd7913b4cf2a8f4d1",
+  "case_id": "pytest-8.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "bsc-wdc/qdislib",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "2f1dd1147df4b6379a270c8749c7f629f9947e6c",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:31.635460Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/bsc-wdc/qdislib/2f1dd1147df4b6379a270c8749c7f629f9947e6c/pyproject.toml",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "178671a77aa8407595a824cfde181ddd",
+  "stats": null
+}

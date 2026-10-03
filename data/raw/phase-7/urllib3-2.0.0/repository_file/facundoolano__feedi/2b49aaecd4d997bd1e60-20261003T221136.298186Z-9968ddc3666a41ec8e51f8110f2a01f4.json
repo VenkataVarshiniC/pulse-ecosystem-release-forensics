@@ -1,0 +1,23 @@
+{
+  "task_id": "2b49aaecd4d997bd1e60",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "facundoolano/feedi",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1",
+    "blocked_by": "cdcf757739b2109ff4b1"
+  },
+  "retrieved_at": "2026-10-03T22:11:36.298186Z",
+  "payload": {
+    "request_performed": false,
+    "blocked_by": "cdcf757739b2109ff4b1",
+    "availability": "STRUCTURALLY_UNAVAILABLE"
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "9968ddc3666a41ec8e51f8110f2a01f4",
+  "stats": null
+}

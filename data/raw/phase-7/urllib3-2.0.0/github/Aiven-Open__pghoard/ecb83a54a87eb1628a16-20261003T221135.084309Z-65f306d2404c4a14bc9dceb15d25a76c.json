@@ -1,0 +1,111 @@
+{
+  "task_id": "ecb83a54a87eb1628a16",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "Aiven-Open/pghoard",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-04-26T17:21:22.577020+00:00",
+    "per_page": 1,
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:35.084309Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits",
+    "body": [
+      {
+        "sha": "0d177de79c63317a4668bb07b10304915de60d64",
+        "node_id": "C_kwDOAj2qntoAKDBkMTc3ZGU3OWM2MzMxN2E0NjY4YmIwN2IxMDMwNDkxNWRlNjBkNjQ",
+        "commit": {
+          "author": {
+            "name": "Alexander Fomichev",
+            "email": "83747651+alexanderfomichev@users.noreply.github.com",
+            "date": "2023-03-30T02:15:03Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2023-03-30T02:15:03Z"
+          },
+          "message": "Merge pull request #583 from aiven/nicois/more-complete-basebackup-upload-metrics\n\nCollect upload metrics during additional basebackup phase",
+          "tree": {
+            "sha": "d11595f2bf913ee3b0eafa7614cc9bac602e6da0",
+            "url": "https://api.github.com/repos/Aiven-Open/pghoard/git/trees/d11595f2bf913ee3b0eafa7614cc9bac602e6da0"
+          },
+          "url": "https://api.github.com/repos/Aiven-Open/pghoard/git/commits/0d177de79c63317a4668bb07b10304915de60d64",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkJPCnCRBK7hj4Ov3rIwAAAdoIAJM+B68pG4Jn0yaSefg8hU9w\n7kkZpW0YWwjJHwucSqzhiWyWn5NOw+a89aQghgtMRyokXVLaplxatQnej0OADtNs\nCtFu/ygN1wZXa2NhPweErOqewRgyEsP49LvCf6LaqnV6mmNT68n8iUwBMSFAGQTP\nTSniNvXtSgQcG45bV1NHzv65Gb0ivier14VRIJwdRqS2o5zXNYW90QZRHw1lFJfa\n/BvsxCzLRLKg3h2m8DgQ82dKXR3GB9OkaX6Bw8eCR8VK5cqBzHoqx26UdQKXgsTT\n9sv+8YbPH4Dg6AvzbWlESkNqWGM6MYBqA5dznxDmNJpzBLsNDEOnSnBRt/GOb70=\n=VfPH\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree d11595f2bf913ee3b0eafa7614cc9bac602e6da0\nparent 301a96f7add59d9e26d59ec1fcdad1a54da86a9e\nparent 57c1cc94b8cbbb2dcd5d9752e32e036bb5aead91\nauthor Alexander Fomichev <83747651+alexanderfomichev@users.noreply.github.com> 1680142503 +1100\ncommitter GitHub <noreply@github.com> 1680142503 +1100\n\nMerge pull request #583 from aiven/nicois/more-complete-basebackup-upload-metrics\n\nCollect upload metrics during additional basebackup phase",
+            "verified_at": "2024-01-16T19:59:59Z"
+          }
+        },
+        "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/0d177de79c63317a4668bb07b10304915de60d64",
+        "html_url": "https://github.com/Aiven-Open/pghoard/commit/0d177de79c63317a4668bb07b10304915de60d64",
+        "comments_url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/0d177de79c63317a4668bb07b10304915de60d64/comments",
+        "author": {
+          "login": "alexanderfomichev",
+          "id": 83747651,
+          "node_id": "MDQ6VXNlcjgzNzQ3NjUx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/83747651?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/alexanderfomichev",
+          "html_url": "https://github.com/alexanderfomichev",
+          "followers_url": "https://api.github.com/users/alexanderfomichev/followers",
+          "following_url": "https://api.github.com/users/alexanderfomichev/following{/other_user}",
+          "gists_url": "https://api.github.com/users/alexanderfomichev/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/alexanderfomichev/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/alexanderfomichev/subscriptions",
+          "organizations_url": "https://api.github.com/users/alexanderfomichev/orgs",
+          "repos_url": "https://api.github.com/users/alexanderfomichev/repos",
+          "events_url": "https://api.github.com/users/alexanderfomichev/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/alexanderfomichev/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "301a96f7add59d9e26d59ec1fcdad1a54da86a9e",
+            "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/301a96f7add59d9e26d59ec1fcdad1a54da86a9e",
+            "html_url": "https://github.com/Aiven-Open/pghoard/commit/301a96f7add59d9e26d59ec1fcdad1a54da86a9e"
+          },
+          {
+            "sha": "57c1cc94b8cbbb2dcd5d9752e32e036bb5aead91",
+            "url": "https://api.github.com/repos/Aiven-Open/pghoard/commits/57c1cc94b8cbbb2dcd5d9752e32e036bb5aead91",
+            "html_url": "https://github.com/Aiven-Open/pghoard/commit/57c1cc94b8cbbb2dcd5d9752e32e036bb5aead91"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "65f306d2404c4a14bc9dceb15d25a76c",
+  "stats": null
+}

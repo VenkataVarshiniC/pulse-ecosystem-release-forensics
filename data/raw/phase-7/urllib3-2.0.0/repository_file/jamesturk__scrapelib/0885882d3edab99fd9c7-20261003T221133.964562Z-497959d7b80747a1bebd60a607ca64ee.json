@@ -1,0 +1,23 @@
+{
+  "task_id": "0885882d3edab99fd9c7",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "jamesturk/scrapelib",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "b27b5435469173c473f02139562b0ff4766296ce",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:33.964562Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/jamesturk/scrapelib/b27b5435469173c473f02139562b0ff4766296ce/pyproject.toml",
+    "content_base64": "W3Rvb2wucG9ldHJ5XQpuYW1lID0gInNjcmFwZWxpYiIKdmVyc2lvbiA9ICIyLjIuMCIKZGVzY3JpcHRpb24gPSAiIgpyZWFkbWUgPSAiUkVBRE1FLm1kIgphdXRob3JzID0gWyJKYW1lcyBUdXJrIDxkZXZAamFtZXN0dXJrLm5ldD4iXQpsaWNlbnNlID0gIkJTRC0yLUNsYXVzZSIKcmVwb3NpdG9yeSA9ICJodHRwczovL2dpdGh1Yi5jb20vamFtZXN0dXJrL3NjcmFwZWxpYiIKY2xhc3NpZmllcnM9WwogICJEZXZlbG9wbWVudCBTdGF0dXMgOjogNiAtIE1hdHVyZSIsCiAgIkludGVuZGVkIEF1ZGllbmNlIDo6IERldmVsb3BlcnMiLAogICJMaWNlbnNlIDo6IE9TSSBBcHByb3ZlZCA6OiBCU0QgTGljZW5zZSIsCiAgIk5hdHVyYWwgTGFuZ3VhZ2UgOjogRW5nbGlzaCIsCiAgIk9wZXJhdGluZyBTeXN0ZW0gOjogT1MgSW5kZXBlbmRlbnQiLAogICJQcm9ncmFtbWluZyBMYW5ndWFnZSA6OiBQeXRob24gOjogMy43IiwKICAiUHJvZ3JhbW1pbmcgTGFuZ3VhZ2UgOjogUHl0aG9uIDo6IDMuOCIsCiAgIlByb2dyYW1taW5nIExhbmd1YWdlIDo6IFB5dGhvbiA6OiAzLjkiLAogICJQcm9ncmFtbWluZyBMYW5ndWFnZSA6OiBQeXRob24gOjogMy4xMCIsCiAgIlByb2dyYW1taW5nIExhbmd1YWdlIDo6IFB5dGhvbiA6OiAzLjExIiwKICAiVG9waWMgOjogU29mdHdhcmUgRGV2ZWxvcG1lbnQgOjogTGlicmFyaWVzIDo6IFB5dGhvbiBNb2R1bGVzIiwKXQoKW3Rvb2wucG9ldHJ5LnNjcmlwdHNdCnNjcmFwZXNoZWxsID0gInNjcmFwZWxpYi5fX21haW5fXzpzY3JhcGVzaGVsbCIKClt0b29sLnBvZXRyeS5kZXBlbmRlbmNpZXNdCnB5dGhvbiA9ICJeMy43IgpyZXF1ZXN0cyA9IHtleHRyYXMgPSBbInNlY3VyaXR5Il0sIHZlcnNpb24gPSAiXjIuMjguMSJ9CnVybGxpYjMgPSAiXjEuMjYiCgpbdG9vbC5wb2V0cnkuZGV2LWRlcGVuZGVuY2llc10KbXlweSA9ICJeMC45NjEiCmZsYWtlOCA9ICJeMy45LjAiCm1vY2sgPSAiXjQuMC4zIgpweXRlc3QgPSAiXjcuMS4yIgpweXRlc3QtY292ID0gIl4yLjExLjEiCmNvdmVyYWxscyA9ICJeMy4zLjEiCm1rZG9jcy1tYXRlcmlhbCA9ICJeOC41LjkiCm1rZG9jc3RyaW5ncyA9ICIwLjE5LjAiCnR5cGVzLXJlcXVlc3RzID0gIl4yLjI4LjExIgp0eXBlcy1tb2NrID0gIl40LjAuMTUiCmltcG9ydGxpYi1tZXRhZGF0YSA9ICI8NS4wIgpweXRlc3QtaHR0cGJpbiA9ICJeMi4wLjAiCkZsYXNrID0gIjIuMS4wIgpXZXJremV1ZyA9ICIyLjAuMyIKCltidWlsZC1zeXN0ZW1dCnJlcXVpcmVzID0gWyJwb2V0cnk+PTAuMTIiXQpidWlsZC1iYWNrZW5kID0gInBvZXRyeS5tYXNvbnJ5LmFwaSIK"
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "497959d7b80747a1bebd60a607ca64ee",
+  "stats": null
+}

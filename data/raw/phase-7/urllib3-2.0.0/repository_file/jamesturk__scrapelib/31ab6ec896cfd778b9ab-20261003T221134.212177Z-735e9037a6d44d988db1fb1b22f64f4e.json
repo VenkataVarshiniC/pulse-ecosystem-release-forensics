@@ -1,0 +1,23 @@
+{
+  "task_id": "31ab6ec896cfd778b9ab",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "jamesturk/scrapelib",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "59bb9d42dee5a0cedd563dd00d00659a7cdf72c7",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:34.212177Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/jamesturk/scrapelib/59bb9d42dee5a0cedd563dd00d00659a7cdf72c7/requirements.txt",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "735e9037a6d44d988db1fb1b22f64f4e",
+  "stats": null
+}

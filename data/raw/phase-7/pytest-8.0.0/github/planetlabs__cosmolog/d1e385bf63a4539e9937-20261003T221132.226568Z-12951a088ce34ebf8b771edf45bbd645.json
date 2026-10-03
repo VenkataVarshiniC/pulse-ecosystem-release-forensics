@@ -1,0 +1,111 @@
+{
+  "task_id": "d1e385bf63a4539e9937",
+  "case_id": "pytest-8.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "planetlabs/cosmolog",
+  "query": {
+    "kind": "github_commits",
+    "until": "2024-05-26T23:59:59.999999+00:00",
+    "per_page": 1,
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:32.226568Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/planetlabs/cosmolog/commits",
+    "body": [
+      {
+        "sha": "660a6b8b1e6ca61813e0503d8f090909a290f971",
+        "node_id": "C_kwDOBc-QRNoAKDY2MGE2YjhiMWU2Y2E2MTgxM2UwNTAzZDhmMDkwOTA5YTI5MGY5NzE",
+        "commit": {
+          "author": {
+            "name": "Brian Cavagnolo",
+            "email": "brian@planet.com",
+            "date": "2024-03-12T20:35:20Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2024-03-12T20:35:20Z"
+          },
+          "message": "Merge pull request #22 from planetlabs/move-message\n\nadd the rendered message to the CosmologEvent object",
+          "tree": {
+            "sha": "b36a64981daa2bf8d8d2f694f394a67cb1448d8d",
+            "url": "https://api.github.com/repos/planetlabs/cosmolog/git/trees/b36a64981daa2bf8d8d2f694f394a67cb1448d8d"
+          },
+          "url": "https://api.github.com/repos/planetlabs/cosmolog/git/commits/660a6b8b1e6ca61813e0503d8f090909a290f971",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJl8LyICRC1aQ7uu5UhlAAAh0AQAHJVX7weDrgmqdALHR/tAGeg\nSouzRhaiyOOt9zaK/HpgWdbJXDeW4ZzM+XAXol/dqdHqdxYrQnGOCn4iWyjknUQ5\nVMiqB1WfsIAggc4Y3bm30+HTqjC+BuUfb01/PLq351hvGtV20eIK5HvZSbdHhhjY\nnek7AjUXHx37KfgmFeICP0hVqIYC+rumg7SYW+YbaSIFhJ+stZAnUMiCMgB2GsUw\n6vtYaKmBqtU4eTPh10NBU7s7lKQ5pyRD02n/mC/59nf76UzzZyLFaHkkKHjBnWhY\nD/SnG7MVfSNboTrgW7v9d4iRKLRsgqisatNnEVuCCrhgp0AG93pcThGvODf5CGkF\nuUzQ21ehEaaI6DDQ/4psH61UcW0neLHD4iq2PaQiW9d6iN+AC50YBU3mByY8Qi0A\nSaYZ0xBgtyQawRV8eoCiAkQfjAJRR0lMLRVXuN4BF5gJ15yRwZV+N+PGlJTkyc/k\nuGkuNLBKaiTMFins+/YCrB8ZPmCG1/4u8LLTLvFhBHCcNhezGqdgrA7IbPbPddn1\nI9kLPFkq995jufUKTYuA24iNyZ8XiAwMD43K9GBMRjvbtORJ+hTplwPz/I0+fWLZ\n5nBNxjK8KGgcawkTPGU7oXZDUankfGiFyiXEF/H3ZVKwWuRDCl7wrs+m+lSSW6bO\npDC8Pp4h5D+nB4bOuoBp\n=npjT\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree b36a64981daa2bf8d8d2f694f394a67cb1448d8d\nparent cde6da6065afe3ca183861af664fed0c88b6cec2\nparent 4c8b702c43eea9cda21290c3ce985f85ce19e25e\nauthor Brian Cavagnolo <brian@planet.com> 1710275720 -0700\ncommitter GitHub <noreply@github.com> 1710275720 -0700\n\nMerge pull request #22 from planetlabs/move-message\n\nadd the rendered message to the CosmologEvent object",
+            "verified_at": "2024-11-08T22:16:03Z"
+          }
+        },
+        "url": "https://api.github.com/repos/planetlabs/cosmolog/commits/660a6b8b1e6ca61813e0503d8f090909a290f971",
+        "html_url": "https://github.com/planetlabs/cosmolog/commit/660a6b8b1e6ca61813e0503d8f090909a290f971",
+        "comments_url": "https://api.github.com/repos/planetlabs/cosmolog/commits/660a6b8b1e6ca61813e0503d8f090909a290f971/comments",
+        "author": {
+          "login": "bcavagnolo",
+          "id": 289954,
+          "node_id": "MDQ6VXNlcjI4OTk1NA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/289954?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/bcavagnolo",
+          "html_url": "https://github.com/bcavagnolo",
+          "followers_url": "https://api.github.com/users/bcavagnolo/followers",
+          "following_url": "https://api.github.com/users/bcavagnolo/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bcavagnolo/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bcavagnolo/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bcavagnolo/subscriptions",
+          "organizations_url": "https://api.github.com/users/bcavagnolo/orgs",
+          "repos_url": "https://api.github.com/users/bcavagnolo/repos",
+          "events_url": "https://api.github.com/users/bcavagnolo/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bcavagnolo/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "cde6da6065afe3ca183861af664fed0c88b6cec2",
+            "url": "https://api.github.com/repos/planetlabs/cosmolog/commits/cde6da6065afe3ca183861af664fed0c88b6cec2",
+            "html_url": "https://github.com/planetlabs/cosmolog/commit/cde6da6065afe3ca183861af664fed0c88b6cec2"
+          },
+          {
+            "sha": "4c8b702c43eea9cda21290c3ce985f85ce19e25e",
+            "url": "https://api.github.com/repos/planetlabs/cosmolog/commits/4c8b702c43eea9cda21290c3ce985f85ce19e25e",
+            "html_url": "https://github.com/planetlabs/cosmolog/commit/4c8b702c43eea9cda21290c3ce985f85ce19e25e"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "12951a088ce34ebf8b771edf45bbd645",
+  "stats": null
+}

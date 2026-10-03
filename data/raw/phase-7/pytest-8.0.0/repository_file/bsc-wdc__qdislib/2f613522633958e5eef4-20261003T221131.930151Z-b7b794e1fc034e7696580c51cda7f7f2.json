@@ -1,0 +1,23 @@
+{
+  "task_id": "2f613522633958e5eef4",
+  "case_id": "pytest-8.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "bsc-wdc/qdislib",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "2190392d57312b8e48941cdcc6fd1fd9f317d495",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:31.930151Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/bsc-wdc/qdislib/2190392d57312b8e48941cdcc6fd1fd9f317d495/requirements.txt",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "b7b794e1fc034e7696580c51cda7f7f2",
+  "stats": null
+}

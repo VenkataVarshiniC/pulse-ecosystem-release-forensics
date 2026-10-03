@@ -1,0 +1,23 @@
+{
+  "task_id": "29be924eaa6414eb0b38",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "atenreiro/opensquat",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "6b671f1758d639571e71f460b1843ea8e1877db0",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:33.202445Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/atenreiro/opensquat/6b671f1758d639571e71f460b1843ea8e1877db0/pyproject.toml",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "8fca2be086994aa6b73e2744cd8e7eff",
+  "stats": null
+}

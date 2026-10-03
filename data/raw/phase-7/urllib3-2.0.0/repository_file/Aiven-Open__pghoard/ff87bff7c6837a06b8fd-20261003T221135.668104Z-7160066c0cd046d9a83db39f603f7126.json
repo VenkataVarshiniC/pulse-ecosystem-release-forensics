@@ -1,0 +1,23 @@
+{
+  "task_id": "ff87bff7c6837a06b8fd",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "Aiven-Open/pghoard",
+  "query": {
+    "kind": "github_file",
+    "path": "requirements.txt",
+    "ref": "0d177de79c63317a4668bb07b10304915de60d64",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:35.668104Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/Aiven-Open/pghoard/0d177de79c63317a4668bb07b10304915de60d64/requirements.txt",
+    "content_base64": "cHN5Y29wZzIKcHlkYW50aWMKcHl0aG9uLXN5c3RlbWQKcmVxdWVzdHMKcm9obXUgPj0gMS4wLjcK"
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "7160066c0cd046d9a83db39f603f7126",
+  "stats": null
+}

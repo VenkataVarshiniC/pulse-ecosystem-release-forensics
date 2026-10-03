@@ -1,0 +1,23 @@
+{
+  "task_id": "cd821b47de03e92a548e",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "facundoolano/feedi",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "9326792ee7c43745c4f3988e0252e01dd529cdcb",
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:36.225970Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/facundoolano/feedi/9326792ee7c43745c4f3988e0252e01dd529cdcb/pyproject.toml",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "257ad47ab96d450cace6afd3c0b48cf6",
+  "stats": null
+}

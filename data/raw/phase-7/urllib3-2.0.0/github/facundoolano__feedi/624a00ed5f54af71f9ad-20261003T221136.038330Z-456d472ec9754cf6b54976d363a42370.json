@@ -1,0 +1,106 @@
+{
+  "task_id": "624a00ed5f54af71f9ad",
+  "case_id": "urllib3-2.0.0",
+  "source": "github",
+  "capture_method": "collector",
+  "source_identifier": "facundoolano/feedi",
+  "query": {
+    "kind": "github_commits",
+    "until": "2023-08-24T23:59:59.999999+00:00",
+    "per_page": 1,
+    "anchor_role": "OBSERVATION_END",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:36.038330Z",
+  "payload": {
+    "status_code": 200,
+    "url": "https://api.github.com/repos/facundoolano/feedi/commits",
+    "body": [
+      {
+        "sha": "9326792ee7c43745c4f3988e0252e01dd529cdcb",
+        "node_id": "C_kwDOJ77T_doAKDkzMjY3OTJlZTdjNDM3NDVjNGYzOTg4ZTAyNTJlMDFkZDUyOWNkY2I",
+        "commit": {
+          "author": {
+            "name": "facundoolano",
+            "email": "facundo.olano@gmail.com",
+            "date": "2023-08-24T14:21:10Z"
+          },
+          "committer": {
+            "name": "facundoolano",
+            "email": "facundo.olano@gmail.com",
+            "date": "2023-08-24T14:21:10Z"
+          },
+          "message": "slightly better behavior on go back in detail",
+          "tree": {
+            "sha": "297962b0ec13e1751e1b967449f96e573921e5ef",
+            "url": "https://api.github.com/repos/facundoolano/feedi/git/trees/297962b0ec13e1751e1b967449f96e573921e5ef"
+          },
+          "url": "https://api.github.com/repos/facundoolano/feedi/git/commits/9326792ee7c43745c4f3988e0252e01dd529cdcb",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/facundoolano/feedi/commits/9326792ee7c43745c4f3988e0252e01dd529cdcb",
+        "html_url": "https://github.com/facundoolano/feedi/commit/9326792ee7c43745c4f3988e0252e01dd529cdcb",
+        "comments_url": "https://api.github.com/repos/facundoolano/feedi/commits/9326792ee7c43745c4f3988e0252e01dd529cdcb/comments",
+        "author": {
+          "login": "facundoolano",
+          "id": 1040941,
+          "node_id": "MDQ6VXNlcjEwNDA5NDE=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1040941?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/facundoolano",
+          "html_url": "https://github.com/facundoolano",
+          "followers_url": "https://api.github.com/users/facundoolano/followers",
+          "following_url": "https://api.github.com/users/facundoolano/following{/other_user}",
+          "gists_url": "https://api.github.com/users/facundoolano/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/facundoolano/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/facundoolano/subscriptions",
+          "organizations_url": "https://api.github.com/users/facundoolano/orgs",
+          "repos_url": "https://api.github.com/users/facundoolano/repos",
+          "events_url": "https://api.github.com/users/facundoolano/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/facundoolano/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "facundoolano",
+          "id": 1040941,
+          "node_id": "MDQ6VXNlcjEwNDA5NDE=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1040941?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/facundoolano",
+          "html_url": "https://github.com/facundoolano",
+          "followers_url": "https://api.github.com/users/facundoolano/followers",
+          "following_url": "https://api.github.com/users/facundoolano/following{/other_user}",
+          "gists_url": "https://api.github.com/users/facundoolano/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/facundoolano/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/facundoolano/subscriptions",
+          "organizations_url": "https://api.github.com/users/facundoolano/orgs",
+          "repos_url": "https://api.github.com/users/facundoolano/repos",
+          "events_url": "https://api.github.com/users/facundoolano/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/facundoolano/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "64dd8412d6a3357b9a86d7f7c00029254eae473a",
+            "url": "https://api.github.com/repos/facundoolano/feedi/commits/64dd8412d6a3357b9a86d7f7c00029254eae473a",
+            "html_url": "https://github.com/facundoolano/feedi/commit/64dd8412d6a3357b9a86d7f7c00029254eae473a"
+          }
+        ]
+      }
+    ]
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "456d472ec9754cf6b54976d363a42370",
+  "stats": null
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "a0e2ce7a54d915e04856",
+  "case_id": "urllib3-2.0.0",
+  "source": "repository_file",
+  "capture_method": "collector",
+  "source_identifier": "Aiven-Open/pghoard",
+  "query": {
+    "kind": "github_file",
+    "path": "pyproject.toml",
+    "ref": "0d177de79c63317a4668bb07b10304915de60d64",
+    "anchor_role": "PRE_RELEASE",
+    "method_version": "p7-boundary-anchor-depth-v1"
+  },
+  "retrieved_at": "2026-10-03T22:11:35.518215Z",
+  "payload": {
+    "status_code": 404,
+    "url": "https://raw.githubusercontent.com/Aiven-Open/pghoard/0d177de79c63317a4668bb07b10304915de60d64/pyproject.toml",
+    "content_base64": "NDA0OiBOb3QgRm91bmQ="
+  },
+  "run_id": "51fe08a5ea3642618d62728dc21a65d4",
+  "attempt_id": "c38258350a1a418cba022d61b5ab8267",
+  "stats": null
+}
