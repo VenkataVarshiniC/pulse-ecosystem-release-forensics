@@ -1,0 +1,140 @@
+table SnapshotScope
+	lineageTag: 756c83f7-4c81-5acf-b80f-26ab9d6eaaa4
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: e00be236-3623-50b9-8901-a03c939fc16c
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: a1f53e6e-32ad-593f-8da7-03a6df02a89f
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: 31b44bc3-cdd8-58dd-955d-630f17aa4d12
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_metric_definition_version
+		dataType: string
+		lineageTag: a77ce095-59b7-53f4-9f53-c45fcc7c78ef
+		summarizeBy: none
+		sourceColumn: source_metric_definition_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column mart_model_version
+		dataType: string
+		lineageTag: 44829a6f-4d9a-5f81-b8a7-a6965e7e76b8
+		summarizeBy: none
+		sourceColumn: mart_model_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: 1e6e212a-7916-5885-8e71-83b17512d951
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_name
+		dataType: string
+		lineageTag: f6f0504e-17b5-5c4a-a9f9-742c4e84ac58
+		summarizeBy: none
+		sourceColumn: case_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_package
+		dataType: string
+		lineageTag: 152ef552-cefe-5019-9e98-0319fc5d7b48
+		summarizeBy: none
+		sourceColumn: target_package
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_version
+		dataType: string
+		lineageTag: 4953b57c-7743-5bbd-8f0e-5a09cc48da2e
+		summarizeBy: none
+		sourceColumn: target_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ccf096f1-9b78-5511-a396-0e739668471b
+		summarizeBy: none
+		sourceColumn: release_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column window_start
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 20222086-d5d0-532b-bd0e-4871e67d5168
+		summarizeBy: none
+		sourceColumn: window_start
+
+		annotation SummarizationSetBy = Automatic
+
+	column window_end
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e67d766a-95a2-5d10-87fc-4bcc996e23f2
+		summarizeBy: none
+		sourceColumn: window_end
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_label
+		dataType: string
+		lineageTag: ec31013d-3732-5ddb-91a1-59490dd3e958
+		summarizeBy: none
+		sourceColumn: case_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_label
+		dataType: string
+		lineageTag: fe4bee95-5996-5d71-a4b2-54a1eeab2e50
+		summarizeBy: none
+		sourceColumn: snapshot_label
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SnapshotScope = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    Members = Source{[Schema="analytics",Item="bridge_case_repository"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(Members, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id])))),
+				    #"Scope Columns" = Table.SelectColumns(#"Approved Published Rows", {"analysis_snapshot_id", "case_key", "snapshot_state", "source_metric_definition_version", "mart_model_version", "input_manifest_sha256"}),
+				    #"Distinct Scope" = Table.Distinct(#"Scope Columns"),
+				    Cases = Source{[Schema="analytics",Item="dim_case"]}[Data],
+				    #"Case Context" = Table.SelectColumns(Cases, {"case_key", "case_name", "target_package", "target_version", "release_time", "window_start", "window_end"}),
+				    #"Joined Case" = Table.NestedJoin(#"Distinct Scope", {"case_key"}, #"Case Context", {"case_key"}, "case", JoinKind.LeftOuter),
+				    #"Expanded Case" = Table.ExpandTableColumn(#"Joined Case", "case", {"case_name", "target_package", "target_version", "release_time", "window_start", "window_end"}),
+				    #"Case Label" = Table.AddColumn(#"Expanded Case", "case_label", each [case_name] & " | " & [target_package] & " " & [target_version], type text),
+				    #"Snapshot Label" = Table.AddColumn(#"Case Label", "snapshot_label", each [case_label] & " | " & Text.Start(Text.From([analysis_snapshot_id]), 8), type text)
+				in
+				    #"Snapshot Label"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

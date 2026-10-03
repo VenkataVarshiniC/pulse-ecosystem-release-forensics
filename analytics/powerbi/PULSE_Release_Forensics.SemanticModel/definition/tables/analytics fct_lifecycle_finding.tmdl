@@ -1,0 +1,214 @@
+table 'analytics fct_lifecycle_finding'
+	lineageTag: f868dae6-8aef-4815-bbc5-8fb76bb4a5c1
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: 32647a19-f0dc-4322-b9c9-ba830e632883
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: 5419c114-c161-4222-8492-52349eed4c9f
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: 167a5954-6667-40ad-ae47-9d6184e86834
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: 03015d06-5825-49e4-9bff-4847ffc33132
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_key
+		dataType: string
+		lineageTag: 0e68d4f5-3b94-41e9-87d6-361d05a94b3d
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column finding_id
+		dataType: string
+		lineageTag: 0181e2a5-caac-409d-8924-31fbd443c91c
+		summarizeBy: none
+		sourceColumn: finding_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version_id
+		dataType: string
+		lineageTag: f1920d7f-9ae0-42d7-a5a0-c3523b998b7d
+		summarizeBy: none
+		sourceColumn: case_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_id
+		dataType: string
+		lineageTag: f7293b8e-93d2-433e-9a8c-99997b8b5aad
+		summarizeBy: none
+		sourceColumn: repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column lifecycle_category
+		dataType: string
+		lineageTag: 294fec30-26d4-4dd6-9d3a-edcf91222937
+		summarizeBy: none
+		sourceColumn: lifecycle_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column question_id
+		dataType: string
+		lineageTag: 06ce645b-f6bc-442d-aee1-52b60667aabf
+		summarizeBy: none
+		sourceColumn: question_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column finding_version
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a397212-e04e-4517-87fc-1213252eea3e
+		summarizeBy: sum
+		sourceColumn: finding_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column finding_status
+		dataType: string
+		lineageTag: 5c2f04df-6dfe-4c0a-89e5-f4e5f8e4b386
+		summarizeBy: none
+		sourceColumn: finding_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column assessment_id
+		dataType: string
+		lineageTag: 4435de70-9dce-46d0-9e7b-e4b8d23a55f3
+		summarizeBy: none
+		sourceColumn: assessment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_sufficiency_status
+		dataType: string
+		lineageTag: c1db9707-4406-4682-8abc-645c60b80324
+		summarizeBy: none
+		sourceColumn: source_sufficiency_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column analytical_status_family
+		dataType: string
+		lineageTag: 75ce147c-c3f6-4f3c-951a-5c02dd928e85
+		summarizeBy: none
+		sourceColumn: analytical_status_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column required_source_set_version
+		dataType: string
+		lineageTag: 58a3e6f6-33c4-4746-bc1b-7dd82bdd3ea0
+		summarizeBy: none
+		sourceColumn: required_source_set_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column confidence_level
+		dataType: string
+		lineageTag: 1bafe9c3-a0a7-4873-bd99-db4a39e96ab1
+		summarizeBy: none
+		sourceColumn: confidence_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column reason_code
+		dataType: string
+		lineageTag: 5c7e5dd9-31af-45cc-8999-65dac9886b61
+		summarizeBy: none
+		sourceColumn: reason_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_artifact_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 04b384cb-8025-43cf-ad5a-ed97a8940e74
+		summarizeBy: sum
+		sourceColumn: support_artifact_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_observation_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b660bbf-768d-41d2-a1c8-a7eba6ea3144
+		summarizeBy: sum
+		sourceColumn: support_observation_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_review_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 38fbd39f-5652-4c89-a9e7-8073355cf148
+		summarizeBy: sum
+		sourceColumn: support_review_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column provenance_status
+		dataType: string
+		lineageTag: d219adea-c9d6-479a-b41f-e624c2462ede
+		summarizeBy: none
+		sourceColumn: provenance_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column rule_version
+		dataType: string
+		lineageTag: bbf5e9f2-0163-414b-95df-15e47efa8e6d
+		summarizeBy: none
+		sourceColumn: rule_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_scope_key
+		dataType: string
+		lineageTag: 640f70d5-c768-5585-8aa1-64b526e22f59
+		summarizeBy: none
+		sourceColumn: member_scope_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics fct_lifecycle_finding' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_fct_lifecycle_finding = Source{[Schema="analytics",Item="fct_lifecycle_finding"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(analytics_fct_lifecycle_finding, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id])))),
+				    #"Member Scope Key" = Table.AddColumn(#"Approved Published Rows", "member_scope_key", each Text.Lower(Text.From([analysis_snapshot_id])) & "|" & Text.Lower(Text.From([case_key])) & "|" & Text.Lower(Text.From([repository_key])), type text)
+				in
+				    #"Member Scope Key"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

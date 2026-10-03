@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a3102e40cc8ed703870b",
+  "displayName": "Candidate Detail",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter4f9977d1b8d2eb80222b24f7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_candidate_review"
+              }
+            },
+            "Property": "candidate_id"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "ca675b39212b9db30928",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "Param_Filter4f9977d1b8d2eb80222b24f7",
+        "boundFilter": "Filter4f9977d1b8d2eb80222b24f7",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_candidate_review"
+              }
+            },
+            "Property": "candidate_id"
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

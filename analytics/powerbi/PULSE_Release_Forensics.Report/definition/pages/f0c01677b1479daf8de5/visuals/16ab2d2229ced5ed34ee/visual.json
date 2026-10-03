@@ -1,0 +1,432 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "16ab2d2229ced5ed34ee",
+  "position": {
+    "x": 40,
+    "y": 656,
+    "z": 9000,
+    "height": 190,
+    "width": 1840,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics bridge_case_repository"
+                    }
+                  },
+                  "Property": "repository_name"
+                }
+              },
+              "queryRef": "analytics bridge_case_repository.repository_name",
+              "nativeQueryRef": "repository_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "observation_id"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.observation_id",
+              "nativeQueryRef": "observation_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "observation_type"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.observation_type",
+              "nativeQueryRef": "observation_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "repository_ref"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.repository_ref",
+              "nativeQueryRef": "repository_ref"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "path_ref"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.path_ref",
+              "nativeQueryRef": "path_ref"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "historical_position"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.historical_position",
+              "nativeQueryRef": "historical_position"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "declared_constraint"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.declared_constraint",
+              "nativeQueryRef": "declared_constraint"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "resolved_version"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.resolved_version",
+              "nativeQueryRef": "resolved_version"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "source_event_time"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.source_event_time",
+              "nativeQueryRef": "source_event_time"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "retrieved_at"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.retrieved_at",
+              "nativeQueryRef": "retrieved_at"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "capture_method"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.capture_method",
+              "nativeQueryRef": "capture_method"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_evidence_observation"
+                    }
+                  },
+                  "Property": "quality_status"
+                }
+              },
+              "queryRef": "analytics fct_evidence_observation.quality_status",
+              "nativeQueryRef": "quality_status"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Exact-ref observations — event time and retrieval time are distinct'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "28569a5a87901a3994df",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics bridge_case_repository"
+              }
+            },
+            "Property": "repository_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b44cacdb1bc98105be75",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "observation_id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "137ff071dccc71400b9d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "observation_type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f9c7b3182294154f5bba",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "repository_ref"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6e6c98752d758c9cb520",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "path_ref"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0bd0115bb0b279dc478f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "historical_position"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e390e1ff7079a5d391f2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "declared_constraint"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "784c3a142a5de656cf1f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "resolved_version"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d36d203be6a9d54425e5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "source_event_time"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bf35efd75384606ff2cd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "retrieved_at"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e297708765cdf32aadc0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "capture_method"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "caf917e8365c59f72007",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analytics fct_evidence_observation"
+              }
+            },
+            "Property": "quality_status"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

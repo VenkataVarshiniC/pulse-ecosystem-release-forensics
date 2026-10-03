@@ -1,0 +1,64 @@
+table 'analytics dim_repository'
+	lineageTag: 065e62f1-a2bb-47e3-9203-7b4a30954238
+
+	column repository_key
+		dataType: string
+		lineageTag: 3f1d52c9-1aa0-4d2c-a243-f113247a8d4d
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_id
+		dataType: string
+		lineageTag: 1fae8564-ff44-4914-887f-8919e8155dc9
+		summarizeBy: none
+		sourceColumn: repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column provider
+		dataType: string
+		lineageTag: 6dc393b1-b9dc-4b59-8424-97173bcd645a
+		summarizeBy: none
+		sourceColumn: provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column provider_repository_id
+		dataType: string
+		lineageTag: 4f632c84-ed47-4045-a7a3-4f7b884da0df
+		summarizeBy: none
+		sourceColumn: provider_repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column canonical_full_name
+		dataType: string
+		lineageTag: dda8049d-bbe4-4238-8392-f70c4cd5230c
+		summarizeBy: none
+		sourceColumn: canonical_full_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column identity_status
+		dataType: string
+		lineageTag: 7411f1bd-b4b3-427d-bb73-90d9557269ce
+		summarizeBy: none
+		sourceColumn: identity_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics dim_repository' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_dim_repository = Source{[Schema="analytics",Item="dim_repository"]}[Data]
+				in
+				    analytics_dim_repository
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

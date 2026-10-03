@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "059080a0adcd6c5a0a71",
+  "displayName": "Release Investigation Overview",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "61fd06aea1fdeb0d287f",
+      "target": "2b84874cc937a84d9e2f",
+      "type": "DataFilter"
+    },
+    {
+      "source": "61fd06aea1fdeb0d287f",
+      "target": "7632d634bd04b5a8ad98",
+      "type": "DataFilter"
+    },
+    {
+      "source": "61fd06aea1fdeb0d287f",
+      "target": "980d329031c946bc3f41",
+      "type": "DataFilter"
+    },
+    {
+      "source": "61fd06aea1fdeb0d287f",
+      "target": "d41b36e1ff7c0797b302",
+      "type": "DataFilter"
+    },
+    {
+      "source": "61fd06aea1fdeb0d287f",
+      "target": "e99046e94f14a65b37b2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ae9cd609c2d08b5fa580",
+      "target": "2b84874cc937a84d9e2f",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ae9cd609c2d08b5fa580",
+      "target": "7632d634bd04b5a8ad98",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ae9cd609c2d08b5fa580",
+      "target": "980d329031c946bc3f41",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ae9cd609c2d08b5fa580",
+      "target": "d41b36e1ff7c0797b302",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ae9cd609c2d08b5fa580",
+      "target": "e99046e94f14a65b37b2",
+      "type": "DataFilter"
+    }
+  ]
+}

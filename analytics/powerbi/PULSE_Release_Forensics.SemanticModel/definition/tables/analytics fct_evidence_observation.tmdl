@@ -1,0 +1,228 @@
+table 'analytics fct_evidence_observation'
+	lineageTag: 5dd2bf7b-f2b1-48f6-a80b-4250adf9811f
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: 9f1a0d4e-e174-40cc-bbcf-317bc311a67d
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: 40efa416-062a-4409-bd6c-db81edb564e5
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: bdb64464-ded6-4cd7-9150-674f47b46a72
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: 6b2db507-cb49-42fa-818c-b43ef28e42ba
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_key
+		dataType: string
+		lineageTag: 6d4740e7-7b3a-4fd7-82a6-58babfda1c30
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_key
+		dataType: string
+		lineageTag: 9baca0de-279a-433c-9f58-1a7b01f4ca08
+		summarizeBy: none
+		sourceColumn: source_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_id
+		dataType: string
+		lineageTag: 3b76780b-4e4d-4afd-9072-a5080acf407e
+		summarizeBy: none
+		sourceColumn: observation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version_id
+		dataType: string
+		lineageTag: 62e5896e-5f80-4429-9996-53e77f5384b7
+		summarizeBy: none
+		sourceColumn: case_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_id
+		dataType: string
+		lineageTag: 6cf87516-0299-4189-926b-b7a388a01723
+		summarizeBy: none
+		sourceColumn: repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column artifact_id
+		dataType: string
+		lineageTag: f424c8cd-2986-4931-a2c2-d7eaa2fdbcb4
+		summarizeBy: none
+		sourceColumn: artifact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_type
+		dataType: string
+		lineageTag: 15a5312c-8b8a-45bb-aa69-3465d7eb05d7
+		summarizeBy: none
+		sourceColumn: observation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column package_name
+		dataType: string
+		lineageTag: 670f34eb-e9ad-490f-afc6-6fbdfc0d76cd
+		summarizeBy: none
+		sourceColumn: package_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column declared_constraint
+		dataType: string
+		lineageTag: b4e29fb5-f0f6-4087-a84b-eccf176d986c
+		summarizeBy: none
+		sourceColumn: declared_constraint
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_version
+		dataType: string
+		lineageTag: a4574ed2-dfdf-4f43-bbfb-449ec7335f97
+		summarizeBy: none
+		sourceColumn: resolved_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_ref
+		dataType: string
+		lineageTag: d0fe880e-2cf9-4092-af67-31dc3babb876
+		summarizeBy: none
+		sourceColumn: repository_ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column path_ref
+		dataType: string
+		lineageTag: b0399819-1937-48b2-be23-c1f839938f60
+		summarizeBy: none
+		sourceColumn: path_ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column historical_position
+		dataType: string
+		lineageTag: e5d532d8-a030-4c71-b951-80d9dede84fd
+		summarizeBy: none
+		sourceColumn: historical_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 07222a30-b0e4-49c1-a0d7-1b168de7e6b9
+		summarizeBy: none
+		sourceColumn: observation_time
+
+		variation Variation
+			isDefault
+			relationship: 85e65480-9a3e-4434-ba1c-6f954967886f
+			defaultHierarchy: LocalDateTable_f376d0e0-f993-4719-ac52-82591a555a89.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_event_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5f7ee7fc-dfa1-4448-ad24-4db354ea144e
+		summarizeBy: none
+		sourceColumn: source_event_time
+
+		variation Variation
+			isDefault
+			relationship: 8886af6d-7a82-4dc9-9c37-06187d3dc289
+			defaultHierarchy: LocalDateTable_f2774f38-52d1-4c70-b178-f6fb8940bafc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column retrieved_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d3e72ed2-d2f3-4cad-af04-c690529b97d8
+		summarizeBy: none
+		sourceColumn: retrieved_at
+
+		variation Variation
+			isDefault
+			relationship: 48b511b2-12fe-41cc-b7fc-296dbb12437a
+			defaultHierarchy: LocalDateTable_10fa8bcc-a1c6-4178-86a1-3767e53a0c4b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column capture_method
+		dataType: string
+		lineageTag: 6700daf8-86bb-4fcc-9776-02bfd9f0e528
+		summarizeBy: none
+		sourceColumn: capture_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column parser_version
+		dataType: string
+		lineageTag: 0d7c67fb-3f7e-4888-bfbd-01ef1dad7cae
+		summarizeBy: none
+		sourceColumn: parser_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column quality_status
+		dataType: string
+		lineageTag: f6c1de8e-b155-467d-b3f9-60715b6a2764
+		summarizeBy: none
+		sourceColumn: quality_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_scope_key
+		dataType: string
+		lineageTag: 3576c5ee-e39f-5b6b-9e61-c45619d96805
+		summarizeBy: none
+		sourceColumn: member_scope_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics fct_evidence_observation' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_fct_evidence_observation = Source{[Schema="analytics",Item="fct_evidence_observation"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(analytics_fct_evidence_observation, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id])))),
+				    #"Member Scope Key" = Table.AddColumn(#"Approved Published Rows", "member_scope_key", each Text.Lower(Text.From([analysis_snapshot_id])) & "|" & Text.Lower(Text.From([case_key])) & "|" & Text.Lower(Text.From([repository_key])), type text)
+				in
+				    #"Member Scope Key"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

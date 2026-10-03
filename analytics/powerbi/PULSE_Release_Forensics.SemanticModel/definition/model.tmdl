@@ -1,0 +1,42 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["analytics bridge_case_repository","analytics bridge_finding_evidence","analytics dim_case","analytics dim_evidence_source","analytics dim_release","analytics dim_repository","analytics fct_candidate_review","analytics fct_collection_task","analytics fct_evidence_observation","analytics fct_lifecycle_finding","analytics fct_repository_investigation","SnapshotScope","_Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'analytics bridge_case_repository'
+ref table DateTableTemplate_967d1fd3-8e99-4f02-925f-261f892ad987
+ref table LocalDateTable_c3550a19-71be-477c-a061-77dcf7f1a753
+ref table 'analytics bridge_finding_evidence'
+ref table 'analytics dim_case'
+ref table LocalDateTable_72d23730-3709-4e8f-b40d-291f82ec5a00
+ref table LocalDateTable_e823e087-fded-4456-b52a-5c8da7ea5d29
+ref table LocalDateTable_3b9366eb-1272-4645-8ed2-8d189f671f11
+ref table 'analytics dim_evidence_source'
+ref table 'analytics dim_release'
+ref table LocalDateTable_da45de91-6b74-41f6-a3c2-933043873022
+ref table 'analytics dim_repository'
+ref table 'analytics fct_candidate_review'
+ref table LocalDateTable_b6ae97c8-237b-4ac3-9cb6-d119cdc71974
+ref table LocalDateTable_b439db88-0056-4d75-aa74-3b54febd2cb9
+ref table 'analytics fct_collection_task'
+ref table 'analytics fct_evidence_observation'
+ref table LocalDateTable_f376d0e0-f993-4719-ac52-82591a555a89
+ref table LocalDateTable_f2774f38-52d1-4c70-b178-f6fb8940bafc
+ref table LocalDateTable_10fa8bcc-a1c6-4178-86a1-3767e53a0c4b
+ref table 'analytics fct_lifecycle_finding'
+ref table 'analytics fct_repository_investigation'
+ref table SnapshotScope
+ref table _Measures
+
+ref cultureInfo en-US
+

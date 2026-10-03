@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "2b84874cc937a84d9e2f",
+  "position": {
+    "x": 794,
+    "y": 786,
+    "z": 11000,
+    "height": 184,
+    "width": 1086,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics bridge_case_repository"
+                    }
+                  },
+                  "Property": "repository_name"
+                }
+              },
+              "queryRef": "analytics bridge_case_repository.repository_name",
+              "nativeQueryRef": "repository_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_repository_investigation"
+                    }
+                  },
+                  "Property": "paired_path_count"
+                }
+              },
+              "queryRef": "analytics fct_repository_investigation.paired_path_count",
+              "nativeQueryRef": "paired_path_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_repository_investigation"
+                    }
+                  },
+                  "Property": "after_only_path_count"
+                }
+              },
+              "queryRef": "analytics fct_repository_investigation.after_only_path_count",
+              "nativeQueryRef": "after_only_path_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_repository_investigation"
+                    }
+                  },
+                  "Property": "unresolved_path_count"
+                }
+              },
+              "queryRef": "analytics fct_repository_investigation.unresolved_path_count",
+              "nativeQueryRef": "unresolved_path_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_repository_investigation"
+                    }
+                  },
+                  "Property": "ambiguous_path_count"
+                }
+              },
+              "queryRef": "analytics fct_repository_investigation.ambiguous_path_count",
+              "nativeQueryRef": "ambiguous_path_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_repository_investigation"
+                    }
+                  },
+                  "Property": "has_exact_target_resolution_observation"
+                }
+              },
+              "queryRef": "analytics fct_repository_investigation.has_exact_target_resolution_observation",
+              "nativeQueryRef": "has_exact_target_resolution_observation"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Historical evidence paths — AFTER_ONLY does not prove absence'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

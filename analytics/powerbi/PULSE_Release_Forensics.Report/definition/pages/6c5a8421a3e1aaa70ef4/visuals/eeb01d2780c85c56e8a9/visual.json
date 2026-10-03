@@ -1,0 +1,288 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "eeb01d2780c85c56e8a9",
+  "position": {
+    "x": 40,
+    "y": 160,
+    "z": 4000,
+    "height": 410,
+    "width": 1840,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "finding_id"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.finding_id",
+              "nativeQueryRef": "finding_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics bridge_case_repository"
+                    }
+                  },
+                  "Property": "repository_name"
+                }
+              },
+              "queryRef": "analytics bridge_case_repository.repository_name",
+              "nativeQueryRef": "repository_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "lifecycle_category"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.lifecycle_category",
+              "nativeQueryRef": "lifecycle_category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "finding_status"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.finding_status",
+              "nativeQueryRef": "finding_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "source_sufficiency_status"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.source_sufficiency_status",
+              "nativeQueryRef": "source_sufficiency_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "analytical_status_family"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.analytical_status_family",
+              "nativeQueryRef": "analytical_status_family"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "reason_code"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.reason_code",
+              "nativeQueryRef": "reason_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "confidence_level"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.confidence_level",
+              "nativeQueryRef": "confidence_level"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "rule_version"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.rule_version",
+              "nativeQueryRef": "rule_version"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "support_artifact_count"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.support_artifact_count",
+              "nativeQueryRef": "support_artifact_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "support_observation_count"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.support_observation_count",
+              "nativeQueryRef": "support_observation_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "support_review_count"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.support_review_count",
+              "nativeQueryRef": "support_review_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "provenance_status"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.provenance_status",
+              "nativeQueryRef": "provenance_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "analysis_snapshot_id"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.analysis_snapshot_id",
+              "nativeQueryRef": "analysis_snapshot_id"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Selected finding, evidence sufficiency and bounded status'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

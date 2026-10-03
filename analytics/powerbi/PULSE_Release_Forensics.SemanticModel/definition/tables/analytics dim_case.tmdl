@@ -1,0 +1,155 @@
+table 'analytics dim_case'
+	lineageTag: e9cfbffa-3045-4b53-b1e0-77e462a57ca5
+
+	column case_key
+		dataType: string
+		lineageTag: cc60faea-a273-44fe-a523-0cde169cfaec
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version_id
+		dataType: string
+		lineageTag: b38826d5-0d47-40ee-940f-14117ac91d0f
+		summarizeBy: none
+		sourceColumn: case_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_id
+		dataType: string
+		lineageTag: dc0cb064-08f0-4acc-bdc0-d4f3c182a9dc
+		summarizeBy: none
+		sourceColumn: case_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version
+		dataType: int64
+		formatString: 0
+		lineageTag: 01b9a85e-80d4-4fa2-ae7a-24f2a2d4c738
+		summarizeBy: sum
+		sourceColumn: case_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_name
+		dataType: string
+		lineageTag: 3759d23b-f4d6-49e1-ab66-d1223dac7b33
+		summarizeBy: none
+		sourceColumn: case_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_key
+		dataType: string
+		lineageTag: 2455f90a-94a0-4104-8725-c09cfdae2267
+		summarizeBy: none
+		sourceColumn: release_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_package
+		dataType: string
+		lineageTag: 831783af-fb45-426c-8529-e89755f0c875
+		summarizeBy: none
+		sourceColumn: target_package
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_version
+		dataType: string
+		lineageTag: 85e4046c-966a-45f6-9345-60433620f186
+		summarizeBy: none
+		sourceColumn: target_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dfc880c8-5b0b-438f-9b60-9c4259220337
+		summarizeBy: none
+		sourceColumn: release_time
+
+		variation Variation
+			isDefault
+			relationship: 3d98bcbf-d5ac-4585-bb3e-be27405ead14
+			defaultHierarchy: LocalDateTable_72d23730-3709-4e8f-b40d-291f82ec5a00.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column window_start
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 16a2cffa-1611-42c1-b414-dec3cd3fb2a9
+		summarizeBy: none
+		sourceColumn: window_start
+
+		variation Variation
+			isDefault
+			relationship: 45e88cf5-6bd1-4701-bd41-42329dbac631
+			defaultHierarchy: LocalDateTable_e823e087-fded-4456-b52a-5c8da7ea5d29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column window_end
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ca55535a-ea2d-407d-be29-eefcb58714d8
+		summarizeBy: none
+		sourceColumn: window_end
+
+		variation Variation
+			isDefault
+			relationship: dc908c34-4caf-42cb-9712-b02ca5175f84
+			defaultHierarchy: LocalDateTable_3b9366eb-1272-4645-8ed2-8d189f671f11.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_plan_version
+		dataType: string
+		lineageTag: c7128e30-d971-4764-8340-aed879801c7d
+		summarizeBy: none
+		sourceColumn: source_plan_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column rule_version
+		dataType: string
+		lineageTag: b8e78a37-e567-48f6-a938-a6c66279d631
+		summarizeBy: none
+		sourceColumn: rule_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column question_set_version
+		dataType: string
+		lineageTag: a11afd71-fbca-48e7-a5c9-a16f56c1dba2
+		summarizeBy: none
+		sourceColumn: question_set_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_status
+		dataType: string
+		lineageTag: 6cb44177-076b-4296-ba6b-c3b586fdecf5
+		summarizeBy: none
+		sourceColumn: case_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics dim_case' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_dim_case = Source{[Schema="analytics",Item="dim_case"]}[Data]
+				in
+				    analytics_dim_case
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

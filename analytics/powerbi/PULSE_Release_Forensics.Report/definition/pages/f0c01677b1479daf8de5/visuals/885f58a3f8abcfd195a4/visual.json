@@ -1,0 +1,162 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "885f58a3f8abcfd195a4",
+  "position": {
+    "x": 964,
+    "y": 862,
+    "z": 11000,
+    "height": 128,
+    "width": 916,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics bridge_case_repository"
+                    }
+                  },
+                  "Property": "repository_name"
+                }
+              },
+              "queryRef": "analytics bridge_case_repository.repository_name",
+              "nativeQueryRef": "repository_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "finding_id"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.finding_id",
+              "nativeQueryRef": "finding_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "finding_status"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.finding_status",
+              "nativeQueryRef": "finding_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "source_sufficiency_status"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.source_sufficiency_status",
+              "nativeQueryRef": "source_sufficiency_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_lifecycle_finding"
+                    }
+                  },
+                  "Property": "reason_code"
+                }
+              },
+              "queryRef": "analytics fct_lifecycle_finding.reason_code",
+              "nativeQueryRef": "reason_code"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Evidence gap: UNKNOWN is not bounded NO'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

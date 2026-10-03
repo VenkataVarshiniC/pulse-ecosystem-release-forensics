@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "76c36b783197cd54c84d",
+  "position": {
+    "x": 40,
+    "y": 862,
+    "z": 10000,
+    "height": 128,
+    "width": 900,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_collection_task"
+                    }
+                  },
+                  "Property": "collection_task_id"
+                }
+              },
+              "queryRef": "analytics fct_collection_task.collection_task_id",
+              "nativeQueryRef": "collection_task_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_collection_task"
+                    }
+                  },
+                  "Property": "task_type"
+                }
+              },
+              "queryRef": "analytics fct_collection_task.task_type",
+              "nativeQueryRef": "task_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics dim_evidence_source"
+                    }
+                  },
+                  "Property": "source_type"
+                }
+              },
+              "queryRef": "analytics dim_evidence_source.source_type",
+              "nativeQueryRef": "source_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_collection_task"
+                    }
+                  },
+                  "Property": "required_flag"
+                }
+              },
+              "queryRef": "analytics fct_collection_task.required_flag",
+              "nativeQueryRef": "required_flag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_collection_task"
+                    }
+                  },
+                  "Property": "terminal_status"
+                }
+              },
+              "queryRef": "analytics fct_collection_task.terminal_status",
+              "nativeQueryRef": "terminal_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_collection_task"
+                    }
+                  },
+                  "Property": "repository_key"
+                }
+              },
+              "queryRef": "analytics fct_collection_task.repository_key",
+              "nativeQueryRef": "repository_key"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Selected source and task inventory; shared upstream tasks may lack repository'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

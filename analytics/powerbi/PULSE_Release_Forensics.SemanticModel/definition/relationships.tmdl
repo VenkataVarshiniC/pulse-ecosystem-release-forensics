@@ -1,0 +1,98 @@
+relationship 97dc33b9-e3cc-440d-b26f-a39fda65f51f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics bridge_case_repository'.included_at
+	toColumn: LocalDateTable_c3550a19-71be-477c-a061-77dcf7f1a753.Date
+
+relationship 3d98bcbf-d5ac-4585-bb3e-be27405ead14
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics dim_case'.release_time
+	toColumn: LocalDateTable_72d23730-3709-4e8f-b40d-291f82ec5a00.Date
+
+relationship 45e88cf5-6bd1-4701-bd41-42329dbac631
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics dim_case'.window_start
+	toColumn: LocalDateTable_e823e087-fded-4456-b52a-5c8da7ea5d29.Date
+
+relationship dc908c34-4caf-42cb-9712-b02ca5175f84
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics dim_case'.window_end
+	toColumn: LocalDateTable_3b9366eb-1272-4645-8ed2-8d189f671f11.Date
+
+relationship a42acdda-6683-44df-8999-b2d209b9efca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics dim_release'.release_time
+	toColumn: LocalDateTable_da45de91-6b74-41f6-a3c2-933043873022.Date
+
+relationship 861c45c2-07e2-41fa-92d3-6800ef8d2025
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics fct_candidate_review'.emitted_at
+	toColumn: LocalDateTable_b6ae97c8-237b-4ac3-9cb6-d119cdc71974.Date
+
+relationship d3a1b9a3-701a-4730-ba04-5568ccfa005f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics fct_candidate_review'.reviewed_at
+	toColumn: LocalDateTable_b439db88-0056-4d75-aa74-3b54febd2cb9.Date
+
+relationship 85e65480-9a3e-4434-ba1c-6f954967886f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics fct_evidence_observation'.observation_time
+	toColumn: LocalDateTable_f376d0e0-f993-4719-ac52-82591a555a89.Date
+
+relationship 8886af6d-7a82-4dc9-9c37-06187d3dc289
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics fct_evidence_observation'.source_event_time
+	toColumn: LocalDateTable_f2774f38-52d1-4c70-b178-f6fb8940bafc.Date
+
+relationship 48b511b2-12fe-41cc-b7fc-296dbb12437a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'analytics fct_evidence_observation'.retrieved_at
+	toColumn: LocalDateTable_10fa8bcc-a1c6-4178-86a1-3767e53a0c4b.Date
+
+relationship 6cbb55a8-b89c-5574-87de-b09ea01e2c77
+	fromColumn: 'analytics dim_case'.release_key
+	toColumn: 'analytics dim_release'.release_key
+
+relationship 34a922d9-edda-5e2b-b38a-4ab5de833d02
+	fromColumn: 'analytics bridge_case_repository'.case_key
+	toColumn: 'analytics dim_case'.case_key
+
+relationship 7d590b45-1d91-5445-97b5-f8257884e925
+	fromColumn: 'analytics bridge_case_repository'.repository_key
+	toColumn: 'analytics dim_repository'.repository_key
+
+relationship 0a5fefb1-f3b3-582d-b763-e80dd81b0526
+	fromColumn: 'analytics bridge_case_repository'.analysis_snapshot_id
+	toColumn: SnapshotScope.analysis_snapshot_id
+
+relationship 4c96f0fa-0661-59ac-84a5-32ab41fc8a14
+	fromColumn: 'analytics fct_collection_task'.analysis_snapshot_id
+	toColumn: SnapshotScope.analysis_snapshot_id
+
+relationship a07ff28d-5057-5a07-b0ed-05ea74385a04
+	fromColumn: 'analytics fct_repository_investigation'.member_scope_key
+	toColumn: 'analytics bridge_case_repository'.member_scope_key
+
+relationship 5f1a96ee-ac3d-5105-bb66-1f78be591634
+	fromColumn: 'analytics fct_candidate_review'.member_scope_key
+	toColumn: 'analytics bridge_case_repository'.member_scope_key
+
+relationship dacbd529-e623-5fa3-972d-b0edbc9ef44a
+	fromColumn: 'analytics fct_lifecycle_finding'.member_scope_key
+	toColumn: 'analytics bridge_case_repository'.member_scope_key
+
+relationship 62bc57b6-af5b-5cc7-882e-67cfcf1185c2
+	fromColumn: 'analytics fct_evidence_observation'.member_scope_key
+	toColumn: 'analytics bridge_case_repository'.member_scope_key
+
+relationship e7f2ff5a-f78e-5364-8252-4b25ac10ddad
+	fromColumn: 'analytics fct_collection_task'.source_key
+	toColumn: 'analytics dim_evidence_source'.source_key
+
+relationship b465b68c-7473-59c0-a922-57d529f6eb07
+	fromColumn: 'analytics fct_candidate_review'.source_key
+	toColumn: 'analytics dim_evidence_source'.source_key
+
+relationship b8b1d354-7bd5-5032-a5d0-7bb3176371f3
+	fromColumn: 'analytics fct_evidence_observation'.source_key
+	toColumn: 'analytics dim_evidence_source'.source_key
+

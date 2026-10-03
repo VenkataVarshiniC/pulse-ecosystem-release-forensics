@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "e5c27cf4be2227649830",
+  "displayName": "Candidate & Review Quality",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "a511eeb9866b0e829cf3",
+      "target": "3f40437e23ee0771d031",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a511eeb9866b0e829cf3",
+      "target": "7af7bd1034e9eb0163d4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a511eeb9866b0e829cf3",
+      "target": "80a07ab446f3838333a3",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a511eeb9866b0e829cf3",
+      "target": "d106e0cc8758de881709",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b6fb4a5cbbef3b6a95d4",
+      "target": "3f40437e23ee0771d031",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b6fb4a5cbbef3b6a95d4",
+      "target": "7af7bd1034e9eb0163d4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b6fb4a5cbbef3b6a95d4",
+      "target": "80a07ab446f3838333a3",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b6fb4a5cbbef3b6a95d4",
+      "target": "d106e0cc8758de881709",
+      "type": "DataFilter"
+    }
+  ]
+}

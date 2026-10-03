@@ -1,0 +1,99 @@
+table 'analytics dim_evidence_source'
+	lineageTag: d8f55be5-84b7-4a2b-9263-5c68fcdf509f
+
+	column source_key
+		dataType: string
+		lineageTag: e0237de3-c216-4ca7-aba0-04c0b715857e
+		summarizeBy: none
+		sourceColumn: source_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_id
+		dataType: string
+		lineageTag: 8bd392fc-3fd4-4b91-aaf4-ea8e7d150b0f
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column provider
+		dataType: string
+		lineageTag: 4620c99f-bf2a-4f2c-8db9-20fba85a32e4
+		summarizeBy: none
+		sourceColumn: provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_type
+		dataType: string
+		lineageTag: 723f44e2-b1d2-4141-bd54-f68fb4d6afc3
+		summarizeBy: none
+		sourceColumn: source_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_version
+		dataType: string
+		lineageTag: 3a8ecabc-23e5-4853-aab1-c51c06f0287b
+		summarizeBy: none
+		sourceColumn: source_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column base_locator
+		dataType: string
+		lineageTag: dd5dd158-6781-40cf-acfe-2106d0d90615
+		summarizeBy: none
+		sourceColumn: base_locator
+
+		annotation SummarizationSetBy = Automatic
+
+	column access_class
+		dataType: string
+		lineageTag: a0cea18a-1d56-432c-98c3-3569ab2b8a6d
+		summarizeBy: none
+		sourceColumn: access_class
+
+		annotation SummarizationSetBy = Automatic
+
+	column collector_capture_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f70144d7-b9f6-4150-8669-852e02fcd26c
+		summarizeBy: sum
+		sourceColumn: collector_capture_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column connector_assisted_capture_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a944480-0189-4c81-9ac4-938d678c6103
+		summarizeBy: sum
+		sourceColumn: connector_assisted_capture_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column fixture_capture_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 57b9e701-7797-47a7-8616-86b44ebdc791
+		summarizeBy: sum
+		sourceColumn: fixture_capture_count
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics dim_evidence_source' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_dim_evidence_source = Source{[Schema="analytics",Item="dim_evidence_source"]}[Data]
+				in
+				    analytics_dim_evidence_source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

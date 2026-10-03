@@ -1,0 +1,86 @@
+table 'analytics dim_release'
+	lineageTag: 63a3a4ff-ed8a-440e-9ef4-72b180f65318
+
+	column release_key
+		dataType: string
+		lineageTag: e914aabb-a36d-4c35-8db6-53053d0c6292
+		summarizeBy: none
+		sourceColumn: release_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_id
+		dataType: string
+		lineageTag: bf0495d5-d090-45b0-874a-48a4469311aa
+		summarizeBy: none
+		sourceColumn: release_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column package_ecosystem
+		dataType: string
+		lineageTag: e618d912-eaf8-4e68-ad4c-77e5a3c9a446
+		summarizeBy: none
+		sourceColumn: package_ecosystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column package_name
+		dataType: string
+		lineageTag: e1510456-792f-4de2-92c9-58790a1ce36b
+		summarizeBy: none
+		sourceColumn: package_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column version
+		dataType: string
+		lineageTag: 4c4cd4ce-2f3e-4aa7-a7c8-57c4a866effb
+		summarizeBy: none
+		sourceColumn: version
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f2930c2a-6971-49a4-8b90-2ca576b5182a
+		summarizeBy: none
+		sourceColumn: release_time
+
+		variation Variation
+			isDefault
+			relationship: a42acdda-6683-44df-8999-b2d209b9efca
+			defaultHierarchy: LocalDateTable_da45de91-6b74-41f6-a3c2-933043873022.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_source_id
+		dataType: string
+		lineageTag: 1421079a-1c10-4c46-940b-ed0a6c8fb9b8
+		summarizeBy: none
+		sourceColumn: release_source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_artifact_id
+		dataType: string
+		lineageTag: a40acbaf-05cb-4a44-b1bf-2a4ea54ae5fb
+		summarizeBy: none
+		sourceColumn: release_artifact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics dim_release' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_dim_release = Source{[Schema="analytics",Item="dim_release"]}[Data]
+				in
+				    analytics_dim_release
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

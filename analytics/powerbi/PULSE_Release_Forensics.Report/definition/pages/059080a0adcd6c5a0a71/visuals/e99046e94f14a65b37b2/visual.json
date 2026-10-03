@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "e99046e94f14a65b37b2",
+  "position": {
+    "x": 1140,
+    "y": 150,
+    "z": 7000,
+    "height": 142,
+    "width": 740,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotScope"
+                    }
+                  },
+                  "Property": "case_name"
+                }
+              },
+              "queryRef": "SnapshotScope.case_name",
+              "nativeQueryRef": "case_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotScope"
+                    }
+                  },
+                  "Property": "target_package"
+                }
+              },
+              "queryRef": "SnapshotScope.target_package",
+              "nativeQueryRef": "target_package"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotScope"
+                    }
+                  },
+                  "Property": "target_version"
+                }
+              },
+              "queryRef": "SnapshotScope.target_version",
+              "nativeQueryRef": "target_version"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotScope"
+                    }
+                  },
+                  "Property": "release_time"
+                }
+              },
+              "queryRef": "SnapshotScope.release_time",
+              "nativeQueryRef": "release_time"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotScope"
+                    }
+                  },
+                  "Property": "snapshot_state"
+                }
+              },
+              "queryRef": "SnapshotScope.snapshot_state",
+              "nativeQueryRef": "snapshot_state"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotScope"
+                    }
+                  },
+                  "Property": "source_metric_definition_version"
+                }
+              },
+              "queryRef": "SnapshotScope.source_metric_definition_version",
+              "nativeQueryRef": "source_metric_definition_version"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Selected release and governed snapshot'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

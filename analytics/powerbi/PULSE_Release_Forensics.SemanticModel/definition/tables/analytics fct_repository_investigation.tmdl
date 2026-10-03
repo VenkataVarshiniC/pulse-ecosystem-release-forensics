@@ -1,0 +1,359 @@
+table 'analytics fct_repository_investigation'
+	lineageTag: 35147696-0bd2-4489-a1fd-41ef9bd20bf3
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: ac3d285a-13af-4af9-bae1-cb89dc891a72
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: 7e630ce9-2da8-4a9d-a42e-b349ee0829bc
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: 00706804-89a7-41f7-9b23-58920bfc1c7f
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: 9ca8b8ca-eff9-41f4-be9d-9b8be4948bb6
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_key
+		dataType: string
+		lineageTag: b619dfdb-43bd-41fa-98cc-49c29178a21f
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version_id
+		dataType: string
+		lineageTag: 9f1625eb-f0de-4f78-8208-ba0fa9335214
+		summarizeBy: none
+		sourceColumn: case_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_id
+		dataType: string
+		lineageTag: 7b00d8e1-75da-4485-a588-d1fe25f932fe
+		summarizeBy: none
+		sourceColumn: repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column core_collection_complete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9ad85e7c-45e3-4871-a272-c8806020d420
+		summarizeBy: none
+		sourceColumn: core_collection_complete
+
+		annotation SummarizationSetBy = Automatic
+
+	column planned_member_task_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 1606deb2-81c3-416d-a682-c847fd988d3d
+		summarizeBy: sum
+		sourceColumn: planned_member_task_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column required_member_task_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 56ce7485-7c78-40e3-9a99-16cb84a621f4
+		summarizeBy: sum
+		sourceColumn: required_member_task_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column optional_not_found_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 409cc29b-4617-420e-b95c-bd6d4b03ef1d
+		summarizeBy: sum
+		sourceColumn: optional_not_found_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column required_member_task_gap_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 17d2d8b8-24e0-46bd-9f73-1839b9089126
+		summarizeBy: sum
+		sourceColumn: required_member_task_gap_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column required_upstream_task_gap_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 91987bd6-eaed-419b-9699-2374bb4eb626
+		summarizeBy: sum
+		sourceColumn: required_upstream_task_gap_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column paired_path_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 0910d4dc-6e3a-4bbe-b091-86d70efe6f7c
+		summarizeBy: sum
+		sourceColumn: paired_path_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column after_only_path_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e5a7a60-3361-4c61-979b-7ee906556712
+		summarizeBy: sum
+		sourceColumn: after_only_path_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column unresolved_path_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f334fd49-00ea-4cef-8c82-abbb936a200d
+		summarizeBy: sum
+		sourceColumn: unresolved_path_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column ambiguous_path_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f6f1764-6773-4060-b696-20ab15e9db6b
+		summarizeBy: sum
+		sourceColumn: ambiguous_path_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_paired_pre_release_history
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e64bfe36-eb2a-46df-9878-adfae046e73f
+		summarizeBy: none
+		sourceColumn: has_paired_pre_release_history
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_after_only_history
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a0de84b1-46cf-4145-aacb-34ea20c4b281
+		summarizeBy: none
+		sourceColumn: has_after_only_history
+
+		annotation SummarizationSetBy = Automatic
+
+	column historical_declaration_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 0802dca9-7c90-4439-8eb4-c0bb1d869951
+		summarizeBy: sum
+		sourceColumn: historical_declaration_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_historical_declaration
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5e979c09-79ab-4f41-8c9b-4c0b2b4b167a
+		summarizeBy: none
+		sourceColumn: has_historical_declaration
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_exact_target_resolution_observation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 75519a4d-9128-4901-b1a6-968c94da68b5
+		summarizeBy: none
+		sourceColumn: has_exact_target_resolution_observation
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_capture_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c1b8955-6b90-49dd-8229-07af6f24b290
+		summarizeBy: sum
+		sourceColumn: release_capture_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column historical_capture_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 548b3e8b-2b0d-492e-90a2-e5f714ceee01
+		summarizeBy: sum
+		sourceColumn: historical_capture_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column candidate_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 16bfeb19-7a54-40c6-aeb3-022ff66cb93a
+		summarizeBy: sum
+		sourceColumn: candidate_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_candidate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 660a0efa-31e2-40ab-8b90-ab2be8a9135d
+		summarizeBy: none
+		sourceColumn: has_candidate
+
+		annotation SummarizationSetBy = Automatic
+
+	column terminal_review_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 35632406-efe2-4dc5-81aa-01b1ccf62b79
+		summarizeBy: sum
+		sourceColumn: terminal_review_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column accepted_review_numerator
+		dataType: int64
+		formatString: 0
+		lineageTag: bec45bef-4b4b-486f-815d-664867df95a0
+		summarizeBy: sum
+		sourceColumn: accepted_review_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	column terminal_review_denominator
+		dataType: int64
+		formatString: 0
+		lineageTag: 24f47ec7-6ea6-49ee-9901-33b1a8dae45d
+		summarizeBy: sum
+		sourceColumn: terminal_review_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	column rejected_review_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b4ea356-2f75-4750-86c4-5139463e3b4e
+		summarizeBy: sum
+		sourceColumn: rejected_review_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewed_acceptance_available
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5504fc08-046f-4ea3-ab26-b63b92c947ae
+		summarizeBy: none
+		sourceColumn: reviewed_acceptance_available
+
+		annotation SummarizationSetBy = Automatic
+
+	column finding_count
+		dataType: int64
+		formatString: 0
+		lineageTag: b7e86d4c-8567-49e1-9674-7ae6f005ab53
+		summarizeBy: sum
+		sourceColumn: finding_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column unknown_finding_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 898cbeb6-5958-4c73-8f19-5e141ceffe5f
+		summarizeBy: sum
+		sourceColumn: unknown_finding_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column bounded_no_finding_count
+		dataType: int64
+		formatString: 0
+		lineageTag: ba8482f8-dd73-49b6-994c-3030e2bccab1
+		summarizeBy: sum
+		sourceColumn: bounded_no_finding_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column legacy_unclassified_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cb2f954-7b13-48de-bf0b-445850d3a24c
+		summarizeBy: sum
+		sourceColumn: legacy_unclassified_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 899b3e6a-fa68-4dff-9742-fc071db8bb59
+		summarizeBy: sum
+		sourceColumn: observation_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column observed_adoption_status
+		dataType: string
+		lineageTag: 2fc4c05f-4db6-4bfe-8573-589631022b12
+		summarizeBy: none
+		sourceColumn: observed_adoption_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column recovery_signal_status
+		dataType: string
+		lineageTag: a74abe4d-5970-4586-a776-019043542a73
+		summarizeBy: none
+		sourceColumn: recovery_signal_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_scope_key
+		dataType: string
+		lineageTag: 3422d68a-2264-5f1f-85b6-36d32b194d73
+		summarizeBy: none
+		sourceColumn: member_scope_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics fct_repository_investigation' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_fct_repository_investigation = Source{[Schema="analytics",Item="fct_repository_investigation"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(analytics_fct_repository_investigation, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id])))),
+				    #"Member Scope Key" = Table.AddColumn(#"Approved Published Rows", "member_scope_key", each Text.Lower(Text.From([analysis_snapshot_id])) & "|" & Text.Lower(Text.From([case_key])) & "|" & Text.Lower(Text.From([repository_key])), type text)
+				in
+				    #"Member Scope Key"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

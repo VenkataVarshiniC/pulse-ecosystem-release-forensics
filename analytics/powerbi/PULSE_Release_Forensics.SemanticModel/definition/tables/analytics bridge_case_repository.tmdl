@@ -1,0 +1,155 @@
+table 'analytics bridge_case_repository'
+	lineageTag: f8fdc72c-a83c-4904-9b00-d059c39b8d37
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: dd847edf-05da-4abd-a51e-c21d50c8903f
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: b543bde8-cf2e-4bda-81f8-2c18949f194c
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: f1a721a8-dd14-407b-8492-9ff167d80066
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_snapshot_model_version
+		dataType: string
+		lineageTag: 77a253dd-07a5-4c29-80ef-dd3f2497be6b
+		summarizeBy: none
+		sourceColumn: source_snapshot_model_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_metric_definition_version
+		dataType: string
+		lineageTag: 5d1cca0d-50c3-491c-93be-7f7890254ce7
+		summarizeBy: none
+		sourceColumn: source_metric_definition_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column mart_model_version
+		dataType: string
+		lineageTag: 3ec5e9ad-5c5d-4b76-9b44-766128b40139
+		summarizeBy: none
+		sourceColumn: mart_model_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: 84fe4863-ddbb-4fd9-8a04-1cf4b3ed73a9
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_key
+		dataType: string
+		lineageTag: 3822188d-b528-42b6-a719-6d75656a83b7
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version_id
+		dataType: string
+		lineageTag: 1b206a54-4dee-4ef5-91dd-e8003edf2503
+		summarizeBy: none
+		sourceColumn: case_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_id
+		dataType: string
+		lineageTag: 77809c9b-ca2a-4099-835c-65c7eb18565a
+		summarizeBy: none
+		sourceColumn: repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column selection_method
+		dataType: string
+		lineageTag: 782129f8-e9a6-4e17-b9fd-2e06729f1afc
+		summarizeBy: none
+		sourceColumn: selection_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column eligibility_status
+		dataType: string
+		lineageTag: 5b39d5f0-d846-44c1-960f-84ab5dda4955
+		summarizeBy: none
+		sourceColumn: eligibility_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column selection_rationale
+		dataType: string
+		lineageTag: 4ca35643-c778-441e-903f-d78eb8d323ba
+		summarizeBy: none
+		sourceColumn: selection_rationale
+
+		annotation SummarizationSetBy = Automatic
+
+	column included_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4eec2025-54f4-4588-9c13-734adb6633f0
+		summarizeBy: none
+		sourceColumn: included_at
+
+		variation Variation
+			isDefault
+			relationship: 97dc33b9-e3cc-440d-b26f-a39fda65f51f
+			defaultHierarchy: LocalDateTable_c3550a19-71be-477c-a061-77dcf7f1a753.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_scope_key
+		dataType: string
+		lineageTag: bab5e252-7431-51ed-8e3a-2de72974cc80
+		summarizeBy: none
+		sourceColumn: member_scope_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_name
+		dataType: string
+		lineageTag: f088f901-67e0-5652-9ed1-f583dd45bb39
+		summarizeBy: none
+		sourceColumn: repository_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics bridge_case_repository' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_bridge_case_repository = Source{[Schema="analytics",Item="bridge_case_repository"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(analytics_bridge_case_repository, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id])))),
+				    #"Member Scope Key" = Table.AddColumn(#"Approved Published Rows", "member_scope_key", each Text.Lower(Text.From([analysis_snapshot_id])) & "|" & Text.Lower(Text.From([case_key])) & "|" & Text.Lower(Text.From([repository_key])), type text),
+				    Repository = Source{[Schema="analytics",Item="dim_repository"]}[Data],
+				    #"Joined Repository" = Table.NestedJoin(#"Member Scope Key", {"repository_key"}, Repository, {"repository_key"}, "repository", JoinKind.LeftOuter),
+				    #"Expanded Repository" = Table.ExpandTableColumn(#"Joined Repository", "repository", {"canonical_full_name"}, {"repository_name"})
+				in
+				    #"Expanded Repository"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

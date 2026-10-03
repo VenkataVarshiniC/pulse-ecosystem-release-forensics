@@ -1,0 +1,113 @@
+table 'analytics bridge_finding_evidence'
+	lineageTag: c19857bd-c1e6-48a5-a01b-f3b6afcfe372
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: 384e4d56-7a6d-40c1-8c26-89ee2e49d369
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: 649b0b28-4b45-4735-bbbd-fbfad4630a65
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: c5939767-c7d0-4d0f-b4c4-4b9991ee60e2
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: a434b245-9330-4014-ba26-49eed8b4062f
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_key
+		dataType: string
+		lineageTag: 94a6a3d5-8f39-47fb-a521-9df52689beae
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column finding_id
+		dataType: string
+		lineageTag: 5fbe60a9-ebff-4ebf-ab12-319aa4252d5f
+		summarizeBy: none
+		sourceColumn: finding_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_type
+		dataType: string
+		lineageTag: 0dd18ead-9754-45a5-bd05-5f58cf64833c
+		summarizeBy: none
+		sourceColumn: support_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_id
+		dataType: string
+		lineageTag: 62f9886f-e987-4a71-a03c-cb9247ca40ea
+		summarizeBy: none
+		sourceColumn: support_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_role
+		dataType: string
+		lineageTag: beff65c6-25ea-499c-8f04-8889cbd64c28
+		summarizeBy: none
+		sourceColumn: support_role
+
+		annotation SummarizationSetBy = Automatic
+
+	column artifact_id
+		dataType: string
+		lineageTag: a3555b64-cae0-42bb-8707-e331e9ea067d
+		summarizeBy: none
+		sourceColumn: artifact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column observation_id
+		dataType: string
+		lineageTag: 1a41b165-6263-4641-ba5f-0fb7b1684d1a
+		summarizeBy: none
+		sourceColumn: observation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_id
+		dataType: string
+		lineageTag: cdaedef1-2b86-4ee1-9907-a4205c45f754
+		summarizeBy: none
+		sourceColumn: review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics bridge_finding_evidence' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_bridge_finding_evidence = Source{[Schema="analytics",Item="bridge_finding_evidence"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(analytics_bridge_finding_evidence, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id]))))
+				in
+				    #"Approved Published Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

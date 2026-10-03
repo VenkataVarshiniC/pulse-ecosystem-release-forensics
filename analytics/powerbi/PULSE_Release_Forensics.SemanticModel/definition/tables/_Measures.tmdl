@@ -1,0 +1,147 @@
+table _Measures
+	lineageTag: 1627cdea-f5cd-513a-af3e-a749e5c773cd
+
+	measure 'Scope Selected' = IF(HASONEVALUE(SnapshotScope[analysis_snapshot_id]) && HASONEVALUE(SnapshotScope[case_key]), 1, 0)
+		formatString: #,0
+		lineageTag: 1f24f986-827d-58ab-872e-61b90e7ca858
+
+	measure 'Selected Case' = IF([Scope Selected] = 1, SELECTEDVALUE(SnapshotScope[case_label]), "Select one published case and snapshot")
+		lineageTag: 4ba8649d-2cf9-5741-bf0f-543438066971
+
+	measure 'Selected Snapshot' = IF([Scope Selected] = 1, SELECTEDVALUE(SnapshotScope[analysis_snapshot_id]), "Select one published case and snapshot")
+		lineageTag: 3ae22222-5b37-5136-92c4-05a4cdf2e71e
+
+	measure 'Declared Members' = IF([Scope Selected] = 1, COALESCE(DISTINCTCOUNT('analytics bridge_case_repository'[member_scope_key]), 0), BLANK())
+		formatString: #,0
+		lineageTag: c4a1dd82-8950-5264-bffe-abe6782a355a
+
+	measure 'Core Complete Members' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_repository_investigation'[member_scope_key]), 'analytics fct_repository_investigation'[core_collection_complete] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: 5f3d5355-e796-5ac7-8c94-e9c1a2e12160
+
+	measure 'Core Collection Coverage' = IF([Scope Selected] = 1, DIVIDE([Core Complete Members], [Declared Members]), BLANK())
+		formatString: 0%
+		lineageTag: 4bd232d8-1424-504c-9c4a-18d44eff2186
+
+	measure 'Core Collection Display' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF([Declared Members] = 0, "Unavailable (0 eligible observations)", "MET-001 READY · " & FORMAT([Core Collection Coverage], "0%") & " (" & FORMAT([Core Complete Members], "0") & "/" & FORMAT([Declared Members], "0") & ")"))
+		lineageTag: 6a91b3f8-9719-50e5-ae50-076d4acf2b72
+
+	measure 'Historical Declaration Members' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_repository_investigation'[member_scope_key]), 'analytics fct_repository_investigation'[has_historical_declaration] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: f3760fa8-ee92-5834-a9db-fbeb11e933e1
+
+	measure 'Historical Context Coverage' = IF([Scope Selected] = 1, DIVIDE([Historical Declaration Members], [Declared Members]), BLANK())
+		formatString: 0%
+		lineageTag: df45b00e-e35a-5348-8514-fcaee2b7d4c3
+
+	measure 'Historical Context Display' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF([Declared Members] = 0, "Unavailable (0 eligible observations)", "Declaration only · " & FORMAT([Historical Context Coverage], "0%") & " (" & FORMAT([Historical Declaration Members], "0") & "/" & FORMAT([Declared Members], "0") & ")"))
+		lineageTag: c2659802-78e1-5712-ba3e-eda070e7360e
+
+	measure 'Candidate Emitting Members' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_repository_investigation'[member_scope_key]), 'analytics fct_repository_investigation'[has_candidate] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: 84114ef7-11e2-5557-93ca-de105d86a096
+
+	measure 'Candidate Emission Coverage' = IF([Scope Selected] = 1, DIVIDE([Candidate Emitting Members], [Declared Members]), BLANK())
+		formatString: 0%
+		lineageTag: a7c437fc-8e71-5058-98da-efc08a897140
+
+	measure 'Candidate Emission Display' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF([Declared Members] = 0, "Unavailable (0 eligible observations)", "Detector activity · " & FORMAT([Candidate Emission Coverage], "0%") & " (" & FORMAT([Candidate Emitting Members], "0") & "/" & FORMAT([Declared Members], "0") & ")"))
+		lineageTag: 9cfabbe8-bb60-5310-9eac-4b40e55a9bdd
+
+	measure 'Required Tasks' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_collection_task'[collection_task_id]), 'analytics fct_collection_task'[required_flag] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: 2cc76b1c-7ef6-5559-9c2b-0841ed4a8428
+
+	measure 'Required Tasks Succeeded' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_collection_task'[collection_task_id]), 'analytics fct_collection_task'[required_flag] = TRUE(), 'analytics fct_collection_task'[terminal_status] = "succeeded"), 0), BLANK())
+		formatString: #,0
+		lineageTag: 26194157-9a3a-5b04-9a30-13437e5c1d90
+
+	measure 'Required Task Completion' = IF([Scope Selected] = 1, DIVIDE([Required Tasks Succeeded], [Required Tasks]), BLANK())
+		formatString: 0%
+		lineageTag: 678a07dd-2f9d-590b-ab29-bb74a51c92f5
+
+	measure 'Required Task Completion Display' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF([Required Tasks] = 0, "Unavailable (0 eligible observations)", "MET-016 READY · required tasks · " & FORMAT([Required Task Completion], "0%") & " (" & FORMAT([Required Tasks Succeeded], "0") & "/" & FORMAT([Required Tasks], "0") & ")"))
+		lineageTag: dead419f-467c-5d8a-b7b8-30428a1b12a0
+
+	measure 'Candidate Count' = IF([Scope Selected] = 1, COALESCE(DISTINCTCOUNT('analytics fct_candidate_review'[candidate_id]), 0), BLANK())
+		formatString: #,0
+		lineageTag: bc4e84a1-7c55-569d-b8e6-e94d3d728721
+
+	measure 'Candidate Artifact Count' = IF([Scope Selected] = 1, COALESCE(DISTINCTCOUNT('analytics fct_candidate_review'[artifact_id]), 0), BLANK())
+		formatString: #,0
+		lineageTag: 3064a921-b0fd-5b1a-8cc1-356150297494
+
+	measure 'Terminally Reviewed Candidates' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_candidate_review'[candidate_id]), 'analytics fct_candidate_review'[has_terminal_review] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: 6838de81-cc07-53f0-9983-e8aa647e491c
+
+	measure 'Accepted Candidates' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_candidate_review'[candidate_id]), 'analytics fct_candidate_review'[accepted_indicator] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: 39b5de40-37ae-5888-9eb8-c37211d8ec35
+
+	measure 'Rejected Candidates' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_candidate_review'[candidate_id]), 'analytics fct_candidate_review'[rejected_indicator] = TRUE()), 0), BLANK())
+		formatString: #,0
+		lineageTag: 6f81e255-854e-59e7-960b-284e05a3d127
+
+	measure 'Reviewed Candidate Acceptance' = IF([Scope Selected] = 1, DIVIDE([Accepted Candidates], [Terminally Reviewed Candidates]), BLANK())
+		formatString: 0%
+		lineageTag: 5ded6dbe-1614-5f52-bada-db4b893e2a8b
+
+	measure 'Acceptance Display' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF([Terminally Reviewed Candidates] = 0, "Unavailable (0 eligible observations)", "Inherited review · " & FORMAT([Reviewed Candidate Acceptance], "0%") & " (" & FORMAT([Accepted Candidates], "0") & "/" & FORMAT([Terminally Reviewed Candidates], "0") & ")"))
+		lineageTag: 2c2c6005-6f18-5593-a9eb-b7bb35519fd8
+
+	measure 'Reviewed Candidate Rejection' = IF([Scope Selected] = 1, DIVIDE([Rejected Candidates], [Terminally Reviewed Candidates]), BLANK())
+		formatString: 0%
+		lineageTag: c9a385f3-8a0a-502d-93f3-07f5f5a6e2fb
+
+	measure 'Rejection Display' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF([Terminally Reviewed Candidates] = 0, "Unavailable (0 eligible observations)", "Inherited review · " & FORMAT([Reviewed Candidate Rejection], "0%") & " (" & FORMAT([Rejected Candidates], "0") & "/" & FORMAT([Terminally Reviewed Candidates], "0") & ")"))
+		lineageTag: 221e76b4-c748-58b9-b3cf-b8a90c7802e8
+
+	measure 'Candidate Density' = IF([Scope Selected] = 1, DIVIDE([Candidate Count], [Declared Members]), BLANK())
+		formatString: 0.00
+		lineageTag: 59fb4a96-8f97-55fa-9cc1-6be9a089a905
+
+	measure 'Finding Count' = IF([Scope Selected] = 1, COALESCE(DISTINCTCOUNT('analytics fct_lifecycle_finding'[finding_id]), 0), BLANK())
+		formatString: #,0
+		lineageTag: 75062214-66ad-5578-bd44-c261510ddd16
+
+	measure 'UNKNOWN Findings' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_lifecycle_finding'[finding_id]), 'analytics fct_lifecycle_finding'[finding_status] = "UNKNOWN"), 0), BLANK())
+		formatString: #,0
+		lineageTag: 1b19b938-9194-5a04-800c-9bacdefceb40
+
+	measure 'Bounded NO Findings' = IF([Scope Selected] = 1, COALESCE(CALCULATE(DISTINCTCOUNT('analytics fct_lifecycle_finding'[finding_id]), 'analytics fct_lifecycle_finding'[finding_status] = "NO_QUALIFYING_EVIDENCE_FOUND"), 0), BLANK())
+		formatString: #,0
+		lineageTag: b46928d5-232b-5484-8640-0646cf4b890b
+
+	measure 'Paired Path Count' = IF([Scope Selected] = 1, COALESCE(SUM('analytics fct_repository_investigation'[paired_path_count]), 0), BLANK())
+		formatString: #,0
+		lineageTag: 1fefed5f-aeba-5cea-9fb5-665b0191d68e
+
+	measure 'After Only Path Count' = IF([Scope Selected] = 1, COALESCE(SUM('analytics fct_repository_investigation'[after_only_path_count]), 0), BLANK())
+		formatString: #,0
+		lineageTag: a9fac7bc-1eb5-5c24-8ee9-b3847f5265ae
+
+	measure 'Unresolved Path Count' = IF([Scope Selected] = 1, COALESCE(SUM('analytics fct_repository_investigation'[unresolved_path_count]), 0), BLANK())
+		formatString: #,0
+		lineageTag: 035c511f-8849-52f6-8dbf-d445c603d55d
+
+	measure 'Ambiguous Path Count' = IF([Scope Selected] = 1, COALESCE(SUM('analytics fct_repository_investigation'[ambiguous_path_count]), 0), BLANK())
+		formatString: #,0
+		lineageTag: a0e14254-73f2-551f-8beb-ff2f25bf4fae
+
+	measure 'Finding Cell' = IF([Scope Selected] <> 1, "Select one published case and snapshot", IF(COUNTROWS('analytics fct_lifecycle_finding') = 0, BLANK(), IF(HASONEVALUE('analytics fct_lifecycle_finding'[finding_status]) && HASONEVALUE('analytics fct_lifecycle_finding'[source_sufficiency_status]), SELECTEDVALUE('analytics fct_lifecycle_finding'[finding_status]) & " | " & SELECTEDVALUE('analytics fct_lifecycle_finding'[source_sufficiency_status]), "Multiple finding states — inspect rows")))
+		lineageTag: dd3d31e3-2d1e-5ced-8be5-fd7190a28130
+
+	column MeasureAnchor
+		dataType: string
+		isHidden
+		lineageTag: 48d92e03-d311-5a43-830d-6d45582cebbb
+		summarizeBy: none
+		sourceColumn: MeasureAnchor
+
+	partition _Measures = m
+		mode: import
+		source = #table(type table [MeasureAnchor = nullable text], {})
+
+	annotation PBI_ResultType = Table
+

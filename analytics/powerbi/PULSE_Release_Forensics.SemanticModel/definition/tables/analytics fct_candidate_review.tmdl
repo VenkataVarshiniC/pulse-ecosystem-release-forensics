@@ -1,0 +1,259 @@
+table 'analytics fct_candidate_review'
+	lineageTag: 53591147-a41c-48c3-ad64-b0b163d97abc
+
+	column analysis_snapshot_id
+		dataType: string
+		lineageTag: 3d493ca6-0898-4447-a6b5-1c15e9d2d37b
+		summarizeBy: none
+		sourceColumn: analysis_snapshot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_state
+		dataType: string
+		lineageTag: 7978599a-9bd7-463c-a65a-3343a13d2a55
+		summarizeBy: none
+		sourceColumn: snapshot_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_manifest_sha256
+		dataType: string
+		lineageTag: 0a2b474b-47f5-4844-a1ff-e5c4a78ff976
+		summarizeBy: none
+		sourceColumn: input_manifest_sha256
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_key
+		dataType: string
+		lineageTag: a4f85ad3-3b5c-4c72-b3c8-09ba48bf63f2
+		summarizeBy: none
+		sourceColumn: case_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_key
+		dataType: string
+		lineageTag: 5b194ad3-85b8-4323-9cbf-689c7039a797
+		summarizeBy: none
+		sourceColumn: repository_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_key
+		dataType: string
+		lineageTag: 9467d77c-ea9d-484e-bbd8-47d15bf34f49
+		summarizeBy: none
+		sourceColumn: source_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column candidate_id
+		dataType: string
+		lineageTag: b3da7d8b-d0f7-44e9-8f8f-ca5432393aa5
+		summarizeBy: none
+		sourceColumn: candidate_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_version_id
+		dataType: string
+		lineageTag: b9337982-f9c1-4e37-82d7-ffca027a87fe
+		summarizeBy: none
+		sourceColumn: case_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column repository_id
+		dataType: string
+		lineageTag: 363402fc-b382-4acb-9570-b6b58dc4c048
+		summarizeBy: none
+		sourceColumn: repository_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column artifact_id
+		dataType: string
+		lineageTag: 0817a2c9-db05-4f6f-acd4-220315008c01
+		summarizeBy: none
+		sourceColumn: artifact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column capture_method
+		dataType: string
+		lineageTag: 3e6ee5de-0de6-4001-bcae-70e100a1fa91
+		summarizeBy: none
+		sourceColumn: capture_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column baseline_version
+		dataType: string
+		lineageTag: abb11c58-7f64-4ce1-afa2-a6fce5b901d7
+		summarizeBy: none
+		sourceColumn: baseline_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column candidate_rule_id
+		dataType: string
+		lineageTag: e53b54fd-f4b4-4b93-8ce7-50bf06166bcc
+		summarizeBy: none
+		sourceColumn: candidate_rule_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column candidate_rule_version
+		dataType: string
+		lineageTag: 903691b4-b73d-4530-ace6-bfc28b825886
+		summarizeBy: none
+		sourceColumn: candidate_rule_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column lifecycle_category
+		dataType: string
+		lineageTag: e3d4bc5a-3431-4996-bb2c-ab5bc8bf8f90
+		summarizeBy: none
+		sourceColumn: lifecycle_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_origin
+		dataType: string
+		lineageTag: 145575b4-62f5-49ed-97f6-7087935678f6
+		summarizeBy: none
+		sourceColumn: source_origin
+
+		annotation SummarizationSetBy = Automatic
+
+	column candidate_status
+		dataType: string
+		lineageTag: ee7989cb-956e-49c2-b806-341bf5d2ddc4
+		summarizeBy: none
+		sourceColumn: candidate_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column emitted_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ee823e16-4fc7-45aa-99c5-50172a2965d9
+		summarizeBy: none
+		sourceColumn: emitted_at
+
+		variation Variation
+			isDefault
+			relationship: 861c45c2-07e2-41fa-92d3-6800ef8d2025
+			defaultHierarchy: LocalDateTable_b6ae97c8-237b-4ac3-9cb6-d119cdc71974.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column selected_review_id
+		dataType: string
+		lineageTag: ba261270-80dd-4004-be8d-b1763123d59d
+		summarizeBy: none
+		sourceColumn: selected_review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_cycle
+		dataType: int64
+		formatString: 0
+		lineageTag: b4056f1d-f810-4d18-a68c-786dd6a66e51
+		summarizeBy: sum
+		sourceColumn: review_cycle
+
+		annotation SummarizationSetBy = Automatic
+
+	column terminal_review_status
+		dataType: string
+		lineageTag: b51ff004-d3fb-4a1a-a146-cbdf268f757f
+		summarizeBy: none
+		sourceColumn: terminal_review_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column terminal_review_reason
+		dataType: string
+		lineageTag: 2c3e3f0c-3e8e-4603-adc1-987316c4b181
+		summarizeBy: none
+		sourceColumn: terminal_review_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewed_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9ef7de8d-191a-4a85-a4ea-d0c03935d43b
+		summarizeBy: none
+		sourceColumn: reviewed_at
+
+		variation Variation
+			isDefault
+			relationship: d3a1b9a3-701a-4730-ba04-5568ccfa005f
+			defaultHierarchy: LocalDateTable_b439db88-0056-4d75-aa74-3b54febd2cb9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_terminal_review
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a5f6925d-48ce-47ac-9e4c-dbe86520978e
+		summarizeBy: none
+		sourceColumn: has_terminal_review
+
+		annotation SummarizationSetBy = Automatic
+
+	column accepted_indicator
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f0c6928d-b17e-496e-bfd2-225ce399e6a4
+		summarizeBy: none
+		sourceColumn: accepted_indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column rejected_indicator
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 18b9d409-dda1-40ff-b8d5-a3d09a7d9992
+		summarizeBy: none
+		sourceColumn: rejected_indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column unresolved_indicator
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: feb4f239-3bf3-46d5-8dda-e365a0ab9547
+		summarizeBy: none
+		sourceColumn: unresolved_indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_scope_key
+		dataType: string
+		lineageTag: 3d5251ee-8828-5299-9d05-30ddcfb6440e
+		summarizeBy: none
+		sourceColumn: member_scope_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'analytics fct_candidate_review' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("127.0.0.1:55432", "pulse_dev"),
+				    analytics_fct_candidate_review = Source{[Schema="analytics",Item="fct_candidate_review"]}[Data],
+				    #"Approved Published Rows" = Table.SelectRows(analytics_fct_candidate_review, each [snapshot_state] = "PUBLISHED_VALIDATION" and List.Contains({"08852d5f-9843-5406-a69b-7039ea2ddaa4", "bd3a02a5-0c2d-5eec-84fd-8e9b93a238a3"}, Text.Lower(Text.From([analysis_snapshot_id])))),
+				    #"Member Scope Key" = Table.AddColumn(#"Approved Published Rows", "member_scope_key", each Text.Lower(Text.From([analysis_snapshot_id])) & "|" & Text.Lower(Text.From([case_key])) & "|" & Text.Lower(Text.From([repository_key])), type text)
+				in
+				    #"Member Scope Key"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

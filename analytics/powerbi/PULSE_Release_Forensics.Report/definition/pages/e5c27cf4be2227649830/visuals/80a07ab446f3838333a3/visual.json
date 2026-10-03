@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "80a07ab446f3838333a3",
+  "position": {
+    "x": 40,
+    "y": 850,
+    "z": 10000,
+    "height": 140,
+    "width": 1130,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_candidate_review"
+                    }
+                  },
+                  "Property": "artifact_id"
+                }
+              },
+              "queryRef": "analytics fct_candidate_review.artifact_id",
+              "nativeQueryRef": "artifact_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_candidate_review"
+                    }
+                  },
+                  "Property": "candidate_id"
+                }
+              },
+              "queryRef": "analytics fct_candidate_review.candidate_id",
+              "nativeQueryRef": "candidate_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_candidate_review"
+                    }
+                  },
+                  "Property": "terminal_review_status"
+                }
+              },
+              "queryRef": "analytics fct_candidate_review.terminal_review_status",
+              "nativeQueryRef": "terminal_review_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analytics fct_candidate_review"
+                    }
+                  },
+                  "Property": "selected_review_id"
+                }
+              },
+              "queryRef": "analytics fct_candidate_review.selected_review_id",
+              "nativeQueryRef": "selected_review_id"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Shared artifact grouping (firings are not independent incidents)'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

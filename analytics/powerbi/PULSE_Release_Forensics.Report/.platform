@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PULSE_Release_Forensics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d40b7d3e-ce30-4208-a4ce-82222574b3d6"
+  }
+}
