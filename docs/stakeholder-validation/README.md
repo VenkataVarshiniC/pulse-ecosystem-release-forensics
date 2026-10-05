@@ -4,16 +4,17 @@ Stakeholder evidence is additive and versioned. Raw survey exports remain local 
 
 | Wave | Population | Status | Boundary |
 | --- | ---: | --- | --- |
-| Wave 1 | n = 9 | Frozen interim wave | Findings may be reconsidered by future waves but this record is not overwritten. |
-| Wave 2 | Future | Not started | Requires a separately frozen export and additive analysis. |
+| Wave 1 | n = 9 | Frozen baseline wave | Findings remain unchanged except for a documented analytical correction. |
+| Wave 2 | cumulative n = 14; new n = 5 | Frozen additive interim wave | Uses R10–R14 and cumulative comparison without rewriting Wave 1. |
+| Wave 3 | Future | Not started | Requires a separately frozen export and additive analysis. |
 
 When another response wave arrives:
 
 1. Freeze the new cumulative raw export and record its digest and response count.
-2. Identify newly added respondents without committing identity or contact data.
-3. Create a separate Wave 2 anonymized dataset and analysis.
-4. Compare Wave 1 with Wave 2 without editing Wave 1 conclusions retrospectively.
-5. Rerun a cumulative hypothesis, persona, requirements, strategy, and counter-evidence reconciliation.
+2. Verify that previously frozen substantive rows match and identify only newly added respondents.
+3. Assign new stable anonymized IDs and create a separate wave dataset and analysis.
+4. Compare prior waves with the additions and cumulative result without editing earlier conclusions.
+5. Rerun cumulative hypothesis, persona, requirements, strategy, counter-evidence, and value reconciliation.
 6. Reassess G8 under the same governance definitions.
 
-Wave 1 may be corrected only for a documented analytical error. A future change in evidence produces a new wave result, not a rewrite of the frozen Wave 1 record.
+A frozen wave may be corrected only for a documented analytical error. New evidence produces a new wave result rather than a retrospective rewrite.

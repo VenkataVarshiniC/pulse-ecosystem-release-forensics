@@ -19,7 +19,7 @@ Classifications apply only to Wave 1: `CONFIRMED`, `PARTIALLY_CONFIRMED`, `CONTR
 
 | Concept | Relevant evidence | Counter-evidence | Classification | Implication |
 | --- | --- | --- | --- | --- |
-| A. Investigation uses fragmented sources | 8/9 used multiple source types; R02/R08 explicitly reported spread. | Explicit fragmentation pain was only 2/9. | `PARTIALLY_CONFIRMED` | Centralization is plausible but source multiplicity alone is not proof of pain. |
+| A. Investigation uses fragmented sources | 7/9 used multiple source types; R02/R08 explicitly reported spread. | Explicit fragmentation pain was only 2/9. | `PARTIALLY_CONFIRMED` | Centralization is plausible but source multiplicity alone is not proof of pain. |
 | B. Historical state is difficult/manual | Difficulty mean 3.22/5; version-use effort 5/9; historical problem 3/9. | No rating was 5 and only one chose history as most useful. | `CONFIRMED` | Phase 7 evidence depth aligns with a real need, within limits. |
 | C. Identifying affected repositories matters | Most useful for 5/9; manual/problem selections from 3/9 each. | Four preferred other capabilities. | `CONFIRMED` | Lead with affected-set support, tied to evidence. |
 | D. Engineers need more than a declaration | Respondents used issues, commits, CI, tests, logs and documentation; trust requires version/history/CI. | The survey did not test a declaration-only counterexample. | `PARTIALLY_CONFIRMED` | Preserve distinct evidence types and avoid adoption inference. |

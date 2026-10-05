@@ -22,7 +22,7 @@ All denominators are the Wave 1 convenience sample, **n = 9**, unless stated oth
 | Lockfile | 2/9 |
 | Package documentation | 2/9 |
 
-Eight respondents selected at least two evidence sources. Their single most-confidence source varied: package documentation 3/9, tests 2/9, CI 1/9, PRs 1/9, issues 1/9, and context-dependent 1/9.
+Seven respondents selected at least two evidence sources. Their single most-confidence source varied: package documentation 3/9, tests 2/9, CI 1/9, PRs 1/9, issues 1/9, and context-dependent 1/9.
 
 Affected-repository methods were also distributed: CI/build failures 6/9, repository knowledge/documentation 5/9, automated update tools 4/9, and dependency graphs, manual search, manifest search, lockfile search, and central inventory each 3/9.
 
