@@ -4,7 +4,7 @@ PULSE investigates public evidence surrounding a dependency release across a dec
 
 **Status:** working local prototype with bounded technical validation and partial stakeholder validation. The implementation on this branch includes the collection engine, PostgreSQL/dbt analytics, Power BI project, React/FastAPI interface, and an isolated evidence-depth experiment. See the [repository audit](docs/audits/2026-10-17-project-briefing.md) for commit-pinned evidence and claim boundaries.
 
-> **Branch scope:** this README describes the cumulative implementation on this branch. At the October 17, 2026 audit, `main` still contained Phase 1; later work had not been merged into the default branch.
+> **Audit scope:** the October 17, 2026 audit inspected the cumulative implementation at commit `49dbbae`. This integration brings that implementation, the evidence briefing, and this README into `main`. The briefing preserves the repository state observed before integration.
 
 ## Why PULSE exists
 
